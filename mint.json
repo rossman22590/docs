@@ -58,45 +58,48 @@
       ]
     },
  {
-      "group": "AI Tutor",
+  "group": "AI Tutor",
+  "pages": [
+    {
+      "group": "Plus",
+      "pages": [
+        "aitutor/plus",
+        "aitutor/personalities"
+      ],
+      "icon": "image",
+      "iconType": "solid"
+    },
+    {
+      "group": "Premium",
       "pages": [
         {
-          "group": "Plus",
+          "group": "Multibot",
           "pages": [
-            "aitutor/plus",
-            "aitutor/personalities"
-          ],
-          "icon": "image",
-          "iconType": "solid"
-        },
-        {
-          "group": "Premium",
-          "pages": [
-            {
-              "group": "Multibot",
-              "pages": [
-                "premium/multibot/multibot-intro"
-              ]
-            },
-            "aitutor/personalities"
+            "premium/multibot/multibot-intro"
           ]
-        }
+        },
+        "aitutor/personalities"
       ]
     }
   ]
-    },
-      "icon": "video",
-      "iconType": "solid"
-    }, {
-      "group": "Ultra",
-      "pages": [
-        "video/vidcraft-ultra"
-      ],
-      "icon": "video",
-      "iconType": "solid"
-    }
-  ]
 },
+{
+  "group": "Video",
+  "pages": [
+    "video/vidcraft-ultra"
+  ],
+  "icon": "video",
+  "iconType": "solid"
+},
+{
+  "group": "Ultra",
+  "pages": [
+    "video/vidcraft-ultra"
+  ],
+  "icon": "video",
+  "iconType": "solid"
+}
+,
         {
   "group": "Pixio",
   "pages": [
