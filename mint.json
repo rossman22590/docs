@@ -58,7 +58,7 @@
       ]
     },
     {
-      "group": "Pixio/Image Generation",
+      "group": "AI Tutor",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -70,7 +70,7 @@
       ]
     },
         {
-      "group": "Video Generation",
+      "group": "Pixio",
       "pages": [
         "essentials/markdown",
         "essentials/code",
