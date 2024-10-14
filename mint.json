@@ -1,148 +1,88 @@
-{
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "AI Tutor x Pixio Documentation",
-  "logo": {
-    "dark": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png",
-    "light": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png"
+"navigation": [
+  {
+    "group": "Get Started",
+    "pages": [
+      "introduction",
+      "quickstart",
+      "development"
+    ]
   },
-  "favicon": "/logo/icon-144x144.png",
-  "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
-    }
+  {
+    "group": "AI Tutor",
+    "pages": [
+      {
+        "group": "Plus",
+        "pages": [
+          "aitutor/plus",
+          "aitutor/personalities"
+        ],
+        "icon": "image",
+        "iconType": "solid"
+      },
+      {
+        "group": "Premium",
+        "pages": [
+          {
+            "group": "Multibot",
+            "pages": [
+              "premium/multibot/multibot-intro"
+            ]
+          },
+          "aitutor/personalities"
+        ]
+      }
+    ]
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+  {
+    "group": "Pixio",
+    "pages": [
+      {
+        "group": "Images",
+        "pages": [
+          "essentials/images"
+        ],
+        "icon": "image",
+        "iconType": "solid"
+      },
+      {
+        "group": "Video",
+        "pages": [
+          "video/vidcraft-ultra"
+        ],
+        "icon": "video",
+        "iconType": "solid"
+      },
+      {
+        "group": "Music",
+        "pages": [
+          "video/vidcraft-ultra"
+        ],
+        "icon": "music",
+        "iconType": "solid"
+      },
+      {
+        "group": "3D",
+        "pages": [
+          "video/vidcraft-ultra"
+        ],
+        "icon": "cube",
+        "iconType": "solid"
+      }
+    ]
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
-    },
-{
-  "navigation": [
-    {
-      "group": "AI Tutor",
-      "pages": [
-        {
-          "group": "Plus",
-          "pages": [
-            "aitutor/plus",
-            "aitutor/personalities"
-          ],
-          "icon": "image",
-          "iconType": "solid"
-        },
-        {
-          "group": "Premium",
-          "pages": [
-            {
-              "group": "Multibot",
-              "pages": [
-                "premium/multibot/multibot-intro"
-              ]
-            },
-            "aitutor/personalities"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "Pixio",
-      "pages": [
-        {
-          "group": "Images",
-          "pages": [
-            "essentials/images"
-          ],
-          "icon": "image",
-          "iconType": "solid"
-        },
-        {
-          "group": "Video",
-          "pages": [
-            "video/vidcraft-ultra"
-          ],
-          "icon": "video",
-          "iconType": "solid"
-        },
-        {
-          "group": "Music",
-          "pages": [
-            "video/vidcraft-ultra"
-          ],
-          "icon": "music",
-          "iconType": "solid"
-        },
-        {
-          "group": "3D",
-          "pages": [
-            "video/vidcraft-ultra"
-          ],
-          "icon": "cube",
-          "iconType": "solid"
-        }
-      ]
-    }
-  ]
-},
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/auth",
-        "api-reference/endpoint/delete",
-        "api-reference/endpoint/upload"
-      ]
-    }
-  ],
-  "footerSocials": {
-    "x": "https://x.com/tsi_org",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+  {
+    "group": "API Documentation",
+    "pages": [
+      "api-reference/introduction"
+    ]
+  },
+  {
+    "group": "Endpoint Examples",
+    "pages": [
+      "api-reference/endpoint/get",
+      "api-reference/endpoint/auth",
+      "api-reference/endpoint/delete",
+      "api-reference/endpoint/upload"
+    ]
   }
-}
+]
