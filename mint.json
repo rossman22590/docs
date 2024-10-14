@@ -90,7 +90,8 @@
             {
               "group": "Multibot",
               "pages": [
-                "premium/multibot-intro"
+                "premium/multibot-intro",
+                "premium/adding-a-persona-multibot"
 
               ],
            "icon": "robot",
