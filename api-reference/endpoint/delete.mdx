@@ -1,4 +1,48 @@
 ---
-title: 'Delete Plant'
-openapi: 'DELETE /plants/{id}'
+title: 'Run a Workflow'
+openapi: 'POST /run'
 ---
+
+### Description
+This endpoint allows you to run a workflow by providing a deployment ID and optional input parameters.
+
+### Request Body
+**Content-Type**: `application/json`
+
+```json
+{
+  "deployment_id": "string",  // The ID of the deployment to run (required)
+  "inputs": {  // Optional inputs for the workflow
+    "key": "string or number"
+  }
+}`
+```
+
+### Responses
+
+#### 200 OK
+
+```json
+
+`{
+  "run_id": "string"  // The ID of the run that has been queued
+}`
+```
+#### 401 Invalid or Expired Token
+
+text
+
+
+
+`Invalid or expired token`
+
+#### 500 Error Creating Run
+
+json
+
+```json
+
+`{
+  "error": "string"  // Error message detailing why the run creation failed
+}`
+```

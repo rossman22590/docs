@@ -1,40 +1,18 @@
 ---
-title: 'Chat with AI'
-openapi: 'POST /chat'
+title: 'Run a Workflow'
+openapi: 'POST /run'
 ---
 
 ### Description
-This endpoint allows users to chat with the AI by sending a message.
+This endpoint allows you to run a workflow by providing a deployment ID and optional input parameters.
 
 ### Request Body
 **Content-Type**: `application/json`
 
 ```json
 {
-  "message": "string" // The message you want to send to the AI
+  "deployment_id": "string",  // The ID of the deployment to run (required)
+  "inputs": {  // Optional inputs for the workflow
+    "key": "string or number"
+  }
 }
-```
-
-### Response
-
-#### 200 OK
-
-```json
-
-
-
-`{
-  "reply": "string" // The AI's response to your message
-}`
-```
-#### 400 Bad Request
-
-```json
-
-
-
-`{
-  "error": "string",  // Error code
-  "message": "string" // Detailed error message
-}`
-```

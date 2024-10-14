@@ -1,4 +1,28 @@
----
-title: 'Get Plants'
-openapi: 'GET /plants'
----
+title: 'Get Workflow Run Output'
+openapi: 'GET /run'
+
+Description
+This endpoint retrieves the output of a workflow run by providing the run_id.
+
+Parameters
+run_id (required, query): The ID of the run for which the output is being retrieved.
+Responses
+200 OK
+
+
+
+{
+  "id": "string",  // Run ID
+  "workflow_version_id": "string",  // Workflow version ID
+  "workflow_inputs": {  // Inputs provided to the workflow
+    "input_text": "string",
+    "input_image": "https://somestatic.png"
+  },
+  "workflow_id": "string",  // ID of the workflow
+  "machine_id": "string",  // Machine used to run the workflow
+  "origin": "manual | api | public-share",  // Origin of the workflow run
+  "status": "not-started | running | uploading | success | failed",  // Current status
+  "ended_at": "string",  // End timestamp
+  "created_at": "string",  // Creation timestamp
+  "started_at": "string"  // Start timestamp
+}
