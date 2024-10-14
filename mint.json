@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:support@myapps.ai"
+      "url": "mailto:rcohen@mytsi.org"
     }
   ],
   "topbarCtaButton": {
     "name": "Go to Dashboard",
-    "url": "https://dashboard.myapps.ai"
+    "url": "https://account.myapps.ai"
   },
   "tabs": [
     {
@@ -46,17 +46,17 @@
     {
       "name": "Pixio API References",
       "icon": "code",
-      "url": "https://myapps.ai/api-references"
+      "url": "https://myapps.ai/"
     },
     {
       "name": "Youtube",
       "icon": "pencil",
-      "url": "https://myapps.ai/content"
+      "url": "https://myapps.ai/"
     },
     {
       "name": "Contact us",
       "icon": "envelope",
-      "url": "https://myapps.ai/contact-us"
+      "url": "https://myapps.ai/"
     }
   ],
   "topAnchor": {
