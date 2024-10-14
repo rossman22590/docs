@@ -1,4 +1,54 @@
-"navigation": [
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "AI Tutor x Pixio Documentation",
+  "logo": {
+    "dark": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png",
+    "light": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png"
+  },
+  "favicon": "/logo/icon-144x144.png",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
+    "anchors": {
+      "from": "#0D9373",
+      "to": "#07C983"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:hi@mintlify.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://dashboard.mintlify.com"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://mintlify.com/docs"
+    },
+    {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://mintlify.com/community"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://mintlify.com/blog"
+    }
+  ],
+  "navigation": [
   {
     "group": "Get Started",
     "pages": [
