@@ -110,12 +110,12 @@
                 "premium/multibot-intro"
 
               ],
-           "icon": "rocket",
+           "icon": "robot",
           "iconType": "solid"
             },
             "aitutor/personalities"
           ],   
-           "icon": "code"
+           "icon": "rocket"
         }
       ]
     }, 
