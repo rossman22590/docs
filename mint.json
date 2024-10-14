@@ -92,7 +92,9 @@
               "pages": [
                 "premium/multibot-intro"
 
-              ]
+              ],
+           "icon": "robot",
+          "iconType": "solid"
             },
             "aitutor/personalities"
           ],   
