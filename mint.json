@@ -57,33 +57,33 @@
         "development"
       ]
     },
-{
+},
+        {
   "group": "AI Tutor",
   "pages": [
+
     {
       "group": "Plus",
-      "icon": "plus",
       "pages": [
-        "plus/markdown",
-        "plus/code",
-        "plus/images"
-      ]
+        "essentials/images"
+      ],
+      "icon": "image",
+      "iconType": "solid"
     },
     {
       "group": "Premium",
-      "icon": "star",
       "pages": [
-        "premium/settings",
-        "premium/navigation",
-        "premium/reusable-snippets"
-      ]
-    },
-    {
+        "video/vidcraft-ultra"
+      ],
+      "icon": "video",
+      "iconType": "solid"
+    }, {
       "group": "Ultra",
-      "icon": "bolt",
       "pages": [
-        "ultra/vidcraft-ultra"
-      ]
+        "video/vidcraft-ultra"
+      ],
+      "icon": "video",
+      "iconType": "solid"
     }
   ]
 },
