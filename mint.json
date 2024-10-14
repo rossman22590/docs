@@ -71,6 +71,8 @@
         },
         {
           "group": "Premium",
+                    "icon": "image",
+          "iconType": "solid",
           "pages": [
             "premium/multibot/multibot-intro",
             "aitutor/personalities"
