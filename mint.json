@@ -5,7 +5,7 @@
     "dark": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png",
     "light": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png"
   },
-  "favicon": "https://docs.myapps.ai/favicon/icon-144x144.png",
+  "favicon": "/logo/icon-144x144.png",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
