@@ -1,0 +1,78 @@
+Prompt Gallery
+==============
+
+Introduction
+------------
+
+The Prompt Gallery is a curated collection of AI prompts designed to streamline and inspire the creation of content across various domains.
+
+Home Page
+---------
+
+Upon accessing the Prompt Gallery, users are greeted with a colorful grid layout.
+
+### Grid Layout
+
+-   Prompt Categories: Each cell in the grid represents a different prompt category such as Writing, Marketing, Backend Development, etc.
+
+-   Interactive Cells: Clicking on a cell expands to reveal a set of specialized prompts related to the chosen category.
+
+Prompt Details
+--------------
+
+When a category cell is selected, users can view detailed prompts:
+
+### Expanded View
+
+-   Prompt Title: The name of the prompt for easy identification.
+
+-   Prompt Description: A brief description of what the prompt entails.
+
+-   Copy Button: Allows users to copy the prompt to the clipboard.
+
+-   Show Button: Reveals additional details or examples related to the prompt.
+
+Categories Page
+---------------
+
+Selecting the 'Categories' tab on the navigation bar directs users to a comprehensive list of available prompt categories.
+
+### Categories Layout
+
+-   List of Categories: Organized in alphabetical order for quick browsing.
+
+-   Search Functionality: Users can search for specific categories.
+
+Detailed Prompt View
+--------------------
+
+Upon selecting a specific prompt, the application presents a detailed view.
+
+### Detailed Explanation
+
+-   Full Prompt Description: An in-depth explanation of the prompt, including parameters and expected outcomes.
+
+-   Copy Full Prompt: This button allows the entire prompt, including its detailed description, to be copied for use.
+
+User Interaction
+----------------
+
+-   Copy Function: Users can copy prompts to use in their projects.
+
+-   Show More: Expands the prompt to show full details.
+
+Dashboard
+---------
+
+Users can navigate back to the main grid view by selecting the 'Dashboard' tab, which provides:
+
+### Dashboard Overview
+
+-   Quick Access: Immediate return to the interactive grid of prompts.
+
+-   Recent Prompts: Displays the most recently viewed or added prompts.
+
+Conclusion
+----------
+
+The Prompt Gallery serves as an expansive resource for AI prompts, offering users a diverse range of templates to kickstart their AI-driven projects. With its user-friendly interface, the Prompt Gallery ensures a smooth and efficient content creation process.
