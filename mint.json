@@ -97,6 +97,16 @@
               ],
            "icon": "robot",
           "iconType": "solid"
+            },            {
+              "group": "Botcraft Pro",
+              "pages": [
+                "premium/multibot-intro",
+                "premium/adding-a-persona-multibot",
+                "premium/botcraft-pro"
+
+              ],
+           "icon": "bolt",
+          "iconType": "solid"
             },
             "aitutor/personalities"
           ],   
