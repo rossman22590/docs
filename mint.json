@@ -91,8 +91,8 @@
               "group": "Multibot",
               "pages": [
                 "premium/multibot-intro",
-                "premium/adding-a-persona-multibot",
-                "premium/botcraft-pro"
+                "premium/adding-a-persona-multibot"
+              
 
               ],
            "icon": "robot",
@@ -100,9 +100,8 @@
             },            {
               "group": "Botcraft Pro",
               "pages": [
-                "premium/multibot-intro",
-                "premium/adding-a-persona-multibot",
                 "premium/botcraft-pro"
+             
 
               ],
            "icon": "bolt",
