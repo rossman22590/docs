@@ -57,83 +57,70 @@
         "development"
       ]
     },
- {
-  "group": "AI Tutor",
-  "pages": [
+{
+  "navigation": [
     {
-      "group": "Plus",
-      "pages": [
-        "aitutor/plus",
-        "aitutor/personalities"
-      ],
-      "icon": "image",
-      "iconType": "solid"
-    },
-    {
-      "group": "Premium",
-      "icon": "image",
-      "iconType": "solid",
+      "group": "AI Tutor",
       "pages": [
         {
-          "group": "Multibot",
+          "group": "Plus",
           "pages": [
-            "premium/multibot/multibot-intro"
-          ]
+            "aitutor/plus",
+            "aitutor/personalities"
+          ],
+          "icon": "image",
+          "iconType": "solid"
         },
-        "aitutor/personalities"
+        {
+          "group": "Premium",
+          "pages": [
+            {
+              "group": "Multibot",
+              "pages": [
+                "premium/multibot/multibot-intro"
+              ]
+            },
+            "aitutor/personalities"
+          ]
+        }
       ]
-    }
-  ]
-},
-{
-  "group": "Video",
-  "pages": [
-    "video/vidcraft-ultra"
-  ],
-  "icon": "video",
-  "iconType": "solid"
-},
-{
-  "group": "Ultra",
-  "pages": [
-    "video/vidcraft-ultra"
-  ],
-  "icon": "video",
-  "iconType": "solid"
-},
-  {
-  "group": "Pixio",
-  "pages": [
-
-    {
-      "group": "Images",
-      "pages": [
-        "essentials/images"
-      ],
-      "icon": "image",
-      "iconType": "solid"
     },
     {
-      "group": "Video",
+      "group": "Pixio",
       "pages": [
-        "video/vidcraft-ultra"
-      ],
-      "icon": "video",
-      "iconType": "solid"
-    }, {
-      "group": "Music",
-      "pages": [
-        "video/vidcraft-ultra"
-      ],
-      "icon": "video",
-      "iconType": "solid"
-    }, {
-      "group": "3D",
-      "pages": [
-        "video/vidcraft-ultra"
-      ],
-      "icon": "video",
-      "iconType": "solid"
+        {
+          "group": "Images",
+          "pages": [
+            "essentials/images"
+          ],
+          "icon": "image",
+          "iconType": "solid"
+        },
+        {
+          "group": "Video",
+          "pages": [
+            "video/vidcraft-ultra"
+          ],
+          "icon": "video",
+          "iconType": "solid"
+        },
+        {
+          "group": "Music",
+          "pages": [
+            "video/vidcraft-ultra"
+          ],
+          "icon": "music",
+          "iconType": "solid"
+        },
+        {
+          "group": "3D",
+          "pages": [
+            "video/vidcraft-ultra"
+          ],
+          "icon": "cube",
+          "iconType": "solid"
+        }
+      ]
     }
   ]
 },
