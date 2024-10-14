@@ -18,50 +18,56 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:support@myapps.ai"
+      "url": "mailto:support@myapps.ai",
+      "icon": "fas fa-life-ring"
     }
   ],
   "topbarCtaButton": {
     "name": "Go to Dashboard",
-    "url": "https://dashboard.myapps.ai"
+    "url": "https://dashboard.myapps.ai",
+    "icon": "fas fa-tachometer-alt"
   },
   "tabs": [
     {
       "name": "API References",
-      "url": "https://myapps.ai/api-references"
+      "url": "https://myapps.ai/api-references",
+      "icon": "fas fa-book"
     },
     {
       "name": "AI Tutor Content",
-      "url": "https://myapps.ai/aitutor-content"
+      "url": "https://myapps.ai/aitutor-content",
+      "icon": "fas fa-brain"
     },
     {
       "name": "Pixio Blog",
-      "url": "https://myapps.ai/blog"
+      "url": "https://myapps.ai/blog",
+      "icon": "fas fa-blog"
     }
   ],
   "primaryTab": {
-    "name": "Home"
+    "name": "Home",
+    "icon": "fas fa-home"
   },
   "anchors": [
     {
       "name": "AI Tutor API References",
-      "icon": "code",
+      "icon": "fas fa-code",
       "url": "https://myapps.ai/api-references"
     },
     {
       "name": "Pixio Content",
-      "icon": "pencil",
+      "icon": "fas fa-pencil-alt",
       "url": "https://myapps.ai/content"
     },
     {
       "name": "Contact us",
-      "icon": "envelope",
+      "icon": "fas fa-envelope",
       "url": "https://myapps.ai/contact-us"
     }
   ],
   "topAnchor": {
     "name": "Home",
-    "icon": "building"
+    "icon": "fas fa-building"
   },
   "navigation": [
     {
@@ -70,7 +76,8 @@
         "introduction",
         "quickstart",
         "development"
-      ]
+      ],
+      "icon": "fas fa-play-circle"
     },
     {
       "group": "AI Tutor",
@@ -81,7 +88,7 @@
             "aitutor/plus",
             "aitutor/personalities"
           ],
-          "icon": "image",
+          "icon": "fas fa-user-plus",
           "iconType": "solid"
         },
         {
@@ -90,14 +97,18 @@
             {
               "group": "Multibot",
               "pages": [
-                "premium/multibot-intro"
-
-              ]
+                "premium/multibot/multibot-intro",
+                "premium/multibot/multibot-advanced",
+                "premium/multibot/multibot-settings"
+              ],
+              "icon": "fas fa-robot"
             },
             "aitutor/personalities"
-          ]
+          ],
+          "icon": "fas fa-user-shield"
         }
-      ]
+      ],
+      "icon": "fas fa-robot"
     },
     {
       "group": "Pixio",
@@ -107,7 +118,7 @@
           "pages": [
             "essentials/images"
           ],
-          "icon": "image",
+          "icon": "fas fa-image",
           "iconType": "solid"
         },
         {
@@ -115,7 +126,7 @@
           "pages": [
             "video/vidcraft-ultra"
           ],
-          "icon": "video",
+          "icon": "fas fa-video",
           "iconType": "solid"
         },
         {
@@ -123,7 +134,7 @@
           "pages": [
             "video/vidcraft-ultra"
           ],
-          "icon": "music",
+          "icon": "fas fa-music",
           "iconType": "solid"
         },
         {
@@ -131,16 +142,18 @@
           "pages": [
             "video/vidcraft-ultra"
           ],
-          "icon": "cube",
+          "icon": "fas fa-cube",
           "iconType": "solid"
         }
-      ]
+      ],
+      "icon": "fas fa-images"
     },
     {
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction"
-      ]
+      ],
+      "icon": "fas fa-book"
     },
     {
       "group": "Endpoint Examples",
@@ -149,12 +162,14 @@
         "api-reference/endpoint/auth",
         "api-reference/endpoint/delete",
         "api-reference/endpoint/upload"
-      ]
+      ],
+      "icon": "fas fa-cogs"
     }
   ],
   "footerSocials": {
     "x": "https://x.com/myapps_ai",
     "github": "https://github.com/myappsai",
-    "linkedin": "https://linkedin.com/company/myappsai"
+    "linkedin": "https://linkedin.com/company/myappsai",
+    "icon": "fas fa-hashtag"
   }
 }
