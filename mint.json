@@ -92,7 +92,7 @@
               "pages": [
                 "premium/multibot-intro",
                 "premium/adding-a-persona-multibot",
-                "premium/new-image-generators-multibot"
+                "premium/image-gen-multibot"
               ],
            "icon": "robot",
           "iconType": "solid"
