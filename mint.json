@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "AI Tutor x Pixio Documentation",
   "logo": {
     "dark": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png",
     "light": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png"
@@ -139,7 +139,7 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
+    "x": "https://x.com/tsi_org",
     "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/mintsearch"
   }
