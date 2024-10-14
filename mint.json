@@ -56,25 +56,35 @@
         "quickstart",
         "development"
       ]
-    },{
-  "group": "AI Tutor",
-  "pages": [
-
-    {
-      "group": "Plus",
-      "pages": [
-        "aitutor/plus",
-        "aitutor/personalities"
-      ],
-      "icon": "image",
-      "iconType": "solid"
     },
-    {
-      "group": "Premium",
+ {
+      "group": "AI Tutor",
       "pages": [
-        "premium/multibot",
-        "aitutor/personalities"
-      ],
+        {
+          "group": "Plus",
+          "pages": [
+            "aitutor/plus",
+            "aitutor/personalities"
+          ],
+          "icon": "image",
+          "iconType": "solid"
+        },
+        {
+          "group": "Premium",
+          "pages": [
+            {
+              "group": "Multibot",
+              "pages": [
+                "premium/multibot"
+              ]
+            },
+            "aitutor/personalities"
+          ]
+        }
+      ]
+    }
+  ]
+    },
       "icon": "video",
       "iconType": "solid"
     }, {
