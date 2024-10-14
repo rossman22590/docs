@@ -18,35 +18,29 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:support@myapps.ai",
-      "icon": "life-ring"
+      "url": "mailto:support@myapps.ai"
     }
   ],
   "topbarCtaButton": {
     "name": "Go to Dashboard",
-    "url": "https://dashboard.myapps.ai",
-    "icon": "tachometer-alt"
+    "url": "https://dashboard.myapps.ai"
   },
   "tabs": [
     {
       "name": "API References",
-      "url": "https://myapps.ai/api-references",
-      "icon": "book"
+      "url": "https://myapps.ai/api-references"
     },
     {
       "name": "AI Tutor Content",
-      "url": "https://myapps.ai/aitutor-content",
-      "icon": "brain"
+      "url": "https://myapps.ai/aitutor-content"
     },
     {
       "name": "Pixio Blog",
-      "url": "https://myapps.ai/blog",
-      "icon": "blog"
+      "url": "https://myapps.ai/blog"
     }
   ],
   "primaryTab": {
-    "name": "Home",
-    "icon": "home"
+    "name": "Home"
   },
   "anchors": [
     {
@@ -56,7 +50,7 @@
     },
     {
       "name": "Pixio Content",
-      "icon": "pencil-alt",
+      "icon": "pencil",
       "url": "https://myapps.ai/content"
     },
     {
@@ -76,8 +70,7 @@
         "introduction",
         "quickstart",
         "development"
-      ],
-      "icon": "play-circle"
+      ]
     },
     {
       "group": "AI Tutor",
@@ -88,7 +81,7 @@
             "aitutor/plus",
             "aitutor/personalities"
           ],
-          "icon": "user-plus",
+          "icon": "image",
           "iconType": "solid"
         },
         {
@@ -97,18 +90,14 @@
             {
               "group": "Multibot",
               "pages": [
-                "premium/multibot/multibot-intro",
-                "premium/multibot/multibot-advanced",
-                "premium/multibot/multibot-settings"
-              ],
-              "icon": "robot"
+                "premium/multibot-intro"
+
+              ]
             },
             "aitutor/personalities"
-          ],
-          "icon": "user-shield"
+          ]
         }
-      ],
-      "icon": "robot"
+      ]
     },
     {
       "group": "Pixio",
@@ -145,15 +134,13 @@
           "icon": "cube",
           "iconType": "solid"
         }
-      ],
-      "icon": "images"
+      ]
     },
     {
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction"
-      ],
-      "icon": "book"
+      ]
     },
     {
       "group": "Endpoint Examples",
@@ -162,14 +149,12 @@
         "api-reference/endpoint/auth",
         "api-reference/endpoint/delete",
         "api-reference/endpoint/upload"
-      ],
-      "icon": "cogs"
+      ]
     }
   ],
   "footerSocials": {
     "x": "https://x.com/myapps_ai",
     "github": "https://github.com/myappsai",
-    "linkedin": "https://linkedin.com/company/myappsai",
-    "icon": "hashtag"
+    "linkedin": "https://linkedin.com/company/myappsai"
   }
 }
