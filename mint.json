@@ -90,9 +90,8 @@
             {
               "group": "Multibot",
               "pages": [
-                "premium/multibot/multibot-intro",
-                "premium/multibot/multibot-advanced",
-                "premium/multibot/multibot-settings"
+                "premium/multibot-intro",
+
               ]
             },
             "aitutor/personalities"
