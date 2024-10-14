@@ -86,6 +86,7 @@
         },
         {
           "group": "Premium",
+          "icon": "code",
           "pages": [
             {
               "group": "Multibot",
