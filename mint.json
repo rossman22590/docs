@@ -72,11 +72,7 @@
         {
   "group": "Pixio",
   "pages": [
-    "essentials/markdown",
-    "essentials/code",
-    "essentials/settings",
-    "essentials/navigation",
-    "essentials/reusable-snippets",
+
     {
       "group": "Images",
       "pages": [
@@ -87,6 +83,20 @@
     },
     {
       "group": "Video",
+      "pages": [
+        "video/vidcraft-ultra"
+      ],
+      "icon": "video",
+      "iconType": "solid"
+    }, {
+      "group": "Music",
+      "pages": [
+        "video/vidcraft-ultra"
+      ],
+      "icon": "video",
+      "iconType": "solid"
+    }, {
+      "group": "3D",
       "pages": [
         "video/vidcraft-ultra"
       ],
