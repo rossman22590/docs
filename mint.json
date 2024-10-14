@@ -62,6 +62,7 @@
   "pages": [
     {
       "group": "Plus",
+      "icon": "plus",
       "pages": [
         "plus/markdown",
         "plus/code",
@@ -70,6 +71,7 @@
     },
     {
       "group": "Premium",
+      "icon": "star",
       "pages": [
         "premium/settings",
         "premium/navigation",
@@ -78,6 +80,7 @@
     },
     {
       "group": "Ultra",
+      "icon": "bolt",
       "pages": [
         "ultra/vidcraft-ultra"
       ]
