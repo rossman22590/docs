@@ -1,4 +1,40 @@
 ---
-title: 'Delete Plant'
-openapi: 'DELETE /plants/{id}'
+title: 'Chat with AI'
+openapi: 'POST /chat'
 ---
+
+### Description
+This endpoint allows users to chat with the AI by sending a message.
+
+### Request Body
+**Content-Type**: `application/json`
+
+```json
+{
+  "message": "string" // The message you want to send to the AI
+}
+```
+
+### Response
+
+#### 200 OK
+
+```json
+
+
+
+`{
+  "reply": "string" // The AI's response to your message
+}`
+```
+#### 400 Bad Request
+
+```json
+
+
+
+`{
+  "error": "string",  // Error code
+  "message": "string" // Detailed error message
+}`
+```
