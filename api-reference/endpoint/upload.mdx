@@ -1,0 +1,46 @@
+---
+title: 'Upload Files to Storage'
+openapi: 'GET /upload-url'
+---
+
+### Description
+
+This endpoint generates an upload URL for file uploads, such as images, to the storage.
+
+### Parameters
+
+-   **type** (required, query): The MIME type of the file (e.g., `image/png`, `image/jpg`, `image/jpeg`).
+-   **file_size** (required, query): The size of the file to be uploaded.
+
+### Responses
+
+#### 200 OK
+
+```json
+
+
+`{
+  "upload_url": "string",  // URL to upload the file
+  "file_id": "string",  // File ID for the uploaded file
+  "download_url": "string"  // Download URL for the file
+}`
+```
+#### 401 Invalid or Expired Token
+
+
+
+```json
+
+`Invalid or expired token`
+```
+
+#### 500 Error Generating Upload URL
+
+
+
+```json
+
+`{
+  "error": "string"  // Error message detailing why the URL generation failed
+}`
+```
