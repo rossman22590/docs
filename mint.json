@@ -63,7 +63,8 @@
     {
       "group": "Plus",
       "pages": [
-        "aitutor/plus"
+        "aitutor/plus",
+        "aitutor/personalities"
       ],
       "icon": "image",
       "iconType": "solid"
