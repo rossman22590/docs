@@ -58,7 +58,7 @@
       ]
     },
     {
-      "group": "Image Generation",
+      "group": "Pixio/Image Generation",
       "pages": [
         "essentials/markdown",
         "essentials/code",
