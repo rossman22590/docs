@@ -1,0 +1,36 @@
+Adding a Persona
+================
+
+### Introduction to Adding a Persona in MultiBot
+
+MultiBot offers a versatile platform for creating and managing multiple chatbots, each with its unique personality and capabilities. Personalizing your chatbot with a specific persona is crucial for enhancing user interaction and ensuring your bot aligns with your brand or intended purpose. Whether you're aiming for a friendly, professional, or quirky chatbot, adding a persona is a straightforward process within MultiBot. For users with AI Tutor Plus, the persona creator feature further simplifies this process, allowing for even more detailed and nuanced personas based on custom options.
+
+### How to Add a Persona in MultiBot
+
+-   Access Settings: Start by locating the settings icon at the top of the MultiBot interface. This icon is your gateway to customizing your chatbot's settings and persona.
+
+    ![](https://docs.myapps.ai/storage/page_media/aba0cb82-026f-4275-bce9-89c7d70f8a30.png)
+-   Enter Chatbot Name: Once you've opened the settings, enter the name of your chatbot. This name will be the identity of your bot across interactions, so choose something that reflects its persona and purpose.
+
+-   Add Your Persona under Custom Instructions: Below the chatbot's name, you'll find the option to add your persona under "Custom Instructions." This is where you can define the characteristics, tone, and behavior of your chatbot. Be as detailed as possible to give your chatbot a distinct and engaging personality.
+
+-   You can also adjust the "temperature", which determines how on topic your chat bot will be or how off topic it can be. Feel free to play around with the settings until your chat bot responds in the manner you like.
+
+    ![](https://docs.myapps.ai/storage/page_media/735b0001-0c7a-46a1-91db-e7614518e17a.png)
+-   Using AI Tutor Plus for Persona Creation: If you have access to AI Tutor Plus, take advantage of the persona creator feature. This tool allows you to generate a persona using the "Custom" option, providing a guided approach to defining your chatbot's personality traits, preferences, and interaction style.
+
+-   Crafting Your Own Prompt: For those without AI Tutor Plus, fear not. You can still come up with your own prompt to add to your chat persona. Think about how you want your chatbot to interact with users, its knowledge base, and any unique quirks or phrases it might use. Incorporate these elements into your custom instructions to bring your chatbot's persona to life.
+
+### Tips for Creating an Effective Chatbot Persona
+
+-   Define Clear Characteristics: Determine the key traits of your chatbot's persona, such as friendly, authoritative, humorous, or empathetic. These characteristics should guide all interactions.
+
+-   Consider Your Audience: Tailor your chatbot's persona to match the expectations and preferences of your target audience. A well-aligned persona can significantly enhance user engagement.
+
+-   Be Consistent: Ensure that your chatbot's persona is consistent across all interactions. Consistency helps build trust and familiarity with users.
+
+-   Iterate and Improve: Don't hesitate to refine your chatbot's persona based on user feedback and interaction patterns. A persona can evolve over time to better meet user needs.
+
+### Conclusion
+
+Adding a persona to your MultiBot chatbot is a crucial step in creating a memorable and engaging user experience. Whether you're leveraging the AI Tutor Plus persona creator or crafting your own custom instructions, defining a clear and consistent persona can transform how users perceive and interact with your chatbot. By following the steps outlined above and considering the tips for creating an effective persona, you can ensure your chatbot stands out and effectively communicates your intended message or brand identity.
