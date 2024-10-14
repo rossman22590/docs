@@ -58,7 +58,19 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Image Generation",
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation",
+        "essentials/reusable-snippets",
+        "video/vidcraft-ultra"
+      ]
+    },
+        {
+      "group": "Video Generation",
       "pages": [
         "essentials/markdown",
         "essentials/code",
