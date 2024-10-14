@@ -57,18 +57,33 @@
         "development"
       ]
     },
+{
+  "group": "AI Tutor",
+  "pages": [
     {
-      "group": "AI Tutor",
+      "group": "Plus",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets",
-        "video/vidcraft-ultra"
+        "plus/markdown",
+        "plus/code",
+        "plus/images"
       ]
     },
+    {
+      "group": "Premium",
+      "pages": [
+        "premium/settings",
+        "premium/navigation",
+        "premium/reusable-snippets"
+      ]
+    },
+    {
+      "group": "Ultra",
+      "pages": [
+        "ultra/vidcraft-ultra"
+      ]
+    }
+  ]
+},
         {
   "group": "Pixio",
   "pages": [
