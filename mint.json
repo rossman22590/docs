@@ -75,7 +75,7 @@
             {
               "group": "Multibot",
               "pages": [
-                "premium/multibot"
+                "premium/multibot/multibot"
               ]
             },
             "aitutor/personalities"
