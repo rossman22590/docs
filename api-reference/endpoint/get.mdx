@@ -1,7 +1,7 @@
-title: 'Get Workflow Run Output'\
+---
+title: 'Get Workflow Run Output'
 openapi: 'GET /run'
-
-* * * * *
+---
 
 ### Description
 
@@ -15,9 +15,8 @@ This endpoint retrieves the output of a workflow run by providing the `run_id`.
 
 #### 200 OK
 
-json
+```json
 
-Copy code
 
 `{
   "id": "string",  // Run ID
@@ -34,32 +33,29 @@ Copy code
   "created_at": "string",  // Creation timestamp
   "started_at": "string"  // Start timestamp
 }`
-
+```
 #### 400 Workflow Not Found
 
-json
-
-Copy code
+```json
 
 `{
   "code": "400",
   "message": "Workflow not found"
 }`
-
+```
 #### 401 Invalid or Expired Token
 
-text
 
-Copy code
+```json
 
 `Invalid or expired token`
 
+```
 #### 500 Error Getting Output
 
-json
-
-Copy code
+```json
 
 `{
   "error": "string"  // Error message detailing why the output retrieval failed
 }`
+```
