@@ -107,7 +107,9 @@
            "icon": "bolt",
           "iconType": "solid"
             },
-            "aitutor/personalities"
+            "aitutor/personalities",
+            "premium/prompt-gallery",
+            "premium/magic-ai"
           ],   
            "icon": "code"
         },
@@ -123,8 +125,8 @@
            "icon": "robot",
           "iconType": "solid"
             },
-            "premium/prompt-gallery",
-            "premium/magic-ai"
+            "premium/beam"
+        
           ],   
            "icon": "rocket"
         }
