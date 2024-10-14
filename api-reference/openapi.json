@@ -1,1 +1,195 @@
-{"swagger":"2.0","info":{"version":"8.15.0","title":"@fastify/swagger"},"definitions":{},"paths":{"/bot/{id}":{"post":{"summary":"API to send message to bot","tags":["Widget"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["message"],"properties":{"message":{"type":"string"},"history":{"type":"array"}}}},{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/bot/{id}/stream":{"post":{"summary":"API to get stream of message from bot","tags":["Widget"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/bot/{id}/style":{"get":{"summary":"API to get style of widget","tags":["Widget"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/bot/{id}/tts":{"post":{"summary":"API to get TTS of message","tags":["Widget"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["id"],"properties":{"id":{"type":"string"}}}},{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/bot/{id}/api":{"post":{"summary":"Public API to send message to bot on widget","tags":["Widget"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["message"],"properties":{"message":{"type":"string"},"history":{"type":"array","default":[]},"history_id":{"type":"string"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"x-api-key"}],"responses":{"200":{"description":"Default Response"}}}},"/bot/{id}/login":{"post":{"summary":"API to login bot","tags":["Widget"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["password","user_id"],"properties":{"password":{"type":"string"},"user_id":{"type":"string"}}}},{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/admin/dialoqbase-settings":{"get":{"summary":"API to get dialoqbase settings","tags":["Admin"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"noOfBotsPerUser":{"type":"number"},"allowUserToCreateBots":{"type":"boolean"},"allowUserToRegister":{"type":"boolean"},"defaultChunkSize":{"type":"number"},"defaultChunkOverlap":{"type":"number"},"defaultChatModel":{"type":"string"},"defaultEmbeddingModel":{"type":"string"},"dynamicallyFetchOllamaModels":{"type":"boolean"},"hideDefaultModels":{"type":"boolean"},"ollamaURL":{"type":"string"},"usePuppeteerFetch":{"type":"boolean"},"fileUploadSizeLimit":{"type":"number"},"refetchDatasource":{"type":"boolean"}}}}}},"post":{"summary":"API to update dialoqbase settings","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"noOfBotsPerUser":{"type":"number"},"allowUserToCreateBots":{"type":"boolean"},"allowUserToRegister":{"type":"boolean"},"dynamicallyFetchOllamaModels":{"type":"boolean"},"defaultChatModel":{"type":"string"},"defaultEmbeddingModel":{"type":"string"},"hideDefaultModels":{"type":"boolean"},"ollamaURL":{"type":"string"},"usePuppeteerFetch":{"type":"boolean"},"fileUploadSizeLimit":{"type":"number"},"refetchDatasource":{"type":"boolean"}}}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"message":{"type":"string"}}}}}}},"/api/v1/admin/rag-settings":{"post":{"summary":"API to update dialoqbase RAG settings","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"defaultChunkSize":{"type":"number"},"defaultChunkOverlap":{"type":"number"}},"required":["defaultChunkSize","defaultChunkOverlap"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"message":{"type":"string"}}}}}}},"/api/v1/admin/users":{"get":{"summary":"API to get all users","tags":["Admin"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response","schema":{"type":"array","items":{"type":"object","properties":{"user_id":{"type":"number"},"username":{"type":"string"},"email":{"type":"string"},"is_admin":{"type":"boolean"},"bots":{"type":"number"},"createdAt":{"type":"string"}}}}}}}},"/api/v1/admin/register-user":{"post":{"summary":"API to register user by admin","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"username":{"type":"string"},"email":{"type":"string"},"password":{"type":"string"},"return_id":{"type":"boolean"}},"required":["username","email","password"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"message":{"type":"string"},"user_id":{"type":"string"},"api_key":{"type":"string"}}}}}}},"/api/v1/admin/reset-user-password":{"post":{"summary":"API to reset user password by admin","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"user_id":{"type":"number"},"new_password":{"type":"string"}},"required":["user_id","new_password"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"message":{"type":"string"}}}}}}},"/api/v1/admin/models":{"get":{"summary":"API to get all models","tags":["Admin"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"post":{"summary":"API to save model from inputed url","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"url":{"type":"string"},"model_id":{"type":"string"},"name":{"type":"string"},"stream_available":{"type":"boolean","default":false},"api_key":{"type":"string"},"api_type":{"type":"string"}},"required":["model_id","stream_available","api_type"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/admin/models/fetch":{"post":{"summary":"API to fetch avialable model from inputed url","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"url":{"type":"string"},"api_key":{"type":"string"},"api_type":{"type":"string"},"ollama_url":{"type":"string"}}}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/admin/models/delete":{"post":{"summary":"API to toogle model","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"id":{"type":"number"}},"required":["id"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/admin/models/hide":{"post":{"summary":"API to toogle model","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"id":{"type":"number"}},"required":["id"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/admin/models/embedding":{"post":{"summary":"API to save embedding model from inputed url","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"url":{"type":"string"},"api_key":{"type":"string"},"api_type":{"type":"string"},"model_id":{"type":"string"},"model_name":{"type":"string"}},"required":["api_type","model_id","model_name"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/admin/user/delete":{"delete":{"summary":"API to delete user","tags":["Admin"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"user_id":{"type":"number"}},"required":["user_id"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"message":{"type":"string"}}}}}}},"/api/v1/bot/":{"post":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"content":{"type":"string"},"type":{"type":"string","enum":["text","website","crawl","github","youtube","rest","sitemap"]},"name":{"type":"string"},"embedding":{"type":"string"},"model":{"type":"string"},"maxDepth":{"type":"number"},"maxLinks":{"type":"number"},"options":{"type":"object"}}}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"get":{"summary":"API to get all bots","tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/embed":{"get":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/source":{"get":{"tags":["Bot"],"parameters":[{"type":"number","default":1,"required":false,"in":"query","name":"page"},{"type":"number","default":10,"required":false,"in":"query","name":"limit"},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"post":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["content","type"],"properties":{"content":{"type":"string"},"type":{"type":"string","enum":["text","website","crawl","github","youtube","rest","sitemap"]},"maxDepth":{"type":"number"},"maxLinks":{"type":"number"},"options":{"type":"object"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}":{"get":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"delete":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"put":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"name":{"type":"string"},"temperature":{"type":"number"},"model":{"type":"string"},"streaming":{"type":"boolean"},"questionGeneratorPrompt":{"type":"string"},"qaPrompt":{"type":"string"},"showRef":{"type":"boolean"},"use_hybrid_search":{"type":"boolean"},"bot_protect":{"type":"boolean"},"use_rag":{"type":"boolean"},"bot_model_api_key":{"type":"string"},"noOfDocumentsToRetrieve":{"type":"number"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/source/{sourceId}/refresh":{"post":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/source/{sourceId}":{"delete":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/upload":{"post":{"summary":"API to upload files","tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/source/upload":{"post":{"summary":"API to upload files","tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"},{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/config":{"get":{"summary":"API to get bot configuraion","tags":["Bot"],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/settings":{"get":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{bot_id}/copy":{"post":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"bot_id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/api":{"post":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"name":{"type":"string"},"embedding":{"type":"string"},"model":{"type":"string"},"question_generator_prompt":{"type":"string"},"system_prompt":{"type":"string"},"temperature":{"type":"number"},"options":{"type":"object","properties":{"noOfDocumentsToRetrieve":{"type":"number"},"noOfChatHistoryInContext":{"type":"number"},"semanticSearchSimilarityScore":{"type":"string","enum":["none","0.2","0.5","0.7"],"default":"none"},"autoResetSession":{"type":"boolean","default":false},"internetSearchEnabled":{"type":"boolean","default":false},"use_hybrid_search":{"type":"boolean","default":false},"autoSyncDataSources":{"type":"boolean","default":false}}}}}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/source/bulk":{"post":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"array","items":{"type":"object","properties":{"content":{"type":"string"},"type":{"type":"string","enum":["text","website","crawl","github","youtube","rest","sitemap"]},"maxDepth":{"type":"number"},"maxLinks":{"type":"number"},"options":{"type":"object"}}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/source/upload/bulk":{"post":{"summary":"API to upload files as source","tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"},{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/chat":{"post":{"summary":"API to send message to bot","tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["message"],"properties":{"message":{"type":"string"},"history":{"type":"array","default":[]},"history_id":{"type":"string"},"stream":{"type":"boolean"},"knowledge_base_ids":{"type":"array","default":[]}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/is-ready":{"get":{"tags":["Bot"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/update":{"put":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"name":{"type":"string"},"model":{"type":"string"},"question_generator_prompt":{"type":"string"},"system_prompt":{"type":"string"},"temperature":{"type":"number"},"streaming":{"type":"boolean"},"use_hybrid_search":{"type":"boolean"},"bot_protect":{"type":"boolean"},"bot_model_api_key":{"type":"string"}}}},{"type":"string","required":true,"in":"header","name":"Authorization"},{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/password":{"put":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"publicBotPwdProtected":{"type":"boolean"},"publicBotPwd":{"type":"string"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/{id}/search":{"post":{"tags":["Bot"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"query":{"type":"string"},"total_results":{"type":"number","default":10}},"required":["query"]}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/openai/chat/completions":{"post":{"tags":["OpenAI"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["messages","model"],"properties":{"messages":{"type":"array","items":{"type":"object","required":["role","content"],"properties":{"role":{"type":"string","enum":["user","assistant"]},"content":{"type":"string"}}}},"model":{"type":"string"},"stream":{"type":"boolean"},"temperature":{"type":"number"},"tools":{"type":"array","items":{"type":"object","required":["type"],"properties":{"type":{"type":"string"},"value":{"type":"array","items":{"type":"string"}}}},"default":[]}}}}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/voice/11labs/tts":{"post":{"summary":"API to get voice from text","tags":["Voice"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"text":{"type":"string"},"voice_id":{"type":"string"}},"required":["text","voice_id"]}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/yt/transcript":{"get":{"summary":"API to get available transcript from youtube video url","tags":["Youtube"],"parameters":[{"type":"string","required":true,"in":"query","name":"url"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/user/login":{"post":{"summary":"API to login user","tags":["User"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["username","password"],"properties":{"username":{"type":"string"},"password":{"type":"string"}}}}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/user/me":{"post":{"summary":"API to update user profile","tags":["User"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["username","email"],"properties":{"username":{"type":"string"},"email":{"type":"string"}}}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"get":{"summary":"Get user profile","tags":["User"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/user/update-password":{"post":{"summary":"API to update user password","tags":["User"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["oldPassword","newPassword"],"properties":{"oldPassword":{"type":"string"},"newPassword":{"type":"string"}}}},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/user/info":{"get":{"summary":"API to check if registeration is allowed","tags":["User"],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"isRegistrationAllowed":{"type":"boolean"}}}}}}},"/api/v1/user/register":{"post":{"summary":"API to register user","tags":["User"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["username","password","email"],"properties":{"username":{"type":"string"},"password":{"type":"string"},"email":{"type":"string"}}}}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/user/is-admin":{"get":{"summary":"Check if user is admin","tags":["User"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/user/api-key":{"post":{"summary":"Create new api key","tags":["User"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["name"],"properties":{"name":{"type":"string"}}}}],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"data":{"type":"object","properties":{"api_key":{"type":"string"}}}}}}}},"get":{"summary":"Get all api keys by user","tags":["User"],"responses":{"200":{"description":"Default Response","schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"id":{"type":"number"},"name":{"type":"string"},"api_key":{"type":"string"},"createdAt":{"type":"string"}}}}}}}}}},"/api/v1/user/api-key/{id}":{"delete":{"summary":"Delete api key","tags":["User"],"parameters":[{"type":"number","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/appearance/{id}":{"get":{"summary":"API to get bot appearance by id","tags":["Bot","Appearance"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"post":{"summary":"API to save bot appearance by id","tags":["Bot","Appearance"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"background_color":{"type":"string"},"bot_name":{"type":"string"},"chat_bot_bubble_style":{"type":"object","properties":{"background_color":{"type":"string"},"text_color":{"type":"string"}}},"chat_human_bubble_style":{"type":"object","properties":{"background_color":{"type":"string"},"text_color":{"type":"string"}}},"first_message":{"type":"string"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/integration/{id}":{"post":{"summary":"API to create bot integration","tags":["Bot","Integration"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["provider","value"],"properties":{"provider":{"type":"string","enum":["telegram","discord","whatsapp","slack","website"]},"value":{"type":"object"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"get":{"summary":"Get all bot channels","tags":["Bot","Integration"],"parameters":[{"type":"string","required":true,"in":"header","name":"Authorization"},{"type":"string","required":true,"in":"path","name":"id"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/integration/{id}/toggle":{"post":{"summary":"API to pause or resume bot integration","tags":["Bot","Integration"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["provider"],"properties":{"provider":{"type":"string","enum":["telegram","discord","whatsapp","slack","website"]}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/integration/{id}/api":{"get":{"summary":"API to get API key for bot integration","tags":["Bot","Integration"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"post":{"summary":"API to generate API key for bot integration","tags":["Bot","Integration"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"put":{"summary":"API to regenerate API key for bot integration","tags":["Bot","Integration"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/playground/{id}":{"post":{"summary":"API to send message to bot on playground","tags":["Bot","Playground"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["message"],"properties":{"message":{"type":"string"},"history":{"type":"array"},"history_id":{"type":"string"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/playground/{id}/stream":{"post":{"summary":"API to get stream of message from bot on playground","tags":["Bot","Playground"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/playground/{id}/history":{"get":{"summary":"API to get history of message from bot on playground","tags":["Bot","Playground"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/playground/{id}/history/{history_id}":{"get":{"summary":"API to get history of message from bot on playground by history id","tags":["Bot","Playground"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"path","name":"history_id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/playground/{id}/voice":{"post":{"summary":"API to get audio settings from bot on playground","tags":["Bot","Playground"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["type","enabled"],"properties":{"type":{"type":"string"},"enabled":{"type":"boolean"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/playground/history/{id}":{"delete":{"summary":"API to delete bot playground by id","tags":["Bot","Playground"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}},"put":{"summary":"API to update bot playground title by id","tags":["Bot","Playground"],"parameters":[{"name":"body","in":"body","schema":{"type":"object","required":["title"],"properties":{"title":{"type":"string"}}}},{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/conversations/{id}/{type}":{"get":{"summary":"Get chat history by intergation type","tags":["Bot","Conversation"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","enum":["telegram","discord","whatsapp","slack","website"],"required":true,"in":"path","name":"type"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}},"/api/v1/bot/conversations/{id}/{type}/{chat_id}":{"get":{"summary":"Get chat history by chat id","tags":["Bot","Conversation"],"parameters":[{"type":"string","required":true,"in":"path","name":"id"},{"type":"string","enum":["telegram","discord","whatsapp","slack","website"],"required":true,"in":"path","name":"type"},{"type":"string","required":true,"in":"path","name":"chat_id"},{"type":"string","required":true,"in":"header","name":"Authorization"}],"responses":{"200":{"description":"Default Response"}}}}}}
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI Plant Store",
+    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "license": {
+      "name": "MIT"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://sandbox.mintlify.com"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/plants": {
+      "get": {
+        "description": "Returns all plants from the system that the user has access to",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of results to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Plant response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Plant"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Creates a new plant in the store",
+        "requestBody": {
+          "description": "Plant to add to the store",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPlant"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "plant response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plant"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plants/{id}": {
+      "delete": {
+        "description": "Deletes a single plant based on the ID supplied",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of plant to delete",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Plant deleted",
+            "content": {}
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Plant": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the plant",
+            "type": "string"
+          },
+          "tag": {
+            "description": "Tag to specify the type",
+            "type": "string"
+          }
+        }
+      },
+      "NewPlant": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Plant"
+          },
+          {
+            "required": [
+              "id"
+            ],
+            "type": "object",
+            "properties": {
+              "id": {
+                "description": "Identification number of the plant",
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ]
+      },
+      "Error": {
+        "required": [
+          "error",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}
