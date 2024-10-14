@@ -99,9 +99,25 @@
             "aitutor/personalities"
           ],   
            "icon": "code"
+        },
+         {
+          "group": "Ultra",
+          "pages": [
+            {
+              "group": "Multibot",
+              "pages": [
+                "premium/multibot-intro"
+
+              ],
+           "icon": "robot",
+          "iconType": "solid"
+            },
+            "aitutor/personalities"
+          ],   
+           "icon": "code"
         }
       ]
-    },
+    }, 
     {
       "group": "Pixio",
       "pages": [
