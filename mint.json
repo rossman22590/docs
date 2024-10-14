@@ -70,17 +70,31 @@
       ]
     },
         {
-      "group": "Pixio",
+  "group": "Pixio",
+  "pages": [
+    "essentials/markdown",
+    "essentials/code",
+    "essentials/settings",
+    "essentials/navigation",
+    "essentials/reusable-snippets",
+    {
+      "group": "Images",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets",
-        "video/vidcraft-ultra"
-      ]
+        "essentials/images"
+      ],
+      "icon": "image",
+      "iconType": "solid"
     },
+    {
+      "group": "Video",
+      "pages": [
+        "video/vidcraft-ultra"
+      ],
+      "icon": "video",
+      "iconType": "solid"
+    }
+  ]
+},
     {
       "group": "API Documentation",
       "pages": [
