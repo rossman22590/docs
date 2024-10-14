@@ -18,39 +18,54 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:support@myapps.ai"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Go to Dashboard",
+    "url": "https://dashboard.myapps.ai"
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "API References",
+      "url": "https://myapps.ai/api-references"
+    },
+    {
+      "name": "AI Tutor Content",
+      "url": "https://myapps.ai/aitutor-content"
+    },
+    {
+      "name": "Pixio Blog",
+      "url": "https://myapps.ai/blog"
     }
   ],
+  "primaryTab": {
+    "name": "Home"
+  },
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "AI Tutor API References",
+      "icon": "code",
+      "url": "https://myapps.ai/api-references"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Pixio Content",
+      "icon": "pencil",
+      "url": "https://myapps.ai/content"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Contact us",
+      "icon": "envelope",
+      "url": "https://myapps.ai/contact-us"
     }
   ],
+  "topAnchor": {
+    "name": "Home",
+    "icon": "building"
+  },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Get Started with AI Tutor",
       "pages": [
         "introduction",
         "quickstart",
@@ -71,10 +86,14 @@
         },
         {
           "group": "Premium",
-                    "icon": "image",
-          "iconType": "solid",
           "pages": [
-            "premium/multibot/multibot-intro",
+            {
+              "group": "Multibot",
+              "pages": [
+                "premium/multibot-intro"
+
+              ]
+            },
             "aitutor/personalities"
           ]
         }
@@ -132,5 +151,10 @@
         "api-reference/endpoint/upload"
       ]
     }
-  ]
+  ],
+  "footerSocials": {
+    "x": "https://x.com/myapps_ai",
+    "github": "https://github.com/myappsai",
+    "linkedin": "https://linkedin.com/company/myappsai"
+  }
 }
