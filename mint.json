@@ -72,7 +72,7 @@
     {
       "group": "Premium",
       "pages": [
-        "video/vidcraft-ultra"
+        "premium/multibot"
       ],
       "icon": "video",
       "iconType": "solid"
