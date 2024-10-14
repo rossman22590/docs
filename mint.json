@@ -86,7 +86,6 @@
         },
         {
           "group": "Premium",
-          "icon": "code",
           "pages": [
             {
               "group": "Multibot",
@@ -96,7 +95,8 @@
               ]
             },
             "aitutor/personalities"
-          ]
+          ],   
+           "icon": "code"
         }
       ]
     },
