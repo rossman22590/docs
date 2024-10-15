@@ -100,8 +100,8 @@
             {
               "group": "Bookify",
               "pages": [
-                "premium/workspace-instructions",
-                "premium/premium-assistants"
+                "premium/bookify-basics",
+                "premium/bookify-advanced"
               ],
            "icon": "robot",
           "iconType": "solid"
