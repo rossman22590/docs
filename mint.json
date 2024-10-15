@@ -131,7 +131,7 @@
         {
           "group": "Images",
           "pages": [
-            "essentials/images"
+            "essentials/pixcraft"
           ],
           "icon": "image",
           "iconType": "solid"
