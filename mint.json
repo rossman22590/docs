@@ -166,7 +166,7 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Pixio API Endpoint",
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/auth",
