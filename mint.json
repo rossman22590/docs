@@ -83,7 +83,8 @@
               "pages": [
                 "premium/multibot-intro",
                 "premium/adding-a-persona-multibot",
-                "premium/image-gen-multibot"
+                "premium/image-gen-multibot",
+                "premium/multibot-vendors"
               ],
            "icon": "robot",
           "iconType": "solid"
