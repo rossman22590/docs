@@ -27,10 +27,6 @@
   },
   "tabs": [
     {
-      "name": "API References",
-      "url": "https://myapps.ai/api-references"
-    },
-    {
       "name": "Pixio",
       "url": "https://pixio.myapps.ai"
     },
