@@ -94,7 +94,8 @@
               "pages": [
                 "premium/botcraft-pro",
                 "premium/botcraft-pro-settings",
-                "premium/botcraft-bot-setup"
+                "premium/botcraft-bot-setup",
+                "premium/botcraft-add-source"
               ],
            "icon": "bolt",
           "iconType": "solid"
