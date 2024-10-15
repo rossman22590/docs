@@ -1,0 +1,152 @@
+Bookify Advanced: Comprehensive User Guide
+==========================================
+
+Introduction
+
+Bookify Advanced is a powerful tool within the AI Tutor platform that allows you to write full books using advanced AI technology. This guide will provide an in-depth explanation of how to use the application based on the interface shown in the image.
+
+Accessing Bookify Advanced
+
+1\. Log into your AI Tutor account.
+
+2\. Navigate to the Bookify Advanced feature.
+
+3\. Ensure you're using the advanced mode, which offers additional features compared to the streamlined version.
+
+Interface Overview
+
+The interface is divided into several key sections:
+
+1\. Model Selection
+
+2\. Book Creation Process
+
+3\. Topic Definition
+
+4\. Additional Instructions
+
+5\. Writing Style and Complexity Settings
+
+6\. Seed Content
+
+7\. File Upload
+
+Let's explore each of these in detail.
+
+1\. Model Selection
+
+At the top of the interface, you'll see "Select AI Models" with a notification:
+
+"Advanced Mode is in beta: You're using a version with experimental features."
+
+This indicates that you're using cutting-edge AI technology that may include new, experimental capabilities.
+
+2\. Book Creation Process
+
+The book creation process is divided into three main parts, each with its own AI model selection:
+
+a) For creating book title:
+
+- Model: llama3-70b-8192 (default)
+
+- You can change this by clicking on the dropdown menu if other options become available.
+
+b) For creating book structure:
+
+- Model: llama3-70b-8192 (default)
+
+- Again, changeable via dropdown if needed.
+
+c) For creating book content:
+
+- Model: llama3-70b-8192 (default)
+
+- Same dropdown option for potential changes.
+
+3\. Topic Definition
+
+In the main content area, you'll see a section labeled "Topic" with the instruction:
+
+"What do you want the book to be about?"
+
+- Enter your desired book topic in the text field provided.
+
+- Be as specific and detailed as possible to guide the AI in generating relevant content.
+
+4\. Additional Instructions
+
+Below the topic, there's an "Additional Instructions" section:
+
+"Provide any specific guidelines or preferences for the book's content"
+
+- Use this field to give more detailed instructions about what you want in your book.
+
+- In the example shown, the user has provided specific instructions for a strength and conditioning book:
+
+"This is a strength and conditioning book for people forty years old and up. I want the book to be in-depth, written so anybody 18-90 can understand, providing tangible information, loaded with useful, relatable information, exercises, exercise routines for each muscle group and body part, from head to toe."
+
+5\. Writing Style and Complexity Settings
+
+There are two important settings you can adjust:
+
+Writing Style:
+
+- A dropdown menu allows you to select the writing style.
+
+- In the image, it's set to "Casual", but you can likely choose other styles like formal, academic, etc.
+
+Complexity Level:
+
+- A slider allows you to set the complexity of the content.
+
+- It ranges from "Beginner" to "Expert" with several levels in between.
+
+- Adjust this based on your target audience's knowledge level.
+
+6\. Seed Content
+
+This section allows you to provide initial content or ideas for the AI to work with:
+
+"Provide any existing notes or content to be incorporated into the book"
+
+In the example, the user has provided detailed seed content about food:
+
+"When it comes to cooking delicious and nutritious meals at home, there are many great options to consider. Start with versatile proteins like chicken, fish, or tofu, which can be prepared in countless ways. Incorporate a variety of colorful vegetables such as bell peppers, broccoli, and carrots for added nutrients and flavor. Whole grains like quinoa or brown rice make excellent bases for many dishes. For quick and easy meals, stir-fries, one-pot pastas, or sheet pan dinners are excellent choices. Don't forget to experiment with herbs and spices to enhance flavors without adding excess calories. Lastly, cooking methods like roasting, grilling, or steaming can help retain nutrients while creating delicious meals. Remember, the key to good home cooking is balancing nutrition, flavor, and convenience to suit your lifestyle and preferences."
+
+Use this section to:
+
+- Provide specific examples
+
+- Outline key points you want covered
+
+- Give any other relevant information that will help shape the book's content
+
+7\. File Upload
+
+At the bottom of the interface, there's a file upload section:
+
+"Upload a text file with your seed content (optional)"
+
+- You can drag and drop a file here or click to browse your files.
+
+- This is useful if you have extensive notes or content in a separate document that you want to incorporate.
+
+Generating Your Book
+
+Once you've filled out all the necessary sections:
+
+1\. Review your inputs to ensure everything is as you want it.
+
+2\. Click the "End Generation and Download Book" button at the top of the interface.
+
+3\. The AI will then process your inputs and generate your book.
+
+4\. Once complete, you'll be able to download and review your AI-generated book.
+
+Additional Notes
+
+- The interface mentions "Visit here to use the streamlined version." This suggests there's a simpler version of Bookify available if you don't need all the advanced features.
+
+- Remember that while this tool is powerful, it's always important to review and edit the AI-generated content to ensure it meets your standards and accuracy requirements.
+
+By following these detailed steps and utilizing all the features Bookify Advanced offers, you can create comprehensive, tailored books on a wide range of topics using cutting-edge AI technology.
