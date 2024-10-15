@@ -92,7 +92,8 @@
               "group": "Botcraft Pro",
               "pages": [
                 "premium/botcraft-pro",
-                "premium/botcraft-pro-settings"
+                "premium/botcraft-pro-settings",
+                "premium/botcraft-bot-setup"
               ],
            "icon": "bolt",
           "iconType": "solid"
