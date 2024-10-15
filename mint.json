@@ -98,6 +98,15 @@
           "iconType": "solid"
             },
             {
+              "group": "Bookify",
+              "pages": [
+                "premium/workspace-instructions",
+                "premium/premium-assistants"
+              ],
+           "icon": "robot",
+          "iconType": "solid"
+            },
+            {
               "group": "Botcraft Pro",
               "pages": [
                 "premium/botcraft-pro",
