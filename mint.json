@@ -168,12 +168,6 @@
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
       "group": "Endpoint Examples",
       "pages": [
         "api-reference/endpoint/get",
@@ -184,8 +178,8 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/myapps_ai",
-    "github": "https://github.com/myappsai",
-    "linkedin": "https://linkedin.com/company/myappsai"
+    "x": "https://x.com/tsi_org",
+    "github": "https://github.com/Tech-In-Schools-Initiative",
+  
   }
 }
