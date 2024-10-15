@@ -132,7 +132,9 @@
           "group": "Images",
           "pages": [
             "img-gen/pixcraft",
-            "img-gen/turbocraft"
+            "img-gen/turbocraft",
+            "img-gen/dalle",
+            "img-gen/upscale-creative"
           ],
           "icon": "image",
           "iconType": "solid"
