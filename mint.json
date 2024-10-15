@@ -130,7 +130,9 @@
            "icon": "robot",
           "iconType": "solid"
             },
-            "premium/beam"
+            "premium/beam",
+            "premium/merging-in-beam",
+            "premium/multibot-ultra-adding-assistants"
         
           ],   
            "icon": "rocket"
