@@ -100,9 +100,9 @@
            "icon": "bolt",
           "iconType": "solid"
             },
-            "aitutor/personalities",
             "premium/prompt-gallery",
-            "premium/magic-ai"
+            "premium/magic-ai",
+            "premium/team-ai"
           ],   
            "icon": "hat-wizard"
         },
