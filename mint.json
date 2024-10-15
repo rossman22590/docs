@@ -88,6 +88,16 @@
               ],
            "icon": "robot",
           "iconType": "solid"
+            },{
+              "group": "AI Tutor Premium App",
+              "pages": [
+                "premium/multibot-intro",
+                "premium/adding-a-persona-multibot",
+                "premium/image-gen-multibot",
+                "premium/multibot-vendors"
+              ],
+           "icon": "robot",
+          "iconType": "solid"
             },
             {
               "group": "Botcraft Pro",
