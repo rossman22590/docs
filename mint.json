@@ -134,7 +134,8 @@
             "img-gen/pixcraft",
             "img-gen/turbocraft",
             "img-gen/dalle",
-            "img-gen/upscale-creative"
+            "img-gen/upscale-creative",
+            "img-gen/faceswap"
           ],
           "icon": "image",
           "iconType": "solid"
