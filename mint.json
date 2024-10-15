@@ -131,7 +131,8 @@
         {
           "group": "Images",
           "pages": [
-            "img-gen/pixcraft"
+            "img-gen/pixcraft",
+            "img-gen/turbocraft"
           ],
           "icon": "image",
           "iconType": "solid"
