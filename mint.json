@@ -102,7 +102,11 @@
             },
             "premium/prompt-gallery",
             "premium/magic-ai",
-            "premium/team-ai"
+            "premium/team-ai",
+            "premium/ai-search",
+            "premium/charachter-ai",
+            "premium/typebot",
+            "premium/datavibes-pro"
           ],   
            "icon": "hat-wizard"
         },
