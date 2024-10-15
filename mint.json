@@ -111,10 +111,12 @@
             "premium/prompt-gallery",
             "premium/magic-ai",
             "premium/team-ai",
-            "premium/ai-search",
+            "premium/ai-research",
             "premium/character-ai",
             "premium/typebot",
-            "premium/datavibes-pro"
+            "premium/datavibes-pro",
+            "premium/agent-builder"
+            
           ],   
            "icon": "hat-wizard"
         },
