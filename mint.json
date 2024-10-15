@@ -91,7 +91,8 @@
             {
               "group": "Botcraft Pro",
               "pages": [
-                "premium/botcraft-pro"
+                "premium/botcraft-pro",
+                "premium/botcraft-pro-settings"
               ],
            "icon": "bolt",
           "iconType": "solid"
