@@ -91,10 +91,8 @@
             },{
               "group": "AI Tutor Premium App",
               "pages": [
-                "premium/multibot-intro",
-                "premium/adding-a-persona-multibot",
-                "premium/image-gen-multibot",
-                "premium/multibot-vendors"
+                "premium/workspace-instructions",
+                "premium/premium-assistants"
               ],
            "icon": "robot",
           "iconType": "solid"
