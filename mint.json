@@ -19,6 +19,10 @@
     {
       "name": "Status",
       "url": "https://ai-tutor-x-pixio.instatus.com/"
+    },
+        {
+      "name": "Feedback",
+      "url": "https://aitutorxpixio.featurebase.app/"
     }
   ],
   "topbarCtaButton": {
