@@ -244,18 +244,6 @@
         }
       ]
     },
-     {
-          "group": "Account",
-          "pages": [
-            "billing/account"
-        
-
-          ],
-          "icon": "cube",
-          "iconType": "solid"
-        }
-      ]
-    },
     {
       "group": "Pixio API Endpoint",
       "pages": [
@@ -263,6 +251,13 @@
         "api-reference/endpoint/auth",
         "api-reference/endpoint/delete",
         "api-reference/endpoint/upload"
+      ]
+    },    
+    {
+      "group": "Account",
+      "pages": [
+        "billing/account"
+
       ]
     }
   ],
