@@ -20,7 +20,7 @@
       "name": "Status",
       "url": "https://ai-tutor-x-pixio.instatus.com/"
     },
-    {
+        {
       "name": "Feedback",
       "url": "https://aitutorxpixio.featurebase.app/"
     }
@@ -90,17 +90,16 @@
                 "premium/image-gen-multibot",
                 "premium/multibot-vendors"
               ],
-              "icon": "robot",
-              "iconType": "solid"
-            },
-            {
+           "icon": "robot",
+          "iconType": "solid"
+            },{
               "group": "AI Tutor Premium App",
               "pages": [
                 "premium/workspace-instructions",
                 "premium/premium-assistants"
               ],
-              "icon": "robot",
-              "iconType": "solid"
+           "icon": "robot",
+          "iconType": "solid"
             },
             {
               "group": "Bookify",
@@ -108,8 +107,8 @@
                 "premium/bookify-basics",
                 "premium/bookify-advanced"
               ],
-              "icon": "robot",
-              "iconType": "solid"
+           "icon": "robot",
+          "iconType": "solid"
             },
             {
               "group": "Botcraft Pro",
@@ -119,8 +118,8 @@
                 "premium/botcraft-bot-setup",
                 "premium/botcraft-add-source"
               ],
-              "icon": "bolt",
-              "iconType": "solid"
+           "icon": "bolt",
+          "iconType": "solid"
             },
             "premium/prompt-gallery",
             "premium/magic-ai",
@@ -131,25 +130,28 @@
             "premium/datavibes-pro",
             "premium/agent-builder",
             "premium/ai-tutor-artifacts"
+            
           ],   
-          "icon": "hat-wizard"
+           "icon": "hat-wizard"
         },
-        {
+         {
           "group": "Ultra",
           "pages": [
             {
               "group": "Ultra Multibot",
               "pages": [
                 "premium/multibot-intro"
+
               ],
-              "icon": "robot",
-              "iconType": "solid"
+           "icon": "robot",
+          "iconType": "solid"
             },
             "premium/beam",
             "premium/merging-in-beam",
             "premium/multibot-ultra-adding-assistants"
+        
           ],   
-          "icon": "rocket"
+           "icon": "rocket"
         }
       ]
     }, 
@@ -159,46 +161,11 @@
         {
           "group": "Images",
           "pages": [
-            {
-              "group": "Generate Image",
-              "pages": [
-                "img-gen/pixcraft",
-                "img-gen/turbocraft",
-                "img-gen/turbocraft-image",
-                "img-gen/dalle",
-                "img-gen/customcraft",
-                "img-gen/imgcraft",
-                "img-gen/procraft",
-              ]
-            },
-            {
-              "group": "Edit Image",
-              "pages": [
-                "img-gen/clothes-swap",
-                "img-gen/fillcraft",
-                "img-gen/upscale-tool",
-                "img-gen/remove-background",
-                "img-gen/controlcraft",
-                "img-gen/tweakcraft",
-                "img-gen/faceswap"
-              ]
-            },
-            {
-              "group": "Restore",
-              "pages": [
-                "img-gen/restore-face",
-                "img-gen/colorize",
-                "img-gen/restore-photos"
-              ]
-            },
-            {
-              "group": "PictoCraft",
-              "pages": [
-                "img-gen/pictocraft-inpainting",
-                "img-gen/pictocraft-combining",
-                "img-gen/pictocraft-full"
-              ]
-            }
+            "img-gen/pixcraft",
+            "img-gen/turbocraft",
+            "img-gen/dalle",
+            "img-gen/upscale-creative",
+            "img-gen/faceswap"
           ],
           "icon": "image",
           "iconType": "solid"
@@ -212,8 +179,12 @@
             "video/faceswapvideo",
             "video/cartooncraft",
             "video/talkcraft",
-            "video/montioncraft-pro",
-            "video/captioncraft"
+            "video/motioncraft-pro",
+            "video/captioncraft",  
+            "video/motioncraft"
+            
+            
+
           ],
           "icon": "video",
           "iconType": "solid"
@@ -250,5 +221,6 @@
   "footerSocials": {
     "x": "https://x.com/tsi_org",
     "github": "https://github.com/Tech-In-Schools-Initiative"
+  
   }
 }
