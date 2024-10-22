@@ -172,7 +172,7 @@
                 "img-gen/procraft",
                 "img-gen/pictocraft"
               ],
-              "icon": "wand-magic-sparkles",
+              "icon": "wand-magic-sparkles"
             },
             {
               "group": "Edit Image",
@@ -185,7 +185,7 @@
                 "img-gen/tweakcraft",
                 "img-gen/faceswap"
               ],
-              "icon": "highlighter",
+              "icon": "highlighter"
             },
             {
               "group": "Restore",
@@ -194,7 +194,7 @@
                 "img-gen/colorize",
                 "img-gen/restore-photos"
               ],
-              "icon": "star",
+              "icon": "star"
             },
             {
               "group": "PictoCraft",
@@ -203,7 +203,7 @@
                 "img-gen/pictocraft-combining",
                 "img-gen/pictocraft-full"
               ],
-              "icon": "camera-retro",
+              "icon": "camera-retro"
             },
             "img-gen/drawcraft"
 
