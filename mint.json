@@ -169,7 +169,7 @@
                 "img-gen/customcraft",
                 "img-gen/imgcraft",
                 "img-gen/procraft",
-                "img-gen/pictocraft-full"
+                "img-gen/pictocraft"
               ]
             },
             {
@@ -195,8 +195,8 @@
             {
               "group": "PictoCraft",
               "pages": [
-                "img-gen/in-painting",
-                "img-gen/combining-images",
+                "img-gen/pictocraft-inpainting",
+                "img-gen/pictocraft-combining",
                 "img-gen/pictocraft-full"
               ]
             }
