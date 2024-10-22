@@ -181,10 +181,10 @@
                 {
                   "group": "FluxCraft",
                   "pages": [
-                    "img-gen/fluxcraft/fluxcraft-overview",
-                    "img-gen/fluxcraft/fluxcraft-prompt",
-                    "img-gen/fluxcraft/fluxcraft-custom",
-                    "img-gen/fluxcraft/fluxcraft-train-lora"
+                    "img-gen/fluxcraft-overview",
+                    "img-gen/fluxcraft-prompt",
+                    "img-gen/fluxcraft-custom",
+                    "img-gen/fluxcraft-train-lora"
                   ]
                 }
               ],
