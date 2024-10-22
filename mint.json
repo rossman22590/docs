@@ -141,14 +141,14 @@
             {
               "group": "Ultra Multibot",
               "pages": [
-                "premium/multibot-intro"
+                "premium/multibot-intro",
+                "premium/multibot-ultra-assistants"
               ],
               "icon": "robot",
               "iconType": "solid"
             },
             "ultra/beam-ultra",
-            "premium/merging-in-beam",
-            "premium/multibot-ultra-adding-assistants"
+            "premium/merging-in-beam"
           ],   
           "icon": "rocket"
         }
