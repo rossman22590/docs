@@ -200,7 +200,6 @@
                 "img-gen/pictocraft-full"
               ]
             }
-            "img-gen/drawcraft",
           ],
           "icon": "image",
           "iconType": "solid"
@@ -215,6 +214,7 @@
             "video/cartooncraft",
             "video/talkcraft",
             "video/motioncraft-pro",
+            "video/motioncraft",
             "video/captioncraft"
           ],
           "icon": "video",
