@@ -173,7 +173,10 @@
         {
           "group": "Video",
           "pages": [
-            "video/vidcraft-ultra"
+            "video/vidcraft-ultra",
+             "video/mixcraft"
+            
+
           ],
           "icon": "video",
           "iconType": "solid"
