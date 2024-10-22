@@ -200,7 +200,9 @@
                 "img-gen/pictocraft-combining",
                 "img-gen/pictocraft-full"
               ]
-            }
+            },
+            "img-gen/drawcraft",
+
           ],
           "icon": "image",
           "iconType": "solid"
