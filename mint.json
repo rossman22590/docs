@@ -117,7 +117,8 @@
                 "premium/botcraft-pro",
                 "premium/botcraft-pro-settings",
                 "premium/botcraft-bot-setup",
-                "premium/botcraft-add-source"
+                "premium/botcraft-add-source",
+                "premium/bocraft-pro-adding-a-rest-api"
               ],
               "icon": "bolt",
               "iconType": "solid"
