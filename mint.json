@@ -181,7 +181,7 @@
         {
           "group": "Music",
           "pages": [
-            "video/vidcraft-ultra"
+            "audio-gen/songcraft"
           ],
           "icon": "music",
           "iconType": "solid"
