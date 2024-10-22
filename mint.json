@@ -181,7 +181,8 @@
         {
           "group": "Music",
           "pages": [
-            "audio-gen/songcraft"
+            "audio-gen/songcraft",
+            "audio-gen/soundcraft"
           ],
           "icon": "music",
           "iconType": "solid"
