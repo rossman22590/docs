@@ -147,8 +147,15 @@
               "icon": "robot",
               "iconType": "solid"
             },
+            {
+              "group": "Beam",
+              "pages": [
             "ultra/beam-ultra",
             "premium/merging-in-beam"
+              ],
+              "icon": "robot",
+              "iconType": "solid"
+            }
           ],   
           "icon": "rocket"
         }
