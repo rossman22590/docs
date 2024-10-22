@@ -185,7 +185,8 @@
                     "img-gen/fluxcraft-prompt",
                     "img-gen/fluxcraft-custom",
                     "img-gen/fluxcraft-train-lora"
-                  ]
+                  ],
+                  "icon": "rocket-launch"
                 }
               ],
               "icon": "rocket-launch"
