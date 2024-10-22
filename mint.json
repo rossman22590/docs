@@ -235,7 +235,9 @@
         {
           "group": "3D",
           "pages": [
-            "3D/objectcraft"
+            "3D/objectcraft",
+            "3D/objectcraft-text"
+
           ],
           "icon": "cube",
           "iconType": "solid"
