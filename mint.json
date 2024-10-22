@@ -150,8 +150,8 @@
             {
               "group": "Beam",
               "pages": [
-            "ultra/beam-ultra",
-            "premium/merging-in-beam"
+                "ultra/beam-ultra",
+                "premium/merging-in-beam"
               ],
               "icon": "robot",
               "iconType": "solid"
@@ -177,7 +177,16 @@
                 "img-gen/customcraft",
                 "img-gen/imgcraft",
                 "img-gen/procraft",
-                "img-gen/pictocraft"
+                "img-gen/pictocraft",
+                {
+                  "group": "FluxCraft",
+                  "pages": [
+                    "img-gen/fluxcraft/fluxcraft-overview",
+                    "img-gen/fluxcraft/fluxcraft-prompt",
+                    "img-gen/fluxcraft/fluxcraft-custom",
+                    "img-gen/fluxcraft/fluxcraft-train-lora"
+                  ]
+                }
               ],
               "icon": "wand-magic-sparkles"
             },
@@ -213,7 +222,6 @@
               "icon": "camera-retro"
             },
             "img-gen/drawcraft"
-
           ],
           "icon": "image",
           "iconType": "solid"
@@ -248,18 +256,16 @@
           "pages": [
             "3D/objectcraft",
             "3D/objectcraft-text"
-
           ],
           "icon": "cube",
           "iconType": "solid"
         }
       ]
     },
-      {
+    {
       "group": "Account",
       "pages": [
         "billing/account"
-
       ]
     },
     {
