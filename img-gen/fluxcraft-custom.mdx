@@ -1,0 +1,94 @@
+---
+title: 'FluxCraft Custom: Using LoRAs'
+description: 'Enhance your AI-generated images with custom LoRAs in FluxCraft'
+icon: 'puzzle-piece'
+---
+
+### Understanding LoRAs in FluxCraft
+
+LoRAs (Low-Rank Adaptation) are powerful tools that help fine-tune AI models for specific styles, subjects, or concepts without retraining the entire model. In FluxCraft, LoRAs enable you to generate more targeted and personalized images by incorporating specialized visual elements or styles into your creations.
+
+#### Key Benefits of Using LoRAs
+<CardGroup cols={2}>
+  <Card title="Specialized Styles" icon="paintbrush">
+    Incorporate **unique artistic styles** or visual themes into your generated images.
+  </Card>
+  <Card title="Subject-Specific Details" icon="bullseye">
+    Enhance the AI's ability to generate **particular subjects or objects** with greater accuracy.
+  </Card>
+  <Card title="Customization" icon="sliders">
+    Fine-tune the **influence of the LoRA** on your generated images using scale adjustments.
+  </Card>
+  <Card title="Efficiency" icon="bolt">
+    Achieve **specialized results** without the need for extensive model retraining.
+  </Card>
+</CardGroup>
+
+#### How to Use LoRAs in FluxCraft
+
+Follow these steps to incorporate LoRAs into your image generation process.
+
+<AccordionGroup>
+  <Accordion title="Step 1: Select Custom Model" icon="list">
+    Choose the "Custom" option from the model dropdown menu.
+
+    ![Custom Model Selection](https://img.mytsi.org/i/87mt745.png)
+  </Accordion>
+  <Accordion title="Step 2: Add LoRA" icon="plus">
+    Click the "+LoRA" button to add an input field for a LoRA.
+
+    ![Add LoRA Button](https://img.mytsi.org/i/o0Vk744.png)
+  </Accordion>
+  <Accordion title="Step 3: Configure LoRA" icon="sliders">
+    Enter the LoRA link in the provided field and adjust the LoRA scale.
+
+    **LoRA Scale**: This parameter controls the strength of the LoRA's influence on the generated image. A higher scale means a stronger effect, while a lower scale results in a more subtle influence.
+  </Accordion>
+</AccordionGroup>
+
+#### Obtaining LoRA Links
+
+You can get LoRA links from two primary sources: Pixio LoRA Training and Civit AI.
+
+<AccordionGroup>
+  <Accordion title="From Pixio LoRA Training" icon="graduation-cap">
+    1. Go to the [Train Flux Lora](https://pixio.myapps.ai/loratraining) section in Pixio.
+    2. Select one of your trained LoRAs.
+    ![Select Trained LoRA](https://img.mytsi.org/i/A40B747.png)
+    3. Note the trigger word - you'll need to include this in your prompt to activate the LoRA.
+    ![Trigger Word](https://img.mytsi.org/i/aFCK748.png)
+    4. Click "Copy LoRA URL" to use in FluxCraft.
+    ![Copy LoRA URL](https://img.mytsi.org/i/nD19749.png)
+  </Accordion>
+  <Accordion title="From Civit AI" icon="globe">
+    1. Visit [Civit AI Models](https://civitai.com/models).
+    2. Use filters to select Flux.1.D, which corresponds to the model used by FluxCraft.
+    ![Filter for Flux.1.D](https://img.mytsi.org/i/PEGf750.png)
+    3. Choose a compatible LoRA.
+    4. Right-click the download button and copy the link address for a direct LoRA link.
+    ![Copy LoRA Link](https://img.mytsi.org/i/RstO751.png)
+    5. Note the trigger words provided - you'll need to use these in your prompt.
+    ![Note Trigger Words](https://img.mytsi.org/i/uR3Q752.png)
+    6. Paste the copied link in the LoRA URL field in FluxCraft and include the trigger words in your prompt.
+    ![Use LoRA in FluxCraft](https://img.mytsi.org/i/iGBw753.png)
+  </Accordion>
+</AccordionGroup>
+
+#### Tips for Effective LoRA Usage
+
+<AccordionGroup>
+  <Accordion title="Experiment with Scale" icon="balance-scale">
+    Try different LoRA scale values to find the right balance between the base model and the LoRA's influence.
+  </Accordion>
+  <Accordion title="Combine Multiple LoRAs" icon="layer-group">
+    Use multiple LoRAs together to create unique combinations of styles and subjects.
+  </Accordion>
+  <Accordion title="Use Appropriate Trigger Words" icon="key">
+    Always include the specified trigger words in your prompt to properly activate the LoRA.
+  </Accordion>
+  <Accordion title="Test and Iterate" icon="redo">
+    Generate multiple images with slight variations in settings to find the best results for your specific needs.
+  </Accordion>
+</AccordionGroup>
+
+By leveraging LoRAs in FluxCraft, you can significantly enhance your AI-generated images, creating more specialized and personalized visual content that aligns closely with your creative vision.
