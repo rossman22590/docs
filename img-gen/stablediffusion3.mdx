@@ -1,0 +1,103 @@
+---
+title: 'Stable Diffusion 3'
+description: 'A comprehensive guide to using Stable Diffusion 3 for AI image generation'
+icon: 'square-s'
+---
+
+
+Stable Diffusion 3 (SD3) is a groundbreaking text-to-image model developed by Stability AI. It represents a significant leap forward in AI image generation, offering unparalleled capabilities in creating highly detailed and diverse images from textual descriptions.
+
+## Key Features of Stable Diffusion 3
+
+<CardGroup cols={2}>
+  <Card title="Improved Performance" icon="chart-line">
+    Excels in multi-subject prompts, image quality, and text rendering abilities.
+  </Card>
+  <Card title="Flexible Model Sizes" icon="layer-group">
+    Ranges from 800M to 8B parameters, catering to various use cases and hardware capabilities.
+  </Card>
+  <Card title="Advanced Architecture" icon="microchip">
+    Utilizes a diffusion transformer architecture combined with flow matching for superior results.
+  </Card>
+  <Card title="Responsible AI" icon="shield-check">
+    Implements safeguards and safety measures to prevent misuse.
+  </Card>
+</CardGroup>
+
+## Using Stable Diffusion 3
+
+To get the best results from Stable Diffusion 3, follow these steps and best practices:
+
+### Step 1: Enter Your Prompt
+
+<AccordionGroup>
+  <Accordion title="Crafting Effective Prompts" icon="pencil-alt">
+    - Use detailed, descriptive language
+    - Include specific style references if desired
+    - SD3 can handle much longer prompts than previous versions (up to 10,000 characters)
+    
+    Example: "A hyperrealistic portrait of an elderly Inuit woman in her 80s with deep wrinkles, weathered skin, and wise, piercing dark eyes. Her silver hair is braided and adorned with traditional bone beads. She's wearing a fur-trimmed parka. Capture the soft, golden light of the Arctic midnight sun reflecting in her eyes and on her skin."
+  </Accordion>
+</AccordionGroup>
+
+![Prompt Input](https://img.mytsi.org/i/dxHz761.png)
+
+### Step 2: Adjust Settings
+
+Click on the settings button to access additional options:
+
+<AccordionGroup>
+  <Accordion title="Negative Prompt" icon="ban">
+    Specify elements you don't want in the image. Note: SD3 wasn't trained with negative prompts, so their effect may be limited.
+  </Accordion>
+  <Accordion title="Aspect Ratio" icon="crop">
+    Choose from preset ratios like 1:1, 16:9, 4:3, etc. SD3 performs best at around 1 megapixel resolution.
+  </Accordion>
+  <Accordion title="Inference Steps" icon="stairs">
+    Recommended: 28 steps. More steps can lead to more detailed images but increase generation time.
+  </Accordion>
+  <Accordion title="Guidance Scale" icon="sliders">
+    Recommended: 3.5 to 4.5. Controls how closely the image adheres to the prompt.
+  </Accordion>
+</AccordionGroup>
+
+![Settings Panel](https://img.mytsi.org/i/e1VP760.png)
+
+### Step 3: Optional Image Input
+
+You can upload an image to guide the generation process:
+
+<AccordionGroup>
+  <Accordion title="Image-to-Image Generation" icon="images">
+    - Upload a base image
+    - Adjust the "Prompt Strength" to control how much the original image influences the result
+  </Accordion>
+</AccordionGroup>
+
+![Image Input](https://img.mytsi.org/i/IAth762.png)
+
+### Step 4: Generate and Review
+
+Click the "Generate" button and wait for your image to be created:
+
+<AccordionGroup>
+  <Accordion title="Generation Process" icon="spinner">
+    - The prompt box will glow while the image is generating
+    - Results will appear below the input area
+    - Options to download or share to the community gallery will be available
+  </Accordion>
+</AccordionGroup>
+
+![Generation Result](https://img.mytsi.org/i/aFkM763.png)
+
+## Advanced Tips for Stable Diffusion 3
+
+- **Experiment with Different Model Sizes**: SD3 offers various model sizes to balance between quality and performance.
+- **Use Natural Language**: SD3 understands natural language well, so write prompts as you would describe the image to a person.
+- **Combine Concepts**: SD3 excels at blending different ideas or themes to create unique images.
+- **Leverage Text Rendering**: SD3 has improved text rendering capabilities, so don't hesitate to include text elements in your prompts.
+- **Fine-tune with Shift Parameter**: Experiment with the shift parameter (default 3.0) to manage noise at higher resolutions.
+
+## Conclusion
+
+Stable Diffusion 3 represents a significant advancement in AI image generation. By understanding its capabilities and following these guidelines, you can create stunning, highly detailed images that accurately reflect your creative vision. Remember to experiment with different settings and prompt styles to discover the full potential of this powerful tool.
