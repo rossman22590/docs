@@ -133,7 +133,8 @@
             "premium/agent-builder",
             "premium/ai-tutor-artifacts",
             "premium/app-builder",
-            "premium/video-sound-fx"
+            "premium/video-sound-fx",
+            "premium/o1-beta"
           ],   
           "icon": "hat-wizard"
         },
