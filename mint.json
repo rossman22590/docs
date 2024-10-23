@@ -247,14 +247,15 @@
         {
           "group": "Video",
           "pages": [
+            "video/motioncraft",
+            "video/motioncraft-pro",
+            "video/motioncraft-ultra",
             "video/vidcraft-pro",
             "video/mixcraft",
             "video/morphcraft",
             "video/faceswapvideo",
             "video/cartooncraft",
             "video/talkcraft",
-            "video/motioncraft-pro",
-            "video/motioncraft",
             "video/captioncraft"
           ],
           "icon": "video",
