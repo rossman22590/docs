@@ -1,0 +1,88 @@
+---
+title: 'Stable Diffusion 3.5'
+description: 'A guide to prompting and available options in Stable Diffusion 3.5'
+icon: 'square-s'
+---
+
+# Stable Diffusion 3.5: Prompting and Options Guide
+
+Stable Diffusion 3.5 offers advanced AI image generation capabilities. This guide will help you understand how to craft effective prompts and use the available options to create stunning images.
+
+## Crafting Effective Prompts
+
+The prompt is the most crucial input for generating images with Stable Diffusion 3.5. Here are some tips for writing effective prompts:
+
+1. **Be Specific and Descriptive**: Provide detailed descriptions of what you want to see in the image.
+2. **Use Natural Language**: Write as if you're describing the image to another person.
+3. **Specify Visual Elements**: Include details about colors, textures, lighting, and composition.
+4. **Mention Styles or Artists**: Reference specific art styles or artists to guide the aesthetic.
+5. **Balance Detail and Creativity**: While being specific, leave some room for AI interpretation.
+
+Example prompt: A hyperrealistic close-up portrait of an elderly Inuit woman in her 80s, with deep wrinkles,
+weathered skin, and wise, piercing dark eyes. Her silver hair is braided and adorned with
+traditional bone beads. She's wearing a fur-trimmed parka. Capture the soft, golden light
+of the Arctic midnight sun reflecting in her eyes and on her skin.
+
+## Available Options
+
+Stable Diffusion 3.5 provides several options to fine-tune your image generation:
+
+### Image Size
+
+<AccordionGroup>
+  <Accordion title="Preset Sizes" icon="crop">
+    Choose from predefined sizes:
+    - square_hd
+    - square
+    - portrait_4_3
+    - portrait_16_9
+    - landscape_4_3
+    - landscape_16_9
+  </Accordion>
+  <Accordion title="Custom Size" icon="expand">
+    Specify a custom width and height in pixels. This option allows for more precise control over the output dimensions.
+  </Accordion>
+</AccordionGroup>
+
+### Inference Steps
+
+<Accordion title="Inference Steps" icon="shoe-prints">
+  Controls the number of denoising steps in the generation process.
+  - Range: 1-50
+  - Default: 28
+  - Higher values generally result in more detailed images but increase generation time.
+</Accordion>
+
+### Guidance Scale
+
+<Accordion title="Guidance Scale" icon="sliders">
+  Determines how closely the image adheres to your prompt.
+  - Range: 1-20
+  - Default: 3.5
+  - Lower values allow more creative freedom, while higher values stick closer to the prompt.
+</Accordion>
+
+### Seed
+
+<Accordion title="Seed" icon="seedling">
+  A number that initializes the random generation process.
+  - Optional: Leave blank for a random seed each time
+  - Specifying a seed allows for reproducible results
+  - Useful for creating variations of an image by keeping the seed constant and adjusting other parameters
+</Accordion>
+
+## Using the Interface
+
+1. **Enter Your Prompt**: Type your detailed image description in the main text area.
+2. **Adjust Settings**: Click the "Settings" button to access and modify the available options.
+3. **Generate**: Click the "Generate" button to create your image based on the prompt and chosen settings.
+4. **View and Download**: Once generated, you can view, download, or share your images to a gallery.
+
+## Tips for Best Results
+
+- Experiment with different prompt phrasings to see how they affect the output.
+- Try various combinations of inference steps and guidance scale to find the ideal balance for your needs.
+- Use the seed option to create variations of an image you like by slightly modifying other parameters.
+- Enable sync mode when you want to ensure each generation completes before starting the next.
+
+Remember, the key to getting the best results from Stable Diffusion 3.5 is experimentation. Don't hesitate to try different prompts and settings combinations to achieve your desired outcome.
