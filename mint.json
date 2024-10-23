@@ -180,6 +180,7 @@
                 "img-gen/imgcraft",
                 "img-gen/procraft",
                 "img-gen/stablediffusion3",
+                "img-gen/stablediffusion35",
                 "img-gen/pictocraft",
                 {
                   "group": "FluxCraft",
