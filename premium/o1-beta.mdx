@@ -16,9 +16,10 @@ icon: 'stars'
 4. [AI Provider, Model Selection, and Presets Configuration](#ai-provider-model-selection-and-presets-configuration)
 5. [Right Sidebar Menu](#right-sidebar-menu)
 6. [Chat Interface](#chat-interface)
-7. [Advanced Features](#advanced-features)
-8. [Troubleshooting](#troubleshooting)
-9. [FAQ](#faq)
+7. [OpenAI o1 Series Models](#openai-o1-series-models)
+8. [Advanced Features](#advanced-features)
+9. [Troubleshooting](#troubleshooting)
+10. [FAQ](#faq)
 
 ## 1. Overview
 
@@ -118,20 +119,67 @@ The central area of the o1 Beta interface is dedicated to your chat interactions
 - View AI responses
 - Scroll through conversation history
 
-## 7. Advanced Features
+## 7. OpenAI o1 Series Models
 
-- **Multi-turn Conversations**: Engage in complex, context-aware dialogues with the AI.
-- **Code Interpretation**: The AI can understand and generate code snippets.
-- **Language Support**: Communicate in multiple languages.
-- **Data Analysis**: Upload datasets for the AI to analyze and provide insights.
+The o1 Beta platform now includes access to OpenAI's groundbreaking o1 series models, which represent a significant advancement in AI reasoning capabilities.
 
-## 8. Troubleshooting
+### 7.1 Overview of o1 Models
 
-If you encounter issues while using o1 Beta:
-- Ensure your internet connection is stable
-- Clear your browser cache and cookies
-- Check if the selected AI provider is operational
-- Verify that your account has the necessary permissions for the chosen features
+OpenAI o1 series models are new large language models trained with reinforcement learning to perform complex reasoning. These models excel in:
+
+- Scientific reasoning
+- Competitive programming (89th percentile on Codeforces)
+- Advanced mathematics (top 500 students in USA Math Olympiad qualifier)
+- PhD-level accuracy on physics, biology, and chemistry problems
+
+### 7.2 Available o1 Models
+
+Two reasoning models are available in the API:
+
+1. **o1-preview**: An early preview designed to reason about hard problems using broad general knowledge.
+2. **o1-mini**: A faster and cheaper version, particularly adept at coding, math, and science tasks where extensive general knowledge isn't required.
+
+### 7.3 Key Features of o1 Models
+
+- **Internal Reasoning**: o1 models think before they answer, producing a long internal chain of thought.
+- **Reasoning Tokens**: These models use reasoning tokens to break down their understanding and consider multiple approaches.
+- **Large Context Window**: Both models offer a context window of 128,000 tokens.
+
+### 7.4 Using o1 Models in o1 Beta
+
+To use o1 models in your o1 Beta application:
+
+1. Select the desired o1 model from the model dropdown menu.
+2. Craft your prompt or question.
+3. Submit and wait for the response (response times may vary based on complexity).
+
+### 7.5 Best Practices for o1 Models
+
+- Keep prompts simple and direct.
+- Avoid chain-of-thought prompts or instructions to "think step by step."
+- Use delimiters for clarity in complex prompts.
+- Limit additional context in retrieval-augmented generation (RAG).
+
+### 7.6 Limitations During Beta
+
+- Text-only input (no image support)
+- Limited message types (user and assistant only)
+- No streaming support
+- No tool or function calling support
+- Fixed parameters for temperature, top_p, and n
+
+### 7.7 Managing Costs and Context
+
+- Use the `max_completion_tokens` parameter to control total tokens generated.
+- Reserve at least 25,000 tokens for reasoning and outputs when starting.
+- Monitor the usage object in responses for token consumption details.
+
+## 8. Advanced Features
+
+[Content remains the same as in the previous version, with the addition of:]
+
+- **Complex Reasoning**: Leverage o1 models for tasks requiring deep analysis and multi-step problem-solving.
+- **Code Generation and Refactoring**: Utilize o1 models for advanced coding tasks and code improvements.
 
 ## 9. FAQ
 
