@@ -226,6 +226,15 @@
               ],
               "icon": "camera-retro"
             },
+            {
+              "group": "Creative Upscaler",
+              "pages": [
+                "img-gen/upscale-creative",
+                "img-gen/upscale-style",
+                "img-gen/upscale-become"
+              ],
+              "icon": "layer-plus"
+            },
             "img-gen/pixio-creative-01",
             "img-gen/drawcraft",
             "img-gen/qrcraft"
