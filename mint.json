@@ -131,7 +131,8 @@
             "premium/typebot",
             "premium/datavibes-pro",
             "premium/agent-builder",
-            "premium/ai-tutor-artifacts"
+            "premium/ai-tutor-artifacts",
+            "premium/app-builder"
           ],   
           "icon": "hat-wizard"
         },
