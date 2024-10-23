@@ -182,7 +182,6 @@
                 "img-gen/stablediffusion3",
                 "img-gen/stablediffusion35",
                 "img-gen/pictocraft",
-                "img-gen/qrcraft",
                 {
                   "group": "FluxCraft",
                   "pages": [
@@ -227,7 +226,8 @@
               ],
               "icon": "camera-retro"
             },
-            "img-gen/drawcraft"
+            "img-gen/drawcraft",
+            "img-gen/qrcraft"
           ],
           "icon": "image",
           "iconType": "solid"
