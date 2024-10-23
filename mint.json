@@ -232,7 +232,8 @@
               "pages": [
                 "img-gen/upscale-creative",
                 "img-gen/upscale-style",
-                "img-gen/upscale-become"
+                "img-gen/upscale-become",
+                "img-gen/upscale-relight"
               ],
               "icon": "layer-plus"
             },
