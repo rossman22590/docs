@@ -182,6 +182,7 @@
                 "img-gen/stablediffusion3",
                 "img-gen/stablediffusion35",
                 "img-gen/pictocraft",
+                "img-gen/qrcraft",
                 {
                   "group": "FluxCraft",
                   "pages": [
