@@ -76,7 +76,8 @@
             "aitutor/plus",
             "aitutor/personalities",
             "aitutor/persona-generator",
-            "aitutor/input-output-options"
+            "aitutor/input-output-options",
+            "aitutor/adding-models"
           
           ],
           "icon": "image",
