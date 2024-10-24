@@ -74,7 +74,8 @@
           "group": "Plus",
           "pages": [
             "aitutor/plus",
-            "aitutor/personalities"
+            "aitutor/personalities",
+            "aitutor/persona-generator"
           ],
           "icon": "image",
           "iconType": "solid"
