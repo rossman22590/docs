@@ -78,7 +78,8 @@
             "aitutor/persona-generator",
             "aitutor/input-output-options",
             "aitutor/adding-models",
-            "aitutor/custom-prompt-tips"
+            "aitutor/custom-prompt-tips",
+            "aitutor/importing-exporting-chats"
           
           ],
           "icon": "image",
