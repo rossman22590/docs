@@ -1,0 +1,144 @@
+---
+title: 'VidCraft Remix'
+description: 'Transform your videos with AI-powered style transfer while preserving structure'
+icon: 'paint-brush'
+---
+
+# VidCraft Remix: Advanced Video Style Transfer
+
+<Tip>
+  Reimagine your videos in new artistic styles while maintaining the original structure and motion!
+</Tip>
+
+## Overview
+
+VidCraft Remix is a powerful video-to-video model that allows you to change the visual style of your video while preserving its original structure and movement. This innovative tool opens up new possibilities for creative video editing and artistic expression.
+
+<CardGroup cols={2}>
+  <Card title="Style Transfer" icon="palette">
+    Transform your video's visual style while maintaining structure.
+  </Card>
+  <Card title="Flexible Input" icon="file-video">
+    Support for videos up to 32 MB in size.
+  </Card>
+  <Card title="Multiple Models" icon="layer-group">
+    Choose from different style models for varied results.
+  </Card>
+  <Card title="Customizable Settings" icon="sliders">
+    Fine-tune your output with adjustable parameters.
+  </Card>
+</CardGroup>
+
+## How to Use VidCraft Remix
+
+Follow these steps to remix your video:
+
+<Steps>
+  <Step title="Upload Video" icon="upload">
+    Upload your video file. MP4 format is recommended.
+    
+    <Callout type="info">
+      Videos up to 32 MB in size are supported.
+    </Callout>
+  </Step>
+  
+  <Step title="Select Model" icon="brush">
+    Choose between two colorful models:
+    - Dark Sushi: More realistic style
+    - Cardos Anime: More stylized, anime-like output
+  </Step>
+  
+  <Step title="Enter Prompts" icon="comment">
+    Provide a prompt and negative prompt to guide the style transfer.
+    
+    <Callout type="tip">
+      The prompt determines what style the video will change to, while the negative prompt specifies what to avoid.
+    </Callout>
+  </Step>
+  
+  <Step title="Fine-tune Settings" icon="sliders">
+    Adjust the following parameters:
+    
+    <AccordionGroup>
+      <Accordion title="Inference Steps" icon="shoe-prints">
+        Determines the number of denoising steps. Higher values can lead to more detailed results but increase processing time.
+      </Accordion>
+      <Accordion title="Guidance Scale" icon="compass">
+        Controls how closely the output adheres to your prompt. Higher values result in stronger adherence but may affect visual quality.
+      </Accordion>
+      <Accordion title="First N Seconds" icon="clock">
+        Specifies the duration of the video to process, starting from the beginning.
+      </Accordion>
+      <Accordion title="FPS" icon="film">
+        Sets the frames per second for the output video. Higher FPS results in smoother motion but increases processing time.
+      </Accordion>
+      <Accordion title="Seed" icon="seedling">
+        A number that initializes the random generation process. Using the same seed with identical settings will produce consistent results.
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+  
+  <Step title="Generate Video" icon="play">
+    Click the "Generate Video" button to start the remixing process.
+    
+    <Callout type="warning">
+      The generation process typically takes 5-6 minutes, depending on the "First N Seconds" setting.
+    </Callout>
+  </Step>
+</Steps>
+
+## Best Practices for VidCraft Remix
+
+To achieve the best results with VidCraft Remix, consider these tips:
+
+<CardGroup cols={2}>
+  <Card title="Choose Appropriate Source Videos" icon="film">
+    Select videos with clear subjects and distinct movements for better style transfer.
+  </Card>
+  <Card title="Craft Effective Prompts" icon="pencil">
+    Use detailed, descriptive prompts to guide the style transfer in your desired direction.
+  </Card>
+  <Card title="Experiment with Models" icon="gear">
+    Try both Dark Sushi and Cardos Anime models to see which best suits your vision.
+  </Card>
+  <Card title="Balance Settings" icon="scale-balanced">
+    Find the right balance between inference steps, guidance scale, and FPS for optimal results.
+  </Card>
+</CardGroup>
+
+## Advanced Tips
+
+<AccordionGroup>
+  <Accordion title="Optimizing for Different Styles" icon="paint-roller">
+    - For realistic styles, use the Dark Sushi model with higher guidance scale
+    - For anime-like styles, use the Cardos Anime model with more creative prompts
+  </Accordion>
+  
+  <Accordion title="Effective Prompt Crafting" icon="feather">
+    - Be specific about color schemes, textures, and artistic styles in your prompt
+    - Use negative prompts to avoid unwanted elements or styles
+  </Accordion>
+  
+  <Accordion title="Fine-tuning for Performance" icon="sliders">
+    - Adjust the "First N Seconds" to process shorter clips for faster iteration
+    - Lower FPS for quicker processing during test runs, then increase for final output
+  </Accordion>
+  
+  <Accordion title="Consistency Across Videos" icon="link">
+    - Use the same seed value to maintain consistent style across multiple video segments
+    - Keep prompts similar when processing multiple parts of a longer video
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+If you encounter issues with VidCraft Remix, try these solutions:
+
+1. **Poor Style Transfer**: Refine your prompt to be more specific or try a different model.
+2. **Long Processing Times**: Reduce the "First N Seconds" or lower the FPS for faster results.
+3. **Inconsistent Results**: Use a fixed seed value to maintain consistency across generations.
+4. **Artifacts or Glitches**: Adjust the guidance scale or increase inference steps for smoother results.
+
+## Conclusion
+
+VidCraft Remix offers a powerful way to reimagine your videos with new artistic styles while preserving the original structure and motion. By understanding the various parameters and following best practices, you can create stunning, transformed videos that push the boundaries of creative expression.
