@@ -260,7 +260,9 @@
             "video/talkcraft",
             "video/talkcraft-pro",
             "video/talkcraft-ultra",
-            "video/captioncraft"
+            "video/captioncraft",
+            "video/video-upscaler",
+            "video/interpolate"
           ],
           "icon": "video",
           "iconType": "solid"
