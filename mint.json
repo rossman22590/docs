@@ -258,6 +258,7 @@
             "video/faceswapvideo",
             "video/cartooncraft",
             "video/talkcraft",
+            "video/talkcraft-pro",
             "video/captioncraft"
           ],
           "icon": "video",
