@@ -75,7 +75,9 @@
           "pages": [
             "aitutor/plus",
             "aitutor/personalities",
-            "aitutor/persona-generator"
+            "aitutor/persona-generator",
+            "aitutor/input-output-options"
+          
           ],
           "icon": "image",
           "iconType": "solid"
