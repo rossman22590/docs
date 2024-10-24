@@ -1,31 +1,403 @@
 ---
-title: 'ObjectCraft: Image to 3D'
-description: 'Introduction to Image-to-3D Feature in ObjectCraft.'
-icon: 'stars'
+title: 'ObjectCraft'
+description: 'Generate stunning 3D models from text or images with advanced AI technology'
+icon: 'cube'
 ---
 
-The Image-to-3D feature within ObjectCraft on Pixio offers a groundbreaking approach to 3D modeling, enabling users to transform two-dimensional images into fully realized three-dimensional objects. This tool caters to artists, designers, and enthusiasts looking to bring their static images to life in the 3D space. Whether it's a sketch, a photograph, or any digital artwork, the Image-to-3D option simplifies the process of creating detailed 3D models.
+# ObjectCraft: Advanced 3D Model Generation
 
-### **How to Use the Image-to-3D Feature in ObjectCraft**
+<Tip>
+  Transform your ideas into stunning 3D models using cutting-edge AI technology with ObjectCraft!
+</Tip>
 
-1.  **Upload Your Image**: Begin by selecting and uploading the image you wish to convert into a 3D model. The clarity and detail of the image can significantly impact the quality of the resulting 3D model.
-    
-2.  **Generate Your 3D Object**: With your image uploaded, proceed to generate the 3D model. ObjectCraft will analyze the uploaded image and use advanced AI algorithms to create a corresponding 3D object that captures the essence and details of your original image.
-    
-3.  **Download the FBX File**: After the 3D model is generated, you can download it in FBX format. This file can be used in various 3D modeling software or uploaded directly to platforms like Sketchfab for visualization.
-    
-4.  **Visualize on Sketchfab**: Upload your FBX file to Sketchfab to view, share, and interact with your 3D model in a virtual environment. Sketchfab provides tools for rotating, zooming, and exploring your model in detail, offering insights into its structure and design.
-    
+## Overview
 
-### **Tips for Success with Image-to-3D in ObjectCraft**
+ObjectCraft is a powerful AI-driven tool that allows you to generate 3D models from text descriptions or images. This innovative platform offers a seamless way to bring your creative visions to life in three dimensions, suitable for game development, animation, virtual reality, and more.
 
-*   **Choose High-Quality Images**: The resolution and detail in your original image play a crucial role in the accuracy and quality of the 3D model. Opt for high-quality, well-lit images with clear subject definition.
-    
-*   **Consider the Complexity**: Simple images with distinct shapes and less intricate details tend to convert more effectively into 3D models. Complex images may require refinement after the initial conversion.
-    
-*   **Experiment and Refine**: The process of converting images to 3D models may involve trial and error. Don't hesitate to experiment with different images and refine your models based on the outcomes and insights gained from viewing them on Sketchfab.
-    
+<CardGroup cols={2}>
+  <Card title="Text-to-3D" icon="keyboard">
+    Generate intricate 3D models from detailed text descriptions.
+  </Card>
+  <Card title="Image-to-3D" icon="image">
+    Transform 2D images into fully-realized 3D models with ease.
+  </Card>
+  <Card title="Customizable Options" icon="sliders">
+    Fine-tune your models with various style, topology, and rendering settings.
+  </Card>
+  <Card title="Multiple Export Formats" icon="file-export">
+    Download your models in various industry-standard formats for different use cases.
+  </Card>
+</CardGroup>
 
-### **Conclusion**
+## How to Use ObjectCraft
 
-The Image-to-3D feature in ObjectCraft represents a significant advancement in the field of 3D modeling, offering a seamless bridge between two-dimensional art and three-dimensional visualization. By enabling users to easily convert images into detailed 3D models and visualize them on platforms like Sketchfab, ObjectCraft opens up new avenues for creative expression and design exploration.
+Follow these comprehensive steps to create your 3D model:
+
+<Steps>
+  <Step title="Choose Input Type" icon="upload">
+    Select between Text-to-3D or Image-to-3D generation.
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/FEYT816.png" alt="Input Type Selection" />
+    </Frame>
+    
+    <Callout type="info">
+      Each input type has its own strengths. Text-to-3D offers more creative freedom, while Image-to-3D provides a great starting point for existing designs.
+    </Callout>
+  </Step>
+  
+  <Step title="Provide Input" icon="pen-to-square">
+    For Text-to-3D:
+    - Enter a detailed prompt describing your desired 3D model
+    - Include pose information for humanoid requests
+    - Be as specific as possible about materials, textures, and style
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/F4Rl818.png" alt="Text Input Interface" />
+    </Frame>
+    
+    For Image-to-3D:
+    - Upload an image, preferably with a solid color background for the subject
+    - Ensure the image is clear and high-resolution for best results
+    - Consider the angle and lighting of your image, as it will influence the 3D output
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/Kg81821.png" alt="Image Input Interface" />
+    </Frame>
+  </Step>
+  
+  <Step title="Adjust Settings" icon="sliders">
+    Fine-tune your generation with various options:
+    
+    For Text-to-3D:
+    <AccordionGroup>
+      <Accordion title="Art Style" icon="palette">
+        Choose between:
+        - Realistic: For lifelike, detailed models
+        - Sculpture: For a more artistic, sculpted look
+        - PBR (Physically Based Rendering): For models with accurate material properties
+        
+        Each style affects the final look and texture of your model significantly.
+      </Accordion>
+      <Accordion title="Negative Prompt" icon="ban">
+        Specify elements you don't want in your model. This helps refine the output by excluding unwanted features or styles.
+      </Accordion>
+      <Accordion title="Seed" icon="seedling">
+        Set a specific seed for reproducible results. Useful for creating variations of the same basic model.
+      </Accordion>
+      <Accordion title="Topology" icon="triangle">
+        Select between:
+        - Triangle: Generally faster to render, good for real-time applications
+        - Quad: Often preferred for animation and subdivision, can provide smoother surfaces
+        
+        Choose based on your intended use of the model.
+      </Accordion>
+      <Accordion title="Target Polycount" icon="chart-bar">
+        Specify the desired complexity of your model. Higher polycount means more detail but larger file size and potentially slower rendering.
+      </Accordion>
+    </AccordionGroup>
+    
+    For Image-to-3D:
+    <AccordionGroup>
+      <Accordion title="Enable PBR" icon="toggle-on">
+        Generate Physically Based Rendering textures for more realistic material properties in various lighting conditions.
+      </Accordion>
+      <Accordion title="Topology" icon="square">
+        Choose between triangle or quad-based geometry, as explained in the Text-to-3D section.
+      </Accordion>
+      <Accordion title="Target Polycount" icon="chart-bar">
+        Set the desired level of detail for your model, balancing between complexity and file size.
+      </Accordion>
+    </AccordionGroup>
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/Ymbx822.png" alt="Settings Interface" />
+    </Frame>
+  </Step>
+  
+  <Step title="Generate Model" icon="play">
+    Click the "Generate" button to create your 3D model.
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/2Bbv819.png" alt="Generation Interface" />
+    </Frame>
+    
+    <Callout type="info">
+      Initial generation typically takes less than 2 minutes for Text-to-3D and 3-4 minutes for Image-to-3D. The time can vary based on the complexity of your input and chosen settings.
+    </Callout>
+  </Step>
+  
+  <Step title="View and Refine" icon="eye">
+    Once generation is complete, view your model in the 3D viewport.
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/Z8wv820.png" alt="3D Viewport" />
+    </Frame>
+    
+    For Text-to-3D models, you can refine and add color:
+    1. Click "Show History"
+    2. Select "Refine" to improve the model
+    3. Wait for the refined model (typically 3-4 minutes)
+    4. View the new, colorized model in the 3D viewer
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/DNvX825.png" alt="Refined Model View" />
+    </Frame>
+    
+    <Callout type="tip">
+      Refinement can significantly improve the quality and detail of your model. It's especially useful for adding color to initially grayscale Text-to-3D models.
+    </Callout>
+  </Step>
+</Steps>
+
+## Mastering ObjectCraft Prompts
+
+Crafting effective prompts is crucial for achieving the best results with ObjectCraft. Here's an in-depth guide to creating powerful prompts:
+
+### Basic Prompt Structure
+
+A good ObjectCraft prompt follows this structure: [Main subject] + [Style details] + [Other details]
+
+### Key Elements of an Effective Prompt
+
+<AccordionGroup>
+  <Accordion title="Main Subject" icon="bullseye">
+    Clearly describe the core object or character you want to generate. Be specific about its nature, size, and basic features.
+    
+    Examples:
+    - "A majestic lion with a flowing mane"
+    - "A sleek, futuristic spaceship with smooth curves"
+    - "An ancient, gnarled oak tree with sprawling branches"
+  </Accordion>
+  
+  <Accordion title="Style Details" icon="brush">
+    Specify the artistic style or visual aesthetic you're aiming for. This guides the AI in understanding the overall look you want to achieve.
+    
+    Examples:
+    - "in a low-poly art style with vibrant colors"
+    - "with a steampunk aesthetic, featuring brass and copper elements"
+    - "inspired by Art Nouveau, with flowing, organic lines"
+  </Accordion>
+  
+  <Accordion title="Other Details" icon="list-ul">
+    Add specific attributes, materials, or contextual information to refine your model further.
+    
+    Examples:
+    - "made of polished bronze with intricate engravings"
+    - "surrounded by swirling mist and floating crystals"
+    - "wearing battle-worn armor with glowing runes"
+  </Accordion>
+</AccordionGroup>
+
+### Advanced Prompting Techniques
+
+<CardGroup cols={2}>
+  <Card title="Use Descriptive Adjectives" icon="font">
+    Incorporate vivid adjectives to enhance detail:
+    - "intricate", "weathered", "luminous", "ethereal", "rugged"
+    
+    Example: "An intricate, weathered clockwork mechanism with luminous, ethereal gears"
+  </Card>
+  <Card title="Specify Materials" icon="layer-group">
+    Mention specific materials for more accurate texturing:
+    - "leather", "brushed steel", "polished marble", "rough-hewn wood"
+    
+    Example: "A throne made of polished obsidian and brushed gold, with leather cushions"
+  </Card>
+  <Card title="Include Contextual Elements" icon="sitemap">
+    Add environmental or contextual details to set the scene:
+    - "in a dense jungle", "floating in zero gravity", "emerging from a sandstorm"
+    
+    Example: "A crystal palace floating in zero gravity, with shimmering forcefield bridges"
+  </Card>
+  <Card title="Reference Familiar Styles" icon="palette">
+    Use recognizable style references to guide the AI:
+    - "in the style of Studio Ghibli", "like a character from World of Warcraft"
+    
+    Example: "A whimsical forest spirit in the style of Studio Ghibli, with glowing markings"
+  </Card>
+</CardGroup>
+
+### Composition and Pose
+
+For character or creature models, describing the pose can significantly impact the result:
+
+- "A warrior in a dynamic battle stance, sword raised high"
+- "A serene meditation pose, legs crossed and hands resting on knees"
+- "An acrobatic pose, mid-backflip with arms outstretched"
+
+### Lighting and Atmosphere
+
+Describing lighting can add depth and mood to your model:
+
+- "Bathed in warm, golden sunlight filtering through leaves"
+- "Illuminated by the eerie glow of bioluminescent plants"
+- "Cast in dramatic chiaroscuro lighting, emphasizing deep shadows"
+
+### Example Prompts
+
+Here are some comprehensive example prompts to inspire your creations:
+
+1. "A cute fox Popmart toy with vibrant pastel colors and a glossy finish. The fox should have large, expressive eyes and be sitting in a playful pose. Add small, kawaii-style accessories like a tiny backpack or a flower crown."
+
+2. "A high-detailed T-posed dwarf character from World of Warcraft, with hand-painted textures. The dwarf should have a thick, braided beard, intricate armor with runic engravings, and be holding a massive warhammer. Include small details like battle scars and weathered leather straps."
+
+3. "A royal armor set made of polished gold and blackened iron, highly detailed with medieval knight design and tooled leather accents. The armor should feature an ornate crown-shaped helmet, pauldrons with lion motifs, and a flowing cape with the kingdom's heraldry."
+
+4. "A cyberpunk tiger character bust wearing a mushroom-like wizard hat, with glowing neon eyes and gem decorations. The tiger's fur should be interwoven with circuitry and metallic implants. The wizard hat should emit a soft, bioluminescent glow and have small holographic runes floating around it."
+
+5. "An ancient, otherworldly tree of life in a fantasy style. The trunk should twist and spiral upwards, with branches forming intricate, Celtic-inspired knots. Incorporate glowing, ethereal fruits and leaves that seem to float and shimmer. At the base, add roots that merge with a reflective pool of water, creating a seamless transition between the tree and its reflection."
+
+## Best Practices for ObjectCraft
+
+To get the most out of ObjectCraft, consider these detailed tips:
+
+<CardGroup cols={2}>
+  <Card title="Be Specific and Descriptive" icon="bullseye">
+    Provide clear, detailed descriptions for more accurate results. The more information you give, the closer the output will be to your vision.
+    
+    Example: Instead of "a sword," try "a legendary longsword with an intricately carved hilt, adorned with sapphires, and a slightly curved, damascus steel blade that glows with a faint blue light."
+  </Card>
+  <Card title="Experiment with Styles" icon="palette">
+    Try different art styles and references to find the perfect look. Don't be afraid to mix styles or use unexpected combinations.
+    
+    Example: "A steampunk-inspired magical staff with Art Nouveau design elements and a touch of cyberpunk neon accents."
+  </Card>
+  <Card title="Utilize Negative Prompts" icon="ban">
+    Use negative prompts to avoid unwanted elements in your models. This can help refine your output by explicitly stating what you don't want.
+    
+    Example: For a clean, minimalist design, you might add "Negative prompt: ornate, busy, cluttered, highly detailed"
+  </Card>
+  <Card title="Refine and Iterate" icon="rotate">
+    Use the refinement feature to improve and colorize Text-to-3D models. Don't settle for the first output if it's not quite right – refining can often bring your vision closer to reality.
+  </Card>
+</CardGroup>
+
+<CardGroup cols={2}>
+  <Card title="Consider Your End Use" icon="bullseye">
+    Think about how you'll use the model when choosing settings. For example, if you're creating game assets, you might prioritize lower poly counts and PBR textures for real-time rendering.
+  </Card>
+  <Card title="Balance Detail and Efficiency" icon="sliders">
+    While high poly counts can provide more detail, they can also result in larger file sizes and slower rendering. Find the right balance for your needs.
+  </Card>
+  <Card title="Use Reference Images" icon="image">
+    Even when using Text-to-3D, having reference images in mind can help you describe your desired output more effectively.
+  </Card>
+  <Card title="Experiment with Seeds" icon="dice">
+    If you're close to your desired result but not quite there, try generating with different seeds while keeping the same prompt. This can produce variations on the same theme.
+  </Card>
+</CardGroup>
+
+## Downloading Your Models
+
+ObjectCraft offers multiple industry-standard formats for downloading your 3D models, ensuring compatibility with a wide range of software and applications:
+
+<Steps>
+  <Step title="Access History" icon="clock">
+    Go to the history section to view your generated models.
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/ZLDY826.png" alt="History Interface" />
+    </Frame>
+  </Step>
+  
+  <Step title="Choose Download Option" icon="download">
+    Select the download option under the desired model.
+  </Step>
+  
+  <Step title="Select Format" icon="file">
+    Choose from available formats:
+    - GLB: Great for web-based 3D applications
+    - FBX: Widely used in game development and animation
+    - USDZ: Ideal for AR applications, especially on iOS
+    - OBJ: A universal 3D format supported by most 3D software
+    - MTL: Material template library, often accompanying OBJ files
+    - ZIP: Download all formats in a single compressed file
+    
+    <Frame>
+      <img src="https://img.mytsi.org/i/KuS3817.png" alt="Download Options" />
+    </Frame>
+    
+    <Callout type="tip">
+      Consider your intended use when choosing a format. For example, GLB is great for web applications, while FBX is often preferred for game engines.
+    </Callout>
+  </Step>
+</Steps>
+
+## Advanced Usage and Tips
+
+To take your ObjectCraft creations to the next level, consider these advanced techniques:
+
+### Combining Multiple Models
+
+While ObjectCraft generates individual models, you can create complex scenes or characters by combining multiple generated models in external 3D software.
+
+1. Generate separate components with consistent style descriptions.
+2. Download each component in a compatible format (e.g., OBJ or FBX).
+3. Import the components into your preferred 3D software.
+4. Assemble and adjust the components to create your final scene or character.
+
+### Post-Processing in 3D Software
+
+After generating your model with ObjectCraft, consider these post-processing steps:
+
+1. **Refine Topology**: Use retopology tools to optimize the model's geometry for animation or real-time rendering.
+2. **UV Unwrapping**: Create custom UV maps for more control over texturing.
+3. **Texture Painting**: Add custom details or refine existing textures.
+4. **Rigging**: For character models, create a skeletal structure for animation.
+5. **Level of Detail (LOD)**: Create multiple versions of your model with varying levels of detail for optimized rendering at different distances.
+
+### Optimizing for Different Platforms
+
+Depending on your target platform, you may need to adjust your models:
+
+- **Mobile/VR**: Aim for lower poly counts and optimize textures for performance.
+- **High-End PC/Console**: You can use higher poly counts and larger textures for more detail.
+- **3D Printing**: Ensure your model is manifold (watertight) and has appropriate wall thicknesses.
+
+## Troubleshooting
+
+If you encounter issues with ObjectCraft, try these detailed solutions:
+
+1. **Poor Model Quality**:
+   - Refine your prompt with more specific details.
+   - Try the refinement feature for Text-to-3D models.
+   - Experiment with different art styles or increase the target poly count.
+   - For Image-to-3D, ensure your input image is high-quality and well-lit.
+
+2. **Generation Errors**:
+   - Check your input for any unsupported elements or overly complex descriptions.
+   - Try simplifying your prompt and gradually adding complexity.
+   - Ensure you're not exceeding any input length limitations.
+
+3. **Unexpected Results**:
+   - Review your prompt for any ambiguous language.
+   - Adjust your settings, particularly the art style and topology, to better match your vision.
+   - Use negative prompts to exclude unwanted elements.
+
+4. **Download Issues**:
+   - Ensure you have a stable internet connection.
+   - Try a different format if one isn't working.
+   - Clear your browser cache and try again.
+   - If issues persist, try downloading from a different device or browser.
+
+5. **Performance Issues**:
+   - For slow loading times, try reducing the poly count or simplifying your model.
+   - Ensure your device meets the minimum requirements for 3D rendering.
+   - Close unnecessary background applications to free up system resources.
+
+<Callout type="tip">
+  If you continue to experience issues, don't hesitate to reach out to ObjectCraft's support team for assistance. Providing detailed information about your input, settings, and the specific problem will help them assist you more effectively.
+</Callout>
+
+## Conclusion
+
+ObjectCraft offers a powerful and intuitive way to bring your 3D ideas to life. By mastering the art of prompt crafting, utilizing the various settings effectively, and following best practices, you can create stunning 3D models for a wide range of applications, from game development to virtual reality experiences and beyond.
+
+Remember that becoming proficient with ObjectCraft is a journey. Each generation is an opportunity to learn and refine your technique. Don't be afraid to experiment with different prompts, styles, and settings – sometimes the most unexpected combinations can yield the most impressive results.
+
+As you continue to use ObjectCraft, you'll develop an intuition for how to craft prompts and adjust settings to achieve exactly the results you're looking for. Whether you're a professional 3D artist looking to streamline your workflow, a game developer in need of quick asset generation, or a hobbyist exploring the world of 3D modeling, ObjectCraft provides a versatile and powerful tool to bring your creative visions to life.
+
+<Callout type="tip">
+  Keep pushing the boundaries of what's possible with AI-generated 3D models. Share your creations, learn from the community, and continue to refine your skills. With ObjectCraft, the only limit is your imagination!
+</Callout>
