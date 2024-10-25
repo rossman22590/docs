@@ -160,7 +160,8 @@
               "pages": [
                 "ultra/beam-gemini",
                 "ultra/merging-in-beam",
-                "ultra/beam-2-beta"
+                "ultra/beam-2-beta",
+                "ultra/beam-ultra"
               ],
               "icon": "robot",
               "iconType": "solid"
