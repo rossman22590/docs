@@ -149,9 +149,8 @@
           "pages": [
             {
               "group": "Ultra Multibot",
-              "pages": [
-                "premium/multibot-intro",
-                "premium/multibot-ultra-adding-assistants"
+              "pages": [              
+                "ultra/multibot-ultra-adding-assistants"
               ],
               "icon": "robot",
               "iconType": "solid"
