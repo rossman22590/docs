@@ -190,7 +190,7 @@
                 "img-gen/stablediffusion3",
                 "img-gen/stablediffusion35",
                 "img-gen/pictocraft",
-                "img-gen/recraft"
+                "img-gen/recraft",
                 {
                   "group": "FluxCraft",
                   "pages": [
