@@ -1,6 +1,6 @@
 ---
-title: 'Pixio API Development'
-description: 'Learn how to interact with the Pixio API to trigger workflows and upload files'
+title: "Pixio API Development"
+description: "Learn how to interact with the Pixio API to trigger workflows and upload files"
 ---
 
 <Info>
@@ -10,8 +10,6 @@ description: 'Learn how to interact with the Pixio API to trigger workflows and 
 ### Step 1: Install the Pixio API SDK
 
 To start interacting with the Pixio API, you need to install the Pixio SDK using npm or yarn:
-
-
 
 ```bash npm
 npm install @pixio/api-sdk `
@@ -33,7 +31,6 @@ Once the SDK is installed, create a `.env` file in your project to securely stor
 ### Step 3: Set up the Pixio API Client
 
 Next, set up the Pixio API client in your code:
-
 
 ```bash npm
 
@@ -68,7 +65,7 @@ You can trigger a workflow by making a POST request to the `/run` endpoint with 
 
 After triggering the workflow, you can retrieve the output using the `run_id`:
 
-```bash npm
+````bash npm
 
 `client.getWorkflowOutput("your-run-id").then(output => {
   console.log('Output:', output);
@@ -87,7 +84,8 @@ To upload a file (image, document, etc.), you need to first get an upload URL:
   console.log('Upload URL:', response.upload_url);
   console.log('File ID:', response.file_id);
 });`
-```
+````
+
 ### Custom Ports
 
 Pixio API calls are generally executed on standard ports. If you are working in a local development environment and need to customize the port for running your Node.js app:
@@ -97,6 +95,7 @@ Pixio API calls are generally executed on standard ports. If you are working in 
 `const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));`
 ```
+
 ### Common Errors
 
 If you encounter any errors such as `EADDRINUSE` or other port-related issues, make sure that no other services are running on the same port.
@@ -105,11 +104,10 @@ If you encounter any errors such as `EADDRINUSE` or other port-related issues, m
 
 `Error: listen EADDRINUSE: address already in use :::3000`
 ```
-Pixio API Versions
-------------------
+
+## Pixio API Versions
 
 To ensure compatibility with the latest Pixio API features, keep the SDK up-to-date:
-
 
 ```bash npm
 
@@ -118,20 +116,16 @@ To ensure compatibility with the latest Pixio API features, keep the SDK up-to-d
 `yarn upgrade @pixio/api-sdk`
 ```
 
-
-Deployment
-----------
+## Deployment
 
 <Tip> Once you've built your Pixio-powered application, you can deploy it on platforms like Vercel, Heroku, or AWS. For more details, check the [Pixio API Documentation](https://myapps.ai/docs/pixio-api). </Tip>
 
 If you have any issues please contact us.
 
-Troubleshooting
----------------
+## Troubleshooting
 
 If you run into any issues while working with the Pixio API, here are a few troubleshooting steps:
 
 <AccordionGroup> <Accordion title="Invalid API Key"> Ensure your `.env` file is correctly set up with your Pixio API key. Regenerate the API key if needed from the dashboard. </Accordion> <Accordion title="Token Expired or Invalid"> Make sure your token is valid and hasn't expired. You can renew it in the Pixio API dashboard under API Keys. </Accordion> <Accordion title="API Response Errors"> If you receive unexpected responses from the API, try resetting your environment and reinstalling dependencies by running `npm install` or `yarn install`. </Accordion> </AccordionGroup>
 
 For further details on the Pixio API, check out the API Reference.
-
