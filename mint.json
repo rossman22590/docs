@@ -312,6 +312,13 @@
         "api-reference/endpoint/delete",
         "api-reference/endpoint/upload"
       ]
+    },
+    {
+      "group": "AI Tutor API Endpoint",
+      "pages": [
+        "ai-tutor-api/aitutor-api-docs",
+  
+      ]
     }
   ],
   "footerSocials": {
