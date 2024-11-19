@@ -316,7 +316,7 @@
     {
       "group": "AI Tutor API Endpoint",
       "pages": [
-        "ai-tutor-api/aitutor-api-docs",
+        "aitutor-api/aitutor-api-docs",
   
       ]
     }
