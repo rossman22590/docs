@@ -301,7 +301,9 @@
       "group": "Account",
       "pages": [
         "billing/account",
-        "video/maker-mode"
+        "video/maker-mode",
+        "billing/billing"
+        
       ]
     },
     {
