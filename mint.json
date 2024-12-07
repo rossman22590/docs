@@ -306,6 +306,14 @@
         
       ]
     },
+     {
+      "group": "FAQ",
+      "pages": [
+        "faq/video"
+    
+        
+      ]
+    },
     {
       "group": "Pixio API Endpoint",
       "pages": [
