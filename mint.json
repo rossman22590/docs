@@ -242,7 +242,8 @@
                 "img-gen/upscale-creative",
                 "img-gen/upscale-style",
                 "img-gen/upscale-become",
-                "img-gen/upscale-relight"
+                "img-gen/upscale-relight",
+                "img-gen/magnific"
               ],
               "icon": "layer-plus"
             },
