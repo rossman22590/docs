@@ -212,8 +212,6 @@
                 "img-gen/fillcraft",
                 "img-gen/upscale-tool",
                 "img-gen/remove-background",
-                "img-gen/controlcraft",
-                "img-gen/tweakcraft",
                 "img-gen/faceswap"
               ],
               "icon": "highlighter"
