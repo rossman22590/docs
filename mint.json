@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "AI Tutor x Pixio Documentation",
   "logo": {
-    "dark": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png",
-    "light": "https://docs.myapps.ai/storage/branding_media/8b2fdd06-73f1-4063-be7c-da52214bd4b1.png"
+    "dark": "https://img.mytsi.org/i/lP72916.png",
+    "light": "https://img.mytsi.org/i/lP72916.png"
   },
   "favicon": "/logo/icon-144x144.png",
   "colors": {
