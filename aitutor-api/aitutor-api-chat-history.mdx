@@ -1,5 +1,117 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Get Chat History API"
+description: "Retrieve the chat history for a specific chat session using its token."
+openapi: 'GET /chat/{token}/history'
 ---
 
+### Description
+
+This endpoint allows you to retrieve the complete chat history associated with a specific chat token.
+
+### Path Parameters
+
+| Name  | Required | Type   | Description                               |
+| ----- | -------- | ------ | ----------------------------------------- |
+| token | Yes      | string | The unique token identifying the chat session |
+
+### Request
+
+**Content-Type**: `application/json`
+
+### Example Request
+
+```bash
+curl --request GET \
+     --url "https://manageprompt.com/api/v1/chat/token/history" \
+     --header 'accept: application/json'
+```
+### Response
+
+```bash
+
+{
+  "success": true,
+  "history": [
+    {
+      "role": "user",
+      "content": "Hello, how can you help me today?",
+      "timestamp": "2023-12-01T10:30:00Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm here to assist you with any questions or tasks you have.",
+      "timestamp": "2023-12-01T10:30:02Z"
+    }
+  ]
+}
+
+
+```
+
+
+### Error Responses
+
+```bash
+
+
+{
+  "success": false,
+  "error": {
+    "message": "Invalid token provided",
+    "code": "invalid_token"
+  }
+}
+
+```
+
+
+
+```bash
+
+{
+  "success": false,
+  "error": {
+    "message": "Chat history not found",
+    "code": "history_not_found"
+  }
+}
+
+
+```
+
+### Code Examples
+
+Python
+
+```python
+
+import requests
+
+token = "your_chat_token"
+url = f"https://manageprompt.com/api/v1/chat/{token}/history"
+headers = {
+    "accept": "application/json"
+}
+
+response = requests.get(url, headers=headers)
+print(response.json())
+
+```
+
+
+Node.js
+
+```bash
+
+const axios = require('axios');
+
+const token = 'your_chat_token';
+const url = `https://manageprompt.com/api/v1/chat/${token}/history`;
+const headers = {
+    'accept': 'application/json'
+};
+
+axios.get(url, { headers })
+    .then(response => console.log(response.data))
+    .catch(error => console.error(error));
+```

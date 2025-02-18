@@ -1,117 +1,155 @@
 ---
-title: "Get Chat History API"
-description: "Retrieve the chat history for a specific chat session using its token."
-openapi: 'GET /chat/{token}/history'
+title: "Run AI Tutor Workflow API"
+description: "Execute a workflow with custom input parameters."
+openapi: 'POST /api/v1/run/{workflow_id}'
 ---
 
 ### Description
 
-This endpoint allows you to retrieve the complete chat history associated with a specific chat token.
+This endpoint allows you to execute a specific workflow by providing its ID and required input parameters.
 
-### Path Parameters
-
-| Name  | Required | Type   | Description                               |
-| ----- | -------- | ------ | ----------------------------------------- |
-| token | Yes      | string | The unique token identifying the chat session |
-
-### Request
+### Request Body
 
 **Content-Type**: `application/json`
 
+```json
+{
+  "story": "string"  // The story input parameter for the workflow
+}
+```
+
+Authentication
+
+Requires a Bearer token in the Authorization header.
+
 ### Example Request
 
-```bash
-curl --request GET \
-     --url "https://manageprompt.com/api/v1/chat/token/history" \
-     --header 'accept: application/json'
+```json
+
+curl --request POST \
+  --url https://aitutor-api.vercel.app/api/v1/run/wf_b1c45lj9pabaotitahwfk9gb \
+  --header 'Authorization: Bearer sk_h9e86nd9jfo5dyojrg9qaaq90bqo185p' \
+  --header 'Content-Type: application/json' \
+  --data '{"story":"a story about a dog named charlie"}'
+
 ```
+
 ### Response
 
-```bash
+```json
+
 
 {
   "success": true,
-  "history": [
-    {
-      "role": "user",
-      "content": "Hello, how can you help me today?",
-      "timestamp": "2023-12-01T10:30:00Z"
-    },
-    {
-      "role": "assistant",
-      "content": "I'm here to assist you with any questions or tasks you have.",
-      "timestamp": "2023-12-01T10:30:02Z"
-    }
-  ]
+  "run_id": "run_abc123xyz",
+  "status": "completed",
+  "output": {
+    "generated_story": "Once upon a time, there was a friendly dog named Charlie..."
+  }
 }
 
 
 ```
 
+### Path Parameters
+
+| Name | Required | Type | Description |
+| --- | --- | --- | --- |
+| workflow_id | Yes | string | The ID of the workflow to run |
+
+### Request Parameters
+
+| Name | Required | Type | Description |
+| --- | --- | --- | --- |
+| story | Yes | string | The story prompt for the workflow |
 
 ### Error Responses
 
-```bash
+
+```json
+
+{
+  "success": false,
+  "error": {
+    "message": "Invalid API key",
+    "code": "unauthorized"
+  }
+}
+
+
+
+```
+
+```json
 
 
 {
   "success": false,
   "error": {
-    "message": "Invalid token provided",
-    "code": "invalid_token"
+    "message": "Workflow not found",
+    "code": "workflow_not_found"
   }
 }
+
 
 ```
 
 
+```json
 
-```bash
 
 {
   "success": false,
   "error": {
-    "message": "Chat history not found",
-    "code": "history_not_found"
+    "message": "Missing required parameter: story",
+    "code": "invalid_request"
   }
 }
 
 
 ```
+
 
 ### Code Examples
 
-Python
+#### Python
 
 ```python
-
 import requests
 
-token = "your_chat_token"
-url = f"https://manageprompt.com/api/v1/chat/{token}/history"
+url = "https://aitutor-api.vercel.app/api/v1/run/wf_b1c45lj9pabaotitahwfk9gb"
 headers = {
-    "accept": "application/json"
+    "Authorization": "Bearer sk_h9e86nd9jfo5dyojrg9qaaq90bqo185p",
+    "Content-Type": "application/json"
+}
+data = {
+    "story": "a story about a dog named charlie"
 }
 
-response = requests.get(url, headers=headers)
+response = requests.post(url, headers=headers, json=data)
 print(response.json())
-
 ```
 
+#### NodeJS
 
-Node.js
-
-```bash
+```json
 
 const axios = require('axios');
 
-const token = 'your_chat_token';
-const url = `https://manageprompt.com/api/v1/chat/${token}/history`;
+const url = 'https://aitutor-api.vercel.app/api/v1/run/wf_b1c45lj9pabaotitahwfk9gb';
 const headers = {
-    'accept': 'application/json'
+    'Authorization': 'Bearer sk_h9e86nd9jfo5dyojrg9qaaq90bqo185p',
+    'Content-Type': 'application/json'
+};
+const data = {
+    story: 'a story about a dog named charlie'
 };
 
-axios.get(url, { headers })
+axios.post(url, data, { headers })
     .then(response => console.log(response.data))
     .catch(error => console.error(error));
+
+
+
 ```
+
