@@ -149,6 +149,15 @@
           "group": "Ultra",
           "pages": [
             {
+              "group": "Ultra Apps",
+              "pages": [              
+                 "ultra/deep-research",
+                  "ultra/browser,
+              ],
+              "icon": "robot",
+              "iconType": "solid"
+            },
+                 {
               "group": "Ultra Multibot",
               "pages": [              
                 "ultra/multibot-ultra-adding-assistants"
