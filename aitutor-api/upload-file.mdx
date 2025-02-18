@@ -1,0 +1,81 @@
+---
+title: "Upload API"
+description: "Search for embeddings relevant to a query in a list of uploaded files."
+---
+
+### Request Body
+
+**Content-Type**: `application/json`
+
+```json
+{
+  "query": "string",      // Query for which to get related chunks and embeddings
+  "file_ids": ["string"], // Array of file UUIDs to search in
+  "k": 3                  // Optional: Number of related chunks to return (default: 3)
+}
+```
+
+### Authentication
+
+Before making requests to the AI Tutor RAG API, you need to obtain your API key from your dashboard.
+
+### Example Request
+
+```javascript
+const res = await fetch("https://rag-api-llm.up.railway.app/embeddings", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "authorization": apiKey,
+  },
+  body: JSON.stringify({
+    query: "search query",
+    file_ids: ["939b2cd7-56d5-4c44-b491-14bfc202e9a0"]
+  }),
+});
+```
+
+### Response
+
+```json
+{
+  "success": true,
+  "documents": [
+    {
+      "content": "my name is jon.",
+      "file_id": "939b2cd7-56d5-4c44-b491-14bfc202e9a0",
+      "score": "0.273"
+    }
+  ]
+}
+```
+
+### Request Parameters
+
+| Name      | Required | Type    | Description                                                         |
+| --------- | -------- | ------- | ------------------------------------------------------------------- |
+| query     | Yes      | string  | Query for which to get related chunks and embeddings                |
+| file\_ids | Yes      | array   | Array of file UUIDs to search in. Must contain at least one file ID |
+| k         | No       | integer | Number of related chunks to return. Default: 3                      |
+
+### Error Responses
+
+```json
+{
+  "success": false,
+  "error": {
+    "message": "Invalid API key provided",
+    "code": "unauthorized"
+  }
+}
+```
+
+```json
+{
+  "success": false,
+  "error": {
+    "message": "No file IDs provided",
+    "code": "invalid_request"
+  }
+}
+```
