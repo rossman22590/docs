@@ -326,7 +326,8 @@
       "group": "AI Tutor API Endpoint",
       "pages": [
         "aitutor-api/aitutor-api-docs",
-        "aitutor-api/rag-api"
+        "aitutor-api/rag-api",
+       "aitutor-api/uplaod-file"
       ]
     }
   ],

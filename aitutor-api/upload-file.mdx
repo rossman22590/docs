@@ -1,19 +1,21 @@
 ---
-title: "Upload API"
-description: "Search for embeddings relevant to a query in a list of uploaded files."
+title: "File Upload API"
+description: "Upload PDF or text files to be processed and chunked for embedding search."
+openapi: 'POST /upload'
 ---
 
-### Request Body
+### Request
 
-**Content-Type**: `application/json`
+**Content-Type**: `multipart/form-data`
 
-```json
-{
-  "query": "string",      // Query for which to get related chunks and embeddings
-  "file_ids": ["string"], // Array of file UUIDs to search in
-  "k": 3                  // Optional: Number of related chunks to return (default: 3)
-}
-```
+The POST request should be a multipart form request containing the file to be uploaded.
+
+### Query Parameters
+
+| Name           | Type    | Required | Description                                                       |
+| -------------- | ------- | -------- | ----------------------------------------------------------------- |
+| chunk\_size    | integer | No       | The chunk size (in tokens) applied when splitting the document    |
+| chunk\_overlap | integer | No       | The chunk overlap (in tokens) applied when splitting the document |
 
 ### Authentication
 
@@ -22,60 +24,74 @@ Before making requests to the AI Tutor RAG API, you need to obtain your API key 
 ### Example Request
 
 ```javascript
-const res = await fetch("https://rag-api-llm.up.railway.app/embeddings", {
+const formData = new FormData();
+formData.append("file", files[0]); // Accepts PDF (.pdf) or text (.txt) files
+
+const response = await fetch("https://rag-api-llm.up.railway.app/upload_file", {
   method: "POST",
   headers: {
-    "Content-Type": "application/json",
     "authorization": apiKey,
   },
-  body: JSON.stringify({
-    query: "search query",
-    file_ids: ["939b2cd7-56d5-4c44-b491-14bfc202e9a0"]
-  }),
+  body: formData,
 });
+
 ```
 
-### Response
+Response
 
-```json
+```javascript
 {
   "success": true,
-  "documents": [
-    {
-      "content": "my name is jon.",
-      "file_id": "939b2cd7-56d5-4c44-b491-14bfc202e9a0",
-      "score": "0.273"
-    }
-  ]
+  "message": "PDF file processed successfully",
+  "file_id": "4db6b5d7-b199-4bfd-9914-6991cb4ba3b6",
+  "file_name": "elon_musk.txt",
+  "chunks": 2,
+  "chunk_size": 1000,
+  "chunk_overlap": 200
+}
+
+```
+
+File Requirements
+Requirement	Description
+File Types	PDF (.pdf) or text (.txt) files only
+Maximum Size	10MB
+
+Download CSV
+
+Error Responses
+
+```javascript
+{
+  "success": false,
+  "error": {
+    "message": "Invalid file type. Only PDF and TXT files are supported",
+    "code": "invalid_file_type"
+  }
 }
 ```
 
-### Request Parameters
+```javascript
 
-| Name      | Required | Type    | Description                                                         |
-| --------- | -------- | ------- | ------------------------------------------------------------------- |
-| query     | Yes      | string  | Query for which to get related chunks and embeddings                |
-| file\_ids | Yes      | array   | Array of file UUIDs to search in. Must contain at least one file ID |
-| k         | No       | integer | Number of related chunks to return. Default: 3                      |
+{
+  "success": false,
+  "error": {
+    "message": "File size exceeds maximum limit of 10MB",
+    "code": "file_too_large"
+  }
+}
 
-### Error Responses
+```
 
-```json
+```javascript
+
+
+
 {
   "success": false,
   "error": {
     "message": "Invalid API key provided",
     "code": "unauthorized"
-  }
-}
-```
-
-```json
-{
-  "success": false,
-  "error": {
-    "message": "No file IDs provided",
-    "code": "invalid_request"
   }
 }
 ```
