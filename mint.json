@@ -136,6 +136,7 @@
             "premium/ai-research",
             "premium/character-ai",
             "premium/typebot",
+            "premium/ai-console",
             "premium/datavibes-pro",
             "premium/agent-builder",
             "premium/ai-tutor-artifacts",
@@ -168,7 +169,8 @@
               "iconType": "solid"
             },
           "ultra/browser",
-         "ultra/deep-research"
+          "ultra/deep-research",
+          "ultra/ai-console-ultra"
           ],   
           "icon": "rocket"
         }
