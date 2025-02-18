@@ -327,7 +327,8 @@
       "pages": [
        "aitutor-api/rag-api",
        "aitutor-api/upload-file-rag",
-       "aitutor-api/multi-file-rag"
+       "aitutor-api/multi-file-rag",
+         "aitutor-api/list-files-rag"
       ]
     },
     {
