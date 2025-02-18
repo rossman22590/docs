@@ -22,7 +22,7 @@ No authentication required for this endpoint.
 
 ```bash
 curl --request GET \
-     --url "https://aitutor-api.vercel.app/api/v1/token" \
+     --url "https://aitutor-api.vercel.app/api/v1/chat/token" \
      --header 'accept: application/json'
 ```
 
@@ -30,7 +30,7 @@ Example Request with Custom TTL
 
 ```bash
 curl --request GET \
-     --url "https://aitutor-api.vercel.app/api/v1/token?ttl=300" \
+     --url "https://aitutor-api.vercel.app/api/v1/chat/token?ttl=300" \
      --header 'accept: application/json'
 
 ```
@@ -84,7 +84,7 @@ Unused tokens do not count against your API quota
 ```python
 import requests
 
-url = "https://aitutor-api.vercel.app/api/v1/token"
+url = "https://aitutor-api.vercel.app/api/v1/chat/token"
 headers = {
     "accept": "application/json"
 }
@@ -99,7 +99,7 @@ Node.js
 
 const axios = require('axios');
 
-const url = 'https://aitutor-api.vercel.app/api/v1/token';
+const url = 'https://aitutor-api.vercel.app/api/api/v1/chat/token';
 const headers = {
     'accept': 'application/json'
 };
