@@ -326,7 +326,7 @@
       "group": "AI Tutor API Endpoint",
       "pages": [
         "aitutor-api/aitutor-api-docs",
-        "aitutor-api/rag-api.mdx"
+        "aitutor-api/rag-api"
       ]
     }
   ],
