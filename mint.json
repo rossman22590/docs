@@ -323,17 +323,17 @@
       ]
     },
     {
-      "group": "AI Tutor API Endpoint",
-      "pages": [
-        "aitutor-api/aitutor-api-docs",
-      ]
-    },
-    {
       "group": "AI Tutor RAG API Endpoint",
       "pages": [
        "aitutor-api/rag-api",
        "aitutor-api/upload-file-rag",
        "aitutor-api/multi-file-rag"
+      ]
+    },
+    {
+      "group": "AI Tutor API Endpoint",
+      "pages": [
+        "aitutor-api/aitutor-api-docs",
       ]
     }
   ],
