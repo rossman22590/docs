@@ -1,0 +1,108 @@
+---
+title: "Multi-File RAG API"
+description: "Search for embeddings relevant to a query across multiple uploaded files simultaneously."
+openapi: 'POST /embeddings'
+---
+
+### Request Body
+
+**Content-Type**: `application/json`
+
+```json
+{
+  "query": "string",                // Query to search across multiple files
+  "file_ids": ["string", "string"], // Array of multiple file UUIDs to search in
+  "k": 3                           // Optional: Number of related chunks to return (default: 3)
+}
+
+```
+
+### Authentication
+
+Before making requests to the AI Tutor RAG API, you need to obtain your API key from your dashboard.
+
+Example Request
+
+```json
+const res = await fetch("https://rag-api-llm.up.railway.app/embeddings", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "authorization": apiKey,
+  },
+  body: JSON.stringify({
+    query: "tell me about ross and nice art",
+    file_ids: [
+      "387dffa2-5f6c-4ad0-8d27-fb0ea0cbff83",
+      "38b5d591-77c7-4612-a88c-ee1eaebba7bf"
+    ]
+  }),
+});
+
+```
+
+### Response
+
+```json
+{
+  "success": true,
+  "documents": [
+    {
+      "content": "Ross created a beautiful painting of mountain landscapes.",
+      "file_id": "387dffa2-5f6c-4ad0-8d27-fb0ea0cbff83",
+      "score": "0.89"
+    },
+    {
+      "content": "The art gallery featured nice contemporary pieces.",
+      "file_id": "38b5d591-77c7-4612-a88c-ee1eaebba7bf",
+      "score": "0.76"
+    }
+  ]
+}
+
+
+```
+
+### Error Responses
+
+```json
+
+
+{
+  "success": false,
+  "error": {
+    "message": "Invalid API key provided",
+    "code": "unauthorized"
+  }
+}
+
+
+```
+
+```json
+
+
+
+{
+  "success": false,
+  "error": {
+    "message": "No file IDs provided",
+    "code": "invalid_request"
+  }
+}
+
+
+```
+
+```json
+
+
+
+{
+  "success": false,
+  "error": {
+    "message": "One or more file IDs are invalid",
+    "code": "invalid_file_ids"
+  }
+}
+```

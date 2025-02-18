@@ -327,7 +327,8 @@
       "pages": [
         "aitutor-api/aitutor-api-docs",
         "aitutor-api/rag-api",
-       "aitutor-api/uplaod-file"
+       "aitutor-api/uplaod-file-rag",
+        "aitutor-api/multi-file-rag"
       ]
     }
   ],
