@@ -22,7 +22,7 @@ No authentication required for this endpoint.
 
 ```bash
 curl --request GET \
-     --url "https://manageprompt.com/api/v1/token" \
+     --url "https://aitutor-api.vercel.app/api/v1/token" \
      --header 'accept: application/json'
 ```
 
@@ -30,7 +30,7 @@ Example Request with Custom TTL
 
 ```bash
 curl --request GET \
-     --url "https://manageprompt.com/api/v1/token?ttl=300" \
+     --url "https://aitutor-api.vercel.app/api/v1/token?ttl=300" \
      --header 'accept: application/json'
 
 ```
@@ -72,19 +72,19 @@ Error Responses
 
 ```
 
-Notes
+### Notes
 
 The token is single-use and can only be used once for workflow execution
 Tokens automatically expire after their TTL period
 This endpoint is publicly accessible as it generates secure, time-limited tokens
 Unused tokens do not count against your API quota
 
-Code Examples
+### Code Examples
 
 ```python
 import requests
 
-url = "https://manageprompt.com/api/v1/token"
+url = "https://aitutor-api.vercel.app/api/v1/token"
 headers = {
     "accept": "application/json"
 }
@@ -99,7 +99,7 @@ Node.js
 
 const axios = require('axios');
 
-const url = 'https://manageprompt.com/api/v1/token';
+const url = 'https://aitutor-api.vercel.app/api/v1/token';
 const headers = {
     'accept': 'application/json'
 };

@@ -48,7 +48,6 @@ curl --request POST \
   }
 }
 
-
 ```
 
 ### Path Parameters
@@ -76,12 +75,9 @@ curl --request POST \
   }
 }
 
-
-
 ```
 
 ```json
-
 
 {
   "success": false,
@@ -91,12 +87,10 @@ curl --request POST \
   }
 }
 
-
 ```
 
 
 ```json
-
 
 {
   "success": false,
@@ -105,7 +99,6 @@ curl --request POST \
     "code": "invalid_request"
   }
 }
-
 
 ```
 
@@ -128,6 +121,7 @@ data = {
 
 response = requests.post(url, headers=headers, json=data)
 print(response.json())
+
 ```
 
 #### NodeJS
@@ -148,8 +142,6 @@ const data = {
 axios.post(url, data, { headers })
     .then(response => console.log(response.data))
     .catch(error => console.error(error));
-
-
 
 ```
 

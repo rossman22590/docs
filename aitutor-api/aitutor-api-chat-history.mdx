@@ -22,7 +22,7 @@ This endpoint allows you to retrieve the complete chat history associated with a
 
 ```bash
 curl --request GET \
-     --url "https://manageprompt.com/api/v1/chat/token/history" \
+     --url "https://aitutor-api.vercel.app//api/v1/chat/token/history" \
      --header 'accept: application/json'
 ```
 ### Response
@@ -88,7 +88,7 @@ Python
 import requests
 
 token = "your_chat_token"
-url = f"https://manageprompt.com/api/v1/chat/{token}/history"
+url = f"https://aitutor-api.vercel.app/api/v1/chat/{token}/history"
 headers = {
     "accept": "application/json"
 }
@@ -106,7 +106,7 @@ Node.js
 const axios = require('axios');
 
 const token = 'your_chat_token';
-const url = `https://manageprompt.com/api/v1/chat/${token}/history`;
+const url = `https://aitutor-api.vercel.app/api/v1/chat/${token}/history`;
 const headers = {
     'accept': 'application/json'
 };
