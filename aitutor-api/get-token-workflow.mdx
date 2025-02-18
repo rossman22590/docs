@@ -1,4 +1,110 @@
 ---
-title: "Get Token"
-description: "Description of your new file."
+title: "Get Token API"
+description: "Retrieve a single-use token for client-side request authentication."
+openapi: 'GET /token'
 ---
+
+### Description
+
+This endpoint provides a single-use token for client-side authentication. Each token has a configurable Time-To-Live (TTL) and expires automatically if unused. The default TTL is 60 seconds, with a maximum allowable duration of 5 minutes.
+
+### Query Parameters
+
+| Name | Required | Type    | Description                                           |
+| ---- | -------- | ------- | ----------------------------------------------------- |
+| ttl  | No       | integer | Token Time-To-Live in seconds (default: 60, max: 300) |
+
+### Authentication
+
+No authentication required for this endpoint.
+
+### Example Request
+
+```bash
+curl --request GET \
+     --url "https://manageprompt.com/api/v1/token" \
+     --header 'accept: application/json'
+```
+
+Example Request with Custom TTL
+
+```bash
+curl --request GET \
+     --url "https://manageprompt.com/api/v1/token?ttl=300" \
+     --header 'accept: application/json'
+
+```
+
+Success Response
+
+```bash
+{
+  "success": true,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "expires_in": 60
+}
+
+```
+
+Error Responses
+
+```bash
+
+{
+  "success": false,
+  "error": {
+    "message": "Invalid TTL value. Must be between 1 and 300 seconds",
+    "code": "invalid_ttl"
+  }
+}
+
+```
+
+```bash
+
+{
+  "success": false,
+  "error": {
+    "message": "Token generation failed",
+    "code": "token_generation_failed"
+  }
+}
+
+```
+
+Notes
+
+The token is single-use and can only be used once for workflow execution
+Tokens automatically expire after their TTL period
+This endpoint is publicly accessible as it generates secure, time-limited tokens
+Unused tokens do not count against your API quota
+
+Code Examples
+
+```python
+import requests
+
+url = "https://manageprompt.com/api/v1/token"
+headers = {
+    "accept": "application/json"
+}
+
+response = requests.get(url, headers=headers)
+print(response.json())
+
+```
+
+```javascript
+Node.js
+
+const axios = require('axios');
+
+const url = 'https://manageprompt.com/api/v1/token';
+const headers = {
+    'accept': 'application/json'
+};
+
+axios.get(url, { headers })
+    .then(response => console.log(response.data))
+    .catch(error => console.error(error));
+```
