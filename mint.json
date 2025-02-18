@@ -152,7 +152,7 @@
               "group": "Ultra Apps",
               "pages": [              
                  "ultra/deep-research",
-                  "ultra/browser",
+                  "ultra/browser"
               ],
               "icon": "robot",
               "iconType": "solid"
