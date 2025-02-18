@@ -163,15 +163,15 @@
                 "ultra/beam-gemini",
                 "ultra/merging-in-beam",
                 "ultra/beam-2-beta",
-                "ultra/beam-ultra",
-                "ultra/glyph"
+                "ultra/beam-ultra"
               ],
               "icon": "robot",
               "iconType": "solid"
             },
           "ultra/browser",
           "ultra/deep-research",
-          "ultra/ai-console-ultra"
+          "ultra/ai-console-ultra",
+         "ultra/glyph"
           ],   
           "icon": "rocket"
         }
