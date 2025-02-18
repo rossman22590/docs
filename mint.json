@@ -157,7 +157,7 @@
               "icon": "robot",
               "iconType": "solid"
             },
-                 {
+               {
               "group": "Ultra Multibot",
               "pages": [              
                 "ultra/multibot-ultra-adding-assistants"
@@ -175,7 +175,8 @@
               ],
               "icon": "robot",
               "iconType": "solid"
-            }
+            },
+          "ultra/browser"
           ],   
           "icon": "rocket"
         }
