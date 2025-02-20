@@ -1,0 +1,100 @@
+---
+title: "Streaming Chat"
+description: "Build your chatbot UI using our streaming chat endpoint, which is fully compatible with Vercel AI SDKs such as useChat."
+openapi: 'GET /api/v1/chat/token/stream'
+---
+
+### Overview
+
+This endpoint provides a streaming chat mechanism that works seamlessly with the Vercel AI SDK. After creating a token for a user, you can leverage this endpoint to power real-time chat interfaces using frameworks like React and the Vercel AI SDK's useChat hook.
+
+### Endpoint
+
+* **HTTP Method**: GET
+
+* **URL**: `/chat/{token}/stream`
+
+> Replace `{token}` with the actual chat token assigned to the user.
+
+### Features
+
+* **Real-time streaming**: Stream chat messages as they are generated.
+
+* **Vercel AI SDK Compatible**: Integrates easily with tools like `ai/react` for a reactive chat interface.
+
+* **Robust Error Handling**: Option for keeping the last message on error.
+
+### Request
+
+**Path Parameter**
+
+| Name  | Required | Type   | Description                                        |
+| ----- | -------- | ------ | -------------------------------------------------- |
+| token | Yes      | string | The unique chat session token assigned to the user |
+
+**HTTP Headers**
+
+* `accept: application/json`
+
+No body content is required for this GET request.
+
+### Example Request
+
+```bash
+curl --request GET \
+     --url "https://aitutor-api.vercel.app/api/v1/chat/your_chat_token/stream" \
+     --header 'accept: application/json'
+
+```
+
+### Response
+
+The response will be a real-time stream of chat messages. The format is dynamically generated with each message containing the following fields:
+
+role: Identifies the sender (e.g., user, assistant).
+content: The text/content of the message.
+timestamp: ISO 8601 formatted timestamp marking when the message was sent.
+Code Example
+Below is an example of how to use this endpoint in a React component with the Vercel AI SDK's useChat hook:
+
+```javascript
+
+'use client';
+
+import { useChat } from 'ai/react';
+
+export default function Page() {
+  // Replace 'your_chat_token' with the actual token value for the chat session
+  const token = 'your_chat_token';
+  
+  // Use the hook and specify the API endpoint for streaming chat
+  const { messages, input, handleInputChange, handleSubmit } = useChat({
+    api: `https://aitutor-api.vercel.app/api/v1/chat/${token}/stream`,
+    keepLastMessageOnError: true,
+  });
+
+  return (
+    <>
+      {messages.map(message => (
+        <div key={message.id}>
+          {message.role === 'user' ? 'User: ' : 'AI: '}
+          {message.content}
+        </div>
+      ))}
+
+      <form onSubmit={handleSubmit}>
+        <input name="prompt" value={input} onChange={handleInputChange} />
+        <button type="submit">Submit</button>
+      </form>
+    </>
+  );
+}
+
+```
+
+### Additional Notes
+
+Vercel AI SDK Integration: For more details on integration with Vercel AI SDKs, visit the Vercel AI SDK documentation.
+
+Error Handling: The keepLastMessageOnError option ensures that if an error occurs while streaming, the last successful message is preserved until the issue is resolved.
+Customization: Feel free to customize the chat UI and error handling logic according to your specific requirements.
