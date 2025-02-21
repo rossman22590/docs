@@ -1,0 +1,210 @@
+---
+title: "Streaming Chat"
+description: "Build your chatbot UI using our streaming chat endpoint, which is fully compatible with Vercel AI SDKs such as useChat."
+openapi: "POST /api/v1/chat/token/stream"
+---
+
+# Streaming API Documentation
+
+## Overview
+
+Our AI Tutor API supports real-time data streaming to enhance user experience and provide faster data retrieval. This guide explains how to implement client-side streaming requests using our API.
+
+<Note>
+  This API is designed to work seamlessly with modern frontend frameworks and provides real-time streaming capabilities.
+</Note>
+
+## Authentication
+
+<CardGroup cols={2}>
+  <Card title="Token Generation" icon="key">
+    Generate single-use tokens for secure API access using our token endpoint.
+  </Card>
+
+  <Card title="Request Authentication" icon="lock">
+    Include tokens as query parameters in your streaming requests.
+  </Card>
+</CardGroup>
+
+### Getting Started
+
+First, generate a token:
+
+```typescript
+const response = await fetch('https://aitutor-api.vercel.app/api/v1/token/generate');
+const { token } = await response.json();
+```
+
+## Making Requests
+
+<CodeGroup>
+  ```typescript TypeScript
+  const response = await fetch(
+    `https://aitutor-api.vercel.app/api/v1/chat/${token}/stream`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ 
+        message: 'your message',
+      }),
+    }
+  );
+  ```
+
+  ```bash cURL
+  curl --request POST \
+    --url https://aitutor-api.vercel.app/api/v1/chat/{token}/stream \
+    --header 'Content-Type: application/json' \
+    --data '{"message":"Help me with React"}'
+  ```
+</CodeGroup>
+
+## React Implementation
+
+```tsx StreamingText.tsx
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
+import { Spinner } from "./loaders";
+
+interface StreamingTextProps {
+  url: string;
+  fallbackText: string;
+  className?: string;
+}
+
+export default function StreamingText({
+  url,
+  fallbackText,
+  className,
+}: StreamingTextProps) {
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState("");
+
+  const getData = useCallback(async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = response.body;
+      if (!data) {
+        setResult(fallbackText);
+        return;
+      }
+
+      const reader = data.getReader();
+      const decoder = new TextDecoder();
+      let done = false;
+      setLoading(false);
+
+      while (!done) {
+        const { value, done: doneReading } = await reader.read();
+        done = doneReading;
+        const chunkValue = decoder.decode(value);
+        setResult((prev) => (prev ?? "") + chunkValue);
+      }
+    } catch (error) {
+      console.error('Streaming error:', error);
+      setResult(fallbackText);
+    } finally {
+      setLoading(false);
+    }
+  }, [url, fallbackText]);
+
+  useEffect(() => {
+    if (url) {
+      getData();
+    }
+  }, [getData, url]);
+
+  return loading ? (
+    <Spinner className={className} />
+  ) : (
+    <p className={className}>{result}</p>
+  );
+}
+```
+
+```tsx
+import StreamingText from './StreamingText';
+
+function MyComponent() {
+  return (
+    <StreamingText
+      url="https://aitutor-api.vercel.app/api/v1/chat/your-token/stream"
+      fallbackText="Loading failed. Please try again."
+      className="text-lg text-gray-800"
+    />
+  );
+}
+```
+
+## Features
+
+<CardGroup cols={2}>
+  <Card title="Real-Time Streaming" icon="bolt">
+    Experience **instant responses** with our advanced streaming technology.
+  </Card>
+
+  <Card title="Progressive Display" icon="stream">
+    Watch responses build in real-time with our **progressive content rendering**.
+  </Card>
+
+  <Card title="Type-Safe Development" icon="shield-check">
+    Built with **TypeScript** support for robust development.
+  </Card>
+
+  <Card title="Customizable UI" icon="palette">
+    Flexible styling options that **adapt to your design**.
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Error Handling" icon="shield-exclamation">
+    * Implement comprehensive error boundaries
+
+    * Provide meaningful fallback content
+
+    * Handle network interruptions gracefully
+
+    * Log errors for debugging
+  </Accordion>
+
+  <Accordion title="Security" icon="key">
+    * Use secure token storage
+
+    * Implement token refresh
+
+    * Follow expiration best practices
+
+    * Monitor usage patterns
+  </Accordion>
+
+  <Accordion title="Performance" icon="gauge-high">
+    * Enable proper cleanup
+
+    * Implement efficient loading
+
+    * Optimize memory usage
+
+    * Handle unmounting
+  </Accordion>
+</AccordionGroup>
+
+## Browser Support
+
+<Warning>
+  Internet Explorer is not supported. Use a modern browser or implement a fallback mechanism.
+</Warning>

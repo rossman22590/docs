@@ -345,7 +345,8 @@
         "aitutor-api/aitutor-api-docs",
         "aitutor-api/get-token-workflow",
          "aitutor-api/aitutor-api-chat-stream",
-        "aitutor-api/aitutor-api-chat-history"
+        "aitutor-api/aitutor-api-chat-history",
+         "aitutor-api/aitutor-api-workflow-stream"
       ]
     }
   ],
