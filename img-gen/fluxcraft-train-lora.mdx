@@ -4,6 +4,42 @@ description: 'Create custom LoRAs to enhance your AI-generated images in FluxCra
 icon: 'graduation-cap'
 ---
 
+### Understanding the Benefits of Style vs RegularLoRAs
+
+A "style LoRA" is a type of LoRA (Low-Rank Adaptation) model specifically designed to capture and apply a particular artistic style, like a painting style or animation aesthetic, while a "regular LoRA" is a more general LoRA focused on adding a specific concept or feature to a model without necessarily changing the overall style drastically; essentially, a style LoRA is used to change the "look" of the generated output, while a regular LoRA focuses on adding new elements to the existing style. 
+
+Key differences: 
+
+* **Training data:**
+
+
+
+
+  A style LoRA is trained on a dataset of images that share a consistent artistic style, like a collection of paintings by a specific artist, while a regular LoRA might be trained on images with diverse styles but a common concept (e.g., images of cats). 
+
+* **Application:**
+
+
+
+
+  When applying a style LoRA, the goal is to transform the generated image to match the specific artistic style, while a regular LoRA would be used to add a particular feature or concept to the generated image without significantly changing its style. 
+
+Example usage: 
+
+* **Style LoRA:**
+
+
+
+
+  You could use a "Van Gogh style LoRA" to make a generated image look like a painting by Vincent Van Gogh. 
+
+* **Regular LoRA:**
+
+
+
+
+  You could use a "cat face LoRA" to add cat ears and whiskers to a generated image of a person, while maintaining the overall style of the base model. 
+
 ### Understanding the Benefits of Custom LoRAs
 
 Training and using custom LoRAs offers numerous advantages for AI image generation:
@@ -12,12 +48,15 @@ Training and using custom LoRAs offers numerous advantages for AI image generati
   <Card title="Personalized Style" icon="palette">
     Create **unique artistic styles** tailored to your specific vision or brand.
   </Card>
+
   <Card title="Specialized Subjects" icon="camera">
     Train the AI to generate **specific objects, characters, or scenes** with higher accuracy.
   </Card>
+
   <Card title="Increased Control" icon="sliders">
     Gain more **precise control** over the output of your AI-generated images.
   </Card>
+
   <Card title="Efficiency" icon="bolt">
     Achieve **specialized results** without the need for extensive model retraining.
   </Card>
@@ -33,6 +72,7 @@ Follow these steps to create your own LoRA using Pixio's LoRA training feature.
 
     **Note:** Each LoRA training costs 400 credits.
   </Accordion>
+
   <Accordion title="Step 2: Set Up Your LoRA" icon="gears">
     Enter a name for your LoRA and choose a trigger word.
 
@@ -40,18 +80,23 @@ Follow these steps to create your own LoRA using Pixio's LoRA training feature.
 
     ![LoRA Setup](https://img.mytsi.org/i/bQFx754.png)
   </Accordion>
+
   <Accordion title="Step 3: Configure LoRA Type" icon="toggle-on">
     Decide whether to enable "Is Style" based on your LoRA's purpose:
-    - Enable for mimicking overall aesthetic, colors, and atmosphere
-    - Disable for training on specific objects or characters
+
+    * Enable for mimicking overall aesthetic, colors, and atmosphere
+
+    * Disable for training on specific objects or characters
 
     ![Is Style Option](https://img.mytsi.org/i/AFtk755.png)
   </Accordion>
+
   <Accordion title="Step 4: Upload Training Images" icon="upload">
     Upload at least 10 images (up to 20 for best results) that your model will train on.
 
     ![Upload Images](https://img.mytsi.org/i/Laug756.png)
   </Accordion>
+
   <Accordion title="Step 5: Start Training" icon="play">
     Click on "Train LoRA" to begin the training process. This will take a few minutes.
 
@@ -71,10 +116,14 @@ Once your LoRA is trained, you can start using it in your projects.
 
     ![Trained Models List](https://img.mytsi.org/i/HsmZ758.png)
   </Accordion>
+
   <Accordion title="Utilizing Your LoRA" icon="wand-magic-sparkles">
     To use your LoRA:
+
     1. Note the trigger word
+
     2. Copy the LoRA URL
+
     3. Use both in FluxCraft to invoke the model
 
     You can also download and share your models if desired.
@@ -89,9 +138,11 @@ Once your LoRA is trained, you can start using it in your projects.
   <Accordion title="Choose Quality Images" icon="image">
     Select high-quality, consistent images that clearly represent the style or subject you want to train.
   </Accordion>
+
   <Accordion title="Vary Your Training Data" icon="sliders">
     Include slight variations in your training images to help the LoRA generalize better.
   </Accordion>
+
   <Accordion title="Test Your LoRA" icon="vial">
     After training, test your LoRA with various prompts to understand its capabilities and limitations.
   </Accordion>
