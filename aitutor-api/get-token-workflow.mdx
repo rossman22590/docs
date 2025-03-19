@@ -21,9 +21,15 @@ No authentication required for this endpoint.
 ### Example Request
 
 ```bash
-curl --request GET \
-     --url "https://aitutor-api.vercel.app/api/v1/chat/token" \
-     --header 'accept: application/json'
+curl --request POST \
+     --url https://aitutor-api.vercel.app/api/v1/chat/token \
+     --header 'Authorization: Bearer YOUR-KEY-HERE' \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '{
+  "chatbotId": "CHATBOT-ID",
+  "sessionId": "RANDOM-STRING"
+}'
 ```
 
 Example Request with Custom TTL
