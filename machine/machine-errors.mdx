@@ -4,64 +4,103 @@ description: "Common error codes and solutions"
 icon: "bug"
 ---
 
-# Machine Error Codes
+# Error Reference Guide
 
-This page provides information about common error codes you might encounter when using Machine, along with explanations and troubleshooting steps.
+This document provides a list of common errors that users might encounter when using Machine, along with their causes and solutions.
 
-## HTTP Error Codes
+## Common Error Codes
 
 <ResponseField name="404" type="Not Found">
-  **Sandbox needs to be recreated**
+  **Resource Not Found**
   
-  The AI sandbox environment has expired or been destroyed. This typically happens after extended periods of inactivity.
+  The requested resource could not be found or has been removed.
   
-  **Solution**: Create a new sandbox instance by refreshing the page or restarting your session.
+  **Solution**: 
+  - Check that you're using the correct URL
+  - Try refreshing the page
+  - Return to the dashboard and try accessing the resource again
 </ResponseField>
 
 <ResponseField name="422" type="Unprocessable Entity">
-  **Ran out of time**
+  **Request Error**
   
-  The operation exceeded the maximum allowed execution time. This can happen with complex requests or during high system load.
+  Machine couldn't process your request due to validation issues.
   
-  **Solution**: Try breaking your request into smaller, more focused prompts, or retry during off-peak hours.
+  **Solution**: 
+  - Try simplifying your request
+  - Check that any uploaded files meet our requirements
+  - If asking a complex question, break it into smaller parts
 </ResponseField>
 
-<ResponseField name="422" type="Unprocessable Entity">
-  **Upload files must happen after chat begins**
-  
-  You attempted to upload files before establishing a chat session.
-  
-  **Solution**: First start a chat session, then proceed with file uploads when the chat is active.
-</ResponseField>
+## Account & Subscription Errors
 
-## Troubleshooting Tips
+### "Invalid subscription tier" Error
 
-<AccordionGroup>
-  <Accordion title="Connection Issues">
-    If you're experiencing connection problems with Machine, try:
-    - Checking your internet connection
-    - Clearing your browser cache
-    - Using a different browser
-    - Disabling VPN or proxy services
-  </Accordion>
-  
-  <Accordion title="Performance Problems">
-    If Machine is running slowly:
-    - Ensure you're not running too many concurrent sessions
-    - Try reducing the complexity of your prompts
-    - Close other resource-intensive applications
-    - Check for browser extensions that might be interfering
-  </Accordion>
-  
-  <Accordion title="File Upload Issues">
-    If you're having trouble with file uploads:
-    - Ensure files are under the maximum size limit (50MB)
-    - Check that you're using supported file formats
-    - Verify the chat session is active before uploading
-    - Try compressing large files before upload
-  </Accordion>
-</AccordionGroup>
+**Cause**: Your subscription appears to be invalid or has encountered a processing issue.
 
-## Need More Help?
+**Solution**:
+1. Go to Account Settings → Subscription to verify your current plan
+2. Try refreshing your browser or logging out and back in
+3. Contact customer support if the issue persists
 
-If you continue to experience issues not covered here, please [contact our support team](mailto:support@machine-ai.com) with details about the error and steps to reproduce it.
+### Checkout Problems
+
+**Cause**: Issues during the payment or subscription upgrade process.
+
+**Solution**:
+1. Try a different browser or clear your browser cache
+2. Ensure your payment method is valid and has sufficient funds
+3. Use our direct checkout link from your account page
+
+## Usage Problems
+
+### "Session Expired" Error
+
+**Cause**: Your session has timed out due to inactivity or system maintenance.
+
+**Solution**:
+1. Refresh the page
+2. Log out and log back in
+3. If the problem continues, wait a few minutes and try again
+
+### "File Upload Failed" Error
+
+**Cause**: Issues with file uploads can occur for several reasons.
+
+**Solution**:
+1. Ensure your file is under the 25MB size limit
+2. Check that you're using a supported file format
+3. Try uploading again or use a different file
+
+### "Chat Not Responding" Error
+
+**Cause**: The AI assistant might be processing a complex request or experiencing high demand.
+
+**Solution**:
+1. Wait a few moments for the response
+2. If no response after 30 seconds, refresh the page
+3. Start a new chat if the issue persists
+
+## Feature Access Issues
+
+### "Feature Not Available" Error
+
+**Cause**: You've attempted to use a feature not included in your current subscription plan.
+
+**Solution**:
+1. Check your current subscription level in Account Settings
+2. Upgrade your plan to access premium features
+3. See our pricing page for feature comparison
+
+### "Usage Limit Reached" Error
+
+**Cause**: You've reached the maximum usage for your current subscription period.
+
+**Solution**:
+1. Check your usage statistics in Account Settings
+2. Wait until your usage resets on your billing date
+3. Consider upgrading to a plan with higher limits
+
+<Info>
+For any errors not covered in this guide, please contact our customer support team at help@machine-ai.com or use the in-app chat support for assistance.
+</Info>

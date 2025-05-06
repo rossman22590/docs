@@ -1,0 +1,204 @@
+---
+title: "External APIs in Machine"
+description: "Connecting Machine to external services"
+icon: "plug"
+---
+
+# Using External APIs with Machine
+
+Machine can connect to virtually any external API using its built-in Python and command-line capabilities. This guide explains how to use these features to expand Machine's functionality by connecting to external services.
+
+## API Integration Capabilities
+
+<CardGroup cols={2}>
+  <Card title="Python Requests" icon="python">
+    Machine can execute Python code that uses the requests library to call external APIs.
+  </Card>
+  <Card title="Curl Commands" icon="terminal">
+    For direct HTTP requests, Machine supports curl commands for quick API interactions.
+  </Card>
+  <Card title="API Authentication" icon="key">
+    Securely connect to APIs that require authentication using various methods.
+  </Card>
+  <Card title="Data Processing" icon="gear">
+    Parse and transform API responses directly within Machine.
+  </Card>
+</CardGroup>
+
+## Basic Python API Example
+
+Here's a simple example of using Python to connect to an external API within Machine:
+
+```python
+import requests
+
+# Make a GET request to a public API
+response = requests.get('https://api.example.com/data')
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Process the JSON response
+    data = response.json()
+    print(f"Retrieved {len(data)} records")
+    
+    # You can now use this data in your workflow
+    for item in data[:5]:  # Show first 5 items
+        print(item['name'])
+else:
+    print(f"Error: {response.status_code}")
+```
+
+Simply paste this code into Machine, adjust the URL and parsing logic for your specific API, and run it.
+
+## Using Curl Commands
+
+If you prefer using curl commands, Machine supports those as well:
+
+```bash
+curl -X GET https://api.example.com/data -H "Authorization: Bearer YOUR_TOKEN"
+```
+
+## Authentication Methods
+
+Machine supports various authentication methods for APIs:
+
+### API Key Authentication
+
+```python
+import requests
+
+headers = {
+    'X-API-Key': 'your_api_key_here'
+}
+
+response = requests.get('https://api.example.com/data', headers=headers)
+```
+
+### OAuth Authentication
+
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer your_oauth_token_here'
+}
+
+response = requests.get('https://api.example.com/data', headers=headers)
+```
+
+### Basic Authentication
+
+```python
+import requests
+
+response = requests.get(
+    'https://api.example.com/data',
+    auth=('username', 'password')
+)
+```
+
+## POST Requests with Data
+
+Sending data to an API:
+
+```python
+import requests
+
+data = {
+    'name': 'New Item',
+    'description': 'This is a new item created via API'
+}
+
+response = requests.post('https://api.example.com/items', json=data)
+
+if response.status_code == 201:
+    print("Item created successfully!")
+    print(response.json())
+else:
+    print(f"Error: {response.status_code}")
+```
+
+## Common API Use Cases
+
+<AccordionGroup>
+  <Accordion title="Data Retrieval" icon="database">
+    Fetch data from external sources to enhance your analysis or combine with your own data.
+    
+    ```python
+    # Example: Getting weather data
+    import requests
+    
+    city = "New York"
+    api_key = "your_weather_api_key"
+    
+    response = requests.get(f"https://api.weatherapi.com/v1/current.json?key={api_key}&q={city}")
+    weather_data = response.json()
+    
+    print(f"Current temperature in {city}: {weather_data['current']['temp_c']}°C")
+    ```
+  </Accordion>
+  
+  <Accordion title="Content Generation" icon="wand-magic-sparkles">
+    Use external AI services alongside Machine for specialized content generation.
+    
+    ```python
+    # Example: Generating an image description using an external API
+    import requests
+    
+    image_url = "https://example.com/image.jpg"
+    vision_api_key = "your_vision_api_key"
+    
+    headers = {"Authorization": f"Bearer {vision_api_key}"}
+    data = {"image_url": image_url}
+    
+    response = requests.post("https://api.vision-service.com/analyze", headers=headers, json=data)
+    description = response.json()["description"]
+    
+    print(f"Image description: {description}")
+    ```
+  </Accordion>
+  
+  <Accordion title="Data Transformation" icon="arrows-rotate">
+    Convert data between formats using specialized APIs.
+    
+    ```python
+    # Example: Converting currency
+    import requests
+    
+    amount = 100
+    from_currency = "USD"
+    to_currency = "EUR"
+    api_key = "your_exchange_api_key"
+    
+    response = requests.get(f"https://api.exchangerate.host/convert?from={from_currency}&to={to_currency}&amount={amount}&api_key={api_key}")
+    result = response.json()
+    
+    print(f"{amount} {from_currency} = {result['result']} {to_currency}")
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+When using external APIs with Machine, follow these best practices:
+
+1. **Security**: Never hardcode sensitive credentials directly in your code. Consider using environment variables or secure storage.
+
+2. **Rate Limiting**: Be aware of API rate limits. Add delays between requests if making multiple calls to avoid being blocked.
+
+3. **Error Handling**: Always implement proper error handling to manage API failures gracefully.
+
+4. **Data Validation**: Validate the data received from external APIs before using it in critical operations.
+
+5. **Caching**: Consider caching API responses for frequently accessed data to improve performance.
+
+## Limitations and Considerations
+
+- Machine has network connectivity to most common APIs but may have restrictions for security reasons
+- Some APIs may have CORS or other security restrictions that prevent direct access
+- For very large datasets, consider pagination or streaming techniques
+- Machine operates within its security sandbox, so some system-level operations might be restricted
+
+<Info>
+Remember that when using external APIs, you're responsible for complying with each service's terms of use and data handling requirements.
+</Info>
