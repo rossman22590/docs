@@ -101,6 +101,15 @@ This document provides a list of common errors that users might encounter when u
 2. Wait until your usage resets on your billing date
 3. Consider upgrading to a plan with higher limits
 
+### "Tool Execution Timeout" Error
+
+**Cause**: You may encounter errors like `ToolResult(success=False, output="Error executing command: Failed to execute session command: HTTPSConnectionPool(host='app.daytona.io', port=443): Read timed out. (read timeout=179.9997366879834)")` when Machine attempts to run commands or code.
+
+**Solution**:
+1. This error is normal and simply means the AI failed or code it wrote failed to execute within the expected time
+2. Just ask Machine to retry the operation
+3. If the error persists, try breaking down your request into smaller steps
+
 <Info>
-For any errors not covered in this guide, please contact our customer support team at rcohen@mytsi.org or use the in-app chat support for assistance.
+For any errors not covered in this guide, please contact our customer support at rcohen@mytsi.org or use the in-app chat support for assistance.
 </Info>
