@@ -314,7 +314,8 @@
     {
       "group": "Machine",
       "pages": [
-        "machine/the-machine"
+        "machine/the-machine",
+        "machine/machine-errors"
       ]
     },
     {

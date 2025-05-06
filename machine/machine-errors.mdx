@@ -1,0 +1,67 @@
+---
+title: "Machine Errors"
+description: "Common error codes and solutions"
+icon: "bug"
+---
+
+# Machine Error Codes
+
+This page provides information about common error codes you might encounter when using Machine, along with explanations and troubleshooting steps.
+
+## HTTP Error Codes
+
+<ResponseField name="404" type="Not Found">
+  **Sandbox needs to be recreated**
+  
+  The AI sandbox environment has expired or been destroyed. This typically happens after extended periods of inactivity.
+  
+  **Solution**: Create a new sandbox instance by refreshing the page or restarting your session.
+</ResponseField>
+
+<ResponseField name="422" type="Unprocessable Entity">
+  **Ran out of time**
+  
+  The operation exceeded the maximum allowed execution time. This can happen with complex requests or during high system load.
+  
+  **Solution**: Try breaking your request into smaller, more focused prompts, or retry during off-peak hours.
+</ResponseField>
+
+<ResponseField name="422" type="Unprocessable Entity">
+  **Upload files must happen after chat begins**
+  
+  You attempted to upload files before establishing a chat session.
+  
+  **Solution**: First start a chat session, then proceed with file uploads when the chat is active.
+</ResponseField>
+
+## Troubleshooting Tips
+
+<AccordionGroup>
+  <Accordion title="Connection Issues">
+    If you're experiencing connection problems with Machine, try:
+    - Checking your internet connection
+    - Clearing your browser cache
+    - Using a different browser
+    - Disabling VPN or proxy services
+  </Accordion>
+  
+  <Accordion title="Performance Problems">
+    If Machine is running slowly:
+    - Ensure you're not running too many concurrent sessions
+    - Try reducing the complexity of your prompts
+    - Close other resource-intensive applications
+    - Check for browser extensions that might be interfering
+  </Accordion>
+  
+  <Accordion title="File Upload Issues">
+    If you're having trouble with file uploads:
+    - Ensure files are under the maximum size limit (50MB)
+    - Check that you're using supported file formats
+    - Verify the chat session is active before uploading
+    - Try compressing large files before upload
+  </Accordion>
+</AccordionGroup>
+
+## Need More Help?
+
+If you continue to experience issues not covered here, please [contact our support team](mailto:support@machine-ai.com) with details about the error and steps to reproduce it.
