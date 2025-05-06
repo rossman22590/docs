@@ -311,7 +311,13 @@
         
       ]
     },
-     {
+    {
+      "group": "Machine",
+      "pages": [
+        "machine/the-machine"
+      ]
+    },
+    {
       "group": "Pixio Model Info",
       "pages": [
         "faq/video"
