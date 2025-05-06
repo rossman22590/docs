@@ -1,0 +1,202 @@
+---
+title: "Command-Line Functionality"
+description: "System automation through conversation"
+icon: "terminal"
+---
+
+# Command-Line Functionality
+
+Machine can execute command-line operations on your behalf, enabling powerful system automation through simple conversations. This capability allows you to perform complex technical tasks without needing to remember specific command syntax.
+
+## Overview
+
+The command-line functionality serves as a bridge between natural language and system-level operations, allowing you to:
+
+- Run terminal commands without memorizing syntax
+- Execute scripts and programs
+- Automate system tasks
+- Install and configure software
+- Manage files and directories at the system level
+
+<Warning>
+Command-line operations can modify your system and files. Machine always asks for confirmation before executing potentially destructive or high-impact commands.
+</Warning>
+
+## Available Operations
+
+### File System Operations
+
+Machine can help you manage files and directories through commands like:
+
+```bash
+# List directory contents
+ls -la ~/Documents
+
+# Find files by pattern
+find ~/Documents -name "*.pdf" -mtime -7
+
+# Create directories
+mkdir -p ~/Projects/new-project/src
+
+# Move or rename files
+mv ~/Downloads/document.pdf ~/Documents/important.pdf
+```
+
+### System Information
+
+Retrieve information about your system:
+
+```bash
+# System information
+uname -a
+systeminfo
+
+# Disk usage
+df -h
+du -sh ~/Documents
+
+# Process monitoring
+ps aux | grep "chrome"
+top
+```
+
+### Network Operations
+
+Perform network diagnostics and operations:
+
+```bash
+# Check connectivity
+ping google.com
+
+# Network interface information
+ifconfig
+ipconfig /all
+
+# DNS lookups
+nslookup example.com
+dig example.com
+```
+
+### Package Management
+
+Install and manage software packages:
+
+```bash
+# For Debian/Ubuntu
+apt update && apt install package-name
+
+# For Red Hat/Fedora
+dnf install package-name
+
+# For macOS
+brew install package-name
+
+# For Windows
+choco install package-name
+```
+
+### Process Management
+
+Control running processes:
+
+```bash
+# Start a process
+start program.exe
+open application.app
+
+# Stop a process
+pkill process-name
+taskkill /IM program.exe
+```
+
+## Using Command-Line Functionality
+
+### Natural Language Requests
+
+You don't need to know exact commands. Simply describe what you want to accomplish:
+
+```
+You: "I need to find all PDF files in my Downloads folder from the last week"
+Machine: "I can help with that. I'll use the 'find' command to locate PDF files modified in the last 7 days. Would you like me to run: find ~/Downloads -name '*.pdf' -mtime -7"
+```
+
+### Script Creation
+
+Machine can create, explain, and execute scripts:
+
+```
+You: "I need a script that backs up my Documents folder to an external drive every day"
+Machine: "I'll create a backup script for you. Here's what it will do:
+1. Check if your external drive is connected
+2. Create a timestamped backup folder
+3. Use rsync to copy only changed files
+4. Log the backup status
+
+Would you like me to create this script now?"
+```
+
+### Automation Workflows
+
+Create complex automation workflows through conversation:
+
+```
+You: "I want to set up a workflow that downloads data from our website analytics, processes it with Python, and emails me a weekly report"
+Machine: "I'll help you create that automation. Let me break this down into steps:
+1. Use curl to download analytics data
+2. Process it with a Python script
+3. Create a report document
+4. Send it via email
+5. Schedule this with cron/Task Scheduler
+
+Would you like me to help you implement each step?"
+```
+
+## Security Considerations
+
+When using command-line functionality, Machine follows these security principles:
+
+### Permission Requirements
+
+- Machine only executes commands with your current user permissions
+- Elevated privileges (sudo/Administrator) are clearly indicated before execution
+- You must explicitly approve commands requiring elevated privileges
+
+### Command Review
+
+- All commands are shown to you before execution
+- Potentially destructive operations are highlighted with warnings
+- Machine explains complex commands in plain language
+
+### Execution Contexts
+
+- By default, commands run in a secure execution context
+- File system access is limited to your user directories unless explicitly expanded
+- Network operations follow strict security policies
+
+## Best Practices
+
+Follow these guidelines for optimal and secure use of command-line functionality:
+
+1. **Review commands carefully** before approving execution
+2. **Start simple** with basic commands before attempting complex operations
+3. **Use descriptive requests** to help Machine understand your goals
+4. **Ask for explanations** if you don't understand what a command does
+5. **Create scripts** for recurring operations rather than executing complex commands repeatedly
+
+## Platform-Specific Considerations
+
+### Windows
+
+- PowerShell and Command Prompt commands are both supported
+- Some operations may require Administrator privileges
+- UNC paths are supported for network operations
+
+### macOS/Linux
+
+- Bash, Zsh, and other common shells are supported
+- Environment variables are preserved between commands
+- File permissions follow standard Unix models
+
+<Info>
+For advanced command-line operations or custom scripts, you can provide Machine with specific syntax or ask it to optimize commands for your particular environment.
+</Info>

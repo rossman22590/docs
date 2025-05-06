@@ -316,10 +316,17 @@
       "pages": [
         "machine/the-machine",
         "machine/getting-started",
+        "machine/using-machine",
         "machine/features",
         "machine/browser-automation",
+        "machine/command-line",
+        "machine/file-management",
         "machine/api-in-machine",
+        "machine/advanced-tutorials",
         "machine/use-cases",
+        "machine/pricing-plans",
+        "machine/security-privacy",
+        "machine/faq",
         "machine/machine-errors"
       ]
     },
