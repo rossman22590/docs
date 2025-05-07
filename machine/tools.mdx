@@ -1,0 +1,191 @@
+---
+title: "Machine Tools"
+description: "Official tools available in Machine and how to use them"
+icon: "screwdriver-wrench"
+---
+
+# Machine Tools
+
+Machine provides a powerful set of built-in tools that can be called directly in conversations. These tools enable you to perform complex operations like file management, browser automation, deployments, and more.
+
+## File Management Tools
+
+### execute-command
+Execute terminal or shell commands directly from Machine.
+```
+You: "Can you run 'npm install' in my project directory?"
+Machine: Using execute-command to run npm install...
+```
+
+### create-file
+Create a new file with specified content.
+```
+You: "Create a new HTML file for our landing page"
+Machine: Using create-file to generate index.html...
+```
+
+### delete-file
+Remove a file from the file system.
+```
+You: "Delete the temporary log file we created"
+Machine: Using delete-file to remove temp.log...
+```
+
+### full-file-rewrite
+Completely replace the contents of an existing file.
+```
+You: "Rewrite the CSS file with the updated styles"
+Machine: Using full-file-rewrite to update styles.css...
+```
+
+### str-replace
+Replace specific strings or patterns within a file while preserving the rest.
+```
+You: "Replace all instances of the old company name with the new one"
+Machine: Using str-replace to update references in the files...
+```
+
+## Browser Automation Tools
+
+### browser-navigate-to
+Navigate to a specific URL in the browser.
+```
+You: "Go to github.com"
+Machine: Using browser-navigate-to to access GitHub...
+```
+
+### browser-click-element
+Click on a specific element on a webpage.
+```
+You: "Click the login button"
+Machine: Using browser-click-element to click on the button...
+```
+
+### browser-input-text
+Enter text into a field on a webpage.
+```
+You: "Type my email address into the signup form"
+Machine: Using browser-input-text to enter your email...
+```
+
+### browser-scroll-down
+Scroll down on the current webpage.
+```
+You: "Scroll down to see more content"
+Machine: Using browser-scroll-down to view more of the page...
+```
+
+### browser-scroll-up
+Scroll up on the current webpage.
+```
+You: "Scroll back to the top"
+Machine: Using browser-scroll-up to return to the top of the page...
+```
+
+### browser-scroll-to-text
+Scroll the page to a specific text element.
+```
+You: "Find the section about pricing on this page"
+Machine: Using browser-scroll-to-text to locate the pricing section...
+```
+
+### browser-select-dropdown-option
+Choose an option from a dropdown menu.
+```
+You: "Select 'English' from the language dropdown"
+Machine: Using browser-select-dropdown-option to change the language...
+```
+
+### browser-get-dropdown-options
+Retrieve all available options from a dropdown menu.
+```
+You: "What language options are available?"
+Machine: Using browser-get-dropdown-options to list all languages...
+```
+
+### browser-send-keys
+Send specific keyboard inputs to the browser.
+```
+You: "Press Enter to submit the form"
+Machine: Using browser-send-keys to press Enter...
+```
+
+### browser-switch-tab
+Change to a different browser tab.
+```
+You: "Go to the other tab we opened earlier"
+Machine: Using browser-switch-tab to switch tabs...
+```
+
+### browser-close-tab
+Close the current browser tab.
+```
+You: "Close this tab now that we're done"
+Machine: Using browser-close-tab to close the current tab...
+```
+
+### browser-drag-drop
+Perform drag and drop operations on webpage elements.
+```
+You: "Drag the image into the upload area"
+Machine: Using browser-drag-drop to move the element...
+```
+
+### browser-wait
+Wait for a specific condition or time period before continuing.
+```
+You: "Wait for the page to fully load"
+Machine: Using browser-wait to pause until loading completes...
+```
+
+## Deployment Tools
+
+### deploy
+Deploy applications, websites, or other resources to production environments.
+```
+You: "Deploy our website to production"
+Machine: Using deploy to publish your site...
+```
+
+## Information Tools
+
+### ask
+Ask Machine a question or request clarification about a topic.
+```
+You: "What's the best approach for optimizing this code?"
+Machine: Using ask to analyze and provide optimization recommendations...
+```
+
+### complete
+Request Machine to complete a task or process that was previously started.
+```
+You: "Please finish generating the documentation we started"
+Machine: Using complete to finish the documentation generation...
+```
+
+### crawl-webpage
+Extract data and information from a specified webpage.
+```
+You: "Extract all the product information from this catalog page"
+Machine: Using crawl-webpage to gather the product details...
+```
+
+### web-search
+Perform a search for information on the internet.
+```
+You: "Find recent articles about machine learning advances"
+Machine: Using web-search to find relevant information...
+```
+
+## Using Tools in Conversations
+
+You don't need to explicitly name these tools in your conversations. Simply describe what you want to accomplish, and Machine will automatically select and use the appropriate tools. However, you can reference tool names directly if you prefer a specific approach:
+
+```
+You: "Can you use browser-navigate-to to open our company website?"
+Machine: Using browser-navigate-to to access your company website...
+```
+
+<Info>
+The availability of specific tools may depend on your subscription plan. Enterprise users have access to additional custom tools and extended functionality.
+</Info>

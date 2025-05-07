@@ -321,6 +321,7 @@
         "machine/browser-automation",
         "machine/command-line",
         "machine/file-management",
+        "machine/tools",
         "machine/api-in-machine",
         "machine/advanced-tutorials",
         "machine/use-cases",
