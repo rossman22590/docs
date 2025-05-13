@@ -186,7 +186,7 @@
             {
               "group": "Generate Image",
               "pages": [
-                "img-gen/pixcraft-full",
+                "img-gen/pixcraft",
                 "img-gen/turbocraft",
                 "img-gen/turbocraft-image",
                 "img-gen/dalle",
