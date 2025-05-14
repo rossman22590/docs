@@ -1,206 +1,310 @@
 ---
-title: 'Pixio Creative 01'
+title: 'Pixio Creative 03'
 description: 'Master AI image generation and remixing with advanced models and customizable settings'
 icon: 'paintbrush-pencil'
 ---
 
-# Pixio Creative 01: AI Image Generation and Remixing
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20172537.png" alt="Pixio Creative 03 Screenshot" />
+</Frame>
 
-Pixio Creative 01 is a cutting-edge AI image generation tool that empowers you to create and remix images using state-of-the-art models and highly customizable settings.
+# Pixio Creative 03: AI Image Generation and Remixing
 
-## Key Features
+<Tip>
+  Experience the next evolution in AI image creation with Pixio Creative 03! Generate stunning visuals, edit with precision, and remix images using state-of-the-art models and comprehensive controls.
+</Tip>
+
+## Overview
+
+Pixio Creative 03 is a cutting-edge AI image generation and manipulation tool that empowers you to create and transform images through various workflows. It provides a versatile suite of capabilities, accessible through different tabs, including generating images from text, editing existing images, remixing visuals, reframing compositions, replacing backgrounds, and upscaling resolution.
 
 <CardGroup cols={2}>
-  <Card title="Text-to-Image Generation" icon="pencil">
-    Create stunning images from detailed text descriptions.
+  <Card title="Generate Images" icon="wand-magic-sparkles">
+    Create original visuals from **text prompts**.
   </Card>
-  <Card title="Image Remixing" icon="rotate">
-    Transform existing images with AI-powered modifications.
+  <Card title="Edit Images" icon="pencil">
+    Modify existing images using **mask-based editing**.
   </Card>
-  <Card title="Multiple AI Models" icon="microchip">
-    Choose from various AI models for diverse results.
+  <Card title="Remix Images" icon="sparkles">
+    Blend concepts and styles from **text and image inputs**.
   </Card>
-  <Card title="Customizable Settings" icon="sliders">
-    Fine-tune your image generation with advanced parameters.
+  <Card title="Multiple Workflows" icon="sliders">
+    Access dedicated tools for **Reframing, Replacing Backgrounds, and Upscaling**.
   </Card>
 </CardGroup>
 
-## Getting Started
+## Workflows and Capabilities
 
-Follow these steps to begin generating or remixing images with Pixio Creative 01:
+Pixio Creative 03 is organized into different tabs, each offering a specific workflow:
+
+### Generate: Create Images from Text
+
+In the Generate tab, you can create entirely new images by providing a text prompt and adjusting various settings.
+
+
+
+**Inputs & Options (Generate Tab):**
+
+*   **Prompt**: Your text description of the desired image.
+*   **Aspect Ratio**: Choose the image shape (e.g., 1x1, 16x9).
+*   **Images**: Number of images to generate (1-8).
+*   **Settings (Modal)**: Access additional controls like Rendering Speed, Magic Prompt, Seed, Style Type, Negative Prompt, Resolution, and Color Palette.
+
+### Generate Mode Examples
+
+Explore the diverse range of images you can generate from text prompts:
+
+<CardGroup cols={2}>
+  <Card title="AMOLED Sunset Sky">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/generated_image_1%20(7).png" alt="Generate Example 1" />
+    ```text
+    AMOLED sunset sky in 8K: gradient shifting from deep indigo through magenta to molten copper. Puffy cumulus clouds detailed with interior shadows of slate gray and navy, topped with bright coral and amber highlights where light skims their fluffy tops.
+    ```
+  </Card>
+  <Card title="Modern Brand Logo">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/generated_image_1%20(8).png" alt="Generate Example 2" />
+    ```text
+    Design a modern, friendly brand logo featuring the word 'kettle' in lowercase letters, using a soft rounded sans-serif font similar to IvySoft or Nunito. Make the first letter 'k' custom-stylized with a unique curved tail that resembles a kettle handle. Use a bold, clean white font on a bright orange background. The overall look should be simple, warm, and tech-friendly, with a touch of personality. (Make the first letter 'k' custom-stylized with a unique curved tail that resembles a kettle handle.- important* )
+    ```
+  </Card>
+  <Card title="Athletic Male Model">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/generated_image_1%20(9).png" alt="Generate Example 3" />
+    ```text
+    A sporty, athletic male model wears a black oversized T-shirt without pleats. He stands in a professional, white studio with an upright, straight posture. His facial expression is neutral and he is looking straight ahead at the camera. The lighting conditions are bright and even - just like in a high-quality fashion shoot
+    ```
+  </Card>
+  <Card title="Sleek Wristwatch">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/generated_image_1%20(10).png" alt="Generate Example 4" />
+    ```text
+    A photograph of a sleek wristwatch placed on a modern stand. The watch has a silver case and a dark blue leather strap, with its face featuring a white dial and black hour markers. The watch is positioned at an angle, reflecting the soft ambient light, while the background is a clean, minimalist white surface that highlights the watch's elegant design.
+    ```
+  </Card>
+</CardGroup>
+
+
+### Edit: Modify Existing Images
+
+The Edit tab allows you to modify an existing image using mask-based editing. You upload an image and draw a mask to define the area you want to change.
+
+
+
+**Inputs & Options (Edit Tab):**
+
+*   **Upload Image to Edit**: Upload the image you want to modify.
+*   **Draw Mask**: Access a mask editor to draw over the area you want to edit.
+*   **Prompt**: Describe what you want to appear in the masked area.
+*   **Settings (Modal)**: Access common settings like Rendering Speed, Magic Prompt, Seed, Style Type, Negative Prompt, Resolution, Number of Images, and Color Palette.
+
+### Remix: Blend Concepts from Text and Image
+
+The Remix tab allows you to blend concepts from a text prompt and an uploaded image, controlling the influence of the image on the final result.
+
+**Inputs & Options (Remix Tab):**
+
+*   **Upload Image**: Upload the image to blend with your prompt.
+*   **Image Weight**: Slider to control how much the uploaded image influences the result.
+*   **Prompt**: Text description to guide the remixing.
+*   **Settings (Modal)**: Access common settings like Rendering Speed, Magic Prompt, Seed, Style Type, Negative Prompt, Aspect Ratio, Resolution, Number of Images, and Color Palette.
+
+### Reframe: Adjust Composition
+
+The Reframe tab allows you to adjust the composition of an image based on a desired output resolution.
+
+**Inputs & Options (Reframe Tab):**
+
+*   **Upload Image**: Upload the image to reframe.
+*   **Resolution**: Select the desired output resolution.
+*   **Settings (Modal)**: Access common settings like Rendering Speed, Seed, Number of Images, and Color Palette.
+
+### Replace BG: Change Background
+
+The Replace BG tab allows you to replace the background of an image based on a text prompt.
+
+**Inputs & Options (Replace BG Tab):**
+
+*   **Upload Image**: Upload the image with the background to replace.
+*   **Prompt**: Describe the new background you want.
+*   **Settings (Modal)**: Access common settings like Rendering Speed, Magic Prompt, Seed, Style Type, Number of Images, and Color Palette.
+
+### Upscale: Enhance Resolution
+
+The Upscale tab allows you to increase the resolution of an image with control over resemblance and detail.
+
+**Inputs & Options (Upscale Tab):**
+
+*   **Upload Image**: Upload the image to upscale.
+*   **Resemblance**: Slider to control how much the upscaled image resembles the original.
+*   **Detail**: Slider to control the level of detail in the upscaled image.
+*   **Optional Prompt**: Text prompt to guide the upscaling process (optional).
+*   **Settings (Modal)**: Access common settings like Magic Prompt, Seed, and Number of Images.
+
+## Mastering Prompts for Pixio Creative 03
+
+Prompting is crucial across all workflows. The way you structure and detail your prompt depends on the active tab and your desired outcome.
+
+### General Prompting Principles:
+
+<AccordionGroup>
+  <Accordion title="Be Specific and Detailed" icon="pencil">
+    Employ descriptive language, detailed adjectives, and adverbs to paint a clear picture for the AI.
+  </Accordion>
+
+  <Accordion title="Use Natural Language" icon="comments">
+    Formulate prompts using descriptive sentences.
+  </Accordion>
+
+  <Accordion title="Consider Negative Prompts" icon="ban">
+    Use negative prompts in the Settings modal to steer away from unwanted elements.
+  </Accordion>
+   <Accordion title="Magic Prompt Option" icon="wand-magic-sparkles">
+    Control the AI's interpretation and expansion of your prompt via the Settings modal.
+  </Accordion>
+</AccordionGroup>
+
+### Prompting for Specific Workflows:
+
+<AccordionGroup>
+  <Accordion title="Generate Prompts" icon="wand-magic-sparkles">
+    Focus on fully describing the desired image from scratch, combining subject, context, style, lighting, and mood.
+    *Example:* "A futuristic cityscape at sunset, high angle view, digital painting, vibrant colors."
+  </Accordion>
+  <Accordion title="Edit Prompts" icon="pencil">
+    Describe the desired changes *within the masked area*. Focus on what you want to appear or how the area should be modified.
+    *Example:* (Mask over a blank wall) Prompt: "A vibrant graffiti mural covering the wall."
+  </Accordion>
+  <Accordion title="Remix Prompts" icon="sparkles">
+    Describe the desired image, indicating how the AI should blend the concepts from the uploaded image with your text prompt.
+    *Example:* (Input Image: Photo of a cat) Prompt: "Remix this image into a cyberpunk robot cat, neon lights, wires, futuristic."
+  </Accordion>
+  <Accordion title="Replace BG Prompts" icon="image">
+    Describe the new background you want for the uploaded image.
+    *Example:* (Input Image: Product photo) Prompt: "A lush jungle background."
+  </Accordion>
+   <Accordion title="Upscale Prompts (Optional)" icon="expand">
+    An optional prompt to guide the upscaling process, helping the AI add details consistent with your description.
+    *Example:* (Input Image: Blurry landscape) Prompt: "Enhance details of trees and mountains."
+  </Accordion>
+</AccordionGroup>
+
+## How to Use Pixio Creative 03
+
+Navigate through the different workflows using the tabs:
 
 <Steps>
-  <Step title="Enter Your Prompt">
-    Provide a detailed description of your desired image in the main text area.
-    
-    <Frame>
-      <img src="https://img.mytsi.org/i/KBum780.png" alt="Prompt Input" />
-    </Frame>
+  <Step title="Select Your Workflow Tab" icon="hand-pointer">
+    Choose the tab that corresponds to your desired task: **Generate, Edit, Remix, Reframe, Replace BG, or Upscale**.
   </Step>
-  
-  <Step title="Adjust Settings">
-    Click "Open Settings" to access and modify generation parameters.
-    
-    <Frame>
-      <img src="https://img.mytsi.org/i/Pi3g781.png" alt="Settings Panel" />
-    </Frame>
+  <Step title="Provide Inputs (Image & Prompt)" icon="keyboard">
+    Enter your text prompt. If the selected tab requires an image (Edit, Remix, Reframe, Replace BG, Upscale), upload your image. For Edit, you may also need to draw a mask.
   </Step>
-  
-  <Step title="Upload Image (Optional)">
-    For remixing, upload an existing image to guide the generation process.
-    
-    <Frame>
-      <img src="https://img.mytsi.org/i/gWiK782.png" alt="Image Upload" />
-    </Frame>
+  <Step title="Adjust Settings (Optional)" icon="sliders">
+    Click the "Open Settings" button to configure parameters like Aspect Ratio, Rendering Speed, Magic Prompt, Seed, Style Type, Negative Prompt, Resolution, Number of Images, and Color Palette.
   </Step>
-  
-  <Step title="Generate or Remix">
-    Click "Generate Image" or "Remix Image" to create your AI-powered artwork.
+  <Step title="Generate/Process Image" icon="play">
+    Click the action button for the active tab (e.g., "Generate Image", "Remix Image", "Upscale Image").
+  </Step>
+  <Step title="Review and Download" icon="eye">
+    Examine the generated or processed images in the gallery below. You can download individual images or all images.
   </Step>
 </Steps>
 
-## Mastering Prompts
+## Input Parameters and Options
 
-Effective prompting is crucial for achieving outstanding results. Here's how to craft powerful prompts:
+Pixio Creative 03 offers a wide array of input parameters, accessible primarily through the Settings modal. The available parameters may vary slightly depending on the active tab.
 
-### Prompt Structure
+### Common Parameters (Available across multiple tabs via Settings):
 
-A well-structured prompt typically includes:
+<ResponseField name="aspect_ratio" type="Enum">
+  Choose from various preset ratios to determine the shape of your generated image.
+  *   Possible enum values: `1x1`, `16x9`, `9x16`, `4x3`, `3x4`, `3x2`, `2x3`, `10x16`, `16x10`, `1x3`, `3x1`, `1x2`, `2x1`, `4x5`, `5x4`.
+</ResponseField>
 
-<CardGroup cols={2}>
-  <Card title="Subject" icon="user">
-    The main focus of your image
-  </Card>
-  <Card title="Action/Pose" icon="person-running">
-    What the subject is doing
-  </Card>
-  <Card title="Setting" icon="map">
-    The environment or background
-  </Card>
-  <Card title="Style" icon="pen-swirl">
-    The artistic style or medium
-  </Card>
-  <Card title="Lighting" icon="sun">
-    Description of lighting conditions
-  </Card>
-  <Card title="Color Palette" icon="palette">
-    Key colors or overall color scheme
-  </Card>
-  <Card title="Mood" icon="face-smile">
-    The emotional tone of the image
-  </Card>
-  <Card title="Technical Details" icon="camera">
-    Camera angle, perspective, etc.
-  </Card>
-</CardGroup>
+<ResponseField name="rendering_speed" type="Enum">
+  Select the generation speed.
+  *   Possible enum values: `TURBO`, `DEFAULT`, `QUALITY`.
+</ResponseField>
 
-### Prompt Techniques
+<ResponseField name="magic_prompt" type="Enum">
+  Control the AI's interpretation and expansion of your prompt.
+  *   Possible enum values: `AUTO`, `ON`, `OFF`.
+</ResponseField>
+
+<ResponseField name="seed" type="integer">
+  Optionally set a specific seed value for reproducible results.
+</ResponseField>
+
+<ResponseField name="style_type" type="Enum">
+  Select from predefined style types to guide the overall aesthetic.
+  *   Possible enum values: `AUTO`, `GENERAL`, `REALISTIC`, `DESIGN`.
+</ResponseField>
+
+<ResponseField name="negative_prompt" type="string">
+  Specify elements you don't want in the image.
+</ResponseField>
+
+<ResponseField name="resolution" type="string">
+  Choose a specific output resolution. (Optional, default based on aspect ratio).
+  *   Possible values: (List of resolutions like '512x1536', '768x1024', '1024x1024', etc.).
+</ResponseField>
+
+<ResponseField name="num_images" type="integer">
+  The number of images to generate (1-8).
+</ResponseField>
+
+<ResponseField name="color_palette" type="object">
+  Define a color palette using a preset or custom colors.
+  *   `name`: Select a preset name (e.g., 'EMBER', 'JUNGLE').
+  *   `members`: Define custom colors with hex codes and weights.
+</ResponseField>
+
+
+### Tab-Specific Parameters:
 
 <AccordionGroup>
-  <Accordion title="Be Specific and Detailed" icon="list-ul">
-    Instead of "a cat," try "a fluffy orange tabby cat with green eyes, sitting regally on a velvet cushion."
+  <Accordion title="Edit Tab" icon="pencil">
+    <ResponseField name="mask_image" type="string">
+      The mask image (Data URI) defining the area to be edited. Required for Edit tab.
+    </ResponseField>
   </Accordion>
   
-  <Accordion title="Use Artistic References" icon="palette">
-    Mention specific artists or styles, e.g., "in the style of Van Gogh's Starry Night" or "Art Nouveau poster design."
+  <Accordion title="Remix Tab" icon="sparkles">
+    <ResponseField name="image_weight" type="integer">
+      Controls how much the uploaded image influences the remixing process. (Range 1-100).
+    </ResponseField>
   </Accordion>
   
-  <Accordion title="Incorporate Technical Language" icon="camera">
-    Use terms like "shot with a wide-angle lens," "low-angle shot," or "chiaroscuro lighting."
-  </Accordion>
-  
-  <Accordion title="Combine Concepts" icon="object-group">
-    Mix ideas for unique results, e.g., "a cyberpunk version of the Mona Lisa set in futuristic Tokyo."
-  </Accordion>
-  
-  <Accordion title="Use Descriptive Adjectives" icon="font">
-    Enhance descriptions with vivid adjectives, e.g., "a dilapidated, moss-covered stone castle perched on a craggy cliff."
+  <Accordion title="Upscale Tab" icon="expand">
+    <ResponseField name="resemblance" type="integer">
+      Controls how much the upscaled image resembles the original. (Range 1-100).
+    </ResponseField>
+    <ResponseField name="detail" type="integer">
+      Controls the level of detail added during upscaling. (Range 1-100).
+    </ResponseField>
+    <ResponseField name="prompt" type="string">
+      Optional prompt to guide the upscaling process.
+    </ResponseField>
   </Accordion>
 </AccordionGroup>
 
-### Example Prompt
-
-  <CodeBlock>
-    A hyperrealistic close-up portrait of an elderly Inuit woman in her 80s, with deep wrinkles, 
-    weathered skin, and wise, piercing dark eyes. Her silver hair is braided and adorned with 
-    traditional bone beads. She's wearing a fur-trimmed parka. Capture the soft, golden light 
-    of the Arctic midnight sun reflecting in her eyes and on her skin. Style: photorealistic 
-    portrait photography. Mood: contemplative and dignified.
-  </CodeBlock>
-
-## Advanced Settings
-
-Customize your image generation with these powerful settings:
-
-<AccordionGroup>
-  <Accordion title="Aspect Ratio" icon="crop">
-    Choose from various preset ratios (e.g., 1:1, 16:9, 4:3) to determine the shape of your generated image.
-  </Accordion>
-  
-  <Accordion title="Model" icon="microchip">
-    Select from different AI models (V_1, V_1_TURBO, V_2, V_2_TURBO) each with unique characteristics.
-  </Accordion>
-  
-  <Accordion title="Magic Prompt Option" icon="sparkles">
-    Choose between AUTO, ON, or OFF to control the AI's interpretation and expansion of your prompt.
-  </Accordion>
-  
-  <Accordion title="Seed" icon="dice">
-    Optionally set a specific seed value for reproducible results.
-  </Accordion>
-  
-  <Accordion title="Style Type" icon="brush">
-    Select from AUTO, GENERAL, REALISTIC, DESIGN, RENDER_3D, or ANIME to guide the overall style of the image.
-  </Accordion>
-  
-  <Accordion title="Negative Prompt" icon="ban">
-    Specify elements you don't want in the image.
-  </Accordion>
-  
-  <Accordion title="Resolution" icon="expand">
-    Choose from various preset resolutions or use the default.
-  </Accordion>
-  
-  <Accordion title="Color Palette" icon="palette">
-    Select a preset color palette or create a custom one to influence the image's color scheme.
-  </Accordion>
-</AccordionGroup>
-
-## Image Remixing
-
-Transform existing images using AI-powered remixing:
-
-1. **Upload a Base Image**: Choose an image with elements you want to keep or modify.
-2. **Craft a Remix Prompt**: Describe the changes you want while referencing the original image.
-3. **Balance Old and New**: Specify which elements to keep, change, or add.
-4. **Adjust Image Weight**: Control the influence of the original image on the final result.
-
-### Remix Prompt Example
-
-  <CodeBlock title="Remix Prompt">
-    ```plaintext
-    Transform this modern cityscape into a futuristic cyberpunk scene. Add neon signs, 
-    holographic billboards, and flying vehicles. Keep the basic layout of buildings but 
-    enhance them with high-tech elements and glowing energy lines. Add a large, red 
-    cybernetic moon in the sky. Style: digital art with a dark, moody atmosphere.
-    ```
-  </CodeBlock>
-
-## Pro Tips
+## Tips for Best Results
 
 <CardGroup cols={2}>
-  <Card title="Use Negative Prompts" icon="minus">
-    Refine results by specifying what you don't want in the image.
+  <Card title="Explore Workflows" icon="hand-pointer">
+    Experiment with different tabs (Generate, Edit, Remix, etc.) to find the best tool for your specific creative task.
   </Card>
-  <Card title="Experiment with Seeds" icon="seedling">
-    Use the same seed with different prompts to explore variations.
+  <Card title="Master Prompting" icon="pencil">
+    Tailor your prompt content and detail based on the active tab and your desired outcome.
+  </Card>
+  <Card title="Utilize Settings" icon="sliders">
+    Dive into the Settings modal to fine-tune parameters like Rendering Speed, Style Type, and Color Palette.
   </Card>
   <Card title="Iterate and Refine" icon="rotate">
-    Use generation results to inform and improve your next prompt.
-  </Card>
-  <Card title="Combine Remix and Generate" icon="object-group">
-    Use remixing to establish a base, then generate new inspired images.
+    Generate multiple versions and adjust prompts or settings to achieve your desired result.
   </Card>
 </CardGroup>
 
-By mastering these techniques and exploring the various settings, you can unlock the full potential of Pixio Creative 01 and create stunning, unique visuals for any project or application.
+## Conclusion
+
+Pixio Creative 03 provides a powerful and versatile platform for AI image generation and manipulation. With its diverse workflows and customizable settings, it empowers creators to bring their visual ideas to life with precision and control.
+
+---

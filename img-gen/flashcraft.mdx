@@ -1,0 +1,195 @@
+---
+title: 'FlashCraft'
+description: 'Generate copyright-safe images with Freepik and Fal F-Lite model'
+icon: 'bolt'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20154627.png" alt="FlashCraft Screenshot" />
+</Frame>
+
+# FlashCraft: Copyright-Safe AI Image Generation with F-Lite
+
+<Tip>
+  Create stunning visuals with confidence using FlashCraft! Powered by the F-Lite model, generate copyright-safe images for your projects, available in Standard and Texture modes.
+</Tip>
+
+## Overview
+
+FlashCraft is an innovative AI image generation tool built upon the **F-Lite model**, a 10B parameter diffusion model developed by Freepik and Fal. F-Lite is uniquely trained on a massive dataset of **exclusively copyright-safe and SFW (Safe for Work) content**, making FlashCraft the ideal choice for creators and businesses who prioritize legal compliance and safe imagery. It offers two distinct modes: **Standard**, for general image generation, and **Texture**, specialized for creating seamless textures.
+
+<CardGroup cols={2}>
+  <Card title="Copyright-Safe" icon="check">
+    Trained on a dataset of **exclusively legally compliant** images.
+  </Card>
+  <Card title="SFW Content" icon="shield">
+    Generates images based on **Safe for Work** content.
+  </Card>
+  <Card title="Standard & Texture Modes" icon="rotate">
+    Choose between **general image generation** and **seamless texture creation**.
+  </Card>
+  <Card title="Powered by F-Lite" icon="microchip">
+    Leverages a **large 10B parameter model** for high-quality outputs.
+  </Card>
+</CardGroup>
+
+## Modes of Operation
+
+FlashCraft offers two distinct modes to suit your creative workflow:
+
+### Standard Mode: General Image Generation
+
+In Standard mode, you can generate a wide variety of images from text prompts, leveraging the general capabilities of the F-Lite model.
+
+
+**Inputs & Options (Standard Mode):**
+
+*   **Prompt**: Your text description of the desired image.
+*   **Negative Prompt**: Specify elements to omit.
+*   **Image Size**: Select the resolution and aspect ratio.
+    *   Possible values: `square_hd`, `square`, `portrait_4_3`, `portrait_16_9`, `landscape_4_3`, `landscape_16_9`, `custom` (with width/height inputs).
+*   **Num Inference Steps**: Controls detail (1-50, default 28).
+*   **Seed**: For reproducible results (optional).
+*   **Guidance Scale**: Adjusts adherence to prompt (0-20, default 3.5).
+*   **Number of Images**: Number of variations to generate (1-4).
+
+### Texture Mode: Seamless Texture Generation
+
+Texture mode is specialized for creating images that can be tiled seamlessly, making them ideal for backgrounds, patterns, and digital assets requiring repetition.
+
+**Inputs & Options (Texture Mode):**
+
+*   **Prompt**: Your text description of the desired texture.
+*   **Negative Prompt**: Specify elements to omit.
+*   **Image Size**: Select the resolution and aspect ratio.
+    *   Possible values: `square_hd`, `square`, `portrait_4_3`, `portrait_16_9`, `landscape_4_3`, `landscape_16_9`, `custom` (with width/height inputs).
+*   **Num Inference Steps**: Controls detail (1-50, default 28).
+*   **Seed**: For reproducible results (optional).
+*   **Guidance Scale**: Adjusts adherence to prompt (0-20, default 3.5).
+*   **Number of Images**: Number of variations to generate (1-4).
+
+## Mastering Prompts for FlashCraft
+
+To get the best results from FlashCraft, especially given the F-Lite model's training data and limitations, prompt writing is important.
+
+### General Prompting Principles:
+
+<AccordionGroup>
+  <Accordion title="Use Long, Detailed Prompts" icon="pencil">
+    According to the F-Lite technical report, using longer prompts can help generate better results and avoid low-quality images. Provide ample detail about your desired image or texture.
+  </Accordion>
+  
+  <Accordion title="Aim for Images Above Megapixel" icon="expand">
+    To avoid low-quality outputs, aim to generate images larger than one megapixel. Select larger image sizes or custom dimensions.
+  </Accordion>
+  
+  <Accordion title="Use Natural Language" icon="comments">
+    Formulate your prompts using descriptive sentences.
+  </Accordion>
+   <Accordion title="Consider Negative Prompts" icon="ban">
+    Use the negative prompt field to steer the AI away from unwanted elements or artifacts.
+  </Accordion>
+</AccordionGroup>
+
+### Prompting for Specific Modes:
+
+<AccordionGroup>
+  <Accordion title="Standard Mode Prompts" icon="image">
+    Describe the desired image content, style, lighting, and composition. Focus on creating a clear visual scene.
+    *Example:* "A photorealistic portrait of a person with dramatic lighting," or "A vibrant digital painting of a fantasy landscape."
+  </Accordion>
+   <Accordion title="Texture Mode Prompts" icon="swatchbook">
+    Describe the desired texture pattern, material, or visual style. Emphasize repetitive elements or seamless patterns.
+    *Example:* "A seamless pattern of intertwining leaves and vines," or "A texture of rough concrete with subtle cracks."
+  </Accordion>
+</AccordionGroup>
+
+## How to Use FlashCraft
+
+Embark on your creative journey with this general workflow:
+
+<Steps>
+  <Step title="Select Your Mode" icon="code-branch">
+    Choose **Standard** for general image generation or **Texture** for seamless texture creation.
+  </Step>
+  <Step title="Provide Your Prompt" icon="keyboard">
+    Enter your text description for the image or texture you want to generate. Remember to use long and detailed prompts.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure settings like Image Size, Num Inference Steps, Guidance Scale, Seed, and Number of Images. Ensure you select an Image Size that results in an image above one megapixel.
+  </Step>
+  <Step title="Generate Image" icon="play">
+    Click the "Generate" button.
+  </Step>
+  <Step title="Review and Download" icon="eye">
+    Examine the generated image or texture. Iterate by adjusting prompts or settings if needed.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+FlashCraft offers a range of input parameters for image generation:
+
+<ResponseField name="prompt" type="string" required>
+  Your text description guiding the image creation. **Recommendation: Use long and detailed prompts.**
+</ResponseField>
+
+<ResponseField name="negative_prompt" type="string">
+  A text prompt specifying elements, styles, or characteristics to avoid.
+</ResponseField>
+
+<ResponseField name="image_size" type="string | object" required>
+  The desired dimensions or aspect ratio for the output image. Can be selected from presets (e.g., `square_hd`, `landscape_4_3`) or specified with custom `width` and `height`. **Recommendation: Generate images above one megapixel.**
+</ResponseField>
+
+<ResponseField name="num_inference_steps" type="integer">
+  Controls the detail and refinement of the image generation. Higher values generally result in more detailed outputs but may increase processing time.
+  *   Default: 28
+  *   Range: 1-50
+</ResponseField>
+
+<ResponseField name="seed" type="integer">
+  A number that initializes the random generation process. Using the same seed with the same prompt and settings will produce a consistent result. Leave empty for a random seed.
+</ResponseField>
+
+<ResponseField name="guidance_scale" type="float">
+  Adjusts how closely the AI adheres to your text prompt. Higher values result in outputs that stick more strictly to the prompt, while lower values allow for more creative variation.
+  *   Default: 3.5
+  *   Range: 0-20
+</ResponseField>
+
+<ResponseField name="num_images" type="integer">
+  The number of images to generate in a single batch.
+  *   Default: 1
+  *   Range: 1-4
+</ResponseField>
+
+<ResponseField name="output_format" type="Enum">
+  The file format for the generated image.
+  *   Default: `jpeg`
+  *   Possible enum values: `jpeg`, `png`
+</ResponseField>
+
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Prioritize Copyright Safety" icon="check">
+    Leverage FlashCraft's training on copyright-safe content for your commercial or public projects.
+  </Card>
+  <Card title="Use Detailed Prompts" icon="pencil">
+    Craft long and descriptive prompts to guide the F-Lite model effectively and improve output quality.
+  </Card>
+  <Card title="Generate High-Resolution Images" icon="expand">
+    Aim for images above one megapixel by selecting appropriate sizes to avoid low-quality results.
+  </Card>
+  <Card title="Experiment with Modes" icon="rotate">
+    Explore both Standard and Texture modes based on your specific image generation needs.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+FlashCraft provides a valuable tool for generating copyright-safe and SFW images using the F-Lite model. Its focus on legal compliance and distinct generation modes make it a practical choice for a wide range of creative applications.
+
+---

@@ -1,38 +1,159 @@
 ---
 title: 'PhotoCraft'
-description: 'This guide will provide a concise walkthrough on how to use PhotoCraft.'
-icon: 'stars'
+description: 'Generate consistent images of a subject in different poses and scenarios'
+icon: 'camera'
 ---
 
-Introduction
-PhotoCraft is a user-friendly application designed to generate high-quality photos based on a base image and user-defined prompts. This guide will provide a concise walkthrough on how to use PhotoCraft effectively, from selecting your base image to adjusting various settings for optimal results.
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20164228.png" alt="PhotoCraft Screenshot" />
+</Frame>
 
-Key Points
-Base Image Selection:
+# PhotoCraft: Consistent Subject Generation in Any Scene
 
-Begin by selecting the base image that will serve as the foundation for your photo generation.
+<Tip>
+  Bring your characters to life in endless scenarios with PhotoCraft! Generate multiple images of a specific person or character, maintaining their likeness while exploring different poses and backgrounds.
+</Tip>
 
-Prompt Input:
+## Overview
 
-Positive Prompt: Enter a descriptive prompt that guides the AI in generating the desired photo.
+PhotoCraft is a specialized AI tool designed to generate consistent images of a particular subject (person or character) across various scenes and poses. You start by uploading an image of your subject, and then use text prompts and settings to guide the AI in creating new photographs featuring that same subject. This tool is invaluable for creating visual narratives, character sheets, or generating diverse marketing materials featuring a consistent individual.
 
-Negative Prompt: Optionally, input a negative prompt to specify elements you want to avoid in the generated photo.
+<CardGroup cols={2}>
+  <Card title="Consistent Subject" icon="user-check">
+    Generate images of the **same person or character** consistently.
+  </Card>
+  <Card title="Diverse Scenarios" icon="image">
+    Place your subject in **different scenes and backgrounds**.
+  </Card>
+  <Card title="Varied Poses" icon="person-walking">
+    Generate images with **randomized or controlled poses**.
+  </Card>
+  <Card title="Customizable Output" icon="sliders">
+    Fine-tune image quality, format, and number of results.
+  </Card>
+</CardGroup>
 
-Adjustable Settings:
+## How to Use PhotoCraft
 
-Output Quality: Adjust the quality of the output image. Higher quality settings will make the generated photo more closely resemble the base image.
+Follow these steps to generate consistent images of your subject in various scenarios:
 
-Number of Images: Choose the number of images you want the AI to generate.
+<Steps>
+  <Step title="Upload Subject Image" icon="upload">
+    Upload a clear image of the **person or character** you want to generate images of. A headshot or portrait is often a good starting point.
+  </Step>
 
-Output Format: Select the desired format for the output image (e.g., JPEG, PNG).
+  <Step title="Enter Prompts" icon="keyboard">
+    Provide a **Prompt** describing the desired scene, pose, or style for the generated image. Optionally, use a **Negative Prompt** to specify elements to avoid.
+  </Step>
 
-Seed: Optionally, add a seed value for reproducibility of the generated images.
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the generation parameters to fine-tune your output:
+    
+    <AccordionGroup>
+      <Accordion title="Output Quality" icon="star">
+        Adjust a slider (0-100) to control the overall quality of the generated images. Higher quality may increase generation time.
+      </Accordion>
+      <Accordion title="Number of Images" icon="clone">
+        Select how many images you want to generate in a single batch (1-4).
+      </Accordion>
+      <Accordion title="Output Format" icon="file-image">
+        Choose the file format for your generated images (PNG, JPG, WEBP).
+      </Accordion>
+      <Accordion title="Seed" icon="seedling">
+        Enter a specific number for reproducible results. Using the same seed, prompt, and settings will produce the same image(s). Leave empty for random results.
+      </Accordion>
+      <Accordion title="Randomize Poses" icon="shuffle">
+        Toggle this switch to generate images with randomized poses for your subject. Disable it if you want more control over the pose via the prompt.
+      </Accordion>
+      {/* <Accordion title="Images per Pose" icon="image">
+        Select how many images to generate for each pose (1-2). (Note: This option may not be visible in the current UI).
+      </Accordion> */}
+    </AccordionGroup>
+  </Step>
 
-Randomize Poses: Use the switch to enable or disable the randomization of photo poses.
+  <Step title="Generate Images" icon="play">
+    Click the "Generate" button. PhotoCraft will process your inputs and create images of your subject in the described scenarios and poses.
+  </Step>
 
-Generating Photos:
+  <Step title="Review and Download" icon="eye">
+    Examine the generated images in the gallery. You can download individual images or all images as a ZIP file.
+  </Step>
+</Steps>
 
-After configuring all settings and entering your prompts, initiate the photo generation process to create your images.
+## Input Parameters and Options
 
-Conclusion
-PhotoCraft simplifies the process of generating high-quality photos by providing intuitive controls and customization options. By following the outlined steps and adjusting the settings according to your preferences, you can effortlessly generate a variety of images that closely match your creative vision. Explore the capabilities of PhotoCraft and create stunning photos with ease.
+PhotoCraft offers a range of input parameters to control the consistent subject generation process:
+
+<ResponseField name="inputImage" type="file" required>
+  The image file of the subject (person or character) you want to generate images of.
+</ResponseField>
+
+<ResponseField name="prompt" type="string" required>
+  Your text description of the desired scene, pose, or style for the generated images.
+</ResponseField>
+
+<ResponseField name="negativePrompt" type="string">
+  A text prompt specifying elements or characteristics to avoid in the generated images.
+</ResponseField>
+
+<ResponseField name="outputQuality" type="integer">
+  Controls the overall quality of the generated images.
+  *   Default: 80
+  *   Range: 0-100
+</ResponseField>
+
+<ResponseField name="numberOfOutputs" type="integer">
+  The number of images to generate in a single batch.
+  *   Default: 2
+  *   Range: 1-4
+</ResponseField>
+
+<ResponseField name="outputFormat" type="Enum" required>
+  The file format for the generated images.
+  *   Possible enum values: `png`, `jpg`, `webp`
+</ResponseField>
+
+<ResponseField name="randomizePoses" type="boolean">
+  Toggle to randomize the poses of the subject in the generated images.
+  *   Default: `true`
+</ResponseField>
+
+<ResponseField name="seed" type="integer">
+  A number that initializes the random generation process. Using the same seed with the same prompt and settings will produce consistent results. Leave empty for a random seed.
+</ResponseField>
+
+{/* <ResponseField name="imagesPerPose" type="integer">
+  The number of images to generate for each pose.
+  *   Default: 1
+  *   Range: 1-2
+  *   Note: This parameter may not be visible in the current UI.
+</ResponseField> */}
+
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Clear Subject Image" icon="user">
+    Use a clear, well-lit image of your subject where their face and features are easily visible.
+  </Card>
+  <Card title="Describe the Scene & Pose" icon="keyboard">
+    Provide detailed prompts describing the desired background, environment, and the pose you want your subject to be in (especially if Randomize Poses is off).
+  </Card>
+  <Card title="Experiment with Quality" icon="sliders">
+    Adjust the Output Quality slider to find the balance between detail and generation time that suits your needs.
+  </Card>
+  <Card title="Utilize Randomize Poses" icon="shuffle">
+    Toggle Randomize Poses on to quickly explore a variety of poses for your subject in the described scene.
+  </Card>
+   <Card title="Use Seed for Consistency" icon="seedling">
+    If you find a result you like, note the seed used so you can regenerate similar images or make small adjustments while keeping the subject consistent.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+PhotoCraft offers a powerful and intuitive way to generate consistent images of a specific subject in various scenarios and poses. By simply uploading a subject image and providing prompts, you can create diverse visual content while maintaining the unique likeness of your chosen person or character.
+
+---
+
+{/* Add any relevant links or badges if available */}

@@ -1,0 +1,420 @@
+---
+title: 'GPT-4o Image'
+description: 'Advanced AI image generation and editing powered by OpenAI GPT-4o'
+icon: 'wand-magic-sparkles'
+---
+
+# GPT-4o Image: Native Multimodal Creation & Editing
+
+<Tip>
+  Experience the power of GPT-4o for image generation and editing! Create stunning visuals, refine images with maskless edits, and leverage reference images, all within a natively multimodal system.
+</Tip>
+
+## Overview
+
+GPT-4o Image Generation, powered by OpenAI's **GPT-4o model**, is a groundbreaking tool that integrates text and image processing into a single, natively multimodal system. This allows for unprecedented flexibility in creating and editing visuals. ImagenCraft provides a platform to utilize GPT-4o's capabilities, excelling at **accurate text rendering**, **precise prompt following**, and **leveraging in-context learning** from uploaded images. It offers distinct **Generate** and **Edit** modes to cover a wide range of creative and practical applications.
+
+<CardGroup cols={2}>
+  <Card title="Natively Multimodal" icon="brain">
+    Integrates **text and image processing** in one system for unprecedented flexibility.
+  </Card>
+  <Card title="Accurate Text Rendering" icon="font">
+    Seamlessly integrates **clear and precise text** into generated images.
+  </Card>
+  <Card title="Precise Prompt Following" icon="bullseye">
+    Excels at adhering to **detailed instructions** and handling multiple objects.
+  </Card>
+  <Card title="In-Context Learning" icon="graduation-cap">
+    Leverages **uploaded images** as visual context and inspiration.
+  </Card>
+</CardGroup>
+
+## Modes of Operation
+
+GPT-4o Image offers two primary modes to suit your creative workflow:
+
+### Generate Mode: Create Images from Text
+
+In Generate mode, you can create entirely new images from scratch by providing a text prompt.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20150048.png" alt="GPT-4o Image Generate Screenshot" />
+</Frame>
+
+**Inputs & Options (Generate Mode):**
+
+*   **Prompt**: Your text description of the desired image. (Max 1000 characters)
+*   **Quality**: Control the level of detail and generation time.
+    *   Possible values: `low` (Faster), `medium`, `high` (Slower), `auto`.
+*   **Size**: Select the output resolution and aspect ratio.
+    *   Possible values: `1024x1024` (Square), `1024x1536` (Portrait), `1536x1024` (Landscape), `auto`.
+*   **Background**: Choose the background type.
+    *   Possible values: `opaque`, `transparent` (Note: Availability depends on Output Format).
+*   **Moderation**: Adjust content filtering sensitivity.
+    *   Possible values: `auto` (Standard), `low` (Less Restrictive).
+*   **Output Format**: File format (PNG, JPEG, WebP).
+*   **Compression Quality**: For JPEG/WebP output (0-100).
+
+### Generate Mode Examples
+
+Explore the diverse range of images you can generate from text prompts:
+
+<CardGroup cols={2}>
+  <Card title="Sustainable Campaign">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/gpt4o-image-1747249459450.png" alt="Generate Example 1" />
+    ```text
+    Design a holographic campaign for a sustainable ocean cleanup initiative using solarpunk aesthetics. Incorporate bioluminescent sea creatures with crystalline structures to convey hope for the future. Feature cleaning drones through iridescent animations, emphasizing the harmony between technology and nature.
+    ```
+  </Card>
+  <Card title="Skincare Thumbnail">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/gpt4o-image-1747249490645.png" alt="Generate Example 2" />
+    ```text
+    Create a clean, elegant, and professional thumbnail design for a skincare brand. The image features a model applying cream to their face, exuding relaxation and self-care. Use soft, natural lighting to highlight the product and the model’s skin. Add subtle text overlay with a modern sans-serif font saying ‘Glow Naturally’ or ‘[Wish Glow] Skincare.’ Incorporate pastel tones like blush pink, soft beige, or mint green in the background to evoke a soothing, luxurious vibe. Include minimalistic icons (e.g., leaves, droplets) to emphasize naturality and hydration. Ensure the focus remains on the model’s glowing skin and the act of applying the cream, creating an aspirational yet approachable aesthetic
+    ```
+  </Card>
+  <Card title="Infographic">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/gpt4o-image-1747249496961.png" alt="Generate Example 3" />
+    ```text
+    Create an infographic on ‘Survey Results on Podcasts’ with vibrant colors, modern icons, and clear typography. Highlight key stats like listening frequency, devices, and topics. Keep the design clean, professional, and easy to read
+    ```
+  </Card>
+  <Card title="Single Page Comic">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/gpt4o-image-1747249509468.png" alt="Generate Example 4" />
+    ```text
+    Create a single page comic or graphic novel covering an entire story of a boy who finds a lost key and goes on an adventure, relentlessly, to find a treasure at the end. The entire story, along with dialogues, must fit within one page of 6 – 8 panels. You can create the characters and graphics based on any theme of your choice.
+    ```
+  </Card>
+</CardGroup>
+
+### Edit Mode: Maskless Image Modification
+
+Edit mode allows you to modify an existing image by providing written instructions. It offers different edit types to suit your needs. Requires an **Image Upload** (except for Reference Images).
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20150158.png" alt="GPT-4o Image Edit Screenshot" />
+</Frame>
+
+**Edit Types Available:**
+
+<AccordionGroup>
+  <Accordion title="Draw Mask" icon="brush">
+    Modify specific areas by **drawing a mask** on the uploaded image.
+    *   **Inputs:** Prompt (describing changes in masked area), Uploaded Image, Mask Image (drawn), Quality, Size, Background, Moderation.
+  </Accordion>
+  <Accordion title="Maskless Editing" icon="wand=sparkles">
+    Modify the image based on a prompt **without drawing a mask**. The AI determines where to apply changes.
+    *   **Inputs:** Prompt (describing changes), Uploaded Image, Quality, Size, Background, Moderation.
+  </Accordion>
+  <Accordion title="Reference Images" icon="object-group">
+    Generate a new image based on a prompt and **up to 4 uploaded reference images**. The AI blends concepts from the references.
+    *   **Inputs:** Prompt (describing how to use references), Reference Images (up to 4), Quality, Size, Background, Moderation.
+  </Accordion>
+</AccordionGroup>
+
+**Common Inputs & Options (Edit Mode):**
+
+*   **Prompt**: Describes the desired changes (Maskless, Draw Mask) or how to use references (Reference Images).
+*   **Quality**: Control output quality (Same options as Generate).
+*   **Size**: Select output size (Same options as Generate).
+*   **Background**: Choose background type (Same options as Generate).
+*   **Moderation**: Adjust content filtering (Same options as Generate).
+*   **Uploaded Image**: The base image to edit (for Draw Mask, Maskless).
+*   **Mask Image**: The mask drawn on the uploaded image (for Draw Mask).
+*   **Reference Images**: Images to use as visual inspiration (for Reference Images).
+
+### Edit Mode Examples
+
+See how GPT-4o Image can modify existing images using its editing capabilities:
+
+#### Maskless Editing Example
+
+Modify an image based on a text prompt without drawing a mask:
+
+<CardGroup cols={2}>
+  <Card title="Input Image">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/a891105f8cc747bf899c8c3b32b0a379_gpt4o-image-1745454134447.png" alt="Maskless Input" />
+  </Card>
+  <Card title="Result">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/gpt4o-image-1747249528506.png" alt="Maskless Result" />
+    ```text
+    Prompt: in the style of anime
+    ```
+  </Card>
+</CardGroup>
+
+#### Reference Images Example
+
+Generate a new image by blending concepts from multiple reference images:
+
+<CardGroup cols={4}>
+  <Card title="Reference Image 1">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/a891105f8cc747bf899c8c3b32b0a379_gpt4o-image-1745454134447.png" alt="Reference Input 1" />
+  </Card>
+  <Card title="Reference Image 2">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/flux-in-context-result%20(3).png" alt="Reference Input 2" />
+  </Card>
+  <Card title="Reference Image 3">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/flux-in-context-result%20(1).png" alt="Reference Input 3" />
+  </Card>
+  <Card title="Result">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/gpt4o-image-1747250266281.png" alt="Reference Result" />
+    ```text
+    Prompt: put this hoodie and baseball cap on the man in the first image
+    ```
+  </Card>
+</CardGroup>
+
+## Mastering Prompts for GPT-4o Image
+
+Prompting is crucial in all modes, but the focus shifts depending on whether you are creating, editing, or customizing. GPT-4o models are known for strong prompt interpretation and respond well to descriptive, clear language.
+
+### Prompt Writing Basics: Subject, Context, and Style
+
+A good starting point for any prompt is to define the core elements:
+
+<CardGroup cols={3}>
+  <Card title="Subject" icon="user">
+    The main object, person, animal, or scenery.
+  </Card>
+  <Card title="Context/Background" icon="map">
+    The environment or setting for the subject.
+  </Card>
+  <Card title="Style" icon="palette">
+    The artistic style (e.g., painting, photograph, sketch, or more specific styles).
+  </Card>
+</CardGroup>
+
+After establishing these basics, refine your prompt by adding more details through iteration until the generated image aligns with your vision.
+
+### General Prompting Principles:
+
+<AccordionGroup>
+  <Accordion title="Be Specific and Detailed" icon="pencil">
+    Employ descriptive language, detailed adjectives, and adverbs to paint a clear picture for Imagen.
+    *Example:* Instead of "a park," try "A park in the spring next to a lake, the sun sets across the lake, golden hour, red wildflowers."
+  </Accordion>
+
+  <Accordion title="Use Natural Language" icon="comments">
+    Formulate prompts using descriptive sentences, as you would describe an image to another person.
+  </Accordion>
+
+  <Accordion title="Consider Negative Prompts" icon="ban">
+    Use negative prompts to steer away from unwanted elements (Note: support varies by model).
+  </Accordion>
+   <Accordion title="Prompt Enhancement" icon="wand-magic-sparkles">
+    For models supporting prompt enhancement (like `imagen-3.0-generate-002`), a shorter prompt can be automatically expanded for potentially better results. This is enabled by default.
+  </Accordion>
+</AccordionGroup>
+
+### Prompting for Specific Modes/Tools:
+
+<AccordionGroup>
+  <Accordion title="Create Mode" icon="wand-magic-sparkles">
+    Focus on fully describing the desired image from scratch, combining subject, context, and style with rich details.
+    *Example:* "A futuristic cityscape at sunset, high angle view, digital painting, vibrant colors."
+  </Accordion>
+  <Accordion title="Edit Mode (Draw Mask)" icon="brush">
+    Describe what you want to appear *within the masked area*. Focus on the object or scene you want to generate and how it should blend with the existing image. For best results, use a description of the masked area. Avoid single-word prompts.
+    *Example:* (Mask over a blank wall) Prompt: "A vibrant graffiti mural covering the wall."
+  </Accordion>
+  <Accordion title="Edit Mode (Maskless Editing)" icon="wand-sparkles">
+    Describe the desired changes to the image in natural language. The AI will interpret your instructions and apply the edits without a mask.
+    *Example:* (Input Image: Photo of a car) Prompt: "Change the car to red."
+  </Accordion>
+  <Accordion title="Edit Mode (Reference Images)" icon="object-group">
+    Describe the desired image, indicating how the AI should draw inspiration from the reference image(s). You can reference specific images if using multiple.
+    *Example:* (Reference Image 1: A character, Reference Image 2: A scene) Prompt: "Generate a portrait of the person from image1 standing in the setting from image2."
+  </Accordion>
+  <Accordion title="Edit Mode (Outpainting)" icon="expand">
+    Describe the content you want to appear in the *expanded areas* around the original image. You can provide an empty string to create the edited images, but a description of the masked area is recommended for best results.
+    *Example:* (Outpainting around a portrait) Prompt: "A lush forest extending around the person."
+  </Accordion>
+  <Accordion title="Edit Mode (Product Image)" icon="box">
+    Describe the desired *background* or *environment* for the product.
+    *Example:* (Input: Product image) Prompt: "Place the product on a wooden table in a sunny cafe."
+  </Accordion>
+  <Accordion title="Customize Mode (Subject)" icon="user">
+    Describe the desired image, referencing the subject from your input image. Use the format `[referenceId]` to refer to the subject image(s).
+    *Example:* (Input: Subject Image with referenceId 1) Prompt: "Generate an image of the person [1] as a knight in shining armor." (Referencing the subject with `[1]`).
+  </Accordion>
+  <Accordion title="Customize Mode (Style)" icon="palette">
+    Describe the desired image content, indicating it should be in the style of your input image. Use the format `[referenceId]` to refer to the style image.
+    *Example:* (Input: Style Image with referenceId 1) Prompt: "Generate an image of a cat sitting on a chair in the style of image [1]."
+  </Accordion>
+  <Accordion title="Customize Mode (ControlNet)" icon="vector-square">
+    Your prompt describes the *content* and *style* of the image, while the ControlNet image provides the structural guide. Ensure your prompt aligns with the structural guidance (e.g., edges, pose) provided by the ControlNet image.
+    *Example:* (Input: Control Image - Canny edges of a building) Prompt: "A beautiful watercolor painting of an ancient castle at sunset."
+  </Accordion>
+</AccordionGroup>
+
+### Advanced Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Generating Text in Images" icon="font">
+    GPT-4o can add text to images.
+    *   **Iterate:** You may need multiple attempts to get the desired text appearance and placement.
+    *   **Keep it Short:** Limit text to 25 characters or less.
+    *   **Multiple Phrases:** Experiment with 2-3 distinct phrases.
+    *   **Guide Placement:** While placement can vary, you can attempt to guide it in the prompt.
+    *   **Inspire Font Style/Size:** Specify general font styles or size indications (small, medium, large).
+    *Example:* "A poster with the text 'Summerland' in bold font as a title, underneath this text is the slogan 'Summer never felt so good'."
+  </Accordion>
+  <Accordion title="Prompt Parameterization" icon="code">
+    For API/SDK use, you can parameterize prompts with placeholders like `{logo_style}` to be filled by user inputs in an interface.
+    *Example Template:* "A {logo_style} logo for a {company_area} company on a solid color background. Include the text {company_name}."
+  </Accordion>
+  <Accordion title="Using Specific Styles" icon="palette">
+    Specify artistic styles (e.g., "photography," "illustration," "digital art") or reference historical art movements ("impressionism," "renaissance," "pop art") or specific artists.
+    *Example:* "An [art style or creation technique] of an angular sporty electric sedan with skyscrapers in the background."
+  </Accordion>
+  <Accordion title="Photography Modifiers" icon="camera">
+    Use keywords to influence camera settings and style:
+    *   **Camera Proximity:** "Close up," "taken from far away," "zoomed out."
+    *   **Camera Position:** "aerial," "from below."
+    *   **Lighting:** "natural lighting," "dramatic lighting," "warm lighting," "cold lighting," "studio photo."
+    *   **Camera Settings:** "motion blur," "soft focus," "bokeh," "portrait."
+    *   **Lens Types:** "35mm," "50mm," "fisheye," "wide angle," "macro," "telephoto zoom."
+    *   **Film Types:** "black and white," "polaroid."
+  </Accordion>
+  <Accordion title="Shapes and Materials" icon="cube">
+    Describe objects made of unusual materials or shapes.
+    *Example:* "a duffle bag made of cheese," "neon tubes in the shape of a bird," "an armchair made of paper, studio photo, origami style."
+  </Accordion>
+  <Accordion title="Image Quality Modifiers" icon="star">
+    Use keywords to indicate desired quality level:
+    *   **General:** "high-quality," "beautiful," "stylized."
+    *   **Photos:** "4K," "HDR," "Studio Photo."
+    *   **Art/Illustration:** "by a professional," "detailed."
+    *Example:* "4k HDR beautiful photo of a corn stalk taken by a professional photographer."
+  </Accordion>
+  <Accordion title="Aspect Ratios and Use Cases" icon="crop">
+    Choose the aspect ratio that best suits your content:
+    *   **Square (1:1):** General use, social media posts.
+    *   **Fullscreen (4:3):** TV, media, film, captures more horizontally.
+    *   **Portrait full screen (3:4):** Fullscreen rotated, captures more vertically.
+    *   **Widescreen (16:9):** TVs, monitors, mobile (landscape), good for landscapes.
+    *   **Portrait (9:16):** Widescreen rotated, for tall objects, mobile (portrait), short-form video.
+  </Accordion>
+   <Accordion title="Photorealistic Images" icon="camera-retro">
+    Combine keywords for specific photorealistic subjects:
+    *   **Portraits:** Prime/zoom lens (24-35mm), "black and white film," "Film noir," "Depth of field," "duotone."
+    *   **Objects (Still Life):** Macro lens (60-105mm), "High detail," "precise focusing," "controlled lighting."
+    *   **Motion:** Telephoto zoom (100-400mm), "Fast shutter speed," "Action or movement tracking."
+    *   **Wide-angle (Landscape/Astronomical):** Wide-angle lens (10-24mm), "Long exposure times," "sharp focus," "smooth water or clouds."
+  </Accordion>
+</AccordionGroup>
+
+## How to Use GPT-4o Image
+
+Navigate through the different modes and tools with this general workflow:
+
+<Steps>
+  <Step title="Select Your Mode" icon="code-branch">
+    Choose **Generate** to create a new image or **Edit** to modify an existing one.
+  </Step>
+  <Step title="Select Your Edit Type (Edit Mode)" icon="toolbox">
+    If in Edit mode, select the type of editing you want to perform: **Draw Mask**, **Maskless Editing**, or **Reference Images**.
+  </Step>
+  <Step title="Upload Image(s) (If Applicable)" icon="arrow-up">
+    If in Edit mode, upload the necessary base image (Draw Mask, Maskless Editing) or reference images (Reference Images). If using Draw Mask, you will also need to draw a mask on the uploaded image.
+  </Step>
+  <Step title="Provide Your Prompt" icon="keyboard">
+    Enter your text description. The prompt's focus depends on your selected mode and edit type.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure settings like Quality, Size, Background, and Moderation.
+  </Step>
+  <Step title="Generate Image(s)" icon="play">
+    Click the "Generate" button.
+  </Step>
+  <Step title="Review and Refine" icon="eye">
+    Examine the generated image(s). Iterate by adjusting prompts, settings, or inputs if needed.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+GPT-4o Image offers a range of input parameters, varying based on the selected **Mode** and **Edit Type**.
+
+### Common Parameters (Available across multiple Modes/Edit Types):
+
+<ResponseField name="prompt" type="string" required>
+  Your text description guiding the image creation or modification. (Max 1000 characters).
+</ResponseField>
+
+<ResponseField name="quality" type="Enum" required>
+  Controls the level of detail and generation time.
+  *   Possible enum values: `low`, `medium`, `high`, `auto`.
+</ResponseField>
+
+<ResponseField name="size" type="Enum" required>
+  The desired output resolution and aspect ratio.
+  *   Possible enum values: `1024x1024`, `1024x1536`, `1536x1024`, `auto`.
+</ResponseField>
+
+<ResponseField name="background" type="Enum" required>
+  Choose the background type for the generated image.
+  *   Possible enum values: `opaque`, `transparent`. (Note: Transparency availability depends on Output Format).
+</ResponseField>
+
+<ResponseField name="moderation" type="Enum" required>
+  Adjusts content filtering sensitivity.
+  *   Possible enum values: `auto` (Standard), `low` (Less Restrictive).
+</ResponseField>
+
+
+### Mode/Edit Type Specific Parameters:
+
+<AccordionGroup>
+  <Accordion title="Generate Mode" icon="wand-magic-sparkles">
+    <ResponseField name="format" type="Enum">
+      The file format for the generated image.
+      *   Possible enum values: `png`, `jpeg`, `webp`. (Note: Hidden in UI but affects transparency).
+    </ResponseField>
+    <ResponseField name="compression" type="integer">
+      Compression quality for JPEG/WebP output. (Range 0-100).
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="Edit Mode (Draw Mask, Maskless Editing)" icon="arrow-up">
+    <ResponseField name="uploadedImage" type="file" required>
+      The base image file to be edited. (Max 10MB).
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="Edit Mode (Draw Mask)" icon="brush">
+    <ResponseField name="maskImage" type="string" required>
+      The mask image (Base64 string or URL) defining the area to be edited. Created using the built-in mask editor.
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="Edit Mode (Reference Images)" icon="object-group">
+    <ResponseField name="referenceImages" type="array of files" required>
+      Up to 4 image files to use as visual references. (Max 1MB each recommended).
+    </ResponseField>
+  </Accordion>
+
+</AccordionGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Choose the Right Mode & Edit Type" icon="code-branch">
+    Select the mode and edit type that precisely match your desired outcome (generation, specific edit type, or customization method).
+  </Card>
+  <Card title="Master Prompting for Your Task" icon="pencil">
+    Tailor your prompt content and detail based on the selected mode and tool's requirements. Be specific and use natural language.
+  </Card>
+  <Card title="Use High-Quality Input Images" icon="image">
+    For Edit mode, start with clear, high-resolution images for the best results.
+  </Card>
+  <Card title="Iterate and Refine" icon="rotate">
+    Use multi-turn conversations to adjust outputs until you achieve the desired result.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+GPT-4o Image provides a powerful and versatile platform for AI image generation and editing, leveraging the advanced capabilities of OpenAI's GPT-4o model. With its distinct modes, intuitive editing types, and strong prompt interpretation, it empowers creators to achieve stunning visual results and communicate effectively through imagery.
+
+---

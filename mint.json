@@ -268,7 +268,13 @@
             "img-gen/fusioncraft",
             "img-gen/mysticcraft",
             "img-gen/imagencraft",
-            "img-gen/dreamcraft"
+            "img-gen/dreamcraft",
+            "img-gen/gpt4o-image",
+            "img-gen/flashcraft",
+            "img-gen/productcraft",
+            "img-gen/photocraft",
+            "img-gen/maxcraft",
+            "img-gen/upscalehd"
           ],
           "icon": "image",
           "iconType": "solid"

@@ -1,0 +1,156 @@
+---
+title: 'MaxCraft'
+description: 'Quick and simple realistic image generation'
+icon: 'clapperboard'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20165740.png" alt="MaxCraft Screenshot" />
+</Frame>
+
+# MaxCraft: Fast & Simple Realistic Image Generation
+
+<Tip>
+  Generate realistic images quickly and easily with MaxCraft! Just provide a prompt, choose your aspect ratio, and get stunning visuals.
+</Tip>
+
+## Overview
+
+MaxCraft is designed for creators who need a fast and simple way to generate realistic images from text prompts. It focuses on a streamlined workflow, requiring minimal inputs to produce high-quality visuals. MaxCraft excels at generating **realistic images quickly**, making it an efficient tool for concept art, visual inspiration, or adding realistic elements to your projects.
+
+<CardGroup cols={2}>
+  <Card title="Quick Generation" icon="bolt">
+    Generate realistic images with **minimal inputs** and **fast processing**.
+  </Card>
+  <Card title="Realistic Outputs" icon="camera">
+    Excels at creating **believable and lifelike visuals**.
+  </Card>
+  <Card title="Simple Interface" icon="sliders">
+    Easy-to-use design with just **a few key controls**.
+  </Card>
+  <Card title="Multiple Images" icon="clone">
+    Generate **up to 9 images** in a single batch.
+  </Card>
+</CardGroup>
+
+## Visual Showcase
+
+Explore examples of realistic images generated with MaxCraft:
+
+<CardGroup cols={2}>
+  <Card title="Fashion Photography">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(21).jpg" alt="MaxCraft Example 1" />
+    ```text
+    Fashion photography, professional male model wearing Balenciaga, shot with Canon EOS R3, 50mm f/1.2 RF lens, f/2.8 settings, 1/160s, ISO 1600, gradient neon violet lighting, signature Balenciaga oversized silhouette, architectural streetwear pieces, Triple S sneakers with luminescent soles, dark backdrop with deep purple atmospheric lighting, professional studio setup with two LED strip lights at floor level and one overhead softbox at 5600K, Balenciaga's industrial-futuristic aesthetic, model in power stance with exaggerated proportions, dramatic contrast highlighting the garment's technical fabrics, ultra sharp details emphasizing logo placement, photorealistic quality matching Demna Gvasalia's artistic direction, 48K resolution, rich detailing on distinctive Balenciaga textures and hardware elements
+    ```
+  </Card>
+  <Card title="View Through Rock Formation">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(22).jpg" alt="MaxCraft Example 2" />
+    ```text
+    A fascinating view through a natural rock formation by the sea, which serves as a frame for the scene. The dark, jagged rocks are visible in the foreground, lapped by gentle, turquoise waters. A luxurious yacht can be seen through the opening in the rock face, lying calmly on the clear blue water. Behind it stretches a hilly landscape that glows in soft colors under bright daylight. The contrasting composition between the rough, dark rocks and the elegant, modern yacht creates a harmonious balance of natural beauty and luxurious lifestyle. (Nature and luxury, rich in contrast, maritime scene, turquoise water)
+    ```
+  </Card>
+  <Card title="Streetwear in Desert">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(23).jpg" alt="MaxCraft Example 3" />
+    ```text
+    capturing a casual yet stylish vibe, a figure in a loose, oversized black street wearing and wide-leg trousers stands against desert background, relaxed stance and the casual attire, including a simple cap and oversized white T-shirt, contrast strikingly with the bright, lighting is even and enhances the playful yet laid-back mood of the set, photorealism, detailing
+    ```
+  </Card>
+  <Card title="Motorcycle Rider">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(24).jpg" alt="MaxCraft Example 4" />
+    ```text
+    cinematic shot of a man in a leather jacket, jeans and white t shirt, riding on a motorcycle, harley davidson. greaser, james dean, rebel without a cause, black and white film.
+    ```
+  </Card>
+</CardGroup>
+
+## How to Use MaxCraft
+
+Follow these simple steps to generate realistic images quickly:
+
+<Steps>
+  <Step title="Enter Your Prompt" icon="keyboard">
+    Type a text description of the image you want to create in the prompt input field.
+  </Step>
+
+  <Step title="Select Aspect Ratio" icon="crop">
+    Choose the desired shape for your image from the available aspect ratio options.
+    *   Possible values: `1:1`, `16:9`, `4:3`, `3:2`, `2:3`, `3:4`, `9:16`, `21:9`.
+  </Step>
+
+  <Step title="Select Number of Images" icon="clone">
+    Specify how many variations of the image you want to generate (1-9).
+  </Step>
+
+  <Step title="Generate Image" icon="play">
+    Click the "Generate" button. MaxCraft will process your inputs and create realistic images.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+MaxCraft offers a streamlined set of input parameters for quick and simple generation:
+
+<ResponseField name="prompt" type="string" required>
+  Your text description guiding the image creation.
+</ResponseField>
+
+<ResponseField name="aspect_ratio" type="Enum" required>
+  The desired aspect ratio for the output image.
+  *   Possible enum values: `1:1`, `16:9`, `4:3`, `3:2`, `2:3`, `3:4`, `9:16`, `21:9`.
+</ResponseField>
+
+<ResponseField name="num_images" type="integer">
+  The number of images to generate in a single batch.
+  *   Default: 1
+  *   Range: 1-9
+</ResponseField>
+
+
+## Mastering Prompts for MaxCraft
+
+To get the best realistic images from MaxCraft, focus on descriptive prompts that guide the AI towards lifelike visuals.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Emphasize Realism" icon="camera">
+    Use keywords like "photorealistic," "realistic," "high detail," "ultra sharp details," and describe textures and materials accurately.
+  </Accordion>
+  
+  <Accordion title="Detail Lighting" icon="sun">
+    Describe the lighting conditions precisely (e.g., "golden hour," "studio lighting," "dramatic contrast").
+  </Accordion>
+  
+  <Accordion title="Specify Camera Details (Optional)" icon="camera">
+    Including camera type, lens, or settings can sometimes influence the final look for photorealistic styles.
+    *Example:* "shot with Canon EOS R3, 50mm f/1.2 RF lens."
+  </Accordion>
+  
+  <Accordion title="Describe Scene and Subject Clearly" icon="keyboard">
+    Provide clear descriptions of the environment, subjects, and their actions or poses.
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Focus on Realism in Prompts" icon="camera">
+    Craft prompts that guide the AI towards photorealistic outputs to leverage MaxCraft's strength.
+  </Card>
+  <Card title="Experiment with Aspect Ratios" icon="crop">
+    Try different aspect ratios to see how they frame your scene and subject.
+  </Card>
+  <Card title="Generate Multiple Images" icon="clone">
+    Increase the Number of Images to get more variations from a single prompt.
+  </Card>
+  <Card title="Keep it Simple" icon="check">
+    MaxCraft is designed for speed and simplicity. Start with clear, direct prompts.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+MaxCraft provides a fast and simple way to generate realistic images from text prompts. Its streamlined interface and focus on quick, high-quality realistic outputs make it an efficient tool for various creative needs.
+
+---

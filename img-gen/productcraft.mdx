@@ -1,0 +1,156 @@
+---
+title: 'ProductCraft'
+description: 'Create product photographs in various scenarios using AI'
+icon: 'box'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20163757.png" alt="ProductCraft Screenshot" />
+</Frame>
+
+# ProductCraft: Showcase Your Products in Any Scene
+
+<Tip>
+  Transform your product images into stunning scenario photographs with ProductCraft! Easily place your product in diverse environments using text descriptions or reference images.
+</Tip>
+
+## Overview
+
+ProductCraft is a specialized AI tool designed to generate realistic product photographs by placing an image of your product into a described or referenced scene. This eliminates the need for expensive photoshoots in various locations, allowing you to quickly create diverse marketing visuals. You provide the product image and define the desired scene using either a **text description** or a **reference image**. ProductCraft offers flexible **placement options** to control how your product appears within the scene.
+
+<CardGroup cols={2}>
+  <Card title="Product Placement" icon="box-open">
+    Place your product image into **any described or referenced scene**.
+  </Card>
+  <Card title="Flexible Scene Input" icon="image">
+    Define the scene using a **text description** or a **reference image**.
+  </Card>
+  <Card title="Customizable Placement" icon="object-ungroup">
+    Control how the product is **positioned and scaled** within the scene.
+  </Card>
+  <Card title="Efficient Workflow" icon="bolt">
+    Quickly generate **multiple product shots** for marketing and e-commerce.
+  </Card>
+</CardGroup>
+
+## How to Use ProductCraft
+
+Follow these steps to create product photographs in different scenarios:
+
+<Steps>
+  <Step title="Upload Product Image" icon="upload">
+    Upload the image file of the **product** you want to place in a scene.
+  </Step>
+
+  <Step title="Define the Scene" icon="keyboard">
+    Provide either a **Scene Description** (text prompt describing the environment) or upload a **Reference Image** (an image showing the desired background scene), or both.
+    
+    <Callout type="info">
+      You must provide at least one of these inputs to define the scene.
+    </Callout>
+  </Step>
+
+  <Step title="Adjust Settings (Optional)" icon="sliders">
+    Configure various options to fine-tune the generation process and product placement.
+    
+    <Callout type="info">
+      See the "Input Parameters and Options" section below for a detailed description of each setting, including Placement Type, Number of Results, Fast Mode, and more.
+    </Callout>
+  </Step>
+
+  <Step title="Generate Product Shots" icon="play">
+    Click the "Generate" button. ProductCraft will process your inputs and create photographs of your product within the defined scene.
+  </Step>
+
+  <Step title="Review and Download" icon="eye">
+    Examine the generated images in the gallery. You can view, download, or send them to the gallery.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+ProductCraft offers a range of input parameters to give you precise control over the product shot generation process:
+
+<ResponseField name="productImage" type="file" required>
+  The image file of the product to be placed in a scene.
+</ResponseField>
+
+<ResponseField name="sceneDescription" type="string">
+  A text description of the scene or environment where you want to place the product. (Optional, but required if no Reference Image is provided).
+</ResponseField>
+
+<ResponseField name="referenceImage" type="file">
+  An image file to use as a reference for the background scene. (Optional, but required if no Scene Description is provided).
+</ResponseField>
+
+<ResponseField name="optimizeDescription" type="boolean">
+  Toggle to enable optimization of the Scene Description text prompt.
+  *   Default: `true`.
+</ResponseField>
+
+<ResponseField name="numResults" type="integer">
+  The number of product shot variations to generate.
+  *   Default: `1`.
+  *   Range: 1-4.
+</ResponseField>
+
+<ResponseField name="fast" type="boolean">
+  Toggle to enable a faster generation mode.
+  *   Default: `true`.
+</ResponseField>
+
+<ResponseField name="placementType" type="Enum">
+  Controls how the product is placed and scaled within the scene.
+  *   Default: `manual_placement`.
+  *   Possible enum values: `original`, `automatic`, `manual_placement`, `manual_padding`.
+</ResponseField>
+
+<ResponseField name="originalQuality" type="boolean">
+  Toggle to attempt preserving the original quality of the product image (only for `original` placement type).
+</ResponseField>
+
+<ResponseField name="shotSize" type="array of integers">
+  Specifies the desired [width, height] for the generated shot size (only for `automatic` and `manual_placement` placement types).
+  *   Default: `[1000, 1000]`.
+  *   Range: [100, 2000] for both width and height.
+</ResponseField>
+
+<ResponseField name="manualPlacementSelection" type="Enum">
+  Selects a predefined position for the product within the scene (only for `manual_placement` placement type).
+  *   Default: `bottom_center`.
+  *   Possible enum values: `upper_left`, `upper_right`, `bottom_left`, `bottom_right`, `right_center`, `left_center`, `upper_center`, `bottom_center`, `center_vertical`, `center_horizontal`.
+</ResponseField>
+
+<ResponseField name="paddingValues" type="array of integers">
+  Specifies padding values [left, right, top, bottom] around the product image (only for `manual_padding` placement type).
+  *   Default: `[50, 50, 50, 50]`.
+  *   Range: 0-500 for each value.
+</ResponseField>
+
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Clear Product Image" icon="box">
+    Use a product image with a clean background (preferably transparent or white) for easier isolation and placement.
+  </Card>
+  <Card title="Be Specific with Scene" icon="clapperboard">
+    Provide a detailed Scene Description or a clear Reference Image to accurately define the desired environment.
+  </Card>
+  <Card title="Experiment with Placement" icon="object-ungroup">
+    Try different Placement Types (Automatic, Manual Placement, Manual Padding) to find the best fit for your product and scene.
+  </Card>
+  <Card title="Adjust Shot Size" icon="crop">
+    If using Automatic or Manual Placement, adjust the Shot Width and Height to frame your product effectively within the scene.
+  </Card>
+   <Card title="Use Padding (Manual Padding)" icon="border-all">
+    Leverage padding values to control the space around your product, useful for creating specific compositions.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+ProductCraft offers a flexible and efficient solution for generating product photographs in diverse scenarios. By combining product images with scene descriptions or references and utilizing the various placement options, you can create compelling visuals for your marketing and e-commerce needs.
+
+---
+

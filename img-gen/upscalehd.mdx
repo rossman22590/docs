@@ -1,0 +1,174 @@
+---
+title: 'Upscale HD'
+description: 'Upscale images up to 8K with high quality and creative controls using the Magnific engine'
+icon: 'expand'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-14%20174858.png" alt="Upscale HD Screenshot" />
+</Frame>
+
+# Upscale HD: Premium AI Upscaling with Magnific
+
+<Tip>
+  Elevate your images to stunning clarity with Upscale HD! Powered by the Magnific engine, achieve exceptional sharpness, quality, and creative control, upscaling up to 8K resolution.
+</Tip>
+
+## Overview
+
+Upscale HD is a premium image enhancement tool utilizing the advanced **Magnific engine**. It is designed to provide one of the best upscaling experiences on the market, focusing on **sharpness, quality, and creative upscaling**. Upscale HD allows you to dramatically increase the resolution of your images, supporting outputs up to **8K**, while also offering parameters to influence the upscaling process creatively.
+
+<CardGroup cols={2}>
+  <Card title="Magnific Engine" icon="microchip">
+    Powered by a leading engine known for **quality and creative upscaling**.
+  </Card>
+  <Card title="High Resolution" icon="expand">
+    Upscale images up to **8K resolution**.
+  </Card>
+  <Card title="Exceptional Sharpness & Quality" icon="star">
+    Achieve **premium detail and clarity** in your upscaled images.
+  </Card>
+  <Card title="Creative Controls" icon="sliders">
+    Influence the upscaling with **creativity, HDR, resemblance, and fractality** settings.
+  </Card>
+</CardGroup>
+
+## How to Use Upscale HD
+
+Follow these steps to upscale your images with high quality and creative control:
+
+<Steps>
+  <Step title="Upload Image" icon="upload">
+    Upload the image file you want to upscale.
+    
+    <Callout type="info">
+      The tool compresses the image for processing.
+    </Callout>
+  </Step>
+
+  <Step title="Select Scale Factor" icon="maximize">
+    Choose the desired scale factor for upscaling (2x, 4x, or 8x).
+    
+    <Callout type="warning">
+      Each scale factor requires a specific number of credits.
+    </Callout>
+  </Step>
+
+  <Step title="Select Optimization" icon="check">
+    Choose what the upscaling is optimized for (e.g., Standard, Soft Portraits, Art & Illustration).
+  </Step>
+
+  <Step title="Enter Prompt" icon="keyboard">
+    Provide a text prompt to guide the upscaling process. This helps the AI understand the content and add details consistent with your description.
+  </Step>
+
+  <Step title="Adjust Creative Settings (Optional)" icon="sliders">
+    Configure optional parameters to influence the creative aspects of the upscale:
+    
+    <AccordionGroup>
+      <Accordion title="Creativity" icon="palette">
+        Slider (-10 to 10) to influence the AI's creative interpretation during upscaling.
+      </Accordion>
+      <Accordion title="HDR" icon="sun">
+        Slider (-10 to 10) to adjust the High Dynamic Range effect.
+      </Accordion>
+      <Accordion title="Resemblance" icon="copy">
+        Slider (-10 to 10) to control how much the upscaled image resembles the original.
+      </Accordion>
+      <Accordion title="Fractality" icon="code-branch">
+        Slider (-10 to 10) to influence fractal-like patterns or complexity.
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+
+  <Step title="Select Engine" icon="microchip">
+    Choose the Magnific engine to use for upscaling.
+    *   Possible values: `Automatic`, `Magnific Illusio`, `Magnific Sharpy`, `Magnific Sparkle`.
+  </Step>
+
+  <Step title="Upscale Image" icon="play">
+    Click the "Upscale Image" button. The tool will process your image based on the selected settings.
+    
+    <Callout type="info">
+      The upscaling process may take some time depending on the scale factor and complexity.
+    </Callout>
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+Upscale HD offers a range of input parameters for controlling the upscaling process:
+
+<ResponseField name="image" type="file" required>
+  The image file to be upscaled. (Compressed for processing).
+</ResponseField>
+
+<ResponseField name="scale_factor" type="Enum" required>
+  The factor to which the image will be upscaled.
+  *   Possible enum values: `2x`, `4x`, `8x`.
+  *   Credits required: 40 (2x), 80 (4x), 160 (8x).
+</ResponseField>
+
+<ResponseField name="optimized_for" type="Enum" required>
+  Specifies what the upscaling is optimized for.
+  *   Possible enum values: `standard`, `soft_portraits`, `hard_portraits`, `art_n_illustration`, `videogame_assets`, `nature_n_landscapes`, `films_n_photography`, `3d_renders`, `science_fiction_n_horror`.
+</ResponseField>
+
+<ResponseField name="prompt" type="string" required>
+  A text prompt to guide the upscaling process and add details.
+</ResponseField>
+
+<ResponseField name="creativity" type="integer">
+  Influences the AI's creative interpretation during upscaling.
+  *   Default: 0
+  *   Range: -10 to 10
+</ResponseField>
+
+<ResponseField name="hdr" type="integer">
+  Adjusts the High Dynamic Range effect.
+  *   Default: 0
+  *   Range: -10 to 10
+</ResponseField>
+
+<ResponseField name="resemblance" type="integer">
+  Controls how much the upscaled image resembles the original.
+  *   Default: 0
+  *   Range: -10 to 10
+</ResponseField>
+
+<ResponseField name="fractality" type="integer">
+  Influences fractal-like patterns or complexity.
+  *   Default: 0
+  *   Range: -10 to 10
+</ResponseField>
+
+<ResponseField name="engine" type="Enum">
+  Selects the Magnific engine to use.
+  *   Default: `automatic`
+  *   Possible enum values: `automatic`, `magnific_illusio`, `magnific_sharpy`, `magnific_sparkle`.
+</ResponseField>
+
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Provide a Clear Prompt" icon="keyboard">
+    Use a descriptive prompt to help the AI understand the image content and add relevant details during upscaling.
+  </Card>
+  <Card title="Choose the Right Optimization" icon="check">
+    Select the 'Optimized For' setting that best matches the content of your image.
+  </Card>
+  <Card title="Experiment with Creative Settings" icon="sliders">
+    Adjust the Creativity, HDR, Resemblance, and Fractality sliders to fine-tune the artistic outcome.
+  </Card>
+  <Card title="Select the Appropriate Engine" icon="microchip">
+    Try different Magnific engines to see which produces the best style for your upscaled image.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+Upscale HD provides a premium solution for enhancing image resolution with exceptional quality and creative control. Powered by the Magnific engine, it allows you to upscale images up to 8K while influencing the process with various parameters, making it ideal for achieving stunning, high-detail visuals.
+
+---
+
