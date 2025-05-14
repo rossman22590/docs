@@ -1,0 +1,345 @@
+---
+title: 'FusionCraft'
+description: 'Advanced AI image generation with specialized models for photo, inpainting, and more'
+icon: 'palette'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20184656.png" alt="FusionCraft Screenshot" />
+</Frame>
+
+# FusionCraft: Blend Power and Precision in AI Image Creation
+
+<Tip>
+  Experience the next evolution in AI image generation with FusionCraft! Combining the power of Flux and Juggernaut, FusionCraft offers specialized models for lightning-fast creation, stunning quality, realistic photos, and precise inpainting.
+</Tip>
+
+## Overview
+
+FusionCraft is a cutting-edge AI image generation platform built upon a finetune of the powerful **Flux** and **Juggernaut** models. It provides a versatile suite of specialized models, each optimized for different creative needs. Whether you require rapid image generation, high-quality outputs, photorealistic results, or precise inpainting capabilities, FusionCraft delivers exceptional performance and control.
+
+<CardGroup cols={2}>
+  <Card title="Specialized Models" icon="cubes">
+    Access models optimized for **speed, quality, photo realism, and inpainting**.
+  </Card>
+  <Card title="High-Quality Outputs" icon="star">
+    Generate visuals with **exceptional detail and artistic fidelity**.
+  </Card>
+  <Card title="Precise Inpainting" icon="brush">
+    Modify specific masked areas of images with **intelligent filling and blending**.
+  </Card>
+  <Card title="Flexible Controls" icon="sliders">
+    Fine-tune your creations with various **sliders and options**.
+  </Card>
+</CardGroup>
+
+## Visual Showcase
+
+Explore the diverse and high-quality outputs achievable with FusionCraft:
+
+<CardGroup cols={2}>
+  <Card title="Windy Hair">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(65).png" alt="FusionCraft Example 1" />
+    ```text
+    a woman with long wild hair on a windy day, in the style of toy camera effects, haunting elegance, frozen movement, captivating gaze, voigtlander bessa r2m, black paintings, new york school
+    ```
+  </Card>
+  <Card title="Medieval Planetarium">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(66).png" alt="FusionCraft Example 2" />
+    ```text
+    Medieval giant space planetarium, 3D op art style, detailed 3D Op Art Trippy Optical Illusion Liquified designs, detailed voluminous black and white lines and squares in op art psychedelic style, middle ages maximalism dreamy tech style, planets and galaxy revolved around the head with diferent colors, millions of three-dimensional photorealistic eyes and galaxies, middle ages clothes, technology lights, middle ages forest, medieval cloth textures, retro future tech middle ages style tample, alien technology, space baroque ancient ornaments, middle ages mystery forest, renaissance pastel colors, mystery, enlightenment, Trippy dreamy colors and ornaments style, futurism, science fiction, mysticism, high detail, dramatic dutch light
+    ```
+  </Card>
+  <Card title="Vinyl Couch">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(67).png" alt="FusionCraft Example 3" />
+    ```text
+    hyper realistic, ultra-resolution photography, front shot, vibrant green color transparent vinyl material couch, minimalist, inspired by experimental design, used camera is Canon EOS R5, 24mm f/2. 8 wide-angle lens, f/6 aperture, 1/15s shutter speed, ISO 100, tripod mounted, finest image quality, ensuring every detail from the light patterns to the material textures is professionally presented, caustics effect, low-key, solid white background, design award winning, casting natural light with softbox lighting, sharp focus, clear, detailed, cinematic, solid background, glamourous, editorial, editorial shoot, ultra realistic,
+    ```
+  </Card>
+  <Card title="Dias de los Muertos Parade">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(68).png" alt="FusionCraft Example 4" />
+    ```text
+    Dias de los Muertos Parade in Mexico City, high-resolution photography, ultra-realistic
+    ```
+  </Card>
+</CardGroup>
+
+## FusionCraft Models and Their Focus
+
+FusionCraft offers a selection of models, each tailored for specific types of image generation:
+
+<AccordionGroup>
+  <Accordion title="Fast (Free)" icon="bolt">
+    Optimized for **speed**, providing rapid image generation.
+    *   **Primary Use:** Quick concept generation, rapid iteration.
+    *   **Available Tools:** Generate, Redux
+  </Accordion>
+  <Accordion title="Balanced (5 Credits)" icon="scale-balanced">
+    Offers a good balance between **speed and quality**.
+    *   **Primary Use:** General purpose image generation, image-to-image transformations.
+    *   **Available Tools:** Regular, Image to Image, Redux
+  </Accordion>
+  <Accordion title="Quality (10 Credits)" icon="star">
+    Prioritizes **high-quality outputs** with greater detail and refinement.
+    *   **Primary Use:** Professional-grade image generation, detailed visuals.
+    *   **Available Tools:** Regular, Image to Image, Redux
+  </Accordion>
+  <Accordion title="Photo (10 Credits)" icon="camera">
+    Specialized for generating **photorealistic images**.
+    *   **Primary Use:** Creating realistic portraits, landscapes, and scenes.
+    *   **Available Tools:** Regular
+  </Accordion>
+  <Accordion title="Inpainting (10 Credits)" icon="brush">
+    Designed for **modifying specific masked areas** of an image.
+    *   **Primary Use:** Removing objects, adding elements, fixing imperfections within an image.
+    *   **Available Tools:** Inpainting
+  </Accordion>
+</AccordionGroup>
+
+### Understanding the Tools:
+
+*   **Generate / Regular:** Create images from a text prompt.
+*   **Redux:** Remix or modify existing images based on a prompt and an input image.
+*   **Image to Image:** Transform an input image based on a prompt and its visual content.
+*   **Inpainting:** Modify specific masked areas of an image based on a prompt and an input image with a mask.
+
+## Mastering Prompts for FusionCraft
+
+Prompting in FusionCraft depends on the model and tool you select. Each model responds differently to prompt complexity and stylistic cues.
+
+### General Prompting Principles:
+
+<AccordionGroup>
+  <Accordion title="Specificity is Key" icon="pencil">
+    Provide clear details about your desired image, especially for models like Quality and Photo. Describe subjects, actions, settings, styles, and mood.
+  </Accordion>
+
+  <Accordion title="Understand Tool Influence" icon="toolbox">
+    Your prompt's interpretation is heavily influenced by the selected tool. A prompt for "Generate" will be interpreted differently than the same prompt used with "Fill" or "Redux".
+  </Accordion>
+
+  <Accordion title="Use Natural Language" icon="comments">
+    Formulate your prompts using descriptive sentences.
+  </Accordion>
+   <Accordion title="Consider Negative Prompts" icon="ban">
+    Use the negative prompt field to steer the AI away from unwanted elements or artifacts.
+  </Accordion>
+</AccordionGroup>
+
+### Prompting for Specific Models/Tools:
+
+<AccordionGroup>
+  <Accordion title="Fast & Balanced" icon="bolt">
+    These models often perform well with straightforward, clear prompts. Focus on the core subject and scene.
+    Example: "A cat sitting on a windowsill looking at the rain."
+  </Accordion>
+   <Accordion title="Quality & Photo" icon="star">
+    These models benefit from more detailed and nuanced prompts, including specifics about lighting, camera style, and artistic details for higher fidelity.
+    Example: "A close-up portrait of an elderly person with kind eyes, soft studio lighting, shallow depth of field, shot on a vintage film camera."
+  </Accordion>
+  <Accordion title="Inpainting" icon="brush">
+    Describe what you want to appear within the masked area. Focus on the object or scene you want to generate and how it should blend with the existing image.
+    Example: (Mask over a blank wall) Prompt: "A vibrant graffiti mural covering the wall."
+  </Accordion>
+  <Accordion title="Image to Image" icon="image">
+     Describe the desired transformation or style for the input image.
+    Example: (Input: Photo of a building) Prompt: "Turn this building into a stained glass window, vibrant colors, intricate patterns, glowing light."
+  </Accordion>
+  <Accordion title="Redux" icon="rotate">
+    Describe the desired changes or the new style you want to apply to the input image, focusing on the elements you want to modify or replace.
+    Example: (Input: Photo of a person) Prompt: "Give them a superhero costume, red and blue, cape flowing in the wind."
+  </Accordion>
+  <Accordion title="LoRAs (Photo & Inpainting)" icon="puzzle-piece">
+    Include the LoRA's specific **trigger word** in your prompt. Then, describe the scene or subject you want, incorporating the concept or style the LoRA was trained on.
+    Example: (Using a "fantasy creature" LoRA with trigger "mythicbeast") Prompt: "A majestic **mythicbeast** perched on a cliff overlooking a misty valley."
+  </Accordion>
+   <Accordion title="ControlNets" icon="vector-square">
+    Your prompt describes the *content* and *style* of the image, while the ControlNet image provides the *structure* or *composition*. Ensure your prompt aligns with the structural guide provided by the ControlNet image.
+    Example: (ControlNet: Canny edges of a building) Prompt: "A beautiful watercolor painting of an ancient castle at sunset." (The AI will generate a watercolor painting of a castle following the edge structure of your input image).
+  </Accordion>
+  <Accordion title="Reference Image (Custom Model)" icon="object-group">
+    Describe the desired image, indicating how the AI should draw inspiration from the reference image(s). You can reference specific images if using multiple.
+    Example: (Reference Image 1: A character, Reference Image 2: A scene) Prompt: "Generate a portrait of the person from image1 standing in the setting from image2."
+  </Accordion>
+</AccordionGroup>
+
+### Prompt Examples
+
+Here are some examples showcasing prompting for different scenarios:
+
+<CodeBlock title="Generate: Sci-Fi City">
+  A sprawling futuristic city at night, illuminated by neon lights and flying vehicles. High angle view, digital painting, vibrant colors, moody atmosphere.
+</CodeBlock>
+
+<CodeBlock title="Redux: Stylize a Photo">
+  (Input Image: Photo of a cat) Prompt: "Turn this photo into a stained glass window, vibrant colors, intricate patterns, glowing light."
+</CodeBlock>
+
+<CodeBlock title="Fill: Add an Element">
+  (Input Image: Room with empty table, Mask over table) Prompt: "Place a steaming cup of coffee and a book on the table."
+</CodeBlock>
+
+<CodeBlock title="LoRA: Apply a Style">
+  (Using LoRA with trigger "cyberart") Prompt: "A portrait of a woman in the rain, **cyberart**, neon reflections, detailed face, moody lighting."
+</CodeBlock>
+
+<CodeBlock title="ControlNet: Match Composition">
+  (ControlNet Input: Pose of a person) Prompt: "An ancient warrior in battle armor, dynamic pose, fantasy art style, epic lighting."
+</CodeBlock>
+
+<CodeBlock title="Custom + References: Blend Concepts">
+  (Reference 1: Character A, Reference 2: Scene B) Prompt: "Generate a portrait of the person from image1 standing in the setting from image2, cinematic lighting, adventurous mood."
+</CodeBlock>
+
+## How to Use FusionCraft
+
+Embark on your creative journey with this general workflow:
+
+<Steps>
+  <Step title="Select Your Model" icon="code-branch">
+    Choose the FusionCraft model that best suits your needs (Fast, Balanced, Quality, Photo, Inpainting).
+  </Step>
+  <Step title="Upload Image (If Applicable)" icon="upload">
+    If using the Balanced, Quality, or Inpainting models, upload the base image you want to work with. For Inpainting, you will also need to draw a mask on the uploaded image.
+  </Step>
+  <Step title="Provide Your Prompt" icon="keyboard">
+    Enter your text description for the image you want to create or modify. Include trigger words if using LoRAs (Photo, Inpainting).
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure common settings like Image Size/Aspect Ratio, Inference Steps, Guidance Scale, and Seed. Adjust model-specific options like Strength (Balanced, Quality, Inpainting), Photo LoRA Scale (Photo), or add LoRAs (Photo, Inpainting).
+  </Step>
+  <Step title="Generate Image" icon="play">
+    Click the "Generate" button and await your creation. Ensure you have enough credits if using a paid model.
+  </Step>
+  <Step title="Review and Refine" icon="eye">
+    Examine the generated image. Iterate by adjusting prompts, settings, or inputs if needed.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+FusionCraft offers a wide array of input parameters to give you precise control over the image generation and modification process. The available parameters vary depending on the selected **Model**.
+
+### Common Parameters (Available across multiple Models):
+
+<ResponseField name="prompt" type="string" required>
+  Your text description guiding the image creation or modification.
+</ResponseField>
+
+<ResponseField name="negative_prompt" type="string">
+  A text prompt specifying elements, styles, or characteristics to avoid in the generated or modified image.
+</ResponseField>
+
+<ResponseField name="image_size / aspect_ratio" type="string | object">
+  The desired dimensions or aspect ratio for the output image. Can be selected from presets (e.g., `square_hd`, `landscape_16_9`) or specified with custom `width` and `height`. Specific options vary by model.
+</ResponseField>
+
+<ResponseField name="num_inference_steps" type="integer">
+  Controls the detail and refinement of the image generation/modification process. Higher values generally result in more detailed outputs but may increase processing time.
+  Default: 4 (Fast), 28 (Balanced, Quality, Photo, Inpainting)
+  Range: 1-12 (Fast), 3-50 (Balanced, Quality, Photo, Inpainting)
+</ResponseField>
+
+<ResponseField name="seed" type="integer">
+  A number that initializes the random generation process. Using the same seed with the same prompt and settings will produce a consistent result. Enter `-1` for a random seed.
+  Applies to: Fast, Balanced, Quality, Photo, Inpainting
+</ResponseField>
+
+<ResponseField name="guidance_scale" type="float">
+  Adjusts how closely the AI adheres to your text prompt. Higher values result in outputs that stick more strictly to the prompt, while lower values allow for more creative variation.
+  Default: 3.5 (Balanced, Quality, Photo, Inpainting)
+  Range: 1-20 (Balanced, Quality, Photo, Inpainting)
+  Note: Not available for the Fast model.
+</ResponseField>
+
+<ResponseField name="num_images / batch_size" type="integer">
+  The number of images to generate in a single batch. (Default: 1).
+  Applies to: All models.
+</ResponseField>
+
+<ResponseField name="output_format" type="Enum">
+  The file format for the generated image.
+  Default: `jpeg`
+  Possible enum values: `jpeg`, `png`
+  Applies to: Photo, Inpainting.
+</ResponseField>
+
+
+
+### Model-Specific Parameters:
+
+<AccordionGroup>
+  <Accordion title="Image Upload" icon="upload">
+    Applies to: **Balanced**, **Quality**, **Inpainting**
+    <ResponseField name="image_url" type="string" required>
+      The URL of the input image file to be used for Image-to-Image or Inpainting.
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="Strength" icon="sliders">
+    Applies to: **Balanced**, **Quality**, **Inpainting**
+    Controls the strength of the transformation from the original image (Image-to-Image, Inpainting). Higher values result in more significant changes, while lower values retain more of the original image's structure/colors.
+    Default: 0.85
+    Range: 0.01 - 0.99
+  </Accordion>
+
+  <Accordion title="Photo LoRA Scale" icon="puzzle-piece">
+    Applies to: **Photo**
+    <ResponseField name="photo_lora_scale" type="float">
+      Controls the influence of a specific internal LoRA used by the Photo model.
+      Default: 0.75
+      Range: (Likely similar to other scales, e.g., 0-2).
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="LoRAs" icon="puzzle-piece">
+    Applies to: **Photo**, **Inpainting**
+    <ResponseField name="loras" type="array of objects">
+      A list of LoRA models to apply to the generation.
+      <ResponseField name="path" type="string" required>
+        The URL or ID of the LoRA model.
+      </ResponseField>
+      <ResponseField name="scale" type="float">
+        Controls the strength of the LoRA's influence on the image. (Range typically 0-2).
+      </ResponseField>
+    </ResponseField>
+    Note: The Photo model currently supports only **one** LoRA.
+  </Accordion>
+
+   <Accordion title="Mask Image" icon="mask">
+    Applies to: **Inpainting**
+    <ResponseField name="mask_url" type="string" required>
+      The URL of the mask image defining the area to be filled or inpainted. This is created using the built-in mask editor.
+    </ResponseField>
+  </Accordion>
+
+</AccordionGroup>
+
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Choose the Right Model" icon="code-branch">
+    Select the model that aligns with your primary goal (speed, balance, quality, photo realism, or editing).
+  </Card>
+  <Card title="Master Prompting for Your Model" icon="pencil">
+    Tailor your prompt detail and style based on the selected model's strengths.
+  </Card>
+  <Card title="Use High-Quality Input Images" icon="image">
+    For models requiring image uploads (Balanced, Quality, Inpainting), start with clear, high-resolution images.
+  </Card>
+  <Card title="Experiment with Settings" icon="sliders">
+    Adjust Inference Steps, Guidance Scale, and Strength (where applicable) to find the perfect balance for your vision.
+  </Card>
+   <Card title="Leverage LoRAs" icon="puzzle-piece">
+    For Photo and Inpainting models, experiment with LoRAs to add specific styles or elements.
+  </Card>
+   <Card title="Precise Masking" icon="crop">
+    When using the Inpainting tool, take care to draw your mask accurately over the area you want to modify.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+FusionCraft offers a powerful and flexible approach to AI image generation through its suite of specialized models. By understanding the strengths of each model and mastering the input parameters and prompting techniques, you can unlock the full potential of this tool to create stunning visuals tailored to your specific needs.
+

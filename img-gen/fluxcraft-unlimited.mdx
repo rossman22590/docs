@@ -1,0 +1,469 @@
+---
+title: 'FluxCraft Unlimited'
+description: 'Explore advanced AI image generation with multiple models and comprehensive tools'
+icon: 'rocket-launch'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20182755.png" alt="FluxCraft Unlimited Screenshot" />
+</Frame>
+
+# FluxCraft Unlimited: Unleash the Full Spectrum of AI Image Creation
+
+<Tip>
+  Dive into the ultimate AI image generation experience with FluxCraft Unlimited! Access a diverse range of models, powerful tools, and unparalleled customization to bring your most ambitious visual concepts to life.
+</Tip>
+
+## Overview
+
+FluxCraft Unlimited is the premier platform for advanced AI image generation, offering a comprehensive suite of tools and models tailored for creators who demand flexibility, control, and high-quality outputs. It moves beyond basic prompting, providing access to different **Flux models**, each with its own set of capabilities and specialized tools. From rapid generation to intricate editing and the power to blend concepts using **LoRAs, ControlNets, and reference images**, FluxCraft Unlimited provides the most complete Flux experience available.
+
+<CardGroup cols={2}>
+  <Card title="Multiple Flux Models" icon="cubes">
+    Explore a range of **specialized AI models**, each with unique strengths and tools.
+  </Card>
+  <Card title="Comprehensive Toolset" icon="toolbox">
+    Access tools for **generating, remixing, editing, and controlling** image creation.
+  </Card>
+  <Card title="Advanced Customization" icon="sliders">
+    Leverage **LoRAs, ControlNets, and reference images** for unparalleled control and blending.
+  </Card>
+  <Card title="High-Quality Outputs" icon="star">
+    Generate visuals with **exceptional detail, consistency, and artistic fidelity**.
+  </Card>
+</CardGroup>
+
+## Models and Their Tools
+
+FluxCraft Unlimited offers access to various Flux models, each equipped with a specific set of tools to cater to different creative workflows. The available tools change depending on the selected model:
+
+<AccordionGroup>
+  <Accordion title="Schnell 1." icon="bolt">
+    Optimized for **speed**.
+    *   **Available Tools:** Generate, Redux
+  </Accordion>
+  <Accordion title="Dev 1." icon="code">
+    A versatile development model.
+    *   **Available Tools:** Regular, Image to Image, Redux
+  </Accordion>
+  <Accordion title="Pro 1." icon="crown">
+    Designed for **professional-grade outputs**, offering various control methods.
+    *   **Available Tools:** Regular, Redux, Canny, Depth, Fill
+    *   *Note:* For **Fill** tool, mask drawing and image uploading are available.
+  </Accordion>
+   <Accordion title="Pro 1.1" icon="crown">
+    An updated version of the Pro model.
+    *   **Available Tools:** Regular, Redux
+  </Accordion>
+  <Accordion title="Ultra 1.1" icon="rocket">
+    Focuses on **style consistency**.
+    *   **Available Tools:** Regular, Redux
+    *   *Note:* Includes a **Raw option** for enhanced style consistency.
+  </Accordion>
+  <Accordion title="Realism" icon="image">
+    Specialized for generating **realistic images**.
+    *   **Available Tools:** Regular
+  </Accordion>
+  <Accordion title="Custom" icon="wrench">
+    A highly **customizable version of Flux Dev**, offering the most complete toolset.
+    *   **Available Tools:** Differential Diffusion, Image to Image, Inpainting, RF-Inversion
+    *   *Note:* This model allows the addition of **ControlNets** and **Reference Images**, and the **Inpainting** tool includes mask drawing and image uploading.
+  </Accordion>
+    <Accordion title="Subject" icon="user">
+    Specialized for generating images based on a **subject image input**.
+    *   **Available Tools:** Regular
+    *   *Note:* Requires a **Subject Image** upload.
+  </Accordion>
+</AccordionGroup>
+
+### Understanding the Tools:
+
+*   **Generate / Regular:** Create images from a text prompt.
+*   **Redux:** Remix or modify existing images based on a prompt and an input image.
+*   **Image to Image:** Transform an input image based on a prompt and its visual content.
+*   **Canny:** Use Canny edge detection from an input image to guide generation (Pro 1.).
+*   **Depth:** Use depth map from an input image to guide generation (Pro 1.).
+*   **Fill / Inpainting:** Modify specific masked areas of an image based on a prompt and an input image with a mask (Pro 1., Custom).
+*   **Differential Diffusion:** (Custom) Likely related to applying changes based on a change map image.
+*   **RF-Inversion:** (Custom) Likely related to inverting or extracting information from an image with advanced controls.
+
+## Mastering Prompts for FluxCraft Unlimited
+
+Prompting in FluxCraft Unlimited is a dynamic process that adapts to the model and tool you choose. While some models excel with simple descriptions, others unlock their full potential with detailed, structured prompts and the integration of visual references.
+
+### General Prompting Principles:
+
+<AccordionGroup>
+  <Accordion title="Specificity is Key" icon="pencil">
+    Whether generating from scratch or editing, clear and detailed prompts yield better results. Describe subjects, actions, settings, styles, and mood.
+  </Accordion>
+  
+  <Accordion title="Understand Tool Influence" icon="toolbox">
+    Your prompt's interpretation is heavily influenced by the selected tool. A prompt for "Generate" will be interpreted differently than the same prompt used with "Fill" or "Redux".
+  </Accordion>
+  
+  <Accordion title="Use Natural Language" icon="comments">
+    Flux models generally respond well to natural language sentences rather than just keywords.
+  </Accordion>
+   <Accordion title="Consider Negative Prompts" icon="ban">
+    While not all models fully support them, using negative prompts can help steer the AI away from unwanted elements or artifacts.
+  </Accordion>
+</AccordionGroup>
+
+### Prompting for Specific Tools/Features:
+
+<AccordionGroup>
+  <Accordion title="Generate / Regular" icon="wand-magic-sparkles">
+    Focus on describing the desired final image. Include details about composition, lighting, style, and subject matter.
+    *Example:* "A cinematic shot of a lone astronaut standing on a rocky alien planet under two moons, wide angle, dramatic lighting."
+  </Accordion>
+   <Accordion title="Redux" icon="rotate">
+    Describe the desired changes or the new style you want to apply to the input image.
+    *Example:* (Input: Photo of a dog) Prompt: "Turn this dog into a cyberpunk robot, neon lights, wires, futuristic."
+  </Accordion>
+  <Accordion title="Image to Image" icon="image">
+     Describe the desired output image, and the AI will use the input image as a strong visual guide for composition, color, or style, depending on the model and strength settings.
+    *Example:* (Input: A sketch of a character) Prompt: "Render this sketch as a detailed fantasy oil painting."
+  </Accordion>
+  <Accordion title="Fill / Inpainting" icon="brush">
+    Describe what you want to appear in the masked area. The AI will attempt to generate content that fits the prompt and blends with the unmasked parts of the image.
+    *Example:* (Mask over a blank wall) Prompt: "Add a vibrant mural of a dragon breathing fire."
+  </Accordion>
+  <Accordion title="LoRAs" icon="puzzle-piece">
+    Include the LoRA's specific **trigger word** in your prompt. Then, describe the scene or subject you want, incorporating the concept or style the LoRA was trained on.
+    *Example:* (Using a "fantasy creature" LoRA with trigger "mythicbeast") Prompt: "A majestic **mythicbeast** perched on a cliff overlooking a misty valley."
+  </Accordion>
+   <Accordion title="ControlNets" icon="vector-square">
+    Your prompt describes the *content* and *style* of the image, while the ControlNet image provides the *structure* or *composition*. Ensure your prompt aligns with the structural guide provided by the ControlNet image.
+    *Example:* (ControlNet: Canny edges of a building) Prompt: "A beautiful watercolor painting of an ancient castle at sunset." (The AI will generate a watercolor painting of a castle following the edge structure of your input image).
+  </Accordion>
+  <Accordion title="Reference Image (Custom Model)" icon="object-group">
+    Describe the desired image, indicating how the AI should draw inspiration from the reference image(s). You can reference specific images if using multiple.
+    *Example:* (Reference Image 1: A character, Reference Image 2: A scene) Prompt: "Generate a portrait of the person from image1 standing in the setting from image2."
+  </Accordion>
+</AccordionGroup>
+
+### Prompt Examples
+
+Here are some examples showcasing prompting for different scenarios:
+
+<CodeBlock title="Generate: Sci-Fi City">
+  A sprawling futuristic city at night, illuminated by neon lights and flying vehicles. High angle view, digital painting, vibrant colors, moody atmosphere.
+</CodeBlock>
+
+<CodeBlock title="Redux: Stylize a Photo">
+  (Input Image: Photo of a cat) Prompt: "Turn this photo into a stained glass window, vibrant colors, intricate patterns, glowing light."
+</CodeBlock>
+
+<CodeBlock title="Fill: Add an Element">
+  (Input Image: Room with empty table, Mask over table) Prompt: "Place a steaming cup of coffee and a book on the table."
+</CodeBlock>
+
+<CodeBlock title="LoRA: Apply a Style">
+  (Using LoRA with trigger "cyberart") Prompt: "A portrait of a woman in the rain, **cyberart**, neon reflections, detailed face, moody lighting."
+</CodeBlock>
+
+<CodeBlock title="ControlNet: Match Composition">
+  (ControlNet Input: Pose of a person) Prompt: "An ancient warrior in battle armor, dynamic pose, fantasy art style, epic lighting."
+</CodeBlock>
+
+<CodeBlock title="Custom + References: Blend Concepts">
+  (Reference 1: Character A, Reference 2: Scene B) Prompt: "Character from image1 exploring the landscape from image2, cinematic lighting, adventurous mood."
+</CodeBlock>
+
+## How to Use FluxCraft Unlimited
+
+Embark on your creative journey with this general workflow:
+
+<Steps>
+  <Step title="Select Your Model" icon="code-branch">
+    Choose the Flux model that best suits your needs based on its available tools and characteristics (Schnell, Dev, Pro, Ultra, Realism, Custom, Subject).
+  </Step>
+  <Step title="Select Your Tool" icon="toolbox">
+    Choose the specific tool you want to use from the options available for your selected model (e.g., Generate, Redux, Fill, Image to Image).
+  </Step>
+  <Step title="Provide Your Prompt" icon="keyboard">
+    Enter your text description for the image you want to create or modify. Include trigger words if using LoRAs.
+  </Step>
+  <Step title="Upload Images/ControlNets (If Applicable)" icon="upload">
+    If your selected tool or model requires visual input (Redux, Image to Image, Fill, Inpainting, Custom model with References/ControlNets, Subject model), upload the necessary image(s) or ControlNet files. Draw a mask if using Fill or Inpainting.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure common settings like Image Size, Inference Steps, Guidance Scale, and Seed. Adjust model-specific options like LoRA/ControlNet settings, Reference Strength, RF-Inversion controls, or the Ultra model's Raw option.
+  </Step>
+  <Step title="Generate Image" icon="play">
+    Click the "Generate" button and await your creation.
+  </Step>
+  <Step title="Review and Refine" icon="eye">
+    Examine the generated image. Iterate by adjusting prompts, settings, or inputs if needed.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+FluxCraft Unlimited offers a wide array of input parameters to give you precise control over the image generation and modification process. The available parameters vary depending on the selected **Model** and **Tool**.
+
+### Common Parameters (Available across multiple Models/Tools):
+
+<ResponseField name="prompt" type="string" required>
+  Your text description guiding the image creation or modification.
+</ResponseField>
+
+<ResponseField name="negative_prompt" type="string">
+  A text prompt specifying elements, styles, or characteristics to avoid in the generated or modified image.
+</ResponseField>
+
+<ResponseField name="image_size / aspect_ratio" type="string | Enum | object">
+  The desired dimensions or aspect ratio for the output image. Can be selected from presets (e.g., `square_hd`, `landscape_16_9`) or specified with custom `width` and `height`. Specific options vary by model.
+</ResponseField>
+
+<ResponseField name="num_inference_steps" type="integer">
+  Controls the detail and refinement of the image generation/modification process. Higher values generally result in more detailed outputs but may increase processing time. (Range typically 3-50).
+</ResponseField>
+
+<ResponseField name="seed" type="integer">
+  A number that initializes the random generation process. Using the same seed with the same prompt and settings will produce a consistent result. Enter `-1` or leave empty for a random seed.
+</ResponseField>
+
+<ResponseField name="guidance_scale" type="float">
+  Adjusts how closely the AI adheres to your text prompt. Higher values result in outputs that stick more strictly to the prompt, while lower values allow for more creative variation. (Range typically 1-20).
+</ResponseField>
+
+<ResponseField name="num_images / batch_size" type="integer">
+  The number of images to generate in a single batch.
+</ResponseField>
+
+<ResponseField name="output_format" type="Enum">
+  The file format for the generated image.
+  
+  Possible enum values: `png`, `jpeg`
+</ResponseField>
+
+
+
+### Model-Specific Parameters:
+
+<AccordionGroup>
+  <Accordion title="LoRAs" icon="puzzle-piece">
+    *Applies to:* **Pro 1.**, **Custom**
+    <ResponseField name="loras" type="array of objects">
+      A list of LoRA models to apply to the generation.
+      <ResponseField name="path" type="string" required>
+        The URL or ID of the LoRA model.
+      </ResponseField>
+      <ResponseField name="scale" type="float">
+        Controls the strength of the LoRA's influence on the image. (Range typically 0-2).
+      </ResponseField>
+      <ResponseField name="trigger_word" type="string">
+        The specific word or phrase that activates the LoRA's effect in the prompt. (Required when using the LoRA).
+      </ResponseField>
+       <ResponseField name="finetune_id" type="string">
+        The ID of a finetuned version of the LoRA. (Used with finetuned endpoints).
+      </ResponseField>
+       <ResponseField name="finetune_strength" type="float">
+        Controls the strength of the finetuned LoRA's influence. (Range typically 0-2).
+      </ResponseField>
+    </ResponseField>
+  </Accordion>
+
+   <Accordion title="Finetune ID / Strength" icon="microchip">
+    *Applies to:* **Pro 1.**, **Ultra 1.1** (when using finetuned endpoints)
+    <ResponseField name="finetune_id" type="string" required>
+      The ID of the specific finetuned model version to use.
+    </ResponseField>
+    <ResponseField name="finetune_strength" type="float">
+      Controls the overall strength of the finetuned model's influence. (Range typically 0-2).
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="ControlNets" icon="vector-square">
+    *Applies to:* **Custom**
+    <ResponseField name="controlnets" type="array of objects">
+      A list of ControlNet models to apply for structural guidance.
+      <ResponseField name="path" type="string" required>
+        The URL or ID of the ControlNet model.
+      </ResponseField>
+      <ResponseField name="config_url" type="string">
+        The configuration URL for the ControlNet model.
+      </ResponseField>
+      <ResponseField name="variant" type="string">
+        The variant of the ControlNet model.
+      </ResponseField>
+      <ResponseField name="control_image_url" type="string" required>
+        The URL of the image providing structural guidance (e.g., Canny edges, depth map).
+      </ResponseField>
+      <ResponseField name="mask_image_url" type="string">
+        The URL of a mask image to apply the ControlNet effect only to masked areas.
+      </ResponseField>
+      <ResponseField name="mask_threshold" type="float">
+        Threshold for the mask image. (Range typically 0-1).
+      </ResponseField>
+      <ResponseField name="conditioning_scale" type="float">
+        Controls the strength of the ControlNet's influence. (Range typically 0-2).
+      </ResponseField>
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="Reference Image" icon="object-group">
+    *Applies to:* **Custom**
+    <ResponseField name="reference_image_url" type="string">
+      The URL of a reference image to influence the visual style or content.
+    </ResponseField>
+    <ResponseField name="reference_strength" type="float">
+      Controls the strength of the reference image's influence. (Range typically 0-1).
+    </ResponseField>
+  </Accordion>
+
+   <Accordion title="Raw Option" icon="palette">
+    *Applies to:* **Ultra 1.1**
+    <ResponseField name="raw" type="boolean">
+      Toggle for enhanced style consistency.
+    </ResponseField>
+  </Accordion>
+
+   <Accordion title="Subject Image" icon="user">
+    *Applies to:* **Subject**
+    <ResponseField name="image_url" type="string" required>
+      The URL of the primary image of the subject for generation.
+    </ResponseField>
+  </Accordion>
+
+</AccordionGroup>
+
+### Tool-Specific Parameters:
+
+<AccordionGroup>
+  <Accordion title="Redux" icon="rotate">
+    *Applies to:* **Schnell 1.**, **Dev 1.**, **Pro 1.**, **Pro 1.1**, **Ultra 1.1**
+    <ResponseField name="image_url" type="string" required>
+      The URL of the image to be remixed or modified.
+    </ResponseField>
+     <ResponseField name="image_prompt_strength" type="float">
+      *Applies to:* **Ultra 1.1** Redux
+      Controls how much the original image influences the result when remixing. (Range typically 0-1).
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="Image to Image" icon="image">
+    *Applies to:* **Dev 1.**, **Custom**
+    <ResponseField name="image_url" type="string" required>
+      The URL of the input image to be transformed.
+    </ResponseField>
+    <ResponseField name="strength" type="float">
+      Controls the strength of the transformation from the original image. (Range typically 0-1).
+    </ResponseField>
+  </Accordion>
+
+  <Accordion title="Fill / Inpainting" icon="brush">
+    *Applies to:* **Pro 1.**, **Custom**
+    <ResponseField name="image_url" type="string" required>
+      The URL of the base image for filling or inpainting.
+    </ResponseField>
+    <ResponseField name="mask_url" type="string" required>
+      The URL of the mask image defining the area to be filled or inpainted.
+    </ResponseField>
+     <ResponseField name="strength" type="float">
+      *Applies to:* **Custom** Inpainting
+      Controls the strength of the inpainting process. (Range typically 0-1).
+    </ResponseField>
+  </Accordion>
+
+   <Accordion title="Differential Diffusion" icon="arrow-right-arrow-left">
+    *Applies to:* **Custom**
+    <ResponseField name="image_url" type="string" required>
+      The URL of the base image.
+    </ResponseField>
+     <ResponseField name="change_map_url" type="string">
+      The URL of the image defining the desired changes or areas.
+    </ResponseField>
+     <ResponseField name="strength" type="float">
+      Controls the strength of the differential diffusion effect. (Range typically 0-1).
+    </ResponseField>
+  </Accordion>
+
+   <Accordion title="RF-Inversion" icon="arrows-rotate">
+    *Applies to:* **Custom**
+    <ResponseField name="image_url" type="string" required>
+      The URL of the image for RF-Inversion.
+    </ResponseField>
+    <ResponseField name="controller_forward" type="float">
+      Controls the forward pass of the controller. (Range typically 0-1).
+    </ResponseField>
+     <ResponseField name="controller_guidance" type="float">
+      Controls the guidance of the controller. (Range typically 0-1).
+    </ResponseField>
+     <ResponseField name="reverse_guidance_start" type="float">
+      Start point for reverse guidance. (Range typically 0-1).
+    </ResponseField>
+     <ResponseField name="reverse_guidance_end" type="float">
+      End point for reverse guidance. (Range typically 0-1).
+    </ResponseField>
+     <ResponseField name="reverse_guidance_schedule" type="Enum">
+      Schedule for reverse guidance.
+       Possible enum values: `constant`, `linear_increase`, `linear_decrease`
+    </ResponseField>
+  </Accordion>
+
+   <Accordion title="Canny / Depth" icon="vector-square">
+    *Applies to:* **Pro 1.**
+    <ResponseField name="control_image_url" type="string" required>
+      The URL of the image providing the Canny edge or Depth map for guidance.
+    </ResponseField>
+    {/* Note: These tools also use common parameters like prompt, steps, guidance scale */}
+  </Accordion>
+
+</AccordionGroup>
+
+
+## How to Use FluxCraft Unlimited
+
+Embark on your creative journey with this general workflow:
+
+<Steps>
+  <Step title="Select Your Model" icon="code-branch">
+    Choose the Flux model that best suits your needs based on its available tools and characteristics (Schnell, Dev, Pro, Ultra, Realism, Custom, Subject).
+  </Step>
+  <Step title="Select Your Tool" icon="toolbox">
+    Choose the specific tool you want to use from the options available for your selected model (e.g., Generate, Redux, Fill, Image to Image).
+  </Step>
+  <Step title="Provide Your Prompt" icon="keyboard">
+    Enter your text description for the image you want to create or modify. Include trigger words if using LoRAs.
+  </Step>
+  <Step title="Upload Images/ControlNets (If Applicable)" icon="upload">
+    If your selected tool or model requires visual input (Redux, Image to Image, Fill, Inpainting, Custom model with References/ControlNets, Subject model), upload the necessary image(s) or ControlNet files. Draw a mask if using Fill or Inpainting.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure common settings like Image Size, Inference Steps, Guidance Scale, and Seed. Adjust model-specific options like LoRA/ControlNet settings, Reference Strength, RF-Inversion controls, or the Ultra model's Raw option.
+  </Step>
+  <Step title="Generate Image" icon="play">
+    Click the "Generate" button and await your creation.
+  </Step>
+  <Step title="Review and Refine" icon="eye">
+    Examine the generated image. Iterate by adjusting prompts, settings, or inputs if needed.
+  </Step>
+</Steps>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Explore All Models & Tools" icon="shuffle">
+    Each model and tool combination offers unique capabilities. Experiment to find the best fit for different types of images or tasks.
+  </Card>
+  <Card title="Master Prompting" icon="pencil">
+    Invest time in crafting detailed and precise prompts, especially when combining text with visual inputs like LoRAs, ControlNets, or References.
+  </Card>
+  <Card title="Leverage Customization" icon="sliders">
+    Don't shy away from adjusting the various settings and exploring LoRAs/ControlNets to achieve highly tailored results.
+  </Card>
+  <Card title="Iterate and Compare" icon="rotate">
+    Generate multiple versions with slight variations in settings or prompts to find the optimal outcome.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+FluxCraft Unlimited offers an unparalleled AI image generation experience, providing creators with a powerful array of models, tools, and customization options. Whether you're seeking speed, precision, or the ability to blend complex visual concepts, FluxCraft Unlimited empowers you to push the boundaries of your creative potential.
+
+---
+
+{/* Add any relevant links or badges if available */}

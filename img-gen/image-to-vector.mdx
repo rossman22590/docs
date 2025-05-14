@@ -1,0 +1,142 @@
+---
+title: 'Image to Vector'
+description: 'Convert raster images (PNG, JPG) to scalable vector graphics (SVG)'
+icon: 'vector-square'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20172745.png" alt="Image to Vector Screenshot" />
+</Frame>
+
+# Image to Vector: Transform Raster to Scalable Graphics
+
+<Tip>
+  Convert your pixel-based images into crisp, scalable vector graphics with Image to Vector! Perfect for logos, icons, and illustrations that need to look sharp at any size.
+</Tip>
+
+## Overview
+
+Image to Vector is a powerful tool that converts raster image formats (like PNG, JPG) into vector graphics (like SVG). Unlike raster images, which are made up of pixels and can lose quality when scaled, vector graphics are composed of paths, lines, and curves defined by mathematical equations. This means they can be scaled infinitely without losing sharpness or detail. This tool is invaluable for graphic designers, web developers, and anyone needing scalable graphics for logos, illustrations, or web assets.
+
+<CardGroup cols={2}>
+  <Card title="Scalable Output" icon="vector-square">
+    Convert to SVG format that can be **scaled infinitely** without quality loss.
+  </Card>
+  <Card title="Detail Preservation" icon="magnifying-glass-plus">
+    Retain **clarity and sharpness** even at large sizes.
+  </Card>
+  <Card title="Customizable Conversion" icon="sliders">
+    Fine-tune the vectorization process with various **modes and sliders**.
+  </Card>
+  <Card title="Easy Workflow" icon="arrow-right-arrow-left">
+    Simple process to **upload, convert, and download**.
+  </Card>
+</CardGroup>
+
+## How to Use Image to Vector
+
+Follow these steps to convert your raster image into a vector graphic:
+
+<Steps>
+  <Step title="Upload Your Image" icon="upload">
+    Click the **"Choose File"** button to upload the raster image file (e.g., PNG, JPG) you want to convert to SVG.
+  </Step>
+
+  <Step title="Configure Settings (Optional)" icon="sliders">
+    Adjust the various dropdown menus and sliders to fine-tune how the image is vectorized.
+    
+    <Callout type="info">
+      See the "Input Parameters and Options" section below for a detailed description of each setting. Experimentation is key to finding the best result for your specific image.
+    </Callout>
+  </Step>
+
+  <Step title="Convert to SVG" icon="play">
+    Click the **"Convert to SVG"** button. The tool will process your image based on the selected settings and generate the vector version.
+  </Step>
+
+  <Step title="Download SVG" icon="download">
+    Once the conversion is complete, click the **"Download SVG"** button to save the vector graphic file to your device.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+Here are the inputs and options available to customize the image-to-vector conversion:
+
+<ResponseField name="file_upload" type="file" required>
+  The raster image file (PNG, JPG, etc.) you want to convert.
+</ResponseField>
+
+<ResponseField name="color_mode" type="Enum">
+  Determines how colors are handled during vectorization.
+  
+  Possible values: `Color`, `Black & White`
+</ResponseField>
+
+<ResponseField name="hierarchical_mode" type="Enum">
+  Controls the layering and structure of the vector output.
+  
+  Possible values: `Stacked`, `Cutout`
+</ResponseField>
+
+<ResponseField name="line_mode" type="Enum">
+  Specifies how lines and shapes are represented in the vector output.
+  
+  Possible values: `Polygon (Straight Lines)`, `Spline (Curved Lines)`
+</ResponseField>
+
+<ResponseField name="filter_speckle" type="integer">
+  Adjusts the sensitivity to small details or "speckles" in the image. Higher values ignore smaller details, simplifying the output.
+</ResponseField>
+
+<ResponseField name="layer_difference" type="integer">
+  Influences how distinct color or tonal areas are treated as separate layers in the vector output.
+</ResponseField>
+
+<ResponseField name="length_threshold" type="integer">
+  Sets a minimum length for vector paths. Shorter paths below this threshold may be ignored.
+</ResponseField>
+
+<ResponseField name="splice_threshold" type="integer">
+  Affects how curves are simplified or "spliced" into straighter segments.
+</ResponseField>
+
+<ResponseField name="color_precision" type="integer">
+  Controls the number of colors or tonal variations preserved in the vector output. Higher values retain more color detail.
+</ResponseField>
+
+<ResponseField name="corner_threshold" type="integer">
+  Determines how sharp corners are detected and represented. Lower values are more sensitive to subtle corners.
+</ResponseField>
+
+<ResponseField name="max_iterations" type="integer">
+  Sets the maximum number of processing iterations the algorithm performs to optimize the vector paths.
+</ResponseField>
+
+<ResponseField name="path_precision" type="integer">
+  Controls the smoothness and accuracy of the vector paths relative to the original image's edges. Higher values create more precise paths.
+</ResponseField>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Use Graphics with Flat Colors" icon="palette">
+    The tool works best with images that have **flat, distinct color areas** and clear edges, like logos, icons, and simple illustrations.
+  </Card>
+  <Card title="Iterate on Sliders" icon="sliders">
+    Experiment extensively with the **various slider settings**. Small adjustments can significantly impact the final SVG output.
+  </Card>
+  <Card title="Understand Each Setting" icon="info">
+    Refer to the parameter descriptions to understand how each slider and dropdown affects the vectorization process.
+  </Card>
+  <Card title="Compare Outputs" icon="rotate">
+    Generate multiple versions with different settings and compare them to find the one that best captures the detail and style of your original image.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+Image to Vector is an indispensable tool for converting raster images into versatile, scalable vector graphics. With its customizable settings, you have fine control over the conversion process, allowing you to achieve high-quality SVG outputs for a wide range of design needs.
+
+---
+

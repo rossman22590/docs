@@ -1,0 +1,134 @@
+---
+title: 'Edit Image'
+description: 'Modify images with maskless editing using the Step1X-Edit model'
+icon: 'highlighter'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20161013.png" alt="Edit Image Screenshot" />
+</Frame>
+
+# Edit Image: Maskless AI Image Modification with Step1X-Edit
+
+<Tip>
+  Transform your images with ease using Edit Image! Leverage the power of Step1X-Edit for intuitive, maskless editing based on simple text descriptions, achieving better consistency than ever before.
+</Tip>
+
+## Overview
+
+Edit Image is an advanced AI tool that redefines the image editing process. Powered by the **Step1X-Edit model**, it offers a **maskless editing approach**, allowing you to modify images simply by describing the desired changes in natural language. Unlike traditional methods that require precise masking, Step1X-Edit understands your instructions and intelligently applies the modifications. This tool excels in delivering **high-quality outputs** with **superior consistency**, making it a powerful alternative to other multimodal editing models.
+
+<CardGroup cols={2}>
+  <Card title="Maskless Editing" icon="wand-magic">
+    Modify images by describing changes with **natural language**, no complex masking required.
+  </Card>
+  <Card title="High-Quality Output" icon="star">
+    Generate **professional-grade edited images** with fine detail and clarity.
+  </Card>
+  <Card title="Superior Consistency" icon="check">
+    Achieve **more reliable and consistent results** in applying described changes.
+  </Card>
+  <Card title="Intuitive Workflow" icon="comments">
+    Edit images simply by **telling the AI what you want to change**.
+  </Card>
+</CardGroup>
+
+## How to Use Edit Image
+
+Follow these steps to modify your images using maskless AI editing:
+
+<Steps>
+  <Step title="Upload Your Image" icon="upload">
+    Upload the base image you wish to edit. This is the image that the AI will modify based on your instructions.
+  </Step>
+
+  <Step title="Describe the Changes" icon="pencil">
+    In the main prompt field, provide a clear text description of the **modifications you want to make** to the image.
+    
+    <Callout type="example">
+      *Examples:*
+      - "change the outfit to a blue jacket"
+      - "add a mustache to the person's face"
+      - "turn the sky into a starry night"
+    </Callout>
+  </Step>
+
+  <Step title="Add Negative Prompt (Optional)" icon="ban">
+    Use the negative prompt field to specify any elements or characteristics you want to **avoid** in the edited image.
+    
+    <Callout type="info">
+      This helps prevent unwanted changes or artifacts.
+    </Callout>
+  </Step>
+
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the generation parameters to fine-tune the editing process:
+    
+    <AccordionGroup>
+      <Accordion title="Guidance Scale" icon="compass">
+        Controls how closely the AI adheres to your description of changes. Higher values result in changes that more strictly follow your prompt.
+      </Accordion>
+      <Accordion title="Inference Steps" icon="shoe-prints">
+        Determines the number of denoising steps. Higher values can lead to more detailed and refined edits.
+      </Accordion>
+      <Accordion title="Seed" icon="seedling">
+        Enter a specific number for reproducible results. Useful for applying similar edits consistently or iterating on a specific modification.
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+
+  <Step title="Generate Edited Image" icon="play">
+    Click the "Generate" button to apply the described changes to your image using the Step1X-Edit model.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+Here are the key input parameters and options available in Edit Image:
+
+<ResponseField name="image_upload" type="file" required>
+  The base image file to be edited.
+</ResponseField>
+
+<ResponseField name="description_of_changes" type="string" required>
+  A text prompt describing the desired modifications to the image.
+</ResponseField>
+
+<ResponseField name="negative_prompt" type="string">
+  A text prompt specifying elements or characteristics to avoid in the edited image. (Optional)
+</ResponseField>
+
+<ResponseField name="guidance_scale" type="float">
+  Controls how closely the AI adheres to the description of changes.
+</ResponseField>
+
+<ResponseField name="inference_steps" type="integer">
+  The number of inference steps to perform.
+</ResponseField>
+
+<ResponseField name="seed" type="integer">
+  A seed value for reproducible results. (Optional)
+</ResponseField>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Be Specific with Changes" icon="pencil">
+    Clearly describe the exact modifications you want to make to the image.
+  </Card>
+  <Card title="Use Negative Prompts" icon="ban">
+    Actively use negative prompts to prevent unwanted alterations or artifacts in the edited image.
+  </Card>
+  <Card title="Experiment with Settings" icon="sliders">
+    Adjust the Guidance Scale and Inference Steps to find the optimal balance between adherence to prompt and quality of edit.
+  </Card>
+  <Card title="Start with Clear Images" icon="image">
+    Begin with high-quality, well-defined images for the best editing outcomes.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+Edit Image, powered by the Step1X-Edit model, offers a revolutionary maskless approach to AI image editing. Its focus on natural language instructions, high-quality output, and superior consistency makes it an intuitive and powerful tool for transforming your images with ease.
+
+---

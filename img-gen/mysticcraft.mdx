@@ -1,0 +1,207 @@
+---
+title: 'MysticCraft'
+description: 'Generate stunningly realistic 2K and 4K images with Freepik Mystic model'
+icon: 'camera'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20191711.png" alt="MysticCraft Screenshot" />
+</Frame>
+
+# MysticCraft: Unleash Hyper-Realistic AI Imagery
+
+<Tip>
+  Step into a world of stunning realism with MysticCraft! Powered by Freepik's advanced Mystic model, generate breathtaking images with unparalleled detail and 2K/4K quality.
+</Tip>
+
+## Overview
+
+MysticCraft is a premier AI image generation tool leveraging the power of **Freepik's Mystic model**. This model is renowned for producing some of the **most realistic images** available, excelling in rendering intricate details and lifelike textures. MysticCraft brings this capability to your fingertips, allowing you to generate visuals with stunning **2K and 4K quality**. Whether you're seeking photorealistic scenes, detailed portraits, or highly realistic artistic creations, MysticCraft provides the fidelity and control to achieve your vision.
+
+<CardGroup cols={2}>
+  <Card title="Unparalleled Realism" icon="camera">
+    Powered by the **Mystic model**, known for its lifelike image synthesis.
+  </Card>
+  <Card title="Stunning High Resolution" icon="expand">
+    Generate images with **2K and 4K quality** for exceptional detail.
+  </Card>
+  <Card title="Creative Control" icon="sliders">
+    Fine-tune realism, detailing, and style with **intuitive settings**.
+  </Card>
+  <Card title="Variety of Engines" icon="microchip">
+    Choose from different **generation engines** for varied artistic outcomes.
+  </Card>
+</CardGroup>
+
+## Visual Showcase
+
+Behold the stunning realism and detail achievable with MysticCraft:
+
+<CardGroup cols={2}>
+  <Card title="Strawberry Jam Close-up">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/mystic-1747178536203.png" alt="MysticCraft Example 1" />
+    ```text
+    Close-up of the strawberries in the pink strawberry jam, ice cubes and green leaves scattered on top. The color is bright red and very attractive, and you can see all kinds of fresh fruits inside the jar. There was an overall texture of water droplets and drops on it. This scene gives people a relaxed feeling, as if they were sitting in the style of to enjoy the delicious taste of fruit sauce, high detail
+    ```
+  </Card>
+  <Card title="Surreal Geometric Complex">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/mystic-1747178543652.png" alt="MysticCraft Example 2" />
+    ```text
+    Surreal, geometric building complex nestled within a serene, wilderness beach landscape with a dreamlike ambiance, high detail, pastel, soft tones, iridescent style, bright and reflective atmosphere light effects, holographic background
+    ```
+  </Card>
+  <Card title="Astronauts Playing Chess">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/mystic-1747178548950.png" alt="MysticCraft Example 3" />
+    ```text
+    Two astronauts, fully suited, sit on foldable chairs on the surface of the moon, deeply engrossed in a game of chess. The Earth hangs in the black sky above them, and their visors reflect the chessboard, adding a touch of surrealism to this quiet, thoughtful moment far from home
+    ```
+  </Card>
+  <Card title="Vibrant City Illustration">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/mystic-1747178555114.png" alt="MysticCraft Example 4" />
+    ```text
+    vibrant illustration of a city The colors are beautiful, the lighting is dynamic, and the overall scene has a cinematic, epic, and wide-shot feel, making it a true masterpiece
+    ```
+  </Card>
+</CardGroup>
+
+## How to Use MysticCraft
+
+Follow these steps to generate stunningly realistic images with MysticCraft:
+
+<Steps>
+  <Step title="Enter Your Prompt" icon="keyboard">
+    Provide a detailed text description of the image you want to create in the prompt input field.
+    
+    <Callout type="tip">
+      Focus on describing the visual details, textures, lighting, and overall realism you desire.
+    </Callout>
+  </Step>
+
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the generation parameters to fine-tune your output:
+    
+    <AccordionGroup>
+      <Accordion title="Resolution" icon="expand">
+        Select the output resolution: **2K** or **4K**.
+      </Accordion>
+      <Accordion title="Aspect Ratio" icon="crop">
+        Choose the desired shape for your image.
+        *   Possible values: `Square 1:1`, `Classic 4:3`, `Widescreen 16:9`
+      </Accordion>
+      <Accordion title="Engine" icon="microchip">
+        Select a generation engine. Each engine has a unique style or focus.
+        *   Possible values: `Automatic`, `Magnific Illusio`, `Magnific Sharpy`, `Magnific Sparkle`
+      </Accordion>
+      <Accordion title="Creative Detailing" icon="pencil">
+        Adjust a slider (0-100) to control the level of micro-detail and intricacy in the image.
+      </Accordion>
+      <Accordion title="Realism" icon="camera">
+        Toggle a switch to enhance the overall realism of the generated image.
+      </Accordion>
+      <Accordion title="Fixed Generation" icon="lock">
+        Toggle a switch for fixed generation (details may vary, often relates to reproducibility or consistency).
+      </Accordion>
+      <Accordion title="Filter NSFW" icon="ban">
+        Toggle a switch to filter out potentially inappropriate content.
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+
+  <Step title="Generate Image" icon="play">
+    Click the "Generate" button. The AI will process your prompt and settings to create your image.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+Here are the detailed input parameters and options available in MysticCraft:
+
+<ResponseField name="prompt" type="string" required>
+  Your text description guiding the image creation.
+</ResponseField>
+
+<ResponseField name="resolution" type="Enum" required>
+  The desired output resolution.
+  *   Possible enum values: `2k`, `4k`
+</ResponseField>
+
+<ResponseField name="aspect_ratio" type="Enum" required>
+  The desired aspect ratio for the output image.
+  *   Possible enum values: `square_1_1`, `classic_4_3`, `widescreen_16_9`
+</ResponseField>
+
+<ResponseField name="realism" type="boolean">
+  Toggle to enhance the overall realism of the generated image. (Default: `true`).
+</ResponseField>
+
+<ResponseField name="creative_detailing" type="integer">
+  Controls the level of micro-detail and intricacy in the image.
+  *   Default: 33
+  *   Range: 0-100
+</ResponseField>
+
+<ResponseField name="engine" type="Enum">
+  Selects the generation engine. Each engine has a unique style or focus.
+  *   Default: `automatic`
+  *   Possible enum values: `automatic`, `magnific_illusio`, `magnific_sharpy`, `magnific_sparkle`
+</ResponseField>
+
+<ResponseField name="fixed_generation" type="boolean">
+  Toggle for fixed generation (details may vary, often relates to reproducibility or consistency).
+</ResponseField>
+
+<ResponseField name="filter_nsfw" type="boolean">
+  Toggle to filter out potentially inappropriate content. (Default: `true`).
+</ResponseField>
+
+
+## Mastering Prompts for MysticCraft
+
+To achieve the highly realistic and detailed images MysticCraft is known for, focus on descriptive and specific prompts.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Emphasize Realism" icon="camera">
+    Use keywords like "photorealistic," "ultra-realistic," "high detail," "sharp focus," "clear," and describe textures and materials.
+  </Accordion>
+  
+  <Accordion title="Detail Lighting" icon="sun">
+    Describe the lighting conditions precisely (e.g., "golden hour," "soft studio lighting," "dramatic dutch light," "caustics effect").
+  </Accordion>
+  
+  <Accordion title="Specify Camera Details (Optional)" icon="camera">
+    Including camera type, lens, aperture, or film type can sometimes influence the final look, especially for photorealistic styles.
+    *Example:* "shot on Canon EOS R5, 24mm f/2.8 wide-angle lens."
+  </Accordion>
+  
+  <Accordion title="Describe Mood and Atmosphere" icon="cloud">
+    Use words that convey the desired feeling (e.g., "serene," "dreamlike," "intense," "cinematic").
+  </Accordion>
+   <Accordion title="Consider Composition" icon="layer-group">
+    Mention desired framing or perspective (e.g., "close-up," "wide-shot," "above view," "centered subject").
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Aim for Realism in Prompts" icon="camera">
+    Craft prompts that guide the AI towards photorealistic outputs to leverage the Mystic model's strength.
+  </Card>
+  <Card title="Experiment with Engines" icon="microchip">
+    Try the different generation engines to see which style best suits your prompt and desired outcome.
+  </Card>
+  <Card title="Adjust Creative Detailing" icon="sliders">
+    Fine-tune the Creative Detailing slider to control the level of intricate detail in your image.
+  </Card>
+  <Card title="Utilize 4K Resolution" icon="expand">
+    Select 4K resolution for maximum detail and clarity in your generated images.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+MysticCraft provides access to Freepik's powerful Mystic model, enabling the creation of stunningly realistic and high-resolution images. By focusing on detailed and descriptive prompts and utilizing the available settings, you can unlock the full potential of this tool to generate visuals with exceptional realism and quality.
+
+---

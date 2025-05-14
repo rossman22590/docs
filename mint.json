@@ -197,6 +197,8 @@
                 "img-gen/recraft",
                 "img-gen/stablediffusion35",
                 "img-gen/pictocraft",
+                "img-gen/sanacraft",
+                "img-gen/photoncraft",
               
                 {
                   "group": "FluxCraft",
@@ -215,10 +217,17 @@
               "group": "Edit Image",
               "pages": [
                 "img-gen/clothes-swap",
+                "img-gen/clothes-swap-advanced",
                 "img-gen/fillcraft",
                 "img-gen/upscale-tool",
                 "img-gen/remove-background",
-                "img-gen/faceswap"
+                "img-gen/faceswap",
+                "img-gen/faceswap-advance",
+                "img-gen/flux-in-context",
+                "img-gen/edit-image",
+                "img-gen/remove-object",
+                "img-gen/upscale-image",
+                "img-gen/image-to-vector"
               ],
               "icon": "highlighter"
             },
@@ -253,7 +262,12 @@
             },
             "img-gen/pixio-creative-01",
             "img-gen/drawcraft",
-            "img-gen/qrcraft"
+            "img-gen/qrcraft",
+            "img-gen/framecraft",
+            "img-gen/fluxcraft-unlimited",
+            "img-gen/fusioncraft",
+            "img-gen/mysticcraft",
+            "img-gen/imagencraft"
           ],
           "icon": "image",
           "iconType": "solid"

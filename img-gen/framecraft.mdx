@@ -1,0 +1,298 @@
+---
+title: 'FrameCraft'
+description: 'Create original images or combine concepts from multiple images'
+icon: 'clapperboard'
+---
+
+# FrameCraft: Crafting Images with AI Precision
+
+<Tip>
+  Unleash your creativity with FrameCraft! Generate unique images from scratch or blend concepts from multiple reference images with unparalleled control.
+</Tip>
+
+## Overview
+
+FrameCraft is a versatile AI image generation tool that offers two distinct modes to suit your creative needs: **Generate** and **References**. Whether you're starting with a blank canvas and a text prompt or seeking to combine specific visual elements and styles from existing images, FrameCraft provides the flexibility and control to bring your vision to life.
+
+<CardGroup cols={2}>
+  <Card title="Generate Original Images" icon="wand-magic-sparkles">
+    Create visuals from **text prompts** with customizable styles and settings.
+  </Card>
+  <Card title="Combine Concepts with References" icon="object-group">
+    Blend elements from **up to 3 reference images** to craft unique scenes and characters.
+  </Card>
+  <Card title="Intuitive Controls" icon="sliders">
+    Fine-tune your creations with easy-to-use **style, aspect ratio, diversity, and seed** options.
+  </Card>
+  <Card title="Consistent Character & Scene Generation" icon="check">
+    Leverage the power of references for **reliable visual consistency**.
+  </Card>
+</CardGroup>
+
+## Generate Mode: Creating from Scratch
+
+In Generate mode, FrameCraft allows you to conjure images purely from your imagination, guided by a text prompt and various stylistic controls.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20175136.png" alt="FrameCraft Generate Screenshot" />
+</Frame>
+
+**Inputs & Options (Generate Mode):**
+
+*   **Prompt**: Enter a text description of the image you want to generate.
+*   **Style**: Select a predefined artistic style to influence the image's aesthetic.
+    <AccordionGroup>
+      <Accordion title="Available Styles" icon="palette">
+        Based on the screenshot, available styles include:
+        - In Motion
+        - Light Anime
+        - Dark Anime
+        - Painted Anime
+        - 3D Cartoon
+        - Sketch
+        - Low Angle
+        - Terracotta
+        {/* Add any other styles if visible or known */}
+      </Accordion>
+    </AccordionGroup>
+*   **Aspect Ratio**: Choose the desired shape for your image.
+    <AccordionGroup>
+      <Accordion title="Available Aspect Ratios" icon="crop">
+        Based on the screenshot, available aspect ratios include:
+        - Widescreen 16:9
+        - Portrait 9:16
+        - Square 1:1
+        - Classic 4:3
+        - Ultrawide 21:9
+        {/* Add any other ratios if visible or known */}
+      </Accordion>
+    </AccordionGroup>
+*   **Diversity**: Adjust a slider to control the variation among the generated images. Higher diversity yields more unique results.
+*   **Seed** (Optional): Enter a specific number for reproducible results. Leaving it optional generates a random seed for each creation.
+
+**Output:**
+
+When you click Generate in this mode, FrameCraft automatically provides **4 unique images** based on your prompt and settings.
+
+### Generate Mode Examples
+
+Behold the stunning variety achievable when generating images from text prompts:
+
+<CardGroup cols={2}>
+  <Card title="Ceramic Blocks">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/FrameCraft-1747173831976.png" alt="Generate Example 1" />
+    ```text
+    A modern sleek product shot background of ceramic blocks of organic shapes, they all contain different textures, some are shiny some art matte, surreal, stacked on top of each other, color story
+    ```
+  </Card>
+  <Card title="Person Covered in Sticky Notes">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/FrameCraft-1747174028878.png" alt="Generate Example 2" />
+    ```text
+    Realistic, A person covered in sticky notes. White background. Full-body shot. Surreal, 35mm, film grain, minimal composition
+    ```
+  </Card>
+  <Card title="Masked Individuals">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/FrameCraft-1747174273537.png" alt="Generate Example 3" />
+    ```text
+    A scene composed of many individuals in a parallel universe where everyone wears masks created from scraps of knitted fabrics and other organic materials. Medium-shot, depth of field, with photo-documentary aesthetic. Outdoors, sky is deep blue, foggy morning, the environment is intense
+    ```
+  </Card>
+  <Card title="Mysterious Jellyfish">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/FrameCraft-1747174457285.png" alt="Generate Example 4" />
+    ```text
+    Cinematic shot of a Mysterious Jellyfish. Using a camera with a 50mm f/ 1. 4 lens, the scene is captured in dark and moody tones, with deep blacks and a dramatic atmosphere.
+    ```
+  </Card>
+</CardGroup>
+
+## References Mode: Blending Concepts
+
+References mode allows you to upload existing images and use them to guide the AI's creation, blending elements, styles, or concepts from your references into a new image.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20175357.png" alt="FrameCraft References Screenshot" />
+</Frame>
+
+**Inputs & Options (References Mode):**
+
+*   **Reference Images**: Upload up to **3 reference images** into the provided slots. These images will serve as visual inputs for the AI.
+*   **Prompt**: Enter a text description that guides how the AI should use the reference images and what the final output should look like.
+*   **Style**: Select a predefined artistic style (same options as Generate mode).
+*   **Aspect Ratio**: Choose the desired shape for your image (same options as Generate mode).
+*   **Diversity**: Adjust a slider to control the variation among the generated images.
+*   **Seed** (Optional): Enter a specific number for reproducible results.
+
+### Prompting with References
+
+When using References mode, your prompt needs to tell the AI how to combine the visual information from the uploaded images. You can refer to the images by their number (e.g., `image1`, `image2`, `image3`).
+
+**Prompt Structure for References:**
+
+Describe the desired output, explicitly referencing elements from your uploaded images using `image1`, `image2`, and `image3`.
+
+<Callout type="example">
+  *Example Prompt:*
+  "the subject from image1, wearing the hoodie from image2, with the setting from image3 behind him"
+</Callout>
+
+### References Mode Example
+
+See how FrameCraft can combine elements from multiple images based on a prompt:
+
+<CardGroup cols={3}>
+  <Card title="Reference Image 1">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/generated_image_2.png" alt="Reference Example 1" />
+  </Card>
+  <Card title="Reference Image 2">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/flux-in-context-result%20(3).png" alt="Reference Example 2" />
+  </Card>
+  <Card title="Reference Image 3">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(59).png" alt="Reference Example 3" />
+  </Card>
+</CardGroup>
+
+**Prompt Used:** "the subject from image1, wearing the hoodie from image2, with the setting from image3 behind him"
+
+**Resulting Image:**
+
+<Card>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/FrameCraft-1747173661323.png" alt="References Result" />
+</Card>
+
+## Mastering Prompts for FrameCraft
+
+Effective prompting is crucial for both Generate and References modes. FrameCraft excels at interpreting detailed, natural language prompts.
+
+### Prompting Best Practices
+
+<AccordionGroup>
+  <Accordion title="Be Descriptive, Not Conversational" icon="pencil">
+    Focus on painting a vivid picture with your words. Avoid conversational phrases like "can you please generate..."
+    *Example:* Instead of "can you please generate an image of a giraffe with a short neck?", use "cinematic photograph of a giraffe with an extremely short neck."
+  </Accordion>
+  
+  <Accordion title="Use Positive Phrasing" icon="plus">
+    Describe what you *do* want in the image. FrameCraft does not support negative prompts, and describing what you don't want may have the opposite effect.
+    *Example:* Instead of "a man with no hair," use "a bald man."
+  </Accordion>
+  
+  <Accordion title="Leverage Natural Language" icon="comments">
+    Use full sentences and natural language. This gives you more precise control over individual elements compared to keyword-heavy prompts.
+  </Accordion>
+  
+  <Accordion title="Combine Elements" icon="object-group">
+    Describe the Subject, Scene, Composition, Lighting, Color, Style, Focus, Angle, Text, and Mood to create complex and nuanced images.
+  </Accordion>
+</AccordionGroup>
+
+### Prompt Keyword Collections
+
+Use these keyword collections as inspiration to add detail and style to your prompts:
+
+<AccordionGroup>
+  <Accordion title="Aesthetic Styles" icon="palette">
+    *   **Glitchcore**: Glitch art, glitchcore, grain texture, datamosh, melting pixels, chromatic aberration, CRT static accents.
+    *   **Dreamy**: Dreamlike, soft focus, light leaks, star lens flare, fine grain, soft gaussian blur, ethereal glow, motion blur.
+    *   **Modern**: Sharp, clean, minimalistic.
+    *   **Horror**: High contrast, desaturated, unstable movement, dark color palette, horror aesthetic.
+    *   **Lo-Fi**: Hand drawn panel, lo-fi 1980s japanese magazine art style, muted tones, pastel color palette, soft grain, nostalgic aesthetic, animated.
+    *   **Vaporwave**: vaporwave, saturated pink, purple, and blues, Retro aesthetics, Glowing neon elements, 90s design elements.
+  </Accordion>
+  
+  <Accordion title="Art Styles" icon="brush">
+    *   **Collage**: collage style, mixed media approach, printed paper cutouts, torn paper edges.
+    *   **Pastel baroque**: elegant baroque artwork, elegant artistry, muted cool pastel color palette with pops of pastel warmth, smooth oil painting, finely blended shading, floral motifs, elaborate.
+    *   **Illustration**: Storybook illustration, thick lines, clean bold shapes, hand-drawn quality, precise ink-like lines.
+    *   **Anime**: anime-style illustration, slightly blurry background, flat shading.
+    *   **Pixel**: pixel art, pixelated scene reminiscent of a nostalgic video game.
+  </Accordion>
+
+  <Accordion title="Composition Styles" icon="layer-group">
+    *   **Centered subject**: [subject] in center frame.
+    *   **Rule of thirds**: rule of thirds composition.
+    *   **Symmetrical**: gentle symmetry, symmetrical composition.
+  </Accordion>
+
+  <Accordion title="Camera & Film Styles" icon="camera">
+    *   **Disposable film**: Classic disposable flash photography taken at night, Characteristics and qualities of a disposable flash camera, on film, vignette and slight overexposure, Overall muted color.
+    *   **Damaged film**: Grainy texture, slightly overexposed, muted colors, visible film scratches, damaged film, light leaks, spontaneous, timeless, soft focus, characteristic Polaroid aesthetic, historical wear and tear.
+    *   **Heavy grain film**: Heavy film grain, visible noise, visible dust particles.
+    *   **VHS**: Shot on VHS, VHS artifacts, tracking lines, worn film texture, analog color bleeding, grainy quality.
+  </Accordion>
+
+  <Accordion title="General Styles" icon="image">
+    *   **Cinematic**: Cinematic photograph, movie still, theatrical, anamorphic lens, 35mm, professional composition.
+    *   **Portrait photography**: Portrait, diffused lighting, editorial portrait, fashion portrait.
+    *   **Product photography**: product photography, minimalist, clean, bright lighting, thoughtfully arranged floral and wood elements.
+  </Accordion>
+
+  <Accordion title="Subject poses" icon="user">
+    *   **Relaxed**: relaxed pose, elegant.
+    *   **In motion**: natural motion blur emphasizes the subject's movement against the still environment.
+    *   **Surreal anatomy**: the [subject] curves and bends impossibly, distorted, warped, squished, and extremely deformed and exaggerated, surreal anatomy.
+  </Accordion>
+
+  <Accordion title="Text Styles" icon="font">
+    *   **Theater marquee**: theater with a large marquee sign that boldly spells [word].
+    *   **Neon sign**: neon sign that spells [word].
+    *   **Balloon**: balloons forming the word [word].
+  </Accordion>
+
+  <Accordion title="Texture Styles" icon="rug">
+    *   **Scanner**: black and white scanned image, vintage photocopy scan stretch effect, grain texture, gritty.
+    *   **Static hologram**: static hologram in the shape of [subject], crt static, soft natural glow.
+    *   **Chrome**: liquid chrome, reflective, shiny, iridescent sheen.
+    *   **Piñata**: piñata [subject], thin tissue paper in assorted colors.
+  </Accordion>
+</AccordionGroup>
+
+## How to Use FrameCraft
+
+Here's a step-by-step guide to using both modes in FrameCraft:
+
+<Steps>
+  <Step title="Choose Your Mode" icon="code-branch">
+    Select either **Generate** to create a new image from a text prompt or **References** to use existing images as inspiration.
+  </Step>
+
+  <Step title="Provide Inputs" icon="keyboard">
+    *   **Generate Mode**: Enter your text prompt.
+    *   **References Mode**: Upload up to 3 reference images and enter your text prompt, referencing the images as needed (e.g., `image1`).
+  </Step>
+
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the **Style**, **Aspect Ratio**, **Diversity**, and **Seed** (optional) to refine your output.
+  </Step>
+
+  <Step title="Generate Image(s)" icon="play">
+    Click the "Generate" button. FrameCraft will create images based on your chosen mode and inputs.
+  </Step>
+
+  <Step title="Review and Refine" icon="eye">
+    Review the generated images. In References mode, you can save outputs as new references for further iteration.
+  </Step>
+</Steps>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Experiment with Modes" icon="shuffle">
+    Try both Generate and References modes to see which best suits your creative process for different tasks.
+  </Card>
+  <Card title="Use High-Quality References" icon="image">
+    For References mode, start with clear, high-quality images to ensure the AI can accurately interpret and blend the visual concepts.
+  </Card>
+  <Card title="Iterate Your Prompts & Settings" icon="rotate">
+    Don't hesitate to generate multiple times, adjusting your prompt, style, diversity, or seed to explore variations and refine your results.
+  </Card>
+  <Card title="Leverage Keyword Collections" icon="list-check">
+    Use the provided keyword collections as inspiration to add rich detail and specific styles to your prompts.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+FrameCraft offers a powerful and flexible platform for AI image generation. Whether you're creating entirely new visuals or skillfully blending concepts from existing images, its intuitive interface and robust controls empower you to bring your artistic visions to life with precision and creativity.
+
+---
+
