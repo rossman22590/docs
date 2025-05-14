@@ -267,7 +267,8 @@
             "img-gen/fluxcraft-unlimited",
             "img-gen/fusioncraft",
             "img-gen/mysticcraft",
-            "img-gen/imagencraft"
+            "img-gen/imagencraft",
+            "img-gen/dreamcraft"
           ],
           "icon": "image",
           "iconType": "solid"

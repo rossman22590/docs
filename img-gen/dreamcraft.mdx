@@ -1,0 +1,323 @@
+---
+title: 'DreamCraft'
+description: 'Advanced AI image generation and editing powered by the open-source HiDream model'
+icon: 'lightbulb'
+---
+
+
+# DreamCraft: Explore AI Imagery with HiDream
+
+<Tip>
+  Unleash your creative dreams with DreamCraft! Powered by the open-source HiDream model, generate stunning images or edit existing ones with intuitive controls.
+</Tip>
+
+## Overview
+
+DreamCraft is a versatile AI image tool built upon the open-source **HiDream-I1** model and its editing counterpart, **HiDream-E1**. It offers two primary modes: **Generate**, for creating images from text prompts, and **Edit**, for performing maskless modifications on existing images. DreamCraft provides access to different "flavors" of the HiDream-I1 model (Fast, Balanced, Quality) and leverages the E1 model for its editing capabilities, making advanced AI image creation and modification more accessible.
+
+<CardGroup cols={2}>
+  <Card title="Open-Source Power" icon="code-branch">
+    Leverages the **HiDream model**, contributing to accessible AI.
+  </Card>
+  <Card title="Generate & Edit Modes" icon="exchange-alt">
+    Create images from scratch or perform **maskless editing** on existing ones.
+  </Card>
+  <Card title="Multiple Models" icon="cubes">
+    Access **Fast, Balanced, and Quality** versions of the HiDream-I1 model.
+  </Card>
+  <Card title="Intuitive Editing" icon="pencil">
+    Modify images with **written instructions**, no complex masking required for editing.
+  </Card>
+</CardGroup>
+
+## Modes of Operation
+
+DreamCraft offers two distinct modes to suit your creative workflow:
+
+### Generate Mode: Create Images from Text
+
+In Generate mode, you can create entirely new images by providing a text prompt. You can select from different versions ("flavors") of the HiDream-I1 model to prioritize speed or quality.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20205515.png" alt="DreamCraft Generate Screenshot" />
+</Frame>
+
+**Inputs & Options (Generate Mode):**
+
+*   **Prompt**: Your text description of the desired image.
+*   **Negative Prompt**: Specify elements to omit.
+*   **Image Size**: Select the resolution and aspect ratio.
+    *   Possible values: `square_hd`, `square`, `portrait_4_3`, `portrait_16_9`, `landscape_4_3`, `landscape_16_9`, `custom` (with width/height inputs).
+*   **Num Inference Steps**: Controls detail (1-50, default 25). Note: Max steps for Fast model is 12.
+*   **Seed**: For reproducible results (optional).
+*   **Guidance Scale**: Adjusts adherence to prompt (0-20, default 5). Note: Only available for Quality model.
+*   **Number of Images**: Number of variations to generate (1-4).
+*   **Model**: Select the HiDream-I1 model version.
+    *   Possible values: `Fast`, `Balanced`, `Quality`.
+*   **Output Format**: File format (JPEG, PNG).
+
+### Generate Mode Examples
+
+Explore the diverse range of images you can generate from text prompts:
+
+<CardGroup cols={2}>
+  <Card title="Astronaut in Space">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(10).jpeg" alt="Generate Example 1" />
+    ```text
+    A paper quilling, layered paper scene of an astronaut playing an electric guitar while floating in space, surrounded by stars and planets, capturing the cosmic energy and musical vibe in zero gravity.
+    ```
+  </Card>
+  <Card title="Yorkshire Canal">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(11).jpeg" alt="Generate Example 2" />
+    ```text
+    Parrish, Yorkshire canal, canal boat docked at water’s edge, gently rippling water, canal banks dotted with lush trees, traditional Yorkshire industrial buildings, weathered brick facades, vintage chimneys, rustic charm, nostalgic, cinematic lighting, ultra-detailed, hyper-realistic, serene atmosphere, early morning mist, reflective water, high resolution
+    ```
+  </Card>
+  <Card title="Dragon Sphere">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(12).jpeg" alt="Generate Example 3" />
+    ```text
+    The image depicts a beautifully ornate, oval-shaped clear glass sphere with an intricately designed frame. The frame is made of a golden material with elaborate, swirling patterns. Inside the sphere there is a detailed, red and white dragon emerging from what appears to be water or waves made of crystal. The dragon has a majestic and mythical appearance, with flowing, spiky hair and a fierce expression. The background of the sphere shows a dynamic scene with splashing water and waves, adding to the sense of movement and energy. The sphere is mounted on a tree trunk, and there are pink flowers and green foliage surrounding it, enhancing the natural and mystical atmosphere of the scene.
+    ```
+  </Card>
+  <Card title="Easter Egg Miniature">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(13).jpeg" alt="Generate Example 4" />
+    ```text
+    masterpiece of a photographer Extreme close-up of tiny miniature workers in colorful construction uniforms and hard hats industriously painting oversized Easter eggs, workers using tiny buckets of vibrant paint, miniature ladders, ropes and pulleys to access different parts of the giant eggs, some workers carefully painting intricate patterns while others roll large eggs through puddles of dye, detailed diorama-like scene with perfect depth of field highlighting the meticulous work process, some workers carrying paint brushes bigger than themselves, droplets of paint glistening under studio lighting, vibrant color palette with diverse egg designs being created, photorealistic macro photography with tilt-shift effect, highly detailed miniature construction site with tiny scaffolding, microscopic paint rollers and diminutive paint splashes, whimsical Easter-themed miniature world captured with 8K resolution and crystal clarity.
+    ```
+  </Card>
+</CardGroup>
+
+### Edit Mode: Maskless Image Modification
+
+Edit mode allows you to modify an existing image simply by providing written instructions. This uses the HiDream-E1 model, which is designed for image-to-image editing without requiring manual masking.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20205206.png" alt="DreamCraft Edit Screenshot" />
+</Frame>
+
+**Inputs & Options (Edit Mode):**
+
+*   **Edit Instruction**: Your text description of the desired changes to the image.
+*   **Target Image Description**: Describe what the final image should look like (optional).
+*   **Edit Image**: Upload the base image you want to edit.
+*   **Negative Prompt**: Specify elements to avoid in the edited image.
+*   **Edit Num Inference Steps**: Controls detail of the edit (1-50, default 50).
+*   **Edit Guidance Scale**: Adjusts adherence to edit instruction (0-20, default 3.5).
+*   **Image Guidance Scale**: Controls how much the original image influences the edit (0-10, default 2).
+*   **Edit Seed**: For reproducible results (optional).
+*   **Edit Num Images**: Number of edited variations (1-4).
+*   **Output Format**: File format (JPEG, PNG).
+
+### Edit Mode Example
+
+See how DreamCraft can modify an existing image using written instructions:
+
+<CardGroup cols={2}>
+  <Card title="Original Image">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/imagencraft-1747180408772.png" alt="Edit Original" />
+  </Card>
+  <Card title="Result">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/image%20(14).jpeg" alt="Edit Result" />
+    ```text
+    Edit Instruction: add realistic dark clouds in the sky
+    Target Image Description: mountains
+    Negative Prompt: low resolution, blur
+    ```
+  </Card>
+</CardGroup>
+
+## Understanding the HiDream Model
+
+DreamCraft is powered by the open-source HiDream model series, which includes the HiDream-I1 (for generation) and HiDream-E1 (for editing) models.
+
+<AccordionGroup>
+  <Accordion title="HiDream-I1 (Generation)" icon="cubes">
+    Available in **Fast, Balanced, and Quality** versions. The Full model is large, but quantized versions (like Q8) can run on GPUs with less VRAM. It uses **four text encoders** to interpret prompts, which can be complex but allows for nuanced prompt tuning. Prompt adherence is generally good, and small changes to the prompt often don't reset the whole image, making iterative prompting easier.
+  </Accordion>
+  <Accordion title="HiDream-E1 (Editing)" icon="pencil">
+    A natural language capable image editing model. It performs **maskless editing** based on an input image and a text instruction. It is designed for image-to-image editing without requiring manual masking, similar to inpainting or outpainting but driven purely by text.
+  </Accordion>
+</AccordionGroup>
+
+## Mastering Prompts for DreamCraft
+
+Prompting in DreamCraft varies based on the mode.
+
+### Prompting in Generate Mode:
+
+<AccordionGroup>
+  <Accordion title="General Prompts" icon="keyboard">
+    Describe the desired image, including subjects, scenes, styles, lighting, and mood.
+  </Accordion>
+  <Accordion title="Multiple Text Encoders" icon="code">
+    While the interface provides a single prompt input, the underlying HiDream-I1 model uses four text encoders. This means the model interprets different aspects of your prompt through various lenses (e.g., one encoder might be better with tags, others with natural language). Experiment with prompt structure and wording to see how the different models respond.
+  </Accordion>
+</AccordionGroup>
+
+### Prompting in Edit Mode:
+
+<AccordionGroup>
+  <Accordion title="Edit Instruction" icon="pencil">
+    Clearly describe the specific changes you want to make to the uploaded image.
+    *Example:* "change the color of the car to red," "add a flower on the table."
+  </Accordion>
+  <Accordion title="Target Image Description (Optional)" icon="image">
+    Describe what the final edited image should look like overall. This can help guide the AI's blending and consistency.
+  </Accordion>
+</AccordionGroup>
+
+## How to Use DreamCraft
+
+Embark on your creative journey with this general workflow:
+
+<Steps>
+  <Step title="Select Your Mode" icon="code-branch">
+    Choose **Generate** to create a new image or **Edit** to modify an existing one.
+  </Step>
+  <Step title="Upload Image (Edit Mode)" icon="upload">
+    If in Edit mode, upload the base image you want to modify.
+  </Step>
+  <Step title="Provide Your Prompt/Instruction" icon="keyboard">
+    Enter your text description (Generate mode) or editing instruction (Edit mode).
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure settings relevant to your mode, such as Model, Image Size, Inference Steps, Guidance Scale, Seed, and Number of Images (Generate mode) or Edit Steps, Image Guidance Scale, and Seed (Edit mode).
+  </Step>
+  <Step title="Generate/Edit Image" icon="play">
+    Click the "Generate" or "Edit" button.
+  </Step>
+  <Step title="Review and Refine" icon="eye">
+    Examine the generated or edited image. Iterate by adjusting prompts/instructions or settings if needed.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+DreamCraft offers a range of input parameters, varying based on the selected **Mode**.
+
+### Generate Mode Parameters:
+
+<AccordionGroup>
+  <Accordion title="Generate Mode Inputs" icon="wand-magic-sparkles">
+    <ResponseField name="prompt" type="string" required>
+      Your text description guiding the image creation.
+    </ResponseField>
+
+    <ResponseField name="negative_prompt" type="string">
+      A text prompt specifying elements, styles, or characteristics to avoid.
+    </ResponseField>
+
+    <ResponseField name="image_size" type="string | object" required>
+      The desired dimensions or aspect ratio for the output image. Can be selected from presets (e.g., `square_hd`, `landscape_4_3`) or specified with custom `width` and `height`.
+    </ResponseField>
+
+    <ResponseField name="num_inference_steps" type="integer">
+      Controls the detail and refinement of the image generation.
+      *   Default: 25
+      *   Range: 1-50 (Max 12 for Fast model)
+    </ResponseField>
+
+    <ResponseField name="seed" type="integer">
+      A number that initializes the random generation process. Using the same seed with the same prompt and settings will produce a consistent result. Leave empty for a random seed.
+    </ResponseField>
+
+    <ResponseField name="guidance_scale" type="float">
+      Adjusts how closely the AI adheres to your text prompt. Higher values result in outputs that stick more strictly to the prompt.
+      *   Default: 5
+      *   Range: 0-20
+      *   Note: Only available for the **Quality** model.
+    </ResponseField>
+
+    <ResponseField name="num_images" type="integer">
+      The number of images to generate in a single batch.
+      *   Default: 1
+      *   Range: 1-4
+    </ResponseField>
+
+    <ResponseField name="model" type="Enum" required>
+      Selects the HiDream-I1 model version for generation.
+      *   Possible enum values: `fast`, `balanced`, `quality`
+    </ResponseField>
+  </Accordion>
+</AccordionGroup>
+
+### Edit Mode Parameters:
+
+<AccordionGroup>
+  <Accordion title="Edit Mode Inputs" icon="pencil">
+    <ResponseField name="editInstruction" type="string" required>
+      Your text description of the desired changes to the image (maskless editing instruction).
+    </ResponseField>
+
+    <ResponseField name="targetImageDescription" type="string">
+      A text description of what the final edited image should look like overall (optional).
+    </ResponseField>
+
+    <ResponseField name="editImage" type="file" required>
+      The base image file to be edited.
+    </ResponseField>
+
+    <ResponseField name="editNegativePrompt" type="string">
+      A text prompt specifying elements or characteristics to avoid in the edited image.
+    </ResponseField>
+
+    <ResponseField name="editNumInferenceSteps" type="integer">
+      Controls the detail and refinement of the editing process.
+      *   Default: 50
+      *   Range: 1-50
+    </ResponseField>
+
+    <ResponseField name="editGuidanceScale" type="float">
+      Adjusts how closely the AI adheres to your editing instruction.
+      *   Default: 3.5
+      *   Range: 0-20
+    </ResponseField>
+
+    <ResponseField name="imageGuidanceScale" type="float">
+      Controls how much the original image influences the editing process.
+      *   Default: 2
+      *   Range: 0-10
+    </ResponseField>
+
+    <ResponseField name="editSeed" type="integer">
+      A number that initializes the random editing process. Leave empty for random seed.
+    </ResponseField>
+
+    <ResponseField name="editNumImages" type="integer">
+      The number of edited variations to generate.
+      *   Default: 1
+      *   Range: 1-4
+    </ResponseField>
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Choose the Right Mode" icon="code-branch">
+    Select **Generate** for new images or **Edit** for maskless modifications of existing ones.
+  </Card>
+  <Card title="Tailor Prompts to Mode" icon="pencil">
+    Use descriptive prompts for generation and clear instructions for editing.
+  </Card>
+  <Card title="Experiment with Models (Generate)" icon="cubes">
+    Try Fast, Balanced, and Quality models to find the best fit for speed vs. quality.
+  </Card>
+  <Card title="Use High-Quality Base Images (Edit)" icon="image">
+    Start with clear, well-defined images for editing for better results.
+  </Card>
+  <Card title="Iterate and Refine" icon="rotate">
+    Generate multiple versions and adjust prompts or settings to achieve your desired outcome.
+  </Card>
+  <Card title="Explore Prompting Nuances" icon="comments">
+    Consider the potential influence of HiDream's multiple text encoders when crafting complex prompts in Generate mode.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+DreamCraft provides a powerful and accessible platform for AI image creation and editing through the open-source HiDream model. With its distinct modes and intuitive controls, it empowers users to generate new visuals and modify existing ones with remarkable flexibility.
+
+---
+
+{/* Add any relevant links or badges if available */}
