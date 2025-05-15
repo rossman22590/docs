@@ -1,0 +1,169 @@
+---
+title: 'ClipCraft'
+description: 'Generate audio from video or text using advanced AI models.'
+icon: 'headphones'
+---
+
+# ClipCraft: AI-Powered Audio Generation
+
+<Tip>
+  Transform videos into audio or create original soundscapes from text with ClipCraft's advanced AI capabilities!
+</Tip>
+
+## Overview
+
+ClipCraft is a versatile AI tool that allows you to generate audio in two distinct ways: by extracting and transforming the sound from an existing video (**Video to Audio**) or by creating entirely new audio based on a text description (**Text to Audio**). Leveraging powerful AI models, ClipCraft provides creative control over the generated sound, making it ideal for content creators, musicians, and anyone looking to explore AI-driven audio production.
+
+<CardGroup cols={2}>
+  <Card title="Video to Audio" icon="video">
+    Generate audio inspired by the content of a **video** using a text prompt.
+  </Card>
+  <Card title="Text to Audio" icon="keyboard">
+    Create original audio from a **text description** of the desired sound.
+  </Card>
+  <Card title="Customizable Parameters" icon="sliders">
+    Fine-tune the generation process with settings for **duration, steps, CFG strength**, and more.
+  </Card>
+  <Card title="Reproducible Results" icon="seedling">
+    Use a **seed** for consistent generations.
+  </Card>
+</CardGroup>
+
+## How to Use ClipCraft
+
+ClipCraft offers two primary modes, accessible via the tabs at the top of the interface.
+
+### Video to Audio Mode
+
+This mode allows you to generate audio that is influenced by both an input video and a text prompt.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/clipcraft-1.png" alt="ClipCraft Video to Audio Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select Video to Audio Tab" icon="video">
+    Click on the **Video to Audio** tab at the top of the page.
+  </Step>
+  <Step title="Upload or Link Video" icon="upload">
+    Upload a video file (MP4 recommended) or enter a video URL. This video will serve as a visual reference for the AI during audio generation.
+  </Step>
+  <Step title="Enter Your Prompt" icon="keyboard">
+    In the **Prompt** field, describe the audio you want to generate. This prompt will guide the AI, using the video's content as context.
+
+    *Example Prompts:*
+    - "Indian holy music"
+    - "A dramatic orchestral score"
+    - "Ambient nature sounds"
+  </Step>
+  <Step title="Adjust Parameters" icon="sliders">
+    Configure the various settings like **Duration, Number of Steps, CFG Strength, Negative Prompt, and Seed** to fine-tune the audio generation (see Input Parameters section below).
+  </Step>
+  <Step title="Generate Video with Audio" icon="play">
+    Click the **Generate Video with Audio** button. The AI will process the video and prompt to create a new audio track, which will be combined with a generated video output.
+  </Step>
+</Steps>
+
+### Text to Audio Mode
+
+This mode allows you to generate audio purely from a text description.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/clipcraft2.png" alt="ClipCraft Text to Audio Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select Text to Audio Tab" icon="keyboard">
+    Click on the **Text to Audio** tab at the top of the page.
+  </Step>
+  <Step title="Describe the Desired Audio" icon="comment">
+    In the **Prompt** field, provide a detailed text description of the audio you want to generate.
+
+    *Example Prompts:*
+    - "Piano solo with violin accompaniment"
+    - "Sound of rain falling on a tin roof"
+    - "Upbeat electronic dance music"
+  </Step>
+  <Step title="Adjust Parameters" icon="sliders">
+    Configure the various settings like **Duration, Number of Steps, CFG Strength, Negative Prompt, and Seed** to fine-tune the audio generation (see Input Parameters section below).
+  </Step>
+  <Step title="Generate Audio" icon="play">
+    Click the **Generate Audio** button. The AI will create an audio file based solely on your text prompt and parameters.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+ClipCraft provides several parameters to customize your audio generation:
+
+<ResponseField name="Prompt" type="string" required>
+  A text description guiding the AI on the desired audio content or style.
+</ResponseField>
+<ResponseField name="Duration (seconds)" type="integer">
+  Sets the length of the generated audio clip. Maximum is 30 seconds.
+
+  Default: 8 seconds | Range: 1-30 seconds
+</ResponseField>
+<ResponseField name="Number of Steps" type="integer">
+  Controls the detail and refinement of the generation process. Higher values can lead to more detailed audio but may increase processing time.
+
+  Default: 25
+</ResponseField>
+<ResponseField name="CFG Strength" type="float">
+  Controls how closely the generated audio adheres to your text prompt. Higher values result in audio that sticks more strictly to the prompt.
+
+  Default: 4.5
+</ResponseField>
+<ResponseField name="Negative Prompt" type="string">
+  Specify elements or qualities you want the AI to avoid in the generated audio.
+</ResponseField>
+<ResponseField name="Seed (Optional)" type="integer">
+  A number that initializes the random generation process. Using the same seed with the same prompt and settings will produce reproducible results. Leave empty for a random seed.
+</ResponseField>
+<ResponseField name="Video URL / Upload Video" type="string / file">
+  (Only in Video to Audio mode) The video source to provide visual context for audio generation.
+</ResponseField>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Be Descriptive" icon="pencil">
+    Provide clear and specific prompts, especially in Text to Audio mode, to guide the AI effectively.
+  </Card>
+  <Card title="Use Negative Prompts" icon="ban">
+    Actively use the Negative Prompt field to steer the AI away from unwanted sounds or styles.
+  </Card>
+  <Card title="Experiment with Parameters" icon="sliders">
+    Adjust Duration, Steps, and CFG Strength to find the perfect balance for your desired audio.
+  </Card>
+  <Card title="Leverage Video Context" icon="video">
+    In Video to Audio mode, choose videos where the visual content strongly relates to the audio you want to generate.
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with ClipCraft, consider these solutions:
+
+<AccordionGroup>
+  <Accordion title="Poor Audio Quality" icon="volume-xmark">
+    Try increasing the **Number of Steps** or adjusting the **CFG Strength**. Ensure your prompt is clear.
+  </Accordion>
+  <Accordion title="Audio Doesn't Match Prompt" icon="comment-slash">
+    Increase the **CFG Strength** to make the AI adhere more closely to the prompt. Refine your prompt to be more specific.
+  </Accordion>
+  <Accordion title="Audio Doesn't Match Video (Video to Audio Mode)" icon="video-slash">
+    Ensure your prompt aligns with the visual content of the video. Try a different video or adjust parameters.
+  </Accordion>
+  <Accordion title="Processing Errors" icon="bug">
+    Check your internet connection. If using a video URL, ensure it's publicly accessible and in a supported format. Try simplifying your prompt.
+  </Accordion>
+  <Accordion title="Reproducibility Issues" icon="seedling">
+    Ensure you are using the exact same **Seed**, **Prompt**, and all other parameters for consistent results.
+  </Accordion>
+</AccordionGroup>
+
+## Conclusion
+
+ClipCraft provides a powerful and flexible platform for AI-driven audio generation. Whether you're creating soundscapes from text or generating audio inspired by video, its intuitive interface and customizable parameters empower you to bring your auditory visions to life.
+

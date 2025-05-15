@@ -1,4 +1,203 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: 'SongCraft Pro'
+description: 'Generate custom songs with AI, including lyrics and music.'
+icon: 'record-vinyl'
 ---
+
+# SongCraft Pro: AI-Powered Song Generation
+
+<Tip>
+  Transform your musical ideas into complete songs with SongCraft Pro's advanced AI technology!
+</Tip>
+
+## Overview
+
+SongCraft Pro is a powerful AI-driven tool that allows you to generate custom songs, complete with lyrics and music, based on your text prompts, chosen styles, and even uploaded vocals or reference tracks. It offers two main modes – Simple and Advanced – catering to different levels of creative control. Whether you're a lyricist, a musician, or just someone with a song idea, SongCraft Pro helps you bring it to life.
+
+<CardGroup cols={2}>
+  <Card title="Simple & Advanced Modes" icon="code-branch">
+    Choose between a **streamlined prompt-based workflow** or **detailed customization** of lyrics, genres, moods, and vocals.
+  </Card>
+  <Card title="Lyrics Generation" icon="pen-fancy">
+    Generate lyrics automatically from a basic prompt or refine your own input.
+  </Card>
+  <Card title="Music Generation" icon="music">
+    Create full songs based on your lyrics and selected parameters.
+  </Card>
+  <Card title="Custom Vocals & References" icon="microphone">
+    Upload your own **vocal tracks** or **reference music** to influence the output.
+  </Card>
+</CardGroup>
+
+## How to Use SongCraft Pro
+
+SongCraft Pro offers two distinct modes: Simple for quick generation and Advanced for detailed control.
+
+### Simple Mode: Quick Song Generation
+
+Simple mode is ideal for generating a song quickly based on a short text prompt.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/Screenshot%202025-05-13%20225021.png" alt="SongCraft Pro Simple Mode Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select Simple Mode" icon="list-ul">
+    From the Mode dropdown at the top, select **Simple**.
+  </Step>
+  <Step title="Enter Song Title" icon="text">
+    Provide a title for your song in the **Song Title** field.
+  </Step>
+  <Step title="Craft Your Prompt" icon="keyboard">
+    Enter a brief text description of the song you want to create in the main **Prompt** text area. This prompt will guide both the lyrics and the music generation.
+    <Callout type="tip">
+      Keep your prompt concise, up to 300 characters. Describe the core idea, theme, or mood.
+    </Callout>
+  </Step>
+  <Step title="Generate Prompt (Optional)" icon="wand-magic-sparkles">
+    Click the **Generate Prompt** button to have AI suggest or expand upon your prompt. You can then edit the generated text.
+  </Step>
+  <Step title="Generate Music" icon="play">
+    Click the **Generate Music** button. Ensure you have enough credits (40 credits per song). The AI will generate the song based on your prompt and title.
+  </Step>
+</Steps>
+
+### Advanced Mode: Detailed Song Customization
+
+Advanced mode provides granular control over lyrics, musical styles, vocals, and reference tracks.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/screencapture-localhost-3000-songcraftpro-2025-05-13-22_51_04.png" alt="SongCraft Pro Advanced Mode Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select Advanced Mode" icon="list-ul">
+    From the Mode dropdown at the top, select **Advanced**.
+  </Step>
+  <Step title="Input Lyrics" icon="file">
+    Enter or paste your song lyrics into the large **Lyrics** text area. You can write your own or use the **Generate Lyrics** button to get AI suggestions based on other parameters.
+    <Callout type="tip">
+      You can input up to 2000 characters of lyrics.
+    </Callout>
+  </Step>
+  <Step title="Enter Song Title" icon="text">
+    Provide a title for your song in the **Song Title** field.
+  </Step>
+  <Step title="Select Genres and Moods" icon="tags">
+    Choose one or more **Genres** and **Moods** from the provided lists by clicking on them. Use the search bars to find specific tags. These selections will influence the musical style and emotional tone.
+  </Step>
+  <Step title="Add Custom Vocals (Optional)" icon="microphone">
+    You have several options for vocals:
+    - **Upload Reference Track**: Upload your own MP3 vocal file. Ensure you select at least one genre and mood first.
+    - **Pre-made Vocals**: Select from a list of available pre-made AI vocal options.
+    - **User's Previously Uploaded Vocals**: Select from vocals you have uploaded in the past.
+    <Callout type="info">
+      Selecting a custom vocal or pre-made vocal will override the Additional Description and Reference Track options.
+    </Callout>
+  </Step>
+  <Step title="Add Reference Track (Optional)" icon="music">
+    You can influence the musical style by selecting an existing **Reference Track** from the searchable list. You can also upload your own reference track.
+    <Callout type="info">
+      Selecting a reference track will override the Additional Description and Custom Vocals options.
+    </Callout>
+  </Step>
+   <Step title="Add Additional Description (Optional)" icon="comment">
+    If you are not using a Custom Vocal or Reference Track, you can provide a text description of the desired musical style, instrumentation, or other details in the **Additional Description** field.
+  </Step>
+  <Step title="Generate Lyrics (Optional)" icon="wand-magic-sparkles">
+    If you don't have lyrics, click the **Generate Lyrics** button. AI will create lyrics based on your title, genres, and moods. You can then edit the generated lyrics.
+  </Step>
+  <Step title="Generate Music" icon="play">
+    Click the **Generate Music** button. Ensure you have enough credits (40 credits per song). The AI will generate the song based on your lyrics and all selected parameters.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+### Common to Both Modes:
+
+<ResponseField name="Song Title" type="string" required>
+  The title for your generated song.
+</ResponseField>
+<ResponseField name="Generate Prompt/Lyrics Button" type="button">
+  Uses AI to generate text content (prompt for Simple, lyrics for Advanced).
+</ResponseField>
+<ResponseField name="Generate Music Button" type="button">
+  Initiates the music generation process (costs 40 credits).
+</ResponseField>
+<ResponseField name="Mode" type="Enum" required>
+  Select between `Simple` and `Advanced` workflows.
+</ResponseField>
+
+### Simple Mode Specific:
+
+<ResponseField name="Prompt" type="string" required>
+  Text description to guide both lyrics and music generation (max 300 characters).
+</ResponseField>
+
+### Advanced Mode Specific:
+
+<ResponseField name="Lyrics" type="string" required>
+  The song lyrics to be used for music generation (max 2000 characters).
+</ResponseField>
+<ResponseField name="Genres" type="array of strings">
+  Select musical genres to influence the song's style.
+</ResponseField>
+<ResponseField name="Moods" type="array of strings">
+  Select moods to influence the song's emotional tone.
+</ResponseField>
+<ResponseField name="Custom Vocals" type="file / string">
+  Upload your own MP3 vocal track or select a pre-made AI vocal ID.
+</ResponseField>
+<ResponseField name="Reference Track" type="file / string">
+  Upload your own MP3 reference track or select an existing reference track ID.
+</ResponseField>
+<ResponseField name="Additional Description" type="string">
+  Text description for musical style or instrumentation if no custom vocal or reference track is used.
+</ResponseField>
+
+## Song History
+
+SongCraft Pro keeps a history of your generated songs.
+
+<AccordionGroup>
+  <Accordion title="Access History" icon="clock">
+    Click the **Show History** tab on the right side of the screen to open the history sidebar.
+  </Accordion>
+  <Accordion title="View Past Songs" icon="list">
+    See a list of your previously generated songs, including title, creation date, and an audio player.
+  </Accordion>
+  <Accordion title="Download Songs" icon="download">
+    Download any song from your history as an MP3 file.
+  </Accordion>
+</AccordionGroup>
+
+## Credits
+
+Generating music with SongCraft Pro costs **40 credits per song**. Your current credit balance is displayed at the top left of the interface.
+
+<Callout type="info">
+  Click the **Buy More** button to purchase additional credits if needed.
+</Callout>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Be Specific (Advanced Mode)" icon="pencil">
+    In Advanced mode, detailed lyrics and precise genre/mood selections lead to better results.
+  </Card>
+  <Card title="Experiment with Modes" icon="shuffle">
+    Try both Simple and Advanced modes to see which best suits your creative process for different song ideas.
+  </Card>
+  <Card title="Leverage Custom Inputs" icon="microphone">
+    If you have a specific vocal style or musical reference in mind, use the Custom Vocals or Reference Track upload features in Advanced mode.
+  </Card>
+  <Card title="Iterate and Refine" icon="rotate">
+    Generate multiple versions, adjusting lyrics, genres, moods, or descriptions, to refine the song until it matches your vision.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+SongCraft Pro empowers creators to generate unique songs with ease, offering flexible workflows for both quick ideas and detailed musical visions. By leveraging its AI capabilities, custom inputs, and stylistic controls, you can bring your musical concepts to life in new and exciting ways.
+

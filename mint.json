@@ -303,10 +303,19 @@
           "iconType": "solid"
         },
         {
-          "group": "Music",
+          "group": "Audio",
           "pages": [
             "audio-gen/songcraft",
-            "audio-gen/soundcraft"
+            "audio-gen/soundcraft",
+            "audio-gen/songcraft-pro",
+            "audio-gen/clipcraft",
+            "audio-gen/composecraft",
+            "audio-gen/rhythmcraft",
+            "audio-gen/wavecraft",
+            "audio-gen/audiocraft",
+            "audio-gen/voicecraft",
+            "audio-gen/voicecraftpro",
+            "audio-gen/speechcraft"
           ],
           "icon": "music",
           "iconType": "solid"

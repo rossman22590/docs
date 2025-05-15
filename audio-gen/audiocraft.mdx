@@ -1,0 +1,212 @@
+---
+title: 'AudioCraft'
+description: 'Generate audio from dialogue or narrate PDF/text data using AI voices.'
+icon: 'podcast'
+---
+
+# AudioCraft: AI-Powered Audio Generation
+
+<Tip>
+  Transform text and documents into natural-sounding audio with customizable AI voices and styles!
+</Tip>
+
+## Overview
+
+AudioCraft is a versatile AI tool that allows you to generate audio content in two primary ways: creating dialogue-based audio from text input (**Studio mode**) or narrating content from PDFs or entered text (**Narration mode**). With a selection of AI voices and synthesis styles, AudioCraft is ideal for creating podcasts, voiceovers, audiobooks, and more.
+
+<CardGroup cols={2}>
+  <Card title="Studio (dialogue to audio)" icon="comments">
+    Generate audio featuring **dialogue between two speakers** using distinct AI voices.
+  </Card>
+  <Card title="Narration (PDF/Data to audio)" icon="file-lines">
+    Convert **PDF documents or text data** into narrated audio.
+  </Card>
+  <Card title="Multiple AI Voices" icon="microphone">
+    Choose from a **variety of voices** with different accents, genders, and ages.
+  </Card>
+  <Card title="Synthesis Styles" icon="palette">
+    Apply different **narration styles** like 'podcast', 'executive-briefing', etc.
+  </Card>
+</CardGroup>
+
+## How to Use AudioCraft
+
+AudioCraft offers two main modes, accessible via the tabs at the top of the interface.
+
+### Studio (dialogue to audio) Mode
+
+This mode is designed for creating audio that simulates a conversation between two speakers.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/audiocraft-studio.png" alt="AudioCraft Studio Mode Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select Studio Tab" icon="comments">
+    Click on the **Studio (dialogue to audio)** tab.
+  </Step>
+  <Step title="Enter Your Dialogue" icon="keyboard">
+    Input the text for your dialogue in the main text area.
+  </Step>
+  <Step title="Optimize Text (Optional)" icon="wand-magic-sparkles">
+    Use the **Optimize**, **News Caster**, **Podcast**, or **Analyst** buttons to automatically format or stylize your input text for different purposes.
+  </Step>
+  <Step title="Set Speaker Names" icon="user">
+    Enter names for **Speaker 1 Name** and **Speaker 2 Name**. These names are used to identify which speaker says which lines in your input text (e.g., "Speaker 1: Hello", "Speaker 2: Hi").
+  </Step>
+  <Step title="Choose Voices" icon="microphone">
+    Select a **Voice 1** and **Voice 2** from the dropdown menus. Choose voices that fit your desired speakers.
+  </Step>
+  <Step title="Enter Voice Prompts (Optional)" icon="comment">
+    Provide specific instructions or prompts for **Prompt for Voice 1** and **Prompt for Voice 2** to influence the tone or delivery style of each voice.
+  </Step>
+  <Step title="Convert to Speech" icon="play">
+    Click the **Convert to Speech** button. The AI will process your text and generate audio featuring the dialogue between the two selected voices.
+  </Step>
+</Steps>
+
+### Narration (PDF/Data to audio) Mode
+
+This mode is used to convert longer text content from a PDF file or directly entered text into narrated audio.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/audiocraft-narration.png" alt="AudioCraft Narration Mode Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select Narration Tab" icon="file-lines">
+    Click on the **Narration (PDF/Data to audio)** tab.
+  </Step>
+  <Step title="Choose Input Type" icon="upload">
+    Select your **Input Type**:
+    - **Upload PDF**: Click to upload a PDF file.
+    - **Enter Data**: Switch to this tab and enter text directly into the provided text area.
+  </Step>
+  <Step title="Choose Voices" icon="microphone">
+    Select a **Voice 1** and **Voice 2** from the dropdown menus. These voices will be used for the narration.
+  </Step>
+  <Step title="Select Synthesis Style" icon="palette">
+    Choose a **Synthesis Style** from the dropdown menu. Options include:
+    - podcast
+    - executive-briefing
+    - childrens-story
+    - debate
+  </Step>
+  <Step title="Upload and Convert" icon="play">
+    Click the **Upload and Convert** button. The AI will process your PDF or text data and generate narrated audio using the selected voices and style.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+AudioCraft provides various inputs and options depending on the selected mode:
+
+### Common Parameters:
+
+<ResponseField name="Text Input" type="string" required>
+  (Studio & Narration - Enter Data) The text content to be converted to audio.
+</ResponseField>
+<ResponseField name="Voice 1 / Voice 2" type="Enum" required>
+  Selectable AI voices with different characteristics (e.g., Angelo (US, male, Young), Arsenio (US African American, male, Middle)).
+</ResponseField>
+
+### Studio Mode Specific:
+
+<ResponseField name="Speaker 1 Name / Speaker 2 Name" type="string" required>
+  Names used to identify speaker turns in the input text.
+</ResponseField>
+<ResponseField name="Prompt for Voice 1 / Prompt for Voice 2" type="string">
+  Text prompts to influence the delivery style of each voice.
+</ResponseField>
+<ResponseField name="Optimize / News Caster / Podcast / Analyst Buttons" type="button">
+  Buttons to automatically format or optimize the input text.
+</ResponseField>
+
+### Narration Mode Specific:
+
+<ResponseField name="Input Type" type="Enum" required>
+  Choose between `Upload PDF` and `Enter Data`.
+</ResponseField>
+<ResponseField name="Upload PDF" type="file">
+  (Input Type: Upload PDF) Upload a PDF file for narration.
+</ResponseField>
+<ResponseField name="Synthesis Style" type="Enum" required>
+  Select the overall style for the narration (e.g., podcast, executive-briefing).
+</ResponseField>
+
+## Generated Audio History / Conversion History
+
+AudioCraft keeps a history of your generated audio clips or conversions.
+
+<AccordionGroup>
+  <Accordion title="View History" icon="list">
+    Your generated audio clips (Studio mode) or conversions (Narration mode) will appear in the history section below the main interface.
+  </Accordion>
+  <Accordion title="Playback" icon="play">
+    Listen to your generated audio directly in the history table.
+  </Accordion>
+  <Accordion title="Download" icon="download">
+    Download individual audio files (MP3 format).
+  </Accordion>
+  <Accordion title="Clear All" icon="trash">
+    Clear all items from your history.
+  </Accordion>
+</AccordionGroup>
+
+## Credits
+
+Generating audio with AudioCraft has a credit requirement.
+
+<AccordionGroup>
+  <Accordion title="Credit Requirement" icon="credit-card">
+    You must have at least 500 credits to initiate audio generation in Narration mode.
+  </Accordion>
+  <Accordion title="Final Cost" icon="calculator">
+    The final credit cost is calculated based on the length of the generated audio after the conversion is complete. This cost may be more or less than 500 credits.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Your current credit balance is displayed at the top left of the interface. Click the **Buy More** button to purchase additional credits if needed.
+</Tip>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Clear Text Input" icon="pencil">
+    Provide clear, well-formatted text. For Studio mode, ensure speaker turns are clearly marked (e.g., "Speaker 1: ...").
+  </Card>
+  <Card title="Choose Appropriate Voices" icon="microphone">
+    Select voices that match the tone and character of your content. Experiment with different voice combinations.
+  </Card>
+  <Card title="Utilize Synthesis Styles (Narration)" icon="palette">
+    Choose a synthesis style that fits the type of content you are narrating (e.g., 'podcast' for conversational content, 'executive-briefing' for formal reports).
+  </Card>
+  <Card title="Optimize Text (Studio)" icon="wand-magic-sparkles">
+    Use the text optimization buttons to refine your dialogue input for better AI interpretation.
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with AudioCraft, consider these solutions:
+
+<AccordionGroup>
+  <Accordion title="Audio Doesn't Sound Natural" icon="volume-xmark">
+    Try a different AI voice. In Studio mode, experiment with the voice prompts. In Narration mode, try a different Synthesis Style.
+  </Accordion>
+  <Accordion title="Conversion Fails" icon="bug">
+    Ensure your text input is not excessively long. If uploading a PDF, ensure it is a standard text-based PDF (not an image-based scan). Check your internet connection.
+  </Accordion>
+  <Accordion title="Incorrect Speaker Turns (Studio)" icon="user-slash">
+    Verify that your speaker names in the text input exactly match the names entered in the **Speaker Name** fields, followed by a colon (e.g., "John: Hello").
+  </Accordion>
+  <Accordion title="Credit Issues" icon="credit-card-slash">
+    Ensure you meet the minimum credit requirement for Narration mode. If a job fails after starting, contact support regarding credit adjustments.
+  </Accordion>
+</AccordionGroup>
+
+## Conclusion
+
+AudioCraft provides a powerful and flexible platform for converting text and documents into high-quality audio using AI voices. With its distinct modes and customization options, you can easily create dialogue or narration for a wide range of applications.
+

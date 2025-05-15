@@ -1,0 +1,152 @@
+---
+title: 'SpeechCraft'
+description: 'Convert text to speech using a reference audio voice with advanced AI.'
+icon: 'comments'
+---
+
+# SpeechCraft: AI-Powered Voice Conversion
+
+<Tip>
+  Generate speech in a specific voice by providing text and a reference audio sample!
+</Tip>
+
+## Overview
+
+SpeechCraft is an AI tool that allows you to convert written text into spoken audio, mimicking the voice characteristics from a reference audio sample. This is useful for creating voiceovers, narration, or dialogue in a consistent voice without needing to record the voice actor for every line.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/speechcraft.png" alt="SpeechCraft Screenshot" />
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Text Input" icon="keyboard">
+    Provide the **text** you want to convert to speech.
+  </Card>
+  <Card title="Reference Audio" icon="microphone">
+    Upload a **reference audio file or URL** containing the voice you want to use.
+  </Card>
+  <Card title="AI Voice Cloning" icon="robot">
+    Generate new speech in the **style and tone of the reference voice**.
+  </Card>
+  <Card title="Customizable Options" icon="sliders">
+    Select **model type** and **remove silence** for refined output.
+  </Card>
+</CardGroup>
+
+## How to Use SpeechCraft
+
+Follow these steps to convert text to speech using a reference voice:
+
+<Steps>
+  <Step title="Enter Text to Convert" icon="keyboard">
+    Input the text you want to convert into speech in the main text area. The estimated credit cost will update as you type.
+  </Step>
+  <Step title="Provide Reference Audio" icon="upload">
+    Provide the audio sample of the voice you want to use:
+    - **Upload Reference Audio**: Click **Choose File** to upload an audio file from your device (audio/* formats supported). Maximum file size is 10MB.
+    - **Reference Audio URL**: Enter the URL of an existing audio file online.
+  </Step>
+  <Step title="Enter Reference Text (Optional)" icon="pencil">
+    In the **Reference Text** field, you can optionally enter the text that is spoken in the reference audio. Providing this can sometimes help the AI better understand and replicate the voice.
+  </Step>
+  <Step title="Select Model Type" icon="microchip">
+    Choose the **Model Type** from the dropdown menu:
+    - **F5-TTS**: A general-purpose TTS model.
+    - **E2-TTS**: Another TTS model option.
+    Experiment to see which model works best for your specific reference audio and text.
+  </Step>
+  <Step title="Remove Silence (Optional)" icon="volume-xmark">
+    Check the **Remove Silence** box if you want the AI to automatically detect and remove periods of silence from the generated audio.
+  </Step>
+  <Step title="Convert to Speech" icon="play">
+    Click the **Convert to Speech** button. Ensure you have enough credits. The AI will process your text and reference audio to generate the new speech audio.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+SpeechCraft requires text and a reference audio source, along with adjustable parameters:
+
+<ResponseField name="Text to convert" type="string" required>
+  The written content you want to convert into spoken audio.
+</ResponseField>
+<ResponseField name="Upload Reference Audio" type="file">
+  Upload an audio file containing the voice you want to replicate. Max size: 10MB.
+</ResponseField>
+<ResponseField name="Reference Audio URL" type="string" required>
+  Enter the URL of an audio file containing the voice you want to replicate.
+</ResponseField>
+<ResponseField name="Reference Text" type="string">
+  (Optional) The text spoken in the reference audio.
+</ResponseField>
+<ResponseField name="Model Type" type="Enum">
+  Select the AI model for speech synthesis (`F5-TTS` or `E2-TTS`).
+</ResponseField>
+<ResponseField name="Remove Silence" type="boolean">
+  Toggle to automatically remove silent portions from the output audio.
+</ResponseField>
+
+## Generated Audio History
+
+SpeechCraft keeps a history of your generated audio conversions.
+
+<AccordionGroup>
+  <Accordion title="View History" icon="list">
+    Your generated audio will appear in the **Generated Audio History** section below the main interface.
+  </Accordion>
+  <Accordion title="Playback" icon="play">
+    Listen to your generated audio directly in the history table.
+  </Accordion>
+  <Accordion title="Download" icon="download">
+    Download individual audio files (WAV format).
+  </Accordion>
+  <Accordion title="Clear All" icon="trash">
+    Clear all items from your history.
+  </Accordion>
+</AccordionGroup>
+
+## Credits
+
+Converting text to speech with SpeechCraft costs **1 credit per 100 characters** of the text you enter in the main text area. The estimated cost is displayed below the text input field.
+
+<Tip>
+  Your current credit balance is displayed at the top left of the interface. Click the **Buy More** button to purchase additional credits if needed.
+</Tip>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="High-Quality Reference Audio" icon="volume-high">
+    Use a clear, high-fidelity audio sample with minimal background noise for the best voice replication.
+  </Card>
+  <Card title="Accurate Reference Text (Optional)" icon="pencil">
+    If providing reference text, ensure it accurately matches the audio sample.
+  </Card>
+  <Card title="Clear Text to Convert" icon="text">
+    Ensure the text you want to convert is free of typos and complex formatting.
+  </Card>
+  <Card title="Experiment with Models" icon="microchip">
+    Try both F5-TTS and E2-TTS models to see which provides a better result for your specific voice and text.
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with SpeechCraft, consider these solutions:
+
+<AccordionGroup>
+  <Accordion title="Generated Voice Doesn't Match Reference" icon="user-slash">
+    Ensure your reference audio is clear and the voice is prominent. Try a different reference audio sample. Experiment with the Model Type.
+  </Accordion>
+  <Accordion title="Processing Errors" icon="bug">
+    Ensure your reference audio file is in a supported format and under the 10MB size limit if uploading. Check your internet connection.
+  </Accordion>
+  <Accordion title="Audio Quality Issues" icon="volume-xmark">
+    Try a different reference audio sample. Experiment with the Model Type.
+  </Accordion>
+</AccordionGroup>
+
+## Conclusion
+
+SpeechCraft provides a powerful and accessible way to generate speech in a desired voice using AI. By providing clear text and a quality reference audio sample, you can create custom voiceovers and audio content with ease.
+

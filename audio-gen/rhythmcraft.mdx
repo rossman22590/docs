@@ -1,0 +1,175 @@
+---
+title: 'RhythmCraft'
+description: 'Generate music from timestamped lyrics and reference audio using AI.'
+icon: 'music'
+---
+
+# RhythmCraft: AI-Powered Music Generation with Timestamps
+
+<Tip>
+  Compose music synchronized with your lyrics by providing timestamped text and reference audio!
+</Tip>
+
+## Overview
+
+RhythmCraft is an AI tool that specializes in generating music based on **timestamped lyrics** and a **reference audio track**. This allows for precise synchronization between the vocals (represented by the timestamped lyrics) and the generated music. It's perfect for musicians, producers, or anyone wanting to create music where the timing of the vocals is a critical element.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.nyc3.digitaloceanspaces.com/docs/rhythmcraft.png" alt="RhythmCraft Screenshot" />
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Timestamped Lyrics" icon="clock">
+    Generate music that aligns precisely with the timing of your **lyrics**.
+  </Card>
+  <Card title="Reference Audio" icon="music">
+    Influence the musical style and structure using a **reference audio file or URL**.
+  </Card>
+  <Card title="AI Composition" icon="wand-magic-sparkles">
+    Generate a complete **audio track** synchronized with your lyrics.
+  </Card>
+  <Card title="Timestamp Generation" icon="pencil">
+    Tool to help you **add timestamps** to your lyrics automatically.
+  </Card>
+</CardGroup>
+
+## How to Use RhythmCraft
+
+Follow these steps to generate music with RhythmCraft:
+
+<Steps>
+  <Step title="Enter Timestamped Lyrics" icon="keyboard">
+    Input your song lyrics into the **Lyrics** text area. Your lyrics **must** include timestamps in the format `[MM:SS.ms]` at the beginning of each line or section you want timed.
+
+    *Example Timestamped Lyrics:*
+    ```
+    [00:05.25] This is the first line
+    [00:08.00] And this is the second line
+    [00:12.50] Starting a new verse here
+    ```
+  </Step>
+  <Step title="Generate Timestamps (Optional)" icon="clock">
+    If your lyrics do not have timestamps, click the **Generate Timestamps** button. This opens a modal where you can set parameters (like start time, line interval, and section interval) to automatically add timestamps to your lyrics. Review the preview and click **Apply Timestamps** to use the generated timestamps.
+  </Step>
+  <Step title="Provide Reference Audio" icon="upload">
+    Choose how to provide reference audio:
+    - **Upload Reference Audio**: Click **Choose File** to upload an audio file from your device (MP3 or WAV recommended).
+    - **Reference Audio URL**: Enter the URL of an existing audio file online.
+  </Step>
+  <Step title="Adjust Parameters" icon="sliders">
+    Configure the generation settings using the sliders:
+    - **Number of Inference Steps**: Controls the detail and refinement of the music.
+    - **Max Frames**: Sets the maximum length or complexity of the generated audio.
+  </Step>
+  <Step title="Generate Music" icon="play">
+    Click the **Generate Music** button. Ensure you have enough credits (20 credits per song). The AI will generate the music synchronized with your timestamped lyrics and influenced by the reference audio.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+RhythmCraft requires timestamped lyrics and a reference audio source, along with adjustable parameters:
+
+<ResponseField name="Lyrics" type="string" required>
+  Your song lyrics, **including timestamps** in `[MM:SS.ms]` format.
+</ResponseField>
+<ResponseField name="Generate Timestamps Button" type="button">
+  Opens a modal to automatically add timestamps to your lyrics.
+</ResponseField>
+<ResponseField name="Upload Reference Audio" type="file">
+  Upload an audio file from your device to use as a reference. Accepts audio formats like WAV, MP3. Max file size 50MB.
+</ResponseField>
+<ResponseField name="Reference Audio URL" type="string" required>
+  Enter the URL of an audio file to use as a reference. Accepts .wav or .mp3 formats.
+</ResponseField>
+<ResponseField name="Number of Inference Steps" type="integer">
+  Controls the number of processing steps for music generation.
+  Default: 32 | Range: 1-100
+</ResponseField>
+<ResponseField name="Max Frames" type="integer">
+  Influences the maximum length and complexity of the generated audio.
+  Default: 2048 | Range: 1024-2048 (steps of 64)
+</ResponseField>
+
+## Timestamp Generation Settings
+
+When using the **Generate Timestamps** button, you can configure the following:
+
+<AccordionGroup>
+  <Accordion title="Start Time (seconds)" icon="clock">
+    Sets the timestamp for the first line of lyrics.
+  </Accordion>
+  <Accordion title="Line Interval (seconds)" icon="text">
+    Sets the default time interval between consecutive lines of lyrics.
+  </Accordion>
+  <Accordion title="Section Interval (seconds)" icon="layer-group">
+    Adds extra time between detected sections (like verses or choruses) in your lyrics.
+  </Accordion>
+</AccordionGroup>
+
+## Song History
+
+RhythmCraft keeps a history of your generated songs for easy access.
+
+<AccordionGroup>
+  <Accordion title="View History" icon="list">
+    Click the **Show History** tab on the right side of the screen to open the history sidebar.
+  </Accordion>
+  <Accordion title="Download Songs" icon="download">
+    Download individual songs as WAV files.
+  </Accordion>
+  <Accordion title="Clear History" icon="trash">
+    Clear all generated songs from your history.
+  </Accordion>
+  <Accordion title="Download All" icon="arrow-down-to-bracket">
+    Download all songs in your history as a ZIP file.
+  </Accordion>
+</AccordionGroup>
+
+## Credits
+
+Generating music with RhythmCraft costs **20 credits per song**. Your current credit balance is displayed at the top left of the interface.
+
+<Tip>
+  Click the **Buy More** button to purchase additional credits if needed.
+</Tip>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Accurate Timestamps" icon="clock">
+    Ensure your timestamps accurately reflect the desired timing of the lyrics in the music. Use the timestamp generator or manually edit for precision.
+  </Card>
+  <Card title="Relevant Reference Audio" icon="music">
+    Choose a reference audio track with a musical style or structure that complements your lyrics and desired rhythm.
+  </Card>
+  <Card title="Experiment with Parameters" icon="sliders">
+    Adjust Inference Steps and Max Frames to explore different musical outcomes and lengths.
+  </Card>
+  <Card title="Clear Lyrics" icon="pencil">
+    Provide clear, well-formatted lyrics to help the AI process them correctly, especially when generating timestamps.
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with RhythmCraft, consider these solutions:
+
+<AccordionGroup>
+  <Accordion title="Music Doesn't Sync with Lyrics" icon="arrow-right-arrow-left">
+    Double-check that your lyrics have correctly formatted timestamps `[MM:SS.ms]`. Ensure the timestamps are in chronological order.
+  </Accordion>
+  <Accordion title="Poor Music Quality" icon="volume-xmark">
+    Try increasing the **Number of Inference Steps**. Experiment with a different reference audio track.
+  </Accordion>
+  <Accordion title="Processing Errors" icon="bug">
+    Ensure your reference audio file is in a supported format and within the size limit if uploading. Check your internet connection.
+  </Accordion>
+  <Accordion title="Timestamp Generation Issues" icon="pencil-slash">
+    Ensure your raw lyrics (before generating timestamps) are clearly separated by line breaks. Adjust the interval settings in the timestamp generator modal.
+  </Accordion>
+</AccordionGroup>
+
+## Conclusion
+
+RhythmCraft offers a unique approach to AI music generation by focusing on the synchronization of music with timestamped lyrics. By providing precise timing information and a reference audio track, you can create custom music that perfectly complements your vocal ideas.

@@ -1,0 +1,135 @@
+---
+title: 'WaveCraft'
+description: 'Generate instrumental music, sound effects, or add sound to videos using AI.'
+icon: 'drum'
+---
+
+# WaveCraft: AI-Powered Audio Creation Suite
+
+<Tip>
+  Generate custom instrumental tracks, unique sound effects, or add sound to your videos with WaveCraft's versatile AI!
+</Tip>
+
+## Overview
+
+WaveCraft is a comprehensive AI tool designed for audio generation and manipulation. It offers three distinct modes: **Instrumental**, **Sound Effect**, and **Video Sound**, allowing you to create various types of audio content from text descriptions or videos. Whether you need background music, a specific sound effect, or want to enhance a video's audio, WaveCraft provides the tools to bring your auditory ideas to life.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/wavecraft.png" alt="WaveCraft Screenshot" />
+</Frame>
+
+<CardGroup cols={3}>
+  <Card title="Instrumental" icon="musical-note">
+    Generate **music tracks** based on a text description and desired duration.
+  </Card>
+  <Card title="Sound Effect" icon="speaker-wave">
+    Create specific **sound effects** from a text description and duration.
+  </Card>
+  <Card title="Video Sound" icon="video-camera">
+    Generate **audio inspired by the visual content** of an uploaded video.
+  </Card>
+</CardGroup>
+
+## How to Use WaveCraft
+
+WaveCraft features three modes, accessible via the tabs at the top of the interface.
+
+<Steps>
+  <Step title="Select Mode" icon="list-ul">
+    Choose the mode that matches your goal: **Instrumental**, **Sound Effect**, or **Video Sound**.
+  </Step>
+  <Step title="Provide Input" icon="keyboard">
+    - For **Instrumental** or **Sound Effect**: Enter a text description of the audio you want to generate in the **Music/Sound Effect Description** field.
+    - For **Video Sound**: Upload or drag and drop a video file into the designated area.
+  </Step>
+  <Step title="Set Duration (Instrumental/Sound Effect)" icon="clock">
+    If in Instrumental or Sound Effect mode, use the slider to set the desired **Duration** for the generated audio.
+  </Step>
+  <Step title="Generate Audio" icon="play">
+    Click the corresponding generate button: **Generate Music**, **Generate Sound Effect**, or **Add Sound to Video**.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+WaveCraft offers different inputs based on the selected mode:
+
+### Common Parameters:
+
+<ResponseField name="Music/Sound Effect Description" type="string" required>
+  (Instrumental & Sound Effect Modes) A text description guiding the AI on the desired audio content or style.
+</ResponseField>
+<ResponseField name="Duration" type="integer">
+  (Instrumental & Sound Effect Modes) Sets the length of the generated audio clip in seconds.
+  - Instrumental: 1s to 180s
+  - Sound Effect: 1s to 30s
+</ResponseField>
+
+### Video Sound Mode Specific:
+
+<ResponseField name="Source Video" type="file">
+  Upload a video file (MP4 recommended) to provide visual context for audio generation. Maximum 30 seconds.
+</ResponseField>
+
+## My Creations / History
+
+WaveCraft keeps a history of all your generated audio creations.
+
+<AccordionGroup>
+  <Accordion title="View Creations" icon="list">
+    Your generated audios will appear in the **My Creations** section below the main interface.
+  </Accordion>
+  <Accordion title="Latest Creation" icon="star">
+    The most recently generated audio will also be displayed in the **Latest Creation** panel for quick access and playback.
+  </Accordion>
+  <Accordion title="Playback" icon="play">
+    Use the built-in audio players in both the Latest Creation and My Creations sections to listen to your generated audio.
+  </Accordion>
+  <Accordion title="Download" icon="download">
+    Download individual audio files (WAV for Instrumental/Sound Effect, MP4 for Video Sound).
+  </Accordion>
+  <Accordion title="Download All" icon="arrow-down-to-bracket">
+    Download all creations in your history as a ZIP file.
+  </Accordion>
+  <Accordion title="Clear All" icon="trash">
+    Clear all generated audios from your history.
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Be Descriptive" icon="pencil">
+    Provide clear and specific text descriptions for Instrumental and Sound Effect modes to guide the AI effectively.
+  </Card>
+  <Card title="Choose Relevant Video" icon="video">
+    In Video Sound mode, select a video where the visual content strongly suggests the type of audio you want to generate.
+  </Card>
+  <Card title="Experiment with Duration" icon="clock">
+    Adjust the duration slider to get the desired length for your audio clips.
+  </Card>
+  <Card title="Utilize History" icon="clock-rotate-left">
+    Review your past creations in the "My Creations" section to refine your prompts and settings for future generations.
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with WaveCraft, consider these solutions:
+
+<AccordionGroup>
+  <Accordion title="Audio Doesn't Match Description" icon="comment-slash">
+    Refine your text prompt to be more specific. Try different phrasing.
+  </Accordion>
+  <Accordion title="Video Sound Doesn't Match Video" icon="video-slash">
+    Ensure the visual content of your video is clear and strongly suggests the desired audio. Try a different video.
+  </Accordion>
+  <Accordion title="Processing Errors" icon="bug">
+    Check your internet connection. If uploading a video, ensure it's in a supported format (MP4) and within the 30-second limit.
+  </Accordion>
+</AccordionGroup>
+
+## Conclusion
+
+WaveCraft provides a flexible and intuitive platform for AI-powered audio creation. With its distinct modes and easy-to-use interface, you can generate a variety of audio content, from custom music tracks to sound effects and video audio enhancements.
+

@@ -1,0 +1,188 @@
+---
+title: 'VoiceCraft Pro'
+description: 'Clone voices from audio samples and convert text to speech with advanced AI features.'
+icon: 'microphone'
+---
+
+# VoiceCraft Pro: Advanced AI Voice Solutions
+
+<Tip>
+  Clone voices with precision and convert text to speech using your custom or available voices with VoiceCraft Pro!
+</Tip>
+
+## Overview
+
+VoiceCraft Pro offers advanced AI-powered capabilities for voice cloning and text-to-speech conversion. It allows users to create highly realistic voice clones from audio samples and then use these cloned voices, alongside other available voices, to convert text into speech with fine-grained control over parameters like engine, quality, speed, and emotion.
+
+<CardGroup cols={2}>
+  <Card title="Clone Voice" icon="user-plus">
+    Create a **digital replica of a voice** from uploaded audio samples.
+  </Card>
+  <Card title="Text to Speech" icon="keyboard">
+    Convert **text into natural-sounding speech** using cloned or pre-defined voices.
+  </Card>
+  <Card title="Advanced Controls" icon="sliders">
+    Fine-tune voice cloning and text-to-speech generation with various parameters.
+  </Card>
+  <Card title="History Tracking" icon="clock">
+    Keep track of your **cloned voices** and **generated audio**.
+  </Card>
+</CardGroup>
+
+## Clone Voice: Create a Voice Clone
+
+This feature allows you to create a new AI voice by cloning it from one or more uploaded audio samples of the voice you want to replicate.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraftpro-cloner.png" alt="VoiceCraft Pro Clone Voice Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Name Your Voice" icon="text">
+    In the **Voice Name** field, enter a name for the voice clone you are creating.
+  </Step>
+  <Step title="Describe the Voice (Optional)" icon="pencil">
+    In the **Description** field, you can optionally provide a description of the voice.
+  </Step>
+  <Step title="Select Audio Files" icon="upload">
+    Click the **Select Audio Files** button to upload one or more audio samples of the voice you want to clone. Higher quality and longer samples generally yield better results.
+  </Step>
+  <Step title="Remove Background Noise (Optional)" icon="sliders">
+    Check the **Remove Background Noise** box if you want the AI to attempt to clean up the audio samples during the cloning process.
+  </Step>
+  <Step title="Clone Voice" icon="user-plus">
+    Click the **Clone Voice** button. The AI will process your audio samples and create a new Voice ID for the cloned voice. This process costs credits.
+  </Step>
+</Steps>
+
+### Clone Voice Input Parameters:
+
+<ResponseField name="Voice Name" type="string" required>
+  A name for the voice clone.
+</ResponseField>
+<ResponseField name="Description" type="string">
+  (Optional) A description of the voice.
+</ResponseField>
+<ResponseField name="Audio Files" type="array of files" required>
+  One or more audio samples of the voice to clone.
+</ResponseField>
+<ResponseField name="Remove Background Noise" type="boolean">
+  Toggle to enable background noise removal during cloning.
+</ResponseField>
+
+## Text to Speech: Convert Text to Audio
+
+This feature allows you to convert text into speech using a selected voice, including voices you have cloned or other available voices.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraftpro-texttospeech.png" alt="VoiceCraft Pro Text to Speech Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Enter Text to Speak" icon="keyboard">
+    In the main text area, enter the text you want to convert into speech. The cost in credits will be estimated based on the character count.
+  </Step>
+  <Step title="Select Voice Source" icon="microphone">
+    Choose the source of the voice:
+    - **Use Cloned Voices**: Select from voices you have cloned using the Clone Voice feature.
+    - **Use Custom Voice URL**: Enter a URL for a custom voice model.
+    - (If neither is selected, you will likely select from a list of pre-defined voices).
+  </Step>
+  <Step title="Choose Voice" icon="list-check">
+    Select the specific voice you want to use from the dropdown list, based on your selected voice source.
+  </Step>
+  <Step title="Adjust Parameters" icon="sliders">
+    Configure various parameters to fine-tune the speech generation:
+    - **Voice Engine**: Select the underlying AI model for speech synthesis (e.g., PlayHT 2.0, Play 3.0 Mini, Play Dialog).
+    - **Quality**: Choose the desired audio quality (e.g., Draft, Low, Medium, High, Premium).
+    - **Speed**: Adjust the speaking speed.
+    - **Voice Guidance / Style Guidance**: (Availability may depend on Voice Engine) Control how closely the AI adheres to the voice's original characteristics or a specific style.
+    - **Emotion**: (Availability may depend on Voice Engine) Select an emotion for the voice to convey (e.g., Happy, Sad, Angry).
+  </Step>
+  <Step title="Generate Speech" icon="play">
+    Click the **Generate Speech** button. The AI will convert your text into audio using the selected voice and parameters. This process costs credits based on the length of the text.
+  </Step>
+</Steps>
+
+### Text to Speech Input Parameters:
+
+<ResponseField name="Text to Speak" type="string" required>
+  The text content to be converted to audio.
+</ResponseField>
+<ResponseField name="Use Cloned Voices Checkbox" type="boolean">
+  Toggle to select from your cloned voices.
+</ResponseField>
+<ResponseField name="Use Custom Voice URL Checkbox" type="boolean">
+  Toggle to enter a custom voice URL.
+</ResponseField>
+<ResponseField name="Custom Voice URL" type="string">
+  (If "Use Custom Voice URL" is checked) The URL of a custom voice model.
+</ResponseField>
+<ResponseField name="Voice (Dropdown)" type="Enum" required>
+  Select the specific voice ID or name to use.
+</ResponseField>
+<ResponseField name="Voice Engine" type="Enum">
+  Select the speech synthesis model (e.g., PlayHT 2.0).
+</ResponseField>
+<ResponseField name="Quality" type="Enum">
+  Select the output audio quality.
+</ResponseField>
+<ResponseField name="Speed" type="float">
+  Adjust the speaking speed.
+</ResponseField>
+<ResponseField name="Voice Guidance / Style Guidance" type="integer">
+  Control adherence to voice characteristics or style (range may vary).
+</ResponseField>
+<ResponseField name="Emotion" type="Enum">
+  Select an emotion for the voice (options may vary by engine).
+</ResponseField>
+
+### Text to Speech Credits:
+
+Converting text to speech costs credits based on the length of the text. The cost is approximately **1 credit per 20 characters**. The exact cost is displayed before generation.
+
+## History
+
+VoiceCraft Pro keeps track of your cloned voices and generated audio.
+
+<AccordionGroup>
+  <Accordion title="View Voice History" icon="list">
+    Click the **View Voice History** button (in Clone Voice mode) to see a list of voices you have cloned, including their names and Voice IDs.
+  </Accordion>
+  <Accordion title="View Generated Audio" icon="clock">
+    Click the **View Generated Audio** button (in Text to Speech mode) to see a history of audio files you have generated, including the text used and the audio playback.
+  </Accordion>
+  <Accordion title="Clear History" icon="trash">
+    Each history section has a **Clear History** button to remove all entries from that specific history list.
+  </Accordion>
+</AccordionGroup>
+
+## Credits
+
+Your total credit balance is displayed at the top left of the interface. Cloning voices and generating speech both consume credits.
+
+<Tip>
+  Click the **Buy More** button to purchase additional credits if needed.
+</Tip>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="High-Quality Audio Samples (Clone)" icon="volume-high">
+    For voice cloning, use clean, high-fidelity audio samples with minimal background noise. Longer samples (up to a reasonable limit) can also improve quality.
+  </Card>
+  <Card title="Clear Text Input (TTS)" icon="pencil">
+    For text-to-speech, ensure your text is well-formatted and free of typos for the most natural-sounding output.
+  </Card>
+  <Card title="Experiment with Parameters (TTS)" icon="sliders">
+    Adjust Voice Engine, Quality, Speed, and Emotion settings to find the perfect combination for your specific audio needs.
+  </Card>
+  <Card title="Manage Credits" icon="credit-card">
+    Be mindful of the credit cost for both cloning and text-to-speech, especially for longer text inputs.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+VoiceCraft Pro provides powerful tools for advanced voice manipulation, from creating highly realistic voice clones to generating customized speech from text. Its detailed controls and history tracking make it a comprehensive solution for professionals and enthusiasts working with AI audio.
+

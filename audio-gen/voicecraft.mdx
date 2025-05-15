@@ -1,0 +1,195 @@
+---
+title: 'VoiceCraft'
+description: 'Create custom AI voices, clone voices from audio, and convert speech using AI.'
+icon: 'microphone-lines'
+---
+
+# VoiceCraft: AI-Powered Voice Creation and Conversion
+
+<Tip>
+  Unlock the power of AI to create unique voices, clone existing ones, and convert audio with VoiceCraft!
+</Tip>
+
+## Overview
+
+VoiceCraft is a versatile AI tool that provides a suite of functionalities for working with voices. It allows you to design entirely new AI voices from a description, clone voices from audio samples, and convert existing speech using a specified voice ID. Whether you're a content creator, developer, or just exploring AI audio, VoiceCraft offers powerful tools for voice manipulation.
+
+<CardGroup cols={3}>
+  <Card title="Voice Creator" icon="wand-magic-sparkles">
+    Design **custom AI voices** from a text description and sample text.
+  </Card>
+  <Card title="Speech to Speech" icon="rotate">
+    Convert an **uploaded audio file** to a different voice using a voice ID.
+  </Card>
+  <Card title="Clone Voice" icon="user-plus">
+    Create a **clone of a voice** from uploaded audio samples.
+  </Card>
+</CardGroup>
+
+## Voice Creator: Design Custom Voices
+
+This feature allows you to generate new AI voices based on a descriptive text and a sample text for the voice to speak.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraft-voicecreator.png" alt="VoiceCraft Voice Creator Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Describe the Voice" icon="pencil">
+    In the **Voice Description** field, enter a detailed description of the voice you want to create (e.g., "A warm, friendly female voice with a slight British accent"). A minimum length is required for the description.
+  </Step>
+  <Step title="Enter Text to Speak" icon="keyboard">
+    In the **Text to Speak** field, enter the sample text you want the generated voice previews to say. The text must be between 100 and 1000 characters.
+  </Step>
+  <Step title="Generate Voice Previews" icon="play">
+    Click the **Generate Voice Previews** button. The AI will generate several audio previews of potential voices based on your description and text.
+  </Step>
+  <Step title="Select a Preview" icon="list-check">
+    Listen to the generated previews. For the voice you like, click the **Select** button next to its audio player. This will populate the **Generated Voice ID** field.
+  </Step>
+  <Step title="Name Your Voice" icon="text">
+    In the **Voice Name** field, enter a name for the voice you are creating.
+  </Step>
+  <Step title="Create Voice" icon="circle-check">
+    Click the **Create Voice** button. This will finalize the creation of your custom voice, and you will receive its unique Voice ID. The voice will also be saved to your Voice History.
+  </Step>
+</Steps>
+
+### Voice Creator Input Parameters:
+
+<ResponseField name="Voice Description" type="string" required>
+  A text description of the voice characteristics (minimum length required).
+</ResponseField>
+<ResponseField name="Text to Speak" type="string" required>
+  Sample text for voice previews (100-1000 characters).
+</ResponseField>
+<ResponseField name="Voice Name" type="string" required>
+  A name for the custom voice you are creating.
+</ResponseField>
+
+## Speech to Speech: Convert Audio Voice
+
+This feature allows you to change the voice of an existing audio file to a different voice using its Voice ID.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraft-speechtospeech.png" alt="VoiceCraft Speech to Speech Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Upload Audio File" icon="upload">
+    Click **Choose File** to upload the audio file you want to convert. The audio must be 60 seconds or less.
+  </Step>
+  <Step title="Enter Voice ID" icon="key">
+    In the **Voice ID** field, enter the ID of the voice you want to convert the audio to. You can get Voice IDs from the Voice Creator, Clone Voice, or your Voice History.
+  </Step>
+  <Step title="Convert Speech" icon="play">
+    Click the **Convert Speech** button. The AI will process your uploaded audio and convert the speech to the specified voice. Note that this process costs credits.
+  </Step>
+</Steps>
+
+### Speech to Speech Input Parameters:
+
+<ResponseField name="Upload Audio File" type="file" required>
+  The audio file to convert (max 60 seconds).
+</ResponseField>
+<ResponseField name="Voice ID" type="string" required>
+  The ID of the target voice for conversion.
+</ResponseField>
+
+### Speech to Speech Credits:
+
+Converting speech using this feature costs **1 credit per second** of the input audio.
+
+## Clone Voice: Create a Voice Clone
+
+This feature allows you to create a new AI voice by cloning it from one or more uploaded audio samples of the voice you want to replicate.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraft-voicecloner.png" alt="VoiceCraft Clone Voice Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Name Your Voice" icon="text">
+    In the **Voice Name** field, enter a name for the voice clone you are creating.
+  </Step>
+  <Step title="Describe the Voice (Optional)" icon="pencil">
+    In the **Description** field, you can optionally provide a description of the voice.
+  </Step>
+  <Step title="Select Audio Files" icon="upload">
+    Click the **Select Audio Files** button to upload one or more audio samples of the voice you want to clone. Higher quality and longer samples generally yield better results.
+  </Step>
+  <Step title="Remove Background Noise (Optional)" icon="sliders">
+    Check the **Remove Background Noise** box if you want the AI to attempt to clean up the audio samples during the cloning process.
+  </Step>
+  <Step title="Clone Voice" icon="user-plus">
+    Click the **Clone Voice** button. The AI will process your audio samples and create a new Voice ID for the cloned voice. This process costs credits.
+  </Step>
+</Steps>
+
+### Clone Voice Input Parameters:
+
+<ResponseField name="Voice Name" type="string" required>
+  A name for the voice clone.
+</ResponseField>
+<ResponseField name="Description" type="string">
+  (Optional) A description of the voice.
+</ResponseField>
+<ResponseField name="Audio Files" type="array of files" required>
+  One or more audio samples of the voice to clone.
+</ResponseField>
+<ResponseField name="Remove Background Noise" type="boolean">
+  Toggle to enable background noise removal during cloning.
+</ResponseField>
+
+### Clone Voice Credits:
+
+Creating a voice clone costs credits based on the total length of the uploaded audio samples. The cost is **1 credit per second** of audio.
+
+## History
+
+VoiceCraft keeps a history of your created voices and speech conversions.
+
+<AccordionGroup>
+  <Accordion title="View Voice History" icon="list">
+    Click the **View Voice History** button (available in Voice Creator and Clone Voice modes) to see a list of voices you have created or cloned, including their names and Voice IDs. From here, you can select a voice to use in Speech to Speech or Text to Speech.
+  </Accordion>
+  <Accordion title="View Speech History" icon="clock">
+    Click the **View Speech History** button (available in Clone Voice mode) to see a history of audio files you have generated using your cloned voices.
+  </Accordion>
+  <Accordion title="Conversion History" icon="clock">
+    (Available in Speech to Speech mode) See a history of audio files you have converted using the Speech to Speech converter.
+  </Accordion>
+  <Accordion title="Clear History" icon="trash">
+    Each history section has a **Clear History** button to remove all entries from that specific history list.
+  </Accordion>
+</AccordionGroup>
+
+## Credits
+
+Your total credit balance is displayed at the top of the interface. Generating voice previews (Voice Creator), converting speech (Speech to Speech), and cloning voices (Clone Voice) all consume credits.
+
+<Tip>
+  Click the **Buy More** button to purchase additional credits if needed.
+</Tip>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Detailed Voice Description (Voice Creator)" icon="pencil">
+    Provide a rich and specific description of the voice you want to create for better preview generation.
+  </Card>
+  <Card title="High-Quality Audio Samples (Clone Voice)" icon="volume-high">
+    Use clear, high-fidelity audio samples with minimal background noise for the best voice cloning results.
+  </Card>
+  <Card title="Accurate Voice ID (Speech to Speech)" icon="key">
+    Ensure the Voice ID you enter is correct for the target voice you want to convert to.
+  </Card>
+  <Card title="Manage Audio Lengths" icon="clock">
+    Be mindful of the maximum audio lengths for uploads (60s for Speech to Speech, no strict limit specified for Clone Voice but shorter, clean samples are better) and credit consumption.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+VoiceCraft offers a comprehensive suite of tools for AI voice manipulation. Whether you're creating a new voice from scratch, cloning an existing one, or converting audio, its intuitive interface and powerful AI models make advanced voice work accessible.
+

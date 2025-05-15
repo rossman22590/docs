@@ -1,0 +1,115 @@
+---
+title: 'ComposeCraft'
+description: 'Generate music from lyrics and reference audio using AI.'
+icon: 'guitar'
+---
+
+# ComposeCraft: AI-Powered Music Composition
+
+<Tip>
+  Transform your lyrics into a full song by providing reference audio with ComposeCraft!
+</Tip>
+
+## Overview
+
+ComposeCraft is an AI-driven tool that allows you to generate original music based on your provided lyrics and a reference audio track. By combining your lyrical ideas with the style or structure of existing audio, ComposeCraft helps you bring your musical vision to life. It's a straightforward process designed for lyricists, musicians, and anyone looking to create unique music with AI assistance.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/composecraft.png" alt="ComposeCraft Screenshot" />
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Lyrics Input" icon="pen-fancy">
+    Provide your own **lyrics** to guide the AI composition.
+  </Card>
+  <Card title="Reference Audio" icon="music">
+    Influence the musical style and structure using a **reference audio file or URL**.
+  </Card>
+  <Card title="AI Composition" icon="wand-magic-sparkles">
+    Generate a complete **audio track** combining lyrics and reference style.
+  </Card>
+  <Card title="Song History" icon="clock">
+    Keep track of your **generated songs** and download them.
+  </Card>
+</CardGroup>
+
+## How to Use ComposeCraft
+
+Follow these steps to compose music with ComposeCraft:
+
+<Steps>
+  <Step title="Enter Your Lyrics" icon="keyboard">
+    Input your song lyrics into the **Lyrics** text area.
+  </Step>
+  <Step title="Provide Reference Audio" icon="upload">
+    Choose how to provide reference audio:
+    - **Upload Reference Audio**: Click **Choose File** to upload an audio file from your device (MP3 or WAV recommended).
+    - **Reference Audio URL**: Enter the URL of an existing audio file online.
+  </Step>
+  <Step title="Compose Music" icon="play">
+    Click the **Compose Music** button. Ensure you have enough credits (20 credits per song). The AI will generate the music based on your lyrics and the reference audio.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+ComposeCraft requires your lyrics and a reference audio source:
+
+<ResponseField name="Lyrics" type="string" required>
+  Your song lyrics. Maximum 600 characters.
+</ResponseField>
+<ResponseField name="Upload Reference Audio" type="file">
+  Upload an audio file from your device to use as a reference.
+</ResponseField>
+<ResponseField name="Reference Audio URL" type="string" required>
+  Enter the URL of an audio file to use as a reference. Accepts .wav or .mp3 formats.
+</ResponseField>
+
+## Song History
+
+ComposeCraft saves your generated songs for easy access.
+
+<AccordionGroup>
+  <Accordion title="View History" icon="list">
+    Your generated songs will appear below the main interface.
+  </Accordion>
+  <Accordion title="Download Songs" icon="download">
+    Download individual songs as MP3 files.
+  </Accordion>
+  <Accordion title="Clear History" icon="trash">
+    Clear all generated songs from your history.
+  </Accordion>
+  <Accordion title="Download All" icon="arrow-down-to-bracket">
+    Download all songs in your history as a ZIP file.
+  </Accordion>
+</AccordionGroup>
+
+## Credits
+
+Generating music with ComposeCraft costs **20 credits per song**. Your current credit balance is displayed at the top left of the interface.
+
+<Tip>
+  Click the **Buy More** button to purchase additional credits if needed.
+</Tip>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Clear Lyrics" icon="pencil">
+    Ensure your lyrics are clear and well-formatted.
+  </Card>
+  <Card title="Relevant Reference Audio" icon="music">
+    Choose a reference audio track that has a musical style or structure similar to what you envision for your song.
+  </Card>
+  <Card title="High-Quality Audio" icon="volume-high">
+    Use a high-quality reference audio file for better results.
+  </Card>
+  <Card title="Experiment" icon="flask">
+    Try different reference audio tracks with the same lyrics to explore various musical interpretations.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+ComposeCraft provides a simple yet powerful way to turn your lyrics into music using AI and reference audio. Its intuitive interface and focus on core inputs make it an accessible tool for creative music composition.
+
