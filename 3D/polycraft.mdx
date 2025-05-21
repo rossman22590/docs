@@ -1,178 +1,321 @@
 ---
 title: 'PolyCraft'
-description: 'PolyCraft: Revolutionary Text and Image to 3D Generator'
+description: 'Generate stunning 3D models from text or images with advanced AI technology.'
 icon: 'cubes'
 ---
 
-### PolyCraft: Transforming Ideas into 3D Reality
+# PolyCraft: Revolutionary Text and Image to 3D Generator
 
-PolyCraft is a cutting-edge AI-powered tool that revolutionizes the creation of 3D models. By leveraging advanced algorithms, it transforms text descriptions and 2D images into high-quality, production-ready 3D objects. This innovative platform bridges the gap between imagination and tangible 3D creations, making it an invaluable asset for designers, animators, game developers, and 3D enthusiasts across various industries.
+<Tip>
+  Transform your ideas into stunning 3D models using cutting-edge AI technology with PolyCraft!
+</Tip>
 
-#### Key Features of PolyCraft
+## Overview
+
+PolyCraft is a cutting-edge AI-powered tool that revolutionizes the creation of 3D models. By leveraging advanced algorithms, it transforms text descriptions and 2D images into high-quality 3D objects. This innovative platform bridges the gap between imagination and tangible 3D creations, making it an invaluable asset for designers, animators, game developers, and 3D enthusiasts. PolyCraft also offers powerful post-processing options like **Animate**, **Stylize**, and **Convert** to enhance your generated models.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/polycraft-3dmodel-gen.png" alt="PolyCraft Main Screenshot" />
+</Frame>
+
 <CardGroup cols={2}>
-  <Card title="Dual Input Modes" icon="keyboard">
-    Generate 3D models from **detailed text prompts** or **uploaded images**, offering unparalleled flexibility in creation.
+  <Card title="Text to 3D" icon="keyboard">
+    Generate 3D models from **detailed text prompts**.
   </Card>
-  <Card title="Lightning-Fast Generation" icon="bolt">
-    Create intricate 3D models **within seconds**, dramatically reducing production time and accelerating workflows.
+  <Card title="Image to 3D" icon="image">
+    Transform **uploaded images** into 3D models.
   </Card>
-  <Card title="Advanced Model Refinement" icon="wand-magic-sparkles">
-    **Enhance and refine** generated models with AI-powered tools for improved clarity, detail, and overall quality.
-  </Card>
-  <Card title="Versatile Animation Integration" icon="film">
-    Breathe life into static models with **built-in animation options**, supporting various formats and motion types.
+  <Card title="Post-Processing Options" icon="wand-magic-sparkles">
+    **Animate, Stylize, and Convert** generated models.
   </Card>
   <Card title="Multi-Format Export" icon="file-export">
-    **Convert and export** your 3D creations in multiple industry-standard formats, ensuring compatibility across different software and platforms.
-  </Card>
-  <Card title="Creative Stylization" icon="palette">
-    Apply unique **artistic styles** to your 3D models, transforming them into Lego, voxel, Minecraft, or other creative interpretations.
+    Download models in **various industry-standard formats**.
   </Card>
 </CardGroup>
 
-#### Mastering the Art of Prompting in PolyCraft
+## How to Use PolyCraft
 
-Effective prompting is crucial for achieving the desired results in PolyCraft. This section provides in-depth guidance on crafting powerful prompts that will unlock the full potential of the AI.
+PolyCraft offers two main input methods: Text to 3D and Image to 3D.
+
+<Steps>
+  <Step title="Choose Input Method" icon="upload">
+    Decide whether you'll use a text prompt or upload an image as your starting point.
+  </Step>
+  <Step title="Provide Input" icon="pen-to-square">
+    - For **Text to 3D**: Enter a text prompt.
+    - For **Image to 3D**: Upload an image file.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure parameters like **Model Version**, **Texture Quality**, **Style**, **Negative Prompt**, **Seed**, **Face Limit**, **Texture**, and **PBR**.
+  </Step>
+  <Step title="Generate" icon="play">
+    Click the **Generate** button.
+  </Step>
+</Steps>
+
+### Text to 3D Mode
+
+Generate a 3D model from a text description.
+
+<Steps>
+  <Step title="Select Text to 3D" icon="keyboard">
+    Ensure you are in Text to 3D mode (usually the default or selectable via a toggle/tab).
+  </Step>
+  <Step title="Enter Prompts" icon="pencil">
+    Enter a **Prompt** describing the model. You can also add a **Negative Prompt** to exclude elements.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure **Model Version**, **Texture Quality**, **Style**, **Model Seed (optional)**, **Face Limit**, **Texture**, and **PBR**.
+  </Step>
+  <Step title="Generate" icon="play">
+    Click **Generate**.
+  </Step>
+</Steps>
+
+### Image to 3D Mode
+
+Generate a 3D model from a single image.
+
+<Steps>
+  <Step title="Select Image to 3D" icon="image">
+    Choose Image to 3D mode (usually selectable via a toggle/tab).
+  </Step>
+  <Step title="Upload Image" icon="upload">
+    Click **Choose File** and upload your image file (JPG or PNG).
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure **Model Version**, **Texture Quality**, **Style**, **Model Seed (optional)**, **Face Limit**, **Texture**, and **PBR**.
+  </Step>
+  <Step title="Generate" icon="play">
+    Click **Generate**.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+PolyCraft offers various parameters for generation:
+
+<ResponseField name="Prompt" type="string">
+  (Text to 3D) Text description of the desired 3D model.
+</ResponseField>
+<ResponseField name="Or upload an image" type="file">
+  (Image to 3D) Upload an image file (JPG or PNG).
+</ResponseField>
+<ResponseField name="Model Version" type="Enum">
+  Choose the AI model version (e.g., `v2.5-20250123`, `v2.0-20240919`, `v1.4-20240625`).
+</ResponseField>
+<ResponseField name="Texture Quality" type="Enum">
+  Choose the quality of the generated textures (`Standard`, `Detailed`).
+</ResponseField>
+<ResponseField name="Style" type="Enum">
+  Select an artistic style (e.g., `Steampunk`, `Cartoon Character`, `Clay`).
+</ResponseField>
+<ResponseField name="Model Seed (optional)" type="string">
+  Enter a seed for model consistency.
+</ResponseField>
+<ResponseField name="Negative Prompt" type="string">
+  Text description for elements to avoid.
+</ResponseField>
+<ResponseField name="Face Limit" type="integer">
+  Set the maximum number of faces (complexity).
+</ResponseField>
+<ResponseField name="Texture" type="boolean">
+  Toggle to generate with textures.
+</ResponseField>
+<ResponseField name="PBR" type="boolean">
+  Toggle to enable Physically Based Rendering textures.
+</ResponseField>
+
+## Generated Models / History
+
+PolyCraft keeps a history of your generated 3D models.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/view-history.png" alt="PolyCraft View History Screenshot" />
+</Frame>
 
 <AccordionGroup>
-  <Accordion title="Understanding Prompt Structure" icon="layer-group">
-    A well-structured prompt typically includes:
-    - **Subject**: The main object or character you want to create.
-    - **Attributes**: Specific characteristics, materials, or styles.
-    - **Context**: The environment or setting of the object.
-    - **Perspective**: The angle or view of the 3D model.
-    - **Style**: Any particular artistic or design style you want to apply.
-
-    Example: "A sleek, futuristic sports car with glossy red paint and chrome accents, parked in a neon-lit cityscape, viewed from a low front three-quarter angle, in a hyper-realistic style."
+  <Accordion title="Show History" icon="clock">
+    Click the **Show History** button to open the history sidebar on the left.
   </Accordion>
-  <Accordion title="Detailing Techniques" icon="magnifying-glass">
-    - **Be Specific**: Instead of "a chair," use "a mid-century modern lounge chair with teak wood frame and olive green upholstery."
-    - **Use Descriptive Adjectives**: Incorporate words like "weathered," "iridescent," or "angular" to add depth to your description.
-    - **Reference Materials**: Mention specific materials like "brushed aluminum," "Moroccan leather," or "Venetian glass" for accurate texturing.
-    - **Include Measurements**: When relevant, provide approximate sizes or proportions to guide the AI.
+  <Accordion title="Generated Models List" icon="list">
+    See a list of your previously generated models with thumbnails and basic info.
   </Accordion>
-  <Accordion title="Stylistic Guidance" icon="paintbrush">
-    - **Artistic Styles**: Reference specific art movements or styles, e.g., "in the style of Art Nouveau" or "with a cyberpunk aesthetic."
-    - **Lighting and Mood**: Describe the lighting conditions or mood, such as "bathed in warm sunset light" or "with an eerie, fog-shrouded atmosphere."
-    - **Time Period**: Specify historical or futuristic contexts to influence the design, like "a 1950s diner interior" or "a 22nd-century space habitat."
+  <Accordion title="View Model" icon="eye">
+    Select a model from the history to view it in the 3D viewer.
   </Accordion>
-  <Accordion title="Leveraging Negative Prompts" icon="ban">
-    Use negative prompts to refine your results:
-    - Exclude unwanted elements: "No wheels, no windows"
-    - Avoid certain styles: "Not cartoonish, not low-poly"
-    - Refine materials: "Avoid metallic textures, no glossy surfaces"
-    
-    Example: "A tree house in a giant oak tree, with multiple levels connected by rope bridges. Negative: No modern materials, no square windows, not symmetrical."
+  <Accordion title="Post-Processing Options" icon="wand-magic-sparkles">
+    Access options like **Animate**, **Convert**, and **Stylize** under each model in the history.
   </Accordion>
-  <Accordion title="Prompt Iteration Strategies" icon="rotate">
-    - Start broad and refine: Begin with a general concept and iterate with more specific details.
-    - A/B testing: Create variations of your prompt to compare results and identify effective descriptors.
-    - Combine successful elements: Take the best aspects from different generations and combine them into a new, refined prompt.
+  <Accordion title="Download" icon="download">
+    Download the model (see Download section below).
+  </Accordion>
+  <Accordion title="Send to Gallery" icon="share">
+    Share your generated model to a community gallery.
+  </Accordion>
+  <Accordion title="Clear All Models" icon="trash">
+    Clear all generated models from your history.
   </Accordion>
 </AccordionGroup>
 
-#### Step-by-Step Guide to Using PolyCraft
+## Post-Processing Options
 
-Follow these comprehensive steps to harness the full power of PolyCraft for your 3D projects.
+PolyCraft offers several advanced post-processing options available from the history sidebar under each generated model.
 
-<AccordionGroup>
-  <Accordion title="Step 1: Initialize Your Project" icon="flag-checkered">
-    Begin by accessing PolyCraft through your preferred platform or software integration. Ensure you have a clear concept of what you want to create before proceeding.
-  </Accordion>
-  <Accordion title="Step 2: Choose Input Method" icon="hand-pointer">
-    Decide whether you'll use a text prompt or upload an image as your starting point. For text prompts, refer to the "Mastering the Art of Prompting" section above. For image uploads, ensure your image is high-quality and clearly represents the desired 3D outcome.
-    ![Input Selection](https://img.mytsi.org/i/taSU827.png)
-  </Accordion>
-  <Accordion title="Step 3: Fine-tune Generation Settings" icon="sliders">
-    Adjust the following parameters to customize your output:
-    - **Model Version**: Choose between 2.0, 1.4, or 1.3. Note that 2.0 models cannot be refined later.
-    - **Negative Prompt**: Specify elements to exclude from the generation.
-    - **Seed**: Use a specific seed for reproducible results or randomize for variety.
-    - **Face Limit**: Set the maximum number of faces for your 3D model to manage complexity.
-    ![Generation Settings](https://img.mytsi.org/i/52lx829.png)
-  </Accordion>
-  <Accordion title="Step 4: Generate the Model" icon="play">
-    Click the "Generate" button to initiate the AI-powered creation process. The system will process your input and settings, typically producing results within seconds. Your generated 3D model will appear in the viewport on the right side of the interface.
-    ![3D Viewport](https://img.mytsi.org/i/pUkQ830.png)
-  </Accordion>
-  <Accordion title="Step 5: Review and Iterate" icon="magnifying-glass-chart">
-    Carefully examine the generated model in the 3D viewport. Rotate, zoom, and pan to inspect all aspects of the creation. If the result doesn't meet your expectations, return to steps 2 and 3 to adjust your input or settings and generate a new version.
-  </Accordion>
-  <Accordion title="Step 6: Access Advanced Processing" icon="wand-magic-sparkles">
-    Once satisfied with the base model, explore additional processing options in the history panel. Here you can access refining, animation, conversion, and stylization features to further enhance your 3D creation.
-    ![Model History](https://img.mytsi.org/i/ZREe831.png)
-  </Accordion>
-</AccordionGroup>
+### Animate Model
 
-#### Advanced Processing Options
+Add dynamic movement to a compatible generated model.
 
-Take your 3D models to the next level with PolyCraft's sophisticated processing features.
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/animate-format.png" alt="PolyCraft Animate Model Modal Screenshot" />
+</Frame>
 
-<AccordionGroup>
-  <Accordion title="Refine: Enhancing Model Quality" icon="brush">
-    Use the refinement option to improve the clarity, detail, and overall quality of your generated model. This process can sharpen edges, smooth surfaces, and enhance textures for a more polished result.
-    ![Refine Option](https://img.mytsi.org/i/yUWN832.png)
-  </Accordion>
-  <Accordion title="Animate: Bringing Models to Life" icon="person-walking">
-    Add dynamic movement to your static models:
-    - Choose between GLB and FBX formats for wide compatibility.
-    - Select from predefined animation types: run, walk, and dive.
-    - Customize animation parameters for speed, duration, and style.
-    ![Animation Options](https://img.mytsi.org/i/ino3833.png)
-  </Accordion>
-  <Accordion title="Convert: Format Flexibility" icon="rotate">
-    Transform your 3D model into various industry-standard formats:
-    - Available formats: GLTF, USDZ, FBX, OBJ, STL
-    - Adjust texture sizes up to 4K for high-resolution detail.
-    - Modify scale factors to ensure proper sizing across different platforms.
-    ![Conversion Options](https://img.mytsi.org/i/yreN834.png)
-  </Accordion>
-  <Accordion title="Stylize: Creative Transformations" icon="paintbrush">
-    Apply unique artistic styles to your 3D models:
-    - Lego: Transform your model into a brick-built version.
-    - Voxel: Create a blocky, retro-inspired interpretation.
-    - Voronoi: Apply an organic, cell-like structure to your model.
-    - Minecraft: Reimagine your creation in the iconic block style of Minecraft.
-    Note: Some stylization options may result in non-3D formats.
-    ![Stylization Options](https://img.mytsi.org/i/kEYV828.png)
-  </Accordion>
-</AccordionGroup>
+<Steps>
+  <Step title="Select Animate" icon="play">
+    From the history sidebar, click the **Animate** option under a generated model. This will open the Animate Model modal.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the animation parameters:
+    - **Output Format**: Choose the output file format (GLB, FBX).
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/animate-format.png" alt="PolyCraft Animate Output Format Screenshot" />
+    </Frame>
+    - **Animation Type**: Select a predefined animation (Idle, Walk, Climb, Jump, Run, Slash, Shoot, Hurt, Fall, Turn).
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/animation-type.png" alt="PolyCraft Animation Type Screenshot" />
+    </Frame>
+  </Step>
+  <Step title="Animate" icon="play">
+    Click the **Animate** button in the modal. The AI will process the model to add the selected animation.
+  </Step>
+</Steps>
 
-#### Pro Tips for Optimal Results
+### Animate Parameters:
 
-Maximize the potential of PolyCraft with these expert recommendations.
+<ResponseField name="Output Format" type="Enum" required>
+  The desired output file format for the animated model: `GLB`, `FBX`.
+</ResponseField>
+<ResponseField name="Animation Type" type="Enum" required>
+  Select a predefined animation: `Idle`, `Walk`, `Climb`, `Jump`, `Run`, `Slash`, `Shoot`, `Hurt`, `Fall`, `Turn`.
+</ResponseField>
 
-<AccordionGroup>
-  <Accordion title="Master the Art of Prompting" icon="jedi">
-    Invest time in crafting detailed, descriptive prompts. The more specific and vivid your text input, the closer the AI can match your vision. Experiment with different phrasings and descriptors to find what works best.
-  </Accordion>
-  <Accordion title="Leverage Model Versions Strategically" icon="code-branch">
-    Understand the strengths of each model version:
-    - 2.0: Latest and most advanced, best for complex, detailed models.
-    - 1.4: Good balance of speed and quality, ideal for iterative work.
-    - 1.3: Faster processing, suitable for quick conceptual models.
-  </Accordion>
-  <Accordion title="Iterate and Refine" icon="rotate">
-    Don't settle for the first generation. Use the history feature to compare different versions, combining the best aspects of multiple generations in your prompts or post-processing.
-  </Accordion>
-  <Accordion title="Optimize for End-Use" icon="bullseye">
-    Consider the final application of your 3D model when choosing conversion formats and animation options. Different platforms and software have varying requirements, so tailor your output accordingly.
-  </Accordion>
-  <Accordion title="Explore Stylization Creatively" icon="lightbulb">
-    Use the stylization options not just for their intended styles, but as creative tools. For example, applying and then reverting a style can lead to interesting textural effects on your model.
-  </Accordion>
-</AccordionGroup>
+### Stylize Model
 
-#### Why Choose PolyCraft?
+Apply unique artistic styles to a generated model.
 
-PolyCraft stands out in the world of 3D creation tools for several compelling reasons:
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/stylization-type.png" alt="PolyCraft Stylize Model Modal Screenshot" />
+</Frame>
 
-- **Unparalleled Speed**: Transform concepts into 3D models in seconds, dramatically accelerating the design and prototyping process.
-- **AI-Powered Precision**: Leverage advanced AI algorithms to create accurate, detailed models that closely match your descriptions or reference images.
-- **Versatile Input Methods**: Flexibility to generate models from both textual descriptions and image inputs, catering to different creative processes.
-- **Comprehensive Toolset**: From initial generation to refinement, animation, and stylization, PolyCraft offers a complete suite of tools for 3D creation and manipulation.
-- **Accessibility**: Powerful enough for professionals yet intuitive for beginners, PolyCraft democratizes high-quality 3D model creation.
-- **Integration Ready**: With support for multiple export formats, PolyCraft seamlessly fits into existing workflows and software ecosystems.
-- **Continuous Innovation**: Regular updates and new features ensure that PolyCraft remains at the cutting edge of AI-powered 3D generation technology.
+<Steps>
+  <Step title="Select Stylize" icon="paintbrush">
+    From the history sidebar, click the **Stylize** option under a generated model. This will open the Stylize Model modal.
+  </Step>
+  <Step title="Select Stylization Type" icon="list-ul">
+    Choose the desired style from the **Stylization Type** dropdown: **Lego**, **Voxel**, **Voronoi**, or **Minecraft**.
+  </Step>
+  <Step title="Adjust Settings (Minecraft)" icon="sliders">
+    If you select **Minecraft**, an additional setting for **Block Size** will be available.
+  </Step>
+  <Step title="Stylize" icon="play">
+    Click the **Stylize** button in the modal. The AI will process the model to apply the selected style.
+  </Step>
+</Steps>
 
-Whether you're a professional designer, a game developer, an animator, or a 3D printing enthusiast, PolyCraft provides a powerful, efficient, and innovative platform to transform your creative visions into stunning 3D realities.
+### Stylize Parameters:
+
+<ResponseField name="Stylization Type" type="Enum" required>
+  Select the artistic style: `Lego`, `Voxel`, `Voronoi`, `Minecraft`.
+</ResponseField>
+<ResponseField name="Block Size" type="integer">
+  (If Stylization Type is `Minecraft`) Set the size of the blocks.
+</ResponseField>
+
+### Convert Model
+
+Convert a model to various formats with options for remeshing, flattening, and scaling.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/convert-modal.png" alt="PolyCraft Convert Model Modal Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select Convert" icon="arrows-pointing-out">
+    From the history sidebar, click the **Convert** option under a generated model. This will open the Convert Model modal.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the conversion parameters:
+    - **Output Format**: Choose the output file format (GLTF, USDZ, FBX, OBJ, STL).
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/convert-format.png" alt="PolyCraft Convert Output Format Screenshot" />
+    </Frame>
+    - **Enable Quad Remeshing**: Toggle to remesh into quads.
+    - **Flatten Bottom**: Toggle to flatten the bottom of the model.
+    - **Texture Size**: Choose the texture resolution (1024, 2048, 4096).
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/convert-texture-size.png" alt="PolyCraft Convert Texture Size Screenshot" />
+    </Frame>
+    - **Texture Format**: Choose the texture image format (BMP, DPX, HDR, JPEG, OPEN_EXR, PNG, TARGA, TIFF, WEBP).
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/convert-texture-format.png" alt="PolyCraft Convert Texture Format Screenshot" />
+    </Frame>
+    - **Set Pivot to Center Bottom**: Toggle to set the pivot point.
+    - **Scale Factor**: Adjust the overall scale.
+  </Step>
+  <Step title="Convert" icon="play">
+    Click the **Convert** button in the modal. The AI will process the model with the new settings.
+  </Step>
+</Steps>
+
+### Convert Parameters:
+
+<ResponseField name="Output Format" type="Enum" required>
+  The desired output file format.
+</ResponseField>
+<ResponseField name="Enable Quad Remeshing" type="boolean">
+  Toggle to enable remeshing into quads.
+</ResponseField>
+<ResponseField name="Flatten Bottom" type="boolean">
+  Toggle to flatten the bottom of the model.
+</ResponseField>
+<ResponseField name="Texture Size" type="Enum">
+  Choose the texture resolution.
+</ResponseField>
+<ResponseField name="Texture Format" type="Enum">
+  Choose the texture image format.
+</ResponseField>
+<ResponseField name="Set Pivot to Center Bottom" type="boolean">
+  Toggle to set the pivot point to the center bottom.
+</ResponseField>
+<ResponseField name="Scale Factor" type="number">
+  Adjust the overall scale of the model.
+</ResponseField>
+
+
+## Troubleshooting
+
+If you encounter issues with PolyCraft, try these detailed solutions:
+
+1. **Poor Model Quality**:
+   - Refine your text prompts or use higher-quality input images. Adjust generation settings like Face Limit.
+   - For Text to 3D, experiment with Model Version, Texture Quality, Style, Negative Prompt, and Seed.
+   - For Image to 3D, ensure the subject is clear and well-lit.
+
+2. **Generation Errors**:
+   - Check your inputs for any unusual characters or overly complex descriptions.
+   - Ensure image files are valid and within limits.
+
+3. **Post-Processing Issues (Animate, Stylize, Convert)**:
+   - Ensure the original model was generated successfully.
+   - Check the parameters in the specific modal for valid inputs.
+   - Some post-processing options may have specific requirements (e.g., Animation may work best on humanoid models).
+
+4. **Download Issues**:
+   - Ensure you have a stable internet connection.
+   - Try a different format if one isn't working.
+   - Clear your browser cache and try again.
+
+## Conclusion
+
+PolyCraft provides a powerful and intuitive way to generate 3D models using AI, whether starting from text or images. With its flexible input types, detailed settings, and comprehensive post-processing tools, it empowers you to create, refine, and enhance 3D assets for various applications.
+

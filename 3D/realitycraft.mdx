@@ -1,0 +1,166 @@
+---
+title: 'RealityCraft'
+description: 'Generate realistic 3D models from images or text using advanced AI models.'
+icon: 'dice-d20'
+---
+
+# RealityCraft: AI-Powered Realistic 3D Model Generation
+
+<Tip>
+  Transform your images or text descriptions into highly realistic 3D models with RealityCraft!
+</Tip>
+
+## Overview
+
+RealityCraft is an advanced AI tool focused on generating realistic 3D models. It supports creating models from single images or multiple views (Multiview), as well as from text prompts for various object types. Leveraging powerful AI models with Turbo capabilities, RealityCraft provides fine-grained control over the generation process, including advanced settings for mesh detail and texture.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/realitycraft.png" alt="RealityCraft Screenshot" />
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Image to 3D" icon="image">
+    Generate realistic 3D models from a **single 2D image** or **multiple views**.
+  </Card>
+  <Card title="Text to 3D" icon="keyboard">
+    Create 3D models from **text descriptions** for various object types.
+  </Card>
+  <Card title="Advanced Settings" icon="sliders">
+    Control **inference steps, guidance scale, resolution**, and **textured mesh** options.
+  </Card>
+  <Card title="Turbo Mode" icon="bolt">
+    Enable **Turbo** for potentially faster generation.
+  </Card>
+</CardGroup>
+
+## How to Use RealityCraft
+
+Follow these steps to generate 3D models with RealityCraft:
+
+<Steps>
+  <Step title="Select Model Type" icon="list-ul">
+    Choose the generation method from the **Model Type** dropdown:
+    - **Mini** or **Standard**: Generate from a single image.
+    - **Multi-View**: Generate from multiple images (front, back, left).
+  </Step>
+  <Step title="Enable Turbo (Optional)" icon="toggle-on">
+    Toggle the **Turbo On** switch for potentially faster generation.
+  </Step>
+  <Step title="Provide Input Image(s)" icon="upload">
+    - For **Mini** or **Standard**: Click to **Upload Image** and select your source image file.
+    - For **Multi-View**: You can either **Upload a single image** and click **Generate Multi-View Images** to have AI generate the other views, or manually **Upload images** for the Front, Back, and Left views.
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the available settings, including **Seed (Optional)** and **Advanced Settings** (Inference Steps, Guidance Scale, Octree Resolution, Textured Mesh).
+  </Step>
+  <Step title="Generate 3D Model" icon="play">
+    Click the **Generate 3D Model** button. The AI will process your input and settings to create your 3D model.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+RealityCraft offers various parameters based on the selected **Model Type**:
+
+<ResponseField name="Model Type" type="Enum" required>
+  Choose the underlying AI model: `mini`, `standard`, or `multiview`.
+</ResponseField>
+<ResponseField name="Turbo On" type="boolean">
+  Toggle to enable Turbo mode for faster generation.
+</ResponseField>
+
+### Input Image(s):
+
+<ResponseField name="Upload Image" type="file">
+  (Model Type: `mini`, `standard`) Upload the single 2D image file to convert.
+</ResponseField>
+<ResponseField name="Generate Multi-View Images Button" type="button">
+  (Model Type: `multiview`) Generates front, back, and left views from a single uploaded image.
+</ResponseField>
+<ResponseField name="Upload Front/Back/Left Image" type="file">
+  (Model Type: `multiview`) Manually upload images for the front, back, and left views.
+</ResponseField>
+
+### Basic Settings:
+
+<ResponseField name="Seed (Optional)" type="string">
+  Enter a seed number for reproducible results. Leave empty for a random seed.
+</ResponseField>
+
+### Advanced Settings:
+
+<ResponseField name="Inference Steps" type="integer">
+  Controls the detail and refinement of the mesh generation. Range: 10-50. Default: 50.
+</ResponseField>
+<ResponseField name="Guidance Scale" type="float">
+  Controls how closely the generation adheres to the input image(s). Range: 1-20. Default: 7.5.
+</ResponseField>
+<ResponseField name="Octree Resolution" type="integer">
+  Influences the resolution and detail of the generated mesh structure. Range: 128-512 (steps of 16). Default: 256.
+</ResponseField>
+<ResponseField name="Textured Mesh" type="boolean">
+  Toggle to generate the model with textures. Default: true.
+</ResponseField>
+
+## Generated Models / History
+
+RealityCraft keeps a history of your generated 3D models.
+
+<AccordionGroup>
+  <Accordion title="History" icon="clock">
+    Click the **History** button to open the history sidebar on the right.
+  </Accordion>
+  <Accordion title="Generated Models List" icon="list">
+    See a list of your previously generated models with thumbnails.
+  </Accordion>
+  <Accordion title="View Model" icon="eye">
+    Select a model from the history to view it in the 3D viewer on the right.
+  </Accordion>
+  <Accordion title="Download Model" icon="download">
+    Download individual models (GLB, FBX, USDZ) or all formats as a ZIP.
+  </Accordion>
+  <Accordion title="Send to Gallery" icon="share">
+    Share your generated model to a community gallery.
+  </Accordion>
+  <Accordion title="Clear All Models" icon="trash">
+    Clear all generated models from your history.
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="High-Quality Input" icon="image">
+    Use clear, well-lit images as your source, especially for Mini and Standard models.
+  </Card>
+  <Card title="Multiple Views (Multiview)" icon="object-group">
+    For Multiview, ensure the front, back, and left images clearly show the object from those perspectives. Using the AI generator can help ensure consistency.
+  </Card>
+  <Card title="Experiment with Settings" icon="sliders">
+    Adjust Inference Steps, Guidance Scale, and Octree Resolution to find the optimal balance of quality and detail for your specific image.
+  </Card>
+  <Card title="Consider Turbo" icon="bolt">
+    Use Turbo mode for faster results when iterating, but compare quality with the non-Turbo version if needed.
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with RealityCraft, consider these solutions:
+
+<AccordionGroup>
+  <Accordion title="Poor Model Quality" icon="cube-slash">
+    Ensure your input image(s) are high-quality and clearly show the object. Try adjusting Advanced Settings like Inference Steps, Guidance Scale, and Octree Resolution.
+  </Accordion>
+  <Accordion title="Generation Errors" icon="bug">
+    Check your input image file format and size. If using Multiview, ensure all three required images are uploaded or generated.
+  </Accordion>
+  <Accordion title="Multiview Generation Issues" icon="viewfinder">
+    If the AI-generated multiview images are not satisfactory, try uploading a different initial image or manually uploading your own front, back, and left views.
+  </Accordion>
+</AccordionGroup>
+
+## Conclusion
+
+RealityCraft provides a powerful and intuitive way to generate realistic 3D models using AI from images. With its flexible input options and detailed settings, it empowers you to transform 2D visuals into compelling 3D assets.
+

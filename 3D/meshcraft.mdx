@@ -1,0 +1,205 @@
+---
+title: 'MeshCraft'
+description: 'Generate 3D models from text or images using advanced AI technology.'
+icon: 'dice-d6'
+---
+
+# MeshCraft: AI-Powered 3D Model Generation
+
+<Tip>
+  Transform your ideas into stunning 3D models using cutting-edge AI technology with MeshCraft!
+</Tip>
+
+## Overview
+
+MeshCraft is a powerful AI-driven tool that allows you to generate 3D models from text descriptions or images. This innovative platform offers a seamless way to bring your creative visions to life in three dimensions, suitable for game development, animation, virtual reality, and more.
+
+<CardGroup cols={2}>
+  <Card title="Text-to-3D" icon="keyboard">
+    Generate intricate 3D models from detailed text descriptions.
+  </Card>
+  <Card title="Image-to-3D" icon="image">
+    Transform 2D images into fully-realized 3D models with ease.
+  </Card>
+  <Card title="Customizable Options" icon="sliders">
+    Fine-tune your models with various settings like seed, texture size, variability, and creative modes.
+  </Card>
+  <Card title="Multiple Export Formats" icon="file-export">
+    Download your models in various industry-standard formats (GLB, FBX, USDZ, ZIP).
+  </Card>
+</CardGroup>
+
+## How to Use MeshCraft
+
+Follow these comprehensive steps to create your 3D model:
+
+<Steps>
+  <Step title="Select Input Type" icon="upload">
+    Choose between **IMAGE TO 3D** or a text-based type (like GENERAL, OBJECT, ANIMAL, HUMAN) from the **Select Type** dropdown.
+  </Step>
+  <Step title="Provide Input" icon="pen-to-square">
+    - For **IMAGE TO 3D**: Upload an image file.
+    - For text-based types: Enter a text prompt (or multiple prompts depending on the type).
+  </Step>
+  <Step title="Adjust Settings" icon="sliders">
+    Configure the available parameters based on your selected type (see Input Parameters section below).
+  </Step>
+  <Step title="Generate 3D Model" icon="play">
+    Click the **Generate 3D Model** button. The AI will process your input and settings to create your 3D model.
+  </Step>
+</Steps>
+
+### Image to 3D Mode
+
+This mode allows you to generate a 3D model directly from a 2D image.
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/meshcraft-imageto3d.png" alt="MeshCraft Image to 3D Screenshot" />
+</Frame>
+
+<Steps>
+  <Step title="Select IMAGE TO 3D" icon="image">
+    From the **Select Type** dropdown, choose **IMAGE TO 3D**.
+  </Step>
+  <Step title="Upload Image" icon="upload">
+    Click **Upload Image** and select the image file you want to convert to 3D. Wait for the upload to complete.
+  </Step>
+  <Step title="Set Seed" icon="seedling">
+    Enter a **Seed** number for reproducible results.
+  </Step>
+  <Step title="Select Texture Size" icon="expand">
+    Choose the desired **Texture Size** for the model's surface details (e.g., 1024).
+  </Step>
+  <Step title="Generate 3D Model" icon="play">
+    Click the **Generate 3D Model** button.
+  </Step>
+</Steps>
+
+### Text to 3D Mode (General Example)
+
+This mode allows you to generate a 3D model from a text description. The available prompts and settings vary depending on the specific text-based type selected (GENERAL, OBJECT, ANIMAL, HUMAN).
+
+<Steps>
+  <Step title="Select Text Type" icon="keyboard">
+    From the **Select Type** dropdown, choose a text-based type like **GENERAL**.
+  </Step>
+  <Step title="Enter Prompt" icon="pencil">
+    In the **Prompt** field, enter a text description of the 3D model you want to generate.
+  </Step>
+  <Step title="Adjust Settings (Optional)" icon="sliders">
+    Depending on the selected type (e.g., OBJECT, ANIMAL, HUMAN), additional prompt fields (like Mesh Prompt, Paint Prompts) and settings (like Mesh Variability, Creative, Animation Type/Prompt) may become available for more detailed control.
+  </Step>
+  <Step title="Generate 3D Model" icon="play">
+    Click the **Generate 3D Model** button.
+  </Step>
+</Steps>
+
+## Input Parameters and Options
+
+The available parameters in MeshCraft depend on the selected **Select Type**:
+
+<ResponseField name="Select Type" type="Enum" required>
+  Choose the generation method: `GENERAL`, `OBJECT`, `ANIMAL`, `HUMAN`, or `IMAGE TO 3D`.
+</ResponseField>
+
+### Image to 3D Specific:
+
+<ResponseField name="Upload Image" type="file" required>
+  The 2D image file to convert into a 3D model.
+</ResponseField>
+<ResponseField name="Seed" type="integer">
+  A number for reproducible results. Default: 1.
+</ResponseField>
+<ResponseField name="Texture Size" type="integer">
+  The resolution of the generated texture map (e.g., 256, 512, 1024, 2048). Default: 1024.
+</ResponseField>
+
+### Text to 3D Specific (Parameters vary by selected text type):
+
+<ResponseField name="Prompt" type="string" required>
+  (Type: GENERAL) Text description of the desired 3D model.
+</ResponseField>
+<ResponseField name="Mesh Prompt" type="string" required>
+  (Type: OBJECT, ANIMAL, HUMAN) Text description focused on the mesh/structure.
+</ResponseField>
+<ResponseField name="Positive Paint Prompt" type="string" required>
+  (Type: OBJECT, ANIMAL, HUMAN) Text description for desired textures/colors.
+</ResponseField>
+<ResponseField name="Negative Paint Prompt" type="string" required>
+  (Type: OBJECT, ANIMAL, HUMAN) Text description for textures/colors to avoid.
+</ResponseField>
+<ResponseField name="Mesh Variability" type="integer">
+  (Type: OBJECT, ANIMAL, HUMAN) Controls how much the mesh varies from the prompt (1: Precise, 2: Default, 3: Creative).
+</ResponseField>
+<ResponseField name="Creative Generation" type="boolean">
+  (Type: OBJECT, ANIMAL, HUMAN) Toggle for more creative interpretation.
+</ResponseField>
+<ResponseField name="Animation Type" type="Enum">
+  (Type: HUMAN) Select animation options: `none`, `rig_only`, `animate`.
+</ResponseField>
+<ResponseField name="Animation Prompt" type="string">
+  (Type: HUMAN) Text description for the desired animation.
+</ResponseField>
+
+## Generated Models / History
+
+MeshCraft keeps a history of your generated 3D models.
+
+<AccordionGroup>
+  <Accordion title="Show History" icon="clock">
+    Click the **Show History** button to open the history sidebar on the left.
+  </Accordion>
+  <Accordion title="Generated Models List" icon="list">
+    See a list of your previously generated models with thumbnails.
+  </Accordion>
+  <Accordion title="View Model" icon="eye">
+    Select a model from the history to view it in the 3D viewer on the right.
+  </Accordion>
+  <Accordion title="Download Model" icon="download">
+    Download individual models in various formats (GLB, FBX, USDZ) or all formats as a ZIP.
+  </Accordion>
+  <Accordion title="Send to Gallery" icon="share">
+    Share your generated model to a community gallery (e.g., Discord webhook).
+  </Accordion>
+  <Accordion title="Clear All Models" icon="trash">
+    Clear all generated models from your history.
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Clear Inputs" icon="pencil">
+    Provide clear and specific text descriptions or high-quality images for better results.
+  </Card>
+  <Card title="Experiment with Types" icon="shuffle">
+    Try both Image to 3D and different Text to 3D types to see which works best for your concept.
+  </Card>
+  <Card title="Adjust Variability/Creative (Text)" icon="sliders">
+    Experiment with Mesh Variability and Creative Generation to control the AI's interpretation in text-based modes.
+  </Card>
+  <Card title="Use Appropriate Texture Size (Image)" icon="expand">
+    Select a texture size suitable for your model's intended use (higher for detail, lower for performance).
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with MeshCraft, consider these solutions:
+
+<AccordionGroup>
+  <Accordion title="Poor Model Quality" icon="cube-slash">
+    Refine your text prompts with more detail or try different phrasing. Ensure your input image is clear and well-lit for Image to 3D. Experiment with Mesh Variability and Creative settings.
+  </Accordion>
+  <Accordion title="Generation Errors" icon="bug">
+    Check your inputs for any unusual characters or overly complex descriptions. Ensure your image file is valid for Image to 3D.
+  </Accordion>
+  <Accordion title="Upload Issues (Image to 3D)" icon="upload-slash">
+    Ensure your image file is in a supported format and size. Check your internet connection.
+  </Accordion>
+</AccordionGroup>
+
+## Conclusion
+
+MeshCraft provides a powerful and intuitive way to generate 3D models using AI, whether starting from a text description or an image. With its flexible input types and customizable settings, you can explore the possibilities of AI-driven 3D creation for various applications.
+

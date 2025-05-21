@@ -324,7 +324,9 @@
           "group": "3D",
           "pages": [
             "3D/objectcraft",
-            "3D/polycraft"
+            "3D/polycraft",
+            "3D/meshcraft",
+            "3D/realitycraft"
           ],
           "icon": "cube",
           "iconType": "solid"
