@@ -312,7 +312,6 @@
             "audio-gen/composecraft",
             "audio-gen/rhythmcraft",
             "audio-gen/wavecraft",
-            "audio-gen/audiocraft",
             "audio-gen/voicecraft",
             "audio-gen/voicecraftpro",
             "audio-gen/speechcraft"
