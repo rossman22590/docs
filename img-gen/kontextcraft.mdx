@@ -1,0 +1,186 @@
+---
+title: 'KontextCraft'
+description: 'Generate and edit images with KontextCraft, powered by Black Forest Labs'
+icon: 'atom'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/KontextCraft-1.png" alt="KontextCraft Screenshot" />
+</Frame>
+
+# KontextCraft: Unleash Your Creative Vision
+
+<Tip>
+  Step into a new era of image creation with KontextCraft! Powered by the latest models from Black Forest Labs, generate and edit images with unparalleled precision and control.
+</Tip>
+
+## Overview
+
+KontextCraft is a premier AI image generation and editing tool that leverages the power of **Black Forest Labs' Kontext models**. These models are renowned for their ability to produce high-quality images and provide a seamless editing experience. KontextCraft brings this capability to your fingertips, allowing you to generate stunning visuals and transform existing images with ease. Whether you're a professional artist or a hobbyist, KontextCraft provides the tools and flexibility to bring your creative ideas to life.
+
+## What Makes Kontext Special?
+
+The Kontext models are not just another set of image generation tools. They are built on a foundation of cutting-edge research and development, which gives them a number of unique advantages:
+
+<CardGroup cols={2}>
+  <Card title="In-Context Image Generation" icon="image">
+    Kontext models can be prompted with both text and images, allowing for a more intuitive and flexible workflow.
+  </Card>
+  <Card title="Seamless Editing" icon="pencil">
+    The models can seamlessly extract and modify visual concepts to produce new, coherent renderings.
+  </Card>
+  <Card title="High-Quality Outputs" icon="star">
+    Kontext models are known for their ability to produce high-quality images with excellent prompt following.
+  </Card>
+  <Card title="Robust Consistency" icon="shield-check">
+    The models allow for multiple successive edits with minimal visual drift, ensuring a consistent and coherent result.
+  </Card>
+</CardGroup>
+
+## Modes of Operation
+
+KontextCraft offers two primary modes of operation: **Generate** and **Edit**.
+
+### Generate Mode
+
+In Generate mode, you can create new images from scratch using text prompts. You can also upload an image to use as a starting point for the generation process.
+
+<AccordionGroup>
+  <Accordion title="Models" icon="layer-group">
+    - **DEV**: A versatile model that supports both text-to-image and image-to-image generation, as well as custom LoRAs.
+    - **PRO**: A high-quality model for generating detailed and realistic images.
+    - **MAX**: The most powerful model, capable of producing stunning, high-resolution images.
+  </Accordion>
+  <Accordion title="Settings" icon="sliders">
+    - **Image Size**: Choose from a variety of preset sizes or specify a custom resolution.
+    - **Seed**: Set a specific seed for reproducible results, or leave it empty for a random seed.
+    - **Guidance Scale**: Adjust how closely the AI follows your prompt.
+    - **Number of Images**: Generate up to four images at once.
+    - **Strength**: Control the influence of the input image when using image-to-image generation.
+    - **LoRAs**: Add custom LoRAs to the DEV model to create unique and personalized images.
+  </Accordion>
+</AccordionGroup>
+
+### Edit Mode
+
+In Edit mode, you can modify existing images using text prompts. You can also upload multiple images for batch editing.
+
+<AccordionGroup>
+  <Accordion title="Models" icon="layer-group">
+    - **DEV**: A versatile model that supports both single and multi-image editing, as well as custom LoRAs.
+    - **PRO**: A high-quality model for editing images with precision and control.
+    - **PRO-MULTI**: A version of the PRO model that is optimized for editing multiple images at once.
+    - **MAX**: The most powerful model, capable of producing stunning, high-resolution edits.
+    - **MAX-MULTI**: A version of the MAX model that is optimized for editing multiple images at once.
+  </Accordion>
+  <Accordion title="Settings" icon="sliders">
+    - **Aspect Ratio**: Choose from a variety of preset aspect ratios.
+    - **Seed**: Set a specific seed for reproducible results, or leave it empty for a random seed.
+    - **Guidance Scale**: Adjust how closely the AI follows your prompt.
+    - **Number of Images**: Generate up to four edited images at once.
+    - **LoRAs**: Add custom LoRAs to the DEV model to create unique and personalized edits.
+  </Accordion>
+</AccordionGroup>
+
+## Mastering Prompts for KontextCraft
+
+To achieve the best results with KontextCraft, focus on descriptive and specific prompts.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Be Specific" icon="pencil">
+    Use detailed keywords to describe the subject, style, and composition of your desired image.
+  </Accordion>
+  <Accordion title="Describe Lighting" icon="sun">
+    Specify the lighting conditions to create the mood and atmosphere you want.
+  </Accordion>
+  <Accordion title="Experiment" icon="lightbulb">
+    Try different combinations of keywords and settings to discover new styles and effects.
+  </Accordion>
+</AccordionGroup>
+
+## Prompt Examples
+
+### Generate
+
+<CardGroup cols={2}>
+  <Card title="A majestic lion with a flowing mane of fire">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(5).jpeg" alt="KontextCraft Example 1" />
+    ```text
+    A majestic lion with a flowing mane of fire, standing on a rocky outcrop overlooking a vast savanna at sunset.
+    ```
+  </Card>
+  <Card title="A futuristic cityscape">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(6).jpeg" alt="KontextCraft Example 2" />
+    ```text
+    A futuristic cityscape with towering skyscrapers, flying vehicles, and holographic advertisements, in a cyberpunk style.
+    ```
+  </Card>
+  <Card title="A whimsical forest scene">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(7).jpeg" alt="KontextCraft Example 3" />
+    ```text
+    A whimsical forest scene with glowing mushrooms, sparkling streams, and mythical creatures, in a fantasy art style.
+    ```
+  </Card>
+  <Card title="A photorealistic portrait">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(8).jpeg" alt="KontextCraft Example 4" />
+    ```text
+    A photorealistic portrait of an elderly woman with kind eyes and a gentle smile, capturing every wrinkle and detail.
+    ```
+  </Card>
+</CardGroup>
+
+### Edit
+
+<CardGroup cols={2}>
+  <Card title="Change the color of the car to a vibrant red">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(9).jpeg" alt="Before" />
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(13).jpeg" alt="After" />
+    ```text
+    Change the color of the car to a vibrant red.
+    ```
+  </Card>
+  <Card title="Add a pair of sunglasses to the man's face">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(10).jpeg" alt="Before" />
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(14).jpeg" alt="After" />
+    ```text
+    Add a pair of sunglasses to the man's face.
+    ```
+  </Card>
+  <Card title="Make the sky look like a beautiful sunset">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(11).jpeg" alt="Before" />
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(15).jpeg" alt="After" />
+    ```text
+    Make the sky look like a beautiful sunset.
+    ```
+  </Card>
+  <Card title="Remove the person from the background">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(12).jpeg" alt="Before" />
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(16).jpeg" alt="After" />
+    ```text
+    Remove the person from the background.
+    ```
+  </Card>
+</CardGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Choose the Right Model" icon="layer-group">
+    Select the model that best suits your needs, whether you're looking for speed, quality, or realism.
+  </Card>
+  <Card title="Use High-Quality Images" icon="image">
+    When editing, start with high-resolution images for the best results.
+  </Card>
+  <Card title="Experiment with Settings" icon="sliders">
+    Adjust the various parameters to fine-tune the output and explore creative variations.
+  </Card>
+  <Card title="Have Fun!" icon="sparkles">
+    Don't be afraid to experiment and try new things. The possibilities are endless!
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+KontextCraft provides a powerful and versatile platform for AI image generation and editing. By mastering the art of prompting and utilizing the available settings, you can unlock the full potential of this tool to create stunning visuals with exceptional quality.

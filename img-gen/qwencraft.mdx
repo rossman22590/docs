@@ -1,0 +1,169 @@
+---
+title: 'QwenCraft'
+description: 'Generate and edit images with QwenCraft, powered by Alibaba Cloud'
+icon: 'font'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/qwencraft.png" alt="QwenCraft Screenshot" />
+</Frame>
+
+# QwenCraft: Advanced AI Image Generation and Editing
+
+<Tip>
+  Unlock the power of Qwen-Image with QwenCraft! Create stunning images, edit with precision, and customize visuals with this open-source model from Alibaba.
+</Tip>
+
+## Overview
+
+QwenCraft is a cutting-edge AI platform that leverages Alibaba's powerful **Qwen-Image models** for both image generation and advanced editing. As an open-source model with an Apache 2.0 license, Qwen-Image is the go-to choice for companies and startups for image use cases. QwenCraft offers unique capabilities, particularly in text rendering and image editing, providing a versatile workflow for all your visual needs.
+
+## What Makes Qwen-Image Special?
+
+Qwen-Image is not just another image model. It's a powerful, open-source tool that excels in a variety of tasks, making it a top choice for developers and creators.
+
+<CardGroup cols={2}>
+  <Card title="Superior Text Rendering" icon="text">
+    Qwen-Image excels at complex text rendering, including multi-line layouts and fine-grained details in both English and Chinese.
+  </Card>
+  <Card title="Consistent Image Editing" icon="pencil">
+    Qwen-Image achieves exceptional performance in preserving both semantic meaning and visual realism during editing operations.
+  </Card>
+  <Card title="Strong Cross-Benchmark Performance" icon="trophy">
+    Qwen-Image consistently outperforms existing models across diverse generation and editing tasks.
+  </Card>
+  <Card title="Open Source" icon="code">
+    With an Apache 2.0 license, Qwen-Image is the go-to choice for companies and startups for image use cases.
+  </Card>
+</CardGroup>
+
+## Modes of Operation
+
+QwenCraft offers two primary modes of operation: **Generate** and **Edit**.
+
+### Generate Mode
+
+In Generate mode, you can create new images from scratch using text prompts.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired image.
+    - **Image Size**: Choose from a variety of preset sizes or specify a custom resolution.
+    - **Inference Steps**: Keep it around 20-30 for quick renders and 50 for final renders.
+    - **Guidance Scale**: Dictates how closely the image generation follows your prompt. The ideal number is between 4 to 5.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+    - **Output Format**: Choose between PNG and JPEG.
+    - **Acceleration**: Choose between none, regular, and high.
+  </Accordion>
+</AccordionGroup>
+
+### Edit Mode
+
+In Edit mode, you can modify existing images using text prompts.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired edits.
+    - **Image Size**: Choose from a variety of preset sizes or specify a custom resolution.
+    - **Inference Steps**: Keep it around 20-30 for quick renders and 50 for final renders.
+    - **Guidance Scale**: Dictates how closely the image generation follows your prompt. The ideal number is between 4 to 5.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+    - **Output Format**: Choose between PNG and JPEG.
+    - **Acceleration**: Choose between none, regular, and high.
+    - **Negative Prompt**: Specify elements to omit from the image.
+  </Accordion>
+</AccordionGroup>
+
+## Mastering Prompts for QwenCraft
+
+To achieve the best results with QwenCraft, focus on descriptive and specific prompts.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Text Edits" icon="text">
+    Use these for replacing or correcting text without breaking style.
+  </Accordion>
+  <Accordion title="Local Appearance Edits" icon="pencil">
+    Small, surgical changes to an object or clothing.
+  </Accordion>
+  <Accordion title="Global Style or Semantic Edits" icon="image">
+    Change the entire look but keep the structure intact.
+  </Accordion>
+  <Accordion title="Micro / Region Edits" icon="crop">
+    Target tiny details with precision.
+  </Accordion>
+  <Accordion title="Identity & Character Control" icon="user">
+    Preserve or swap identities without breaking features.
+  </Accordion>
+  <Accordion title="Poster & Composite Design" icon="palette">
+    For structured layouts and graphic design edits.
+  </Accordion>
+  <Accordion title="Camera & Lighting Controls" icon="camera">
+    Direct Qwen like a photographer.
+  </Accordion>
+</AccordionGroup>
+
+## Prompt Examples
+
+### Generate
+
+<CardGroup cols={2}>
+  <Card title="Generate Example 1">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/qwencraft_image%20(1).png" alt="QwenCraft Generate Example 1" />
+    ```text
+    A futuristic sports car, photorealistic style, parked under neon city lights, reflections on wet streets, cinematic lighting, "Night Racer" in metallic chrome text on the hood
+    ```
+  </Card>
+  <Card title="Generate Example 2">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/qwencraft_image%20(2).png" alt="QwenCraft Generate Example 2" />
+    ```text
+    A mystical dragon hovering above a sparkling waterfall under a starry sky.
+    ```
+  </Card>
+  <Card title="Generate Example 3">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/qwencraft_image%20(3).png" alt="QwenCraft Generate Example 3" />
+    ```text
+    A photorealistic portrait of an elderly woman with kind eyes and a gentle smile, capturing every wrinkle and detail.
+    ```
+  </Card>
+  <Card title="Generate Example 4">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/qwencraft_image%20(4).png" alt="QwenCraft Generate Example 4" />
+    ```text
+    Bookstore window display. A sign displays “New Arrivals This Week”. Below, a shelf tag with the text “Best-Selling Novels Here”.
+    ```
+  </Card>
+</CardGroup>
+
+### Edit
+
+<CardGroup cols={2}>
+  <Card title="Edit Example 1">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/qwencraft_image%20(4).png" alt="Before" />
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/qwencraft_image%20(5).png" alt="After" />
+    ```text
+    Replace the sign text with ‘GRAND OPENING’. Keep original font, size, color, and perspective. Do not alter background or signboard.
+    ```
+  </Card>
+</CardGroup>
+
+## Tips for Best Results
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="pencil">
+    Use detailed keywords to describe the subject, style, and composition of your desired image.
+  </Card>
+  <Card title="Use Quotes for Text" icon="text">
+    Put the exact words you want in double quotes to ensure they are rendered correctly.
+  </Card>
+  <Card title="Chain Your Edits" icon="link">
+    Don’t overload one edit. Chain 2–3 smaller edits instead for better results.
+  </Card>
+  <Card title="Use Negatives" icon="ban">
+    Use negatives to avoid distortion, warped text, and duplicate faces.
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+QwenCraft provides a powerful and versatile platform for AI image generation and editing. By mastering the art of prompting and utilizing the available settings, you can unlock the full potential of this tool to create stunning visuals with exceptional quality.
