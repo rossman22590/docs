@@ -303,7 +303,18 @@
             "video/talkcraft-ultra",
             "video/captioncraft",
             "video/video-upscaler",
-            "video/interpolate"
+            "video/interpolate",
+            "video/scenecraft",
+            "video/fxcraft",
+            "video/magicraft",
+            "video/lipsync",
+            "video/lipsync-max",
+            "video/seedcraft",
+            "video/wancraft",
+            "video/viducraft",
+            "video/animatecraft",
+            "video/filmcraft",
+            "video/flixcraft"
           ],
           "icon": "video",
           "iconType": "solid"

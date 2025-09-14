@@ -1,0 +1,84 @@
+---
+title: 'AnimateCraft'
+description: 'Animate images with AnimateCraft, powered by FramePack'
+icon: 'user-plus'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/animatecraft.png" alt="AnimateCraft Screenshot" />
+</Frame>
+
+# AnimateCraft: Efficient Image-to-Video Generation
+
+<Tip>
+  Transform static images into dynamic videos with AnimateCraft, an advanced image-to-video model that autoregressively generates high-quality video content.
+</Tip>
+
+## Overview
+
+AnimateCraft is a groundbreaking tool that’s redefining AI image to video creation with its innovative video frame by frame approach. Designed for creators and developers, this neural network structure excels at generating dynamic videos from static images or prompts.
+
+## What Makes FramePack Special?
+
+FramePack’s robust feature set makes it a standout in AI image-to-video generation. Here are its core strengths:
+
+<CardGroup cols={2}>
+  <Card title="Progressive Video Generation" icon="film">
+    FramePack builds videos frame by frame, offering latent previews for each section to ensure quality control and allow creators to refine outputs iteratively.
+  </Card>
+  <Card title="Anti-Drifting Technology" icon="shield-check">
+    Using bi-directional sampling, FramePack maintains consistency in long videos, preventing quality degradation and ensuring smooth animations.
+  </Card>
+  <Card title="Prompt-Based Animation" icon="pencil">
+    Creators can use text prompts to produce dynamic AI image to video outputs tailored to their vision.
+  </Card>
+</CardGroup>
+
+## Parameters
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired animation.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Aspect Ratio**: Choose between 16:9 and 9:16.
+    - **Resolution**: Choose between 480p and 720p.
+    - **CFG Scale**: Dictates how closely the video generation follows your prompt.
+    - **Guidance Scale**: A second parameter for controlling the guidance scale.
+    - **Number of Frames**: The number of frames in the output video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+## Mastering Prompts for AnimateCraft
+
+To achieve the best results with AnimateCraft, focus on descriptive and specific prompts.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Be Specific, Not Poetic" icon="pencil">
+    Use real-world camera lingo (f/1.4, backlight, ISO) and descriptive terms like "frosted glass window" instead of "dreamy vibes." For example, instead of "a forest," try "a misty enchanted forest with glowing mushrooms, sunlight filtering through oak trees, soft piano music."
+  </Accordion>
+  <Accordion title="Focus on Motion" icon="film">
+    Describe how the scene could come alive and become dynamic using brief phrases. Larger and more dynamic motions (like dancing, jumping, running, etc.) are preferred over smaller or more subtle ones (like standing still, sitting, etc.).
+  </Accordion>
+  <Accordion title="Describe Subject, Then Motion" icon="user">
+    Start with the subject, then describe the motion. For example: "The girl dances gracefully, with clear movements, full of charm."
+  </Accordion>
+</AccordionGroup>
+
+## Prompt Examples
+
+<CardGroup cols={1}>
+  <Card title="Image to Video Example 1">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/seedcraft3.jpg" alt="Before" />
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/animatecraft-1374068171.mp4" alt="After" controls />
+    ```text
+    The man turns his head to the right, a subtle smile playing on his lips as his eyes meet the camera. The warm, golden hour light catches the highlights in his hair and the texture of his fleece jacket. The desert dunes in the background are cast in long shadows as the sun sets.
+    ```
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+AnimateCraft provides a powerful and versatile platform for AI video generation. By mastering the art of prompting and utilizing the available settings, you can unlock the full potential of this tool to create stunning visuals with exceptional quality.

@@ -1,0 +1,219 @@
+---
+title: 'SceneCraft'
+description: 'Create stunning videos with SceneCraft, powered by the Hunyuan model'
+icon: 'video'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/scenecraft.png" alt="SceneCraft Screenshot" />
+</Frame>
+
+# SceneCraft: AI Video Generation
+
+<Tip>
+  Unlock the power of the Hunyuan model with SceneCraft! Create stunning videos from text, images, and even other videos with this powerful AI tool.
+</Tip>
+
+## Overview
+
+SceneCraft is a game-changing AI video generator that breaks down the barriers of professional video creation. Powered by the advanced Hunyuan model, SceneCraft delivers studio-quality results completely free of charge, democratizing high-end video production for creators worldwide.
+
+## Modes of Operation
+
+SceneCraft offers six primary modes of operation, each designed for a specific video creation workflow.
+
+### Text to Video
+
+In Text to Video mode, you can create new videos from scratch using text prompts.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Aspect Ratio**: Choose between 16:9 and 9:16.
+    - **Resolution**: Choose between 480p, 580p, and 720p.
+    - **Number of Frames**: Choose between 85 and 129.
+    - **Pro Mode**: Enable for higher quality at the cost of more credits.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Prompt Examples
+
+<CardGroup cols={2}>
+  <Card title="Text to Video Example 1">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/scenecraft-62.mp4" controls />
+    ```text
+    A lone hiker with a bright red backpack ascends a rocky trail in a tranquil mountain range at sunrise, with layers of mist rolling over the peaks. The hiker pauses to admire the breathtaking view as the camera begins with a wide-angle shot, slowly zooming in to capture their steady climb. The peaceful atmosphere is enhanced by the warm golden hour sunlight, which casts long shadows across the terrain. The shot transitions from a wide-angle framing to a medium shot, centering the hiker against the vast and majestic mountain backdrop.
+    ```
+  </Card>
+  <Card title="Text to Video Example 2">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/scenecraft-508.mp4" controls />
+    ```text
+    A street vendor prepares food at a small cart on a lively urban street filled with pedestrians, bicycles, and colorful storefronts. As steam rises from the grill, the vendor flips food with precision while passersby walk briskly in the background. The camera employs a tracking shot, following the vendor’s hands before panning upward to reveal the bustling street in its entirety. The vibrant and energetic atmosphere is complemented by soft afternoon light, with occasional reflections glinting off nearby windows. The scene transitions seamlessly from a close-up of the vendor’s hands to a wide shot of the dynamic cityscape.
+    ```
+  </Card>
+</CardGroup>
+
+### LoRA
+
+In LoRA mode, you can train and use your own LoRAs for better consistency in videos.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Aspect Ratio**: Choose between 16:9 and 9:16.
+    - **Resolution**: Choose between 480p, 580p, and 720p.
+    - **Number of Frames**: Choose between 85 and 129.
+    - **Pro Mode**: Enable for higher quality at the cost of more credits.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+    - **LoRAs**: Add custom LoRAs to create unique and personalized videos.
+  </Accordion>
+</AccordionGroup>
+
+### Image to Video
+
+In Image to Video mode, you can input an image and animate it with a prompt.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired animation.
+    - **Aspect Ratio**: Choose between 16:9 and 9:16.
+    - **Resolution**: Only 720p is supported for image-to-video.
+    - **Number of Frames**: Choose between 85 and 129.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Video to Video
+
+In Video to Video mode, you can transform already existing videos with prompting.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired transformation.
+    - **Aspect Ratio**: Choose between 16:9 and 9:16.
+    - **Resolution**: Choose between 480p, 580p, and 720p.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **Pro Mode**: Enable for higher quality at the cost of more credits.
+    - **Strength**: Control the influence of the input video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Portrait
+
+In Portrait mode, you can use a video of a face to drive an animation of a portrait image.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Use ArcFace**: Enable for better face recognition.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Custom
+
+In Custom mode, you can have an item or character and use it as a subject in a new video while retaining consistency.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Aspect Ratio**: Choose between 16:9 and 9:16.
+    - **Resolution**: Choose between 512p and 720p.
+    - **FPS**: The frames per second of the output video.
+    - **CFG Scale**: Dictates how closely the video generation follows your prompt.
+    - **Number of Frames**: The number of frames in the output video.
+    - **Enable Prompt Expansion**: Enable to automatically expand your prompt for better results.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+## How to Train a LoRA
+
+<Steps>
+  <Step title="Step 1: Open the LoRA Training Modal">
+    Click the "Train LoRA" button in the LoRA tab to open the training modal.
+  </Step>
+  <Step title="Step 2: Upload Your Images">
+    Upload between 4 and 30 images of the subject you want to train your LoRA on. You can also upload a zip file containing your images.
+  </Step>
+  <Step title="Step 3: Name Your LoRA">
+    Give your LoRA a name and an optional trigger word.
+  </Step>
+  <Step title="Step 4: Start Training">
+    Click the "Train LoRA" button to start the training process. This will cost 800 credits.
+  </Step>
+</Steps>
+
+## Mastering Prompts for SceneCraft
+
+A compelling AI video prompt consists of 7 components: 1. subject, 2. scene, 3. motion, 4. camera movement, 5. atmosphere, 6. lighting, 7. shot composition.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Subject" icon="user">
+    **Define Your Star.** Must clearly specify the main focus of your video. Be specific about details that matter, such as size, color, or distinctive features.
+    <br/>
+    *Examples:*
+    - "A young woman with flowing red hair"
+    - "A sleek electric sports car"
+    - "A majestic eagle in flight"
+  </Accordion>
+  <Accordion title="Scene" icon="map">
+    **Set Your Stage.** Describe the environment where your action takes place. Include background elements that enhance your story's context.
+    <br/>
+    *Examples:*
+    - "In a neon-lit cyberpunk cityscape"
+    - "Amidst a snow-covered forest at dawn"
+    - "Inside a minimalist modern apartment"
+  </Accordion>
+  <Accordion title="Motion" icon="film">
+    **Bring Life to Your Video.** Detail how your subject moves or interacts. Use vivid verbs to describe precise movements.
+    <br/>
+    *Examples:*
+    - "Gracefully dancing through falling autumn leaves"
+    - "Rapidly accelerating along a coastal highway"
+    - "Smoothly transitioning between yoga poses"
+  </Accordion>
+  <Accordion title="Camera Movement" icon="camera">
+    **Direct Your Shot.** Specify how the camera should capture the action. Think like a cinematographer to create dynamic visual interest.
+    <br/>
+    *Examples:*
+    - "Slow upward tilt revealing the cityscape"
+    - "Smooth tracking shot following the subject"
+    - "Dramatic circular pan around the scene"
+  </Accordion>
+  <Accordion title="Atmosphere" icon="cloud">
+    **Create the Right Mood.** Set the emotional tone of your video. Consider how lighting and color contribute to the desired atmosphere.
+    <br/>
+    *Examples:*
+    - "Mysterious and ethereal atmosphere"
+    - "Energetic and vibrant mood"
+    - "Calm and serene ambiance"
+  </Accordion>
+  <Accordion title="Lighting" icon="sun">
+    **Perfect Your Illumination.** Define how light shapes your scene. Light can dramatically affect the mood and visual impact.
+    <br/>
+    *Examples:*
+    - "Soft, warm sunlight filtering through trees"
+    - "Sharp, contrasting shadows from street lights"
+    - "Diffused, ethereal glow from above"
+  </Accordion>
+  <Accordion title="Shot Composition" icon="crop">
+    **Frame Your Vision.** Describe how elements should be arranged. Consider the rule of thirds and visual balance in your composition.
+    <br/>
+    *Examples:*
+    - "Close-up shot focusing on emotional expression"
+    - "Wide landscape shot emphasizing scale"
+    - "Low-angle shot creating dramatic perspective"
+  </Accordion>
+</AccordionGroup>
+
+
+## Conclusion
+
+SceneCraft provides a powerful and versatile platform for AI video generation. By mastering the art of prompting and utilizing the available settings, you can unlock the full potential of this tool to create stunning visuals with exceptional quality.

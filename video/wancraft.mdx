@@ -1,0 +1,173 @@
+---
+title: 'WanCraft'
+description: 'Create stunning videos with WanCraft, powered by Alibaba'
+icon: 'video'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/wancraft.png" alt="WanCraft Screenshot" />
+</Frame>
+
+# WanCraft: AI Video Generation
+
+<Tip>
+  Unlock the power of Wan 2.1 and 2.2 with WanCraft! Create stunning videos from text and images with this powerful AI tool.
+</Tip>
+
+## Overview
+
+WanCraft is a cutting-edge AI platform that leverages Alibaba's powerful **Wan 2.1 and 2.2 models** for both image and video generation. With its ability to produce high-resolution videos and handle a wide range of styles, WanCraft is the perfect tool for creating posters, infographics, and other professional-quality visuals.
+
+## Modes of Operation
+
+WanCraft offers five primary modes of operation, each designed for a specific video creation workflow.
+
+### Text to Video
+
+In Text to Video mode, you can create new videos from scratch using text prompts.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between Fast, Balanced, Quality, v2, and v2 Turbo.
+    - **Resolution**: Choose between 480p, 580p, and 720p.
+    - **Aspect Ratio**: Choose between auto, 16:9, 9:16, and 1:1.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **Guidance Scale**: Dictates how closely the image generation follows your prompt.
+    - **Shift**: A parameter for controlling the video generation.
+    - **Sampler**: Choose between unipc and dpm++.
+    - **Number of Frames**: The number of frames in the output video.
+    - **Frames Per Second**: The frames per second of the output video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Image to Video
+
+In Image to Video mode, you can input an image and animate it with a prompt.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired animation.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between Fast, Standard, Quality, v2, and v2 Turbo.
+    - **Resolution**: Choose between 480p and 720p.
+    - **Aspect Ratio**: Choose between auto, 16:9, 9:16, and 1:1.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **Guidance Scale**: Dictates how closely the image generation follows your prompt.
+    - **Shift**: A parameter for controlling the video generation.
+    - **Number of Frames**: The number of frames in the output video.
+    - **Frames Per Second**: The frames per second of the output video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Effects
+
+In Effects mode, you can apply a variety of effects to an image.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Subject**: Your text description of the subject in the image.
+    - **Effect Type**: Choose between squish, muscle, inflate, crush, rotate, gun-shooting, deflate, and cakeify.
+    - **Number of Frames**: The number of frames in the output video.
+    - **Frames Per Second**: The frames per second of the output video.
+    - **Aspect Ratio**: Choose between auto, 16:9, 9:16, and 1:1.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **LoRA Scale**: A parameter for controlling the LoRA scale.
+    - **Number of Reference Steps**: The number of reference steps to take.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Frames
+
+In Frames mode, you can create a video by providing the first and last frames.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Resolution**: Choose between 480p and 720p.
+    - **Aspect Ratio**: Choose between auto, 16:9, 9:16, and 1:1.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **Guide Scale**: Dictates how closely the image generation follows your prompt.
+    - **Shift**: A parameter for controlling the video generation.
+    - **Number of Frames**: The number of frames in the output video.
+    - **Frames Per Second**: The frames per second of the output video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Video to Video
+
+In Video to Video mode, you can transform an existing video with a new prompt.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired transformation.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Strength**: Control the influence of the input video.
+    - **Resolution**: Choose between 480p, 580p, and 720p.
+    - **Aspect Ratio**: Choose between auto, 16:9, 9:16, and 1:1.
+    - **Inference Steps**: The number of steps to take when generating the video.
+    - **Guidance Scale**: Dictates how closely the image generation follows your prompt.
+    - **Guidance Scale 2**: A second parameter for controlling the guidance scale.
+    - **Shift**: A parameter for controlling the video generation.
+    - **Interpolator**: Choose between none, film, and rife.
+    - **Number of Interpolated Frames**: The number of frames to interpolate.
+    - **Adjust FPS for Interpolation**: Choose whether to adjust the FPS for interpolation.
+    - **Resample FPS**: Choose whether to resample the FPS to the target.
+    - **Number of Frames**: The number of frames in the output video.
+    - **Frames Per Second**: The frames per second of the output video.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+## Mastering Prompts for WanCraft
+
+To achieve the best results with WanCraft, focus on descriptive and specific prompts.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Camera Movements" icon="camera">
+    Describing how the camera moves is crucial in creating dynamic, engaging videos. Examples include: Pan Left/Right, Tilt Up/Down, Dolly In/Out, Tracking Shot, Crash Zoom, and Camera Roll.
+  </Accordion>
+  <Accordion title="Lighting" icon="sun">
+    Lighting can drastically change the feel of a scene. Examples include: Soft Light, Hard Light, Backlight, and Volumetric Lighting.
+  </Accordion>
+  <Accordion title="Atmosphere and Mood" icon="cloud">
+    Setting the right atmosphere ensures that the generated video conveys the desired tone. Examples include: Somber, Euphoric, Mysterious, and Dreamlike.
+  </Accordion>
+  <Accordion title="Composition and Perspective" icon="crop">
+    Describing how the subject is framed in the shot helps create engaging visuals. Examples include: Close-Up, Wide Shot, Low Angle, and High Angle.
+  </Accordion>
+  <Accordion title="Visual Style and Effects" icon="palette">
+    Defining the look and feel of the video is essential for guiding the model. Examples include: Cinematic, Vintage Film Look, Shallow Depth of Field, and Motion Blur.
+  </Accordion>
+</AccordionGroup>
+
+## Prompt Examples
+
+### Text to Video
+
+<CardGroup cols={2}>
+  <Card title="Text to Video Example 1">
+    <video controls src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/wancraft-1522191461.mp4" alt="WanCraft Text to Video Example 1" />
+    ```text
+    A low angle shot of a jazz pianist in a dimly lit 1920s jazz bar, playing the piano with concentration. He wears a white shirt with suspenders and black trousers, his hands move rapidly on the keys. Camera pans left to low angle shot of a cute girl with pigtails and glasses playing the trumpet.
+    ```
+  </Card>
+  <Card title="Text to Video Example 2">
+    <video controls src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/wancraft-1713559141.mp4" alt="WanCraft Text to Video Example 2" />
+    ```text
+    Close up shot of the determined face of a battle-worn samurai. Camera pulls back to reveal him standing alone on a foggy battlefield, gripping his katana. Camera pulls back to reveal fallen warriors behind him. Wind whips through the trees, sending red autumn leaves swirling.
+    ```
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+WanCraft provides a powerful and versatile platform for AI video generation. By mastering the art of prompting and utilizing the available settings, you can unlock the full potential of this tool to create stunning visuals with exceptional quality.
