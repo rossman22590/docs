@@ -1,0 +1,157 @@
+---
+title: 'PikaCraft'
+description: 'Create stunning videos with PikaCraft, powered by Pika Labs'
+icon: 'camera-movie'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/pikacraft.png" alt="PikaCraft Screenshot" />
+</Frame>
+
+# PikaCraft: AI Video Generation
+
+<Tip>
+  Unlock the power of Pika Labs with PikaCraft! Create stunning videos from text and images with this powerful AI tool.
+</Tip>
+
+## Overview
+
+PikaCraft is a cutting-edge AI platform that leverages the powerful **Pika Labs models** for video generation. With its ability to produce high-quality videos and handle a wide range of styles, PikaCraft is the perfect tool for creating posters, infographics, and other professional-quality visuals.
+
+## Modes of Operation
+
+PikaCraft offers four primary modes of operation, each designed for a specific video creation workflow.
+
+### Text to Video
+
+In Text to Video mode, you can create new videos from scratch using text prompts.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between v2.1, v2.2, and v2 Turbo.
+    - **Aspect Ratio**: Choose between 16:9, 9:16, 1:1, 4:5, 5:4, 3:2, and 2:3.
+    - **Resolution**: Choose between 720p and 1080p.
+    - **Duration**: Choose between 5 and 10 seconds.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Image to Video
+
+In Image to Video mode, you can input an image and animate it with a prompt.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired animation.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between v2.1, v2.2, and v2 Turbo.
+    - **Resolution**: Choose between 720p and 1080p.
+    - **Duration**: Choose between 5 and 10 seconds.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Effects
+
+In Effects mode, you can apply a variety of effects to an image.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Effect**: Choose from a variety of effects, including Cake-ify, Crumble, and Crush.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Scenes
+
+In Scenes mode, you can use multiple images to guide the video generation.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Aspect Ratio**: Choose between 16:9, 9:16, 1:1, 4:5, 5:4, 3:2, and 2:3.
+    - **Resolution**: Choose between 720p and 1080p.
+    - **Duration**: Choose between 5 and 10 seconds.
+    - **Ingredients Mode**: Choose between creative and precise.
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+## Mastering Prompts for PikaCraft
+
+To achieve the best results with PikaCraft, focus on descriptive and specific prompts.
+
+### Prompting Techniques:
+
+<AccordionGroup>
+  <Accordion title="Camera Control" icon="camera">
+    With the `-camera` parameter, you can direct camera movements. Choose from zoom, pan, or rotate. For example: `-camera zoom in`
+  </Accordion>
+  <Accordion title="Motion Strength" icon="film">
+    Adjust how much movement is in your video using the `-motion` parameter. The default setting is 1, and you can select a value from 0 to 4. For example: `-motion 3`
+  </Accordion>
+  <Accordion title="Guidance Scale" icon="sliders">
+    The `-gs` parameter helps adjust how closely your video will follow your text prompt. Choose a value between 8–24, with 12 as the default. For example: `-gs 16`
+  </Accordion>
+  <Accordion title="Negative Prompting" icon="ban">
+    The `-neg` parameter is used to exclude specific elements you don’t want in your video. You can specify words to avoid. For example: `-neg words letters signs`
+  </Accordion>
+  <Accordion title="Aspect Ratio" icon="crop">
+    With the `-ar` parameter, you can set the width:height ratio of your video, with options like 16:9, 9:16, 1:1, and 4:5. For example: `-ar 16:9`
+  </Accordion>
+  <Accordion title="Seed" icon="recycle">
+    For consistent generation, use the `-seed` parameter. Note that this guarantees consistency only if both the prompt and negative prompt are unchanged. For example: `-seed 123456789`
+  </Accordion>
+</AccordionGroup>
+
+## Prompt Examples
+
+### Text to Video
+
+<CardGroup cols={2}>
+  <Card title="Text to Video Example 1">
+    <video controls src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/pikacraft-1757960687393.mp4" alt="PikaCraft Text to Video Example 1" />
+    ```text
+    A unicorn gracefully walking through an enchanted forest, its mane flowing gently in the breeze. The forest is illuminated by soft, magical lights with sparkling dust swirling around, creating a serene and mystical atmosphere.
+    ```
+  </Card>
+  <Card title="Text to Video Example 2">
+    <video controls src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/pikacraft-1757961388541.mp4" alt="PikaCraft Text to Video Example 2" />
+    ```text
+    Smooth Close-Up Pan: The camera gently pans across a leopard’s face, capturing the intricate details of its fur, piercing eyes, and focused expression. The scene is set against a soft, natural background, highlighting the leopard’s majestic presence under soft, diffused lighting. Use a Panasonic DC-GH5S camera with a 70-200mm telephoto lens on Fuji Eterna Vivid 500T film negative. Keywords: majestic, detailed, close-up, natural background, diffused lighting.
+    ```
+  </Card>
+</CardGroup>
+
+### Image to Video
+
+<CardGroup cols={1}>
+  <Card title="Image to Video Example">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/seedcraft3.jpg" alt="PikaCraft Image to Video Example" />
+    ```text
+    The man's sunglasses reflect the desert. The camera slowly zooms in on his face, capturing his awe-struck expression.
+    ```
+    <video controls src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/pikacraft-1757962168463.mp4" alt="PikaCraft Image to Video Example Output" />
+  </Card>
+</CardGroup>
+
+### Effects
+
+<CardGroup cols={1}>
+  <Card title="Effects Example">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/kontext-image%20(13).jpeg" alt="PikaCraft Effects Example Input" />
+    ```text
+    cakefy this car
+    ```
+    <video controls src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/pikacraft-1757970558500.mp4" alt="PikaCraft Effects Example Output" />
+  </Card>
+</CardGroup>
+
+## Conclusion
+
+PikaCraft provides a powerful and versatile platform for AI video generation. By mastering the art of prompting and utilizing the available settings, you can unlock the full potential of this tool to create stunning visuals with exceptional quality.

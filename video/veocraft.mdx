@@ -1,0 +1,253 @@
+---
+title: 'VeoCraft'
+description: 'Create stunning videos with VeoCraft, powered by Googles Veo 2 and Veo 3 models.'
+icon: 'google'
+---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/veocraft.png" alt="VeoCraft Screenshot" />
+</Frame>
+
+# VeoCraft: AI Video Generation
+
+<Tip>
+  Unlock the power of Google's Veo 2 and Veo 3 models with VeoCraft! Create stunning videos from text and images with this powerful AI tool.
+</Tip>
+
+## Overview
+
+VeoCraft is a cutting-edge AI platform that leverages Google's powerful **Veo 2 and Veo 3 models** for both image and video generation. With its ability to produce high-resolution videos and handle a wide range of styles, VeoCraft is the perfect tool for creating posters, infographics, and other professional-quality visuals.
+
+<CardGroup cols={2}>
+  <Card title="Text-to-Video" icon="keyboard">
+    Generate videos from detailed text prompts, bringing your ideas to life.
+  </Card>
+  <Card title="Image-to-Video" icon="image">
+    Transform static images into dynamic video sequences with AI-powered animation.
+  </Card>
+  <Card title="High-Quality Output" icon="star">
+    Veo 3 offers superior resolution and quality for professional-grade results.
+  </Card>
+  <Card title="Audio Generation" icon="waveform">
+    Create synchronized dialogue, sound effects, and music.
+  </Card>
+</CardGroup>
+
+## Modes of Operation
+
+VeoCraft offers two primary modes of operation, each designed for a specific video creation workflow.
+
+### Text to Video
+
+In Text to Video mode, you can create new videos from scratch using text prompts.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between Veo 2, Veo 3, and Veo 3 Fast.
+    - **Aspect Ratio**: Choose between 16:9 and 9:16 (Veo 2 only).
+    - **Resolution**: Choose between 720p and 1080p (Veo 3 only).
+    - **Duration**: Choose between 5 and 8 seconds (Veo 2 only).
+    - **Audio**: Enable to generate audio with your video (Veo 3 only).
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+### Image to Video
+
+In Image to Video mode, you can input an image and animate it with a prompt.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired animation.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between Veo 2, Veo 3, and Veo 3 Fast.
+    - **Resolution**: Choose between 720p and 1080p (Veo 3 only).
+    - **Audio**: Enable to generate audio with your video (Veo 3 only).
+    - **Seed**: Use a seed to control the output. The same seed + same prompt will produce an identical output.
+  </Accordion>
+</AccordionGroup>
+
+## Mastering Prompts for VeoCraft
+
+To achieve the best results with VeoCraft, focus on descriptive and specific prompts.
+
+### The 8-Part Framework
+
+A professional prompt should include:
+
+1.  **Scene**: A clear sentence describing the overall action and vibe.
+2.  **Visual Style**: Define your aesthetic (cinematic, realistic, animated, surreal).
+3.  **Camera Movement**: Specify camera behavior (static, slow pan, tracking, aerial).
+4.  **Main Subject**: Detail who or what the camera should focus on.
+5.  **Background**: Describe the setting and era if relevant.
+6.  **Lighting and Mood**: Set the emotional tone through lighting choices.
+7.  **Audio Cue**: Include music, ambience, or sound effects.
+8.  **Color Palette**: Guide the overall color scheme.
+
+### Prompting Techniques
+
+<AccordionGroup>
+  <Accordion title="Use Precise Language" icon="pencil">
+    Be very specific and precise with your words. Always say exactly what you mean. You're talking to an AI, not a friend.
+    <br/>
+    *Example:* Instead of "A girl cooking dinner," use "A young woman in her early 20s cooking dinner."
+  </Accordion>
+  <Accordion title="Layer Your Prompts" icon="layer-group">
+    Start with the core action, then add technical details, style elements, and audio.
+    <br/>
+    *Example:* "A golden retriever running through a meadow at sunset, medium shot with warm lighting, tail wagging happily, birds chirping in the background."
+  </Accordion>
+  <Accordion title="Be Specific About Timing" icon="clock">
+    Use timing words to control the flow of your video.
+    <br/>
+    *Slow:* gradual, slowly, gentle, smooth, flowing
+    <br/>
+    *Fast:* sudden, quick, rapid, instant, sharp
+    <br/>
+    *Rhythmic:* rhythmic, steady, pulsing, beating, repeating
+  </Accordion>
+  <Accordion title="Combine Technical and Creative Language" icon="camera">
+    Mix camera terms with descriptive words to give you both technical control and creative freedom.
+    <br/>
+    *Example:* "Close-up of weathered hands kneading bread dough."
+  </Accordion>
+  <Accordion title="Consider Cause and Effect" icon="link">
+    Think about how actions create reactions to make your videos feel more real and connected.
+    <br/>
+    *Example:* "A child blowing dandelion seeds, causing them to drift away in the breeze while the camera follows their floating path."
+  </Accordion>
+</AccordionGroup>
+
+### Common Mistakes to Avoid
+
+- **Too Vague**: Instead of "A person in a room," use "A chef in a busy kitchen preparing pasta."
+- **Too Complicated**: Instead of "A dragon flying through space while singing opera," use "A dragon soaring through clouds at sunset."
+- **Missing Audio**: Instead of "A waterfall in the mountains," use "A waterfall cascading down rocky cliffs with the sound of rushing water echoing."
+- **No Timing**: Instead of "Flowers growing," use "Flowers gradually blooming in morning sunlight."
+
+## JSON Prompting for VeoCraft
+
+JSON (JavaScript Object Notation) is a data format that allows for structured, readable, and machine-compatible data exchange. When used in AI video generation, it helps to break down a prompt into key-value pairs that define the components of a video.
+
+### Why Use JSON Prompting?
+
+- **Enhanced Consistency**: Ensure that key elements of your video remain consistent across multiple scenes.
+- **Improved Control**: Dictate the parameters for every visual, sound, and environmental detail.
+- **Efficiency in Iteration**: Quickly test different versions of a video by adjusting individual parameters.
+
+### JSON Prompt Structure
+
+```json
+{
+  "scene_name": {
+    "scene": {
+      "camera": {
+        "type": "DSLR",
+        "angle": "low angle",
+        "motion": "slow pan up",
+        "focus": "deep focus"
+      },
+      "subject": {
+        "character": "A stoic knight",
+        "appearance": "Wearing polished steel armor with a red cape",
+        "expression": "Determined and focused",
+        "accessories": "A longsword sheathed at his hip"
+      },
+      "props": {
+        "main_props": "A crackling bonfire",
+        "secondary_props": "A tattered banner with a dragon emblem",
+        "environment_props": "Ancient ruins and moss-covered stones"
+      },
+      "setting": {
+        "location": "A desolate mountain pass",
+        "time": "Dusk, with a full moon rising",
+        "background": "Jagged peaks against a purple sky",
+        "atmosphere": "Tense and expectant"
+      },
+      "lighting": {
+        "style": "Chiaroscuro",
+        "mood": "Dramatic and mysterious",
+        "shadows": "Long and deep"
+      }
+    },
+    "action": {
+      "primary_action": "The knight draws his sword, which glints in the firelight",
+      "secondary_actions": "The wind whips his cape around him",
+      "interaction": "He stares down an unseen enemy",
+      "timing": "0-2s setup, 2-6s main action, 6-8s conclusion",
+      "pacing": "Deliberate and tense"
+    },
+    "dialogue": {
+      "speech": "For the fallen!",
+      "tone": "Gravelly and determined",
+      "lip_sync": "perfect lip synchronization",
+      "no_subtitles": true
+    },
+    "audio": {
+      "voice": "Deep and resonant",
+      "action_sounds": "The scrape of steel as the sword is drawn",
+      "environmental": "The crackling of the fire and the howling of the wind",
+      "music": "A low, ominous orchestral score",
+      "ambience": "A sense of impending battle"
+    },
+    "style": {
+      "genre": "Dark fantasy",
+      "mood": "Epic and somber",
+      "visual_style": "Photorealistic with a touch of grit",
+      "pacing": "Slow and deliberate"
+    },
+    "no_subtitles": true
+  }
+}
+```
+
+### Best Practices for Crafting JSON Prompts
+
+- **Be Descriptive**: The more detailed your descriptions, the better the AI can interpret your vision.
+- **Specify Audio Elements**: Include any ambient sounds, music, or dialogue in the prompt.
+- **Use Cinematic Terminology**: Terms like "dolly zoom," "bokeh effect," and "golden hour lighting" will guide the AI to create visuals with a high degree of realism and cinematic flair.
+- **Iterate and Refine**: Don’t hesitate to experiment with different settings.
+
+## Prompt Examples
+
+### Text to Video
+
+<CardGroup cols={1}>
+  <Card title="Text to Video Example">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/video-1757975222221.mp4" controls />
+    ```text
+    A weathered sea captain with a thick grey beard and blue knitted hat stands at a ship’s railing, gesturing toward stormy ocean waves. Cinematic close-up with slow dolly-in on his weathered face. Golden hour lighting with dramatic shadows. He says: “The ocean teaches you respect, one wave at a time.” Audio: ocean waves crashing, wind, no background music. Color palette: deep blues, warm amber, weathered browns. (no subtitles)
+    ```
+  </Card>
+</CardGroup>
+
+### Image to Video
+
+<CardGroup cols={1}>
+  <Card title="Image to Video Example">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/seedcraft3.jpg" alt="Image to Video Input" />
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/video-1757976016092.mp4" controls />
+    ```text
+    Man looks around and then looks at the camera and says "Veo 3 is now in Pixio. Sign up now"
+    ```
+  </Card>
+</CardGroup>
+
+### JSON Prompting
+
+<CardGroup cols={1}>
+  <Card title="JSON Prompting Example">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/video-1757976247535.mp4" controls />
+    ```json
+    {
+      "scene": "The detective stands on a rooftop, looking over a neon-lit city.",
+      "character": "Dark-haired detective wearing a futuristic coat.",
+      "camera": "Wide shot, with a slow pull-back.",
+      "lighting": "Cool blue hues, with neon glows.",
+      "audio": "Wind howling, distant sirens."
+    }
+    ```
+  </Card>
+</CardGroup>

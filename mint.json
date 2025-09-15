@@ -291,7 +291,8 @@
             "video/motioncraft",
             "video/motioncraft-pro",
             "video/motioncraft-ultra",
-            "video/vidcraft-and-vidcraft-hd",
+            "video/vidcraft",
+            "video/vidcraft-hd",
             "video/vidcraft-pro",
             "video/vidcraft-ultra",
             "video/vidcraft-remix",
@@ -313,8 +314,12 @@
             "video/wancraft",
             "video/viducraft",
             "video/animatecraft",
+            "video/animate-portrait",
             "video/filmcraft",
-            "video/flixcraft"
+            "video/flixcraft",
+            "video/pikacraft",
+            "video/veocraft",
+            "video/removebg"
           ],
           "icon": "video",
           "iconType": "solid"
