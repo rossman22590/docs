@@ -1,71 +1,201 @@
 ---
 title: 'VidCraft Ultra'
-description: 'Master AI-powered video generation with VidCraft Ultra'
+description: 'Master AI-powered video generation with VidCraft Ultra, powered by Runway.'
 icon: 'clapperboard-play'
 ---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraftultra.png" alt="VidCraft Ultra Screenshot" />
+</Frame>
 
 # VidCraft Ultra: Advanced AI Video Generation
 
 <Tip>
-Harness the power of cutting-edge AI to create stunning videos from text, images, and existing videos with unprecedented control and creativity!
+  Harness the power of Runway to create stunning videos from text, images, and existing videos with unprecedented control and creativity!
 </Tip>
 
 ## Overview
 
-VidCraft Ultra represents the pinnacle of AI-driven video generation. This innovative platform offers a suite of powerful tools for creating high-quality, customizable videos from various inputs, including text prompts, images, and existing videos.
+VidCraft Ultra, powered by Runway, represents the pinnacle of AI-driven video generation. This innovative platform offers a suite of powerful tools for creating high-quality, customizable videos from various inputs, including text prompts, images, and existing videos.
 
 <CardGroup cols={2}>
-<Card title="Text-to-Video" icon="keyboard">
-Generate videos up to 18 seconds long from detailed text descriptions.
-</Card>
-<Card title="Image-to-Video" icon="image">
-Transform static images into dynamic video sequences with AI-powered animation.
-</Card>
-<Card title="Text and Image to Video" icon="object-group">
-Combine text prompts with images for more precise control over your generated videos.
-</Card>
-<Card title="Video-to-Video" icon="film">
-Remix existing videos into new styles and concepts using text prompts.
-</Card>
+  <Card title="Text-to-Video" icon="keyboard">
+    Generate videos up to 40 seconds long from detailed text descriptions.
+  </Card>
+  <Card title="Image-to-Video" icon="image">
+    Transform static images into dynamic video sequences with AI-powered animation.
+  </Card>
+  <Card title="Video-to-Video" icon="film">
+    Remix existing videos into new styles and concepts using text prompts.
+  </Card>
+  <Card title="Performance Capture" icon="user-astronaut">
+    Apply the facial performance from a video to a portrait image.
+  </Card>
 </CardGroup>
 
 ### Key Features of VidCraft Ultra
 
 - High-fidelity output with improved consistency and motion
-
 - Flexible input options (text, image, video)
-
-- Ability to extend videos up to 18 seconds
-
+- Ability to extend videos up to 40 seconds
+- Upscale videos to 4K
 - Advanced settings for fine-tuning outputs
 
-- Seamless integration with asset management
+## Modes of Operation
 
-## Text-to-Video Generation
+VidCraft Ultra offers a variety of modes to suit your creative needs:
 
-VidCraft Ultra's text-to-video feature allows you to create complex, high-quality videos using detailed text prompts.
+### V4 and V4 Turbo
 
-### How to Use Text-to-Video
+The flagship models for text and image to video generation.
 
-<Steps>
-<Step title="Select Text-to-Video Mode" icon="list-ul">
-Choose the Text-to-Video option from the dropdown menu.
-<Frame>
-<img src="https://img.mytsi.org/i/S8nV793.png" alt="VidCraft Ultra Mode Selection" />
-</Frame>
-</Step>
-<Step title="Craft Your Prompt" icon="pen-fancy">
-Write a detailed text description of the video you want to generate.
-</Step>
-<Step title="Adjust Settings" icon="sliders">
-Configure additional settings such as duration, aspect ratio, and more.
-</Step>
-<Step title="Generate Video" icon="play">
- Click the "Generate" button to create your video.
-</Step>
-</Steps>
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Input Image**: An optional image to guide the video generation.
+    - **Aspect Ratio**: Choose between various aspect ratios.
+    - **Duration**: Choose between 5 and 10 seconds.
+    - **Seed**: Use a seed to control the output.
+  </Accordion>
+</AccordionGroup>
 
-### Mastering Text-to-Video Prompts
+<CardGroup cols={1}>
+  <Card title="V4 and V4 Turbo Example">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/pixio-chat-result.jpg" alt="Input Image" />
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft%20ultra%20(6).mp4" controls />
+    ```text
+    A slow, cinematic push-in down the wet, neon-lit alleyway. Light rain begins to fall, creating gentle ripples in the puddles on the ground. Steam rises softly from a vent on the side of a building. The neon signs flicker intermittently, their vibrant colors shimmering and reflecting on the wet pavement. Moody, atmospheric, hyperrealistic, 8k.
+    ```
+  </Card>
+</CardGroup>
+
+### VidCraft Turbo (V3 Turbo)
+
+Useful for frame-to-frame generation with up to 3 image inputs.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **First Image**: The first frame of the video.
+    - **Middle Image**: An optional middle frame.
+    - **Last Image**: An optional last frame.
+    - **Aspect Ratio**: Choose between landscape, portrait, and square.
+    - **Duration**: Choose between 5, 10, 15, and 20 seconds.
+    - **Camera Controls**: Adjust horizontal, vertical, roll, zoom, pan, and tilt.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="VidCraft Turbo (V3 Turbo) Example">
+    <div style={{ display: 'flex', gap: '1rem' }}>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/lipsyncmax2.jpeg" alt="First Frame" />
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/seedcraft4.jpeg" alt="Last Frame" />
+    </div>
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft%20ultra%20(7).mp4" controls />
+    ```text
+    A locked-off, static shot. In a smooth, fluid motion, the man's right hand enters the frame holding a pair of dark, stylish sunglasses. He raises them to his face and puts them on, settling them perfectly on the bridge of his nose. Photorealistic, cinematic, 8k.
+    ```
+  </Card>
+</CardGroup>
+
+### V4 Edit (Aleph)
+
+Capable of editing videos based on a prompt.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Input Video**: The video to be edited.
+    - **Reference Image**: An optional image to guide the edit.
+    - **Prompt**: Your text description of the desired edit.
+    - **Seed**: Use a seed to control the output.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="V4 Edit (Aleph) Example">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/video-1757976016092.mp4" controls />
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft%20ultra%20(8).mp4" controls />
+    ```text
+    Replace the background with a vibrant, neon-lit cyberpunk cityscape at night. The man is now on a high-rise balcony overlooking the sprawling metropolis below. The glow from the city's neon signs should cast colorful reflections on his jacket.
+    ```
+  </Card>
+</CardGroup>
+
+### Act One and Act Two
+
+Performance capture models that take a video performance from an actor and apply it to a portrait. Act Two has expressive body gestures.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Performance Video**: A video of an actor's performance.
+    - **Character Reference**: An image or video of the character.
+    - **Aspect Ratio**: Choose between various aspect ratios.
+    - **Body Control**: Enable for expressive body gestures (Act Two only).
+    - **Expression Intensity**: Control the intensity of facial expressions (Act Two only).
+    - **Seed**: Use a seed to control the output.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Act One and Act Two Example">
+    <div style={{ display: 'flex', gap: '1rem' }}>
+      <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraftultra2.mp4" controls />
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/lipsyncmax2.jpeg" alt="Target Image" />
+    </div>
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft%20ultra%20(9).mp4" controls />
+  </Card>
+</CardGroup>
+
+### Video to Video
+
+Allows remixing of a video with an image input for consistency.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Input Video**: The video to be remixed.
+    - **Style Image**: An optional image to influence the style.
+    - **Prompt**: Your text description of the desired transformation.
+    - **Aspect Ratio**: Choose between landscape, portrait, and square.
+    - **Structure Transformation**: Control how much the original video's structure changes.
+    - **Duration**: Choose between 5, 10, 15, and 20 seconds.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Video to Video Example">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft-290015805306960.mp4" controls />
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft%20ultra%20(10).mp4" controls />
+    ```text
+    In the style of studio ghibli
+    ```
+  </Card>
+</CardGroup>
+
+### Expand
+
+Allows expanding of a video from landscape to portrait and vice versa.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Input Video**: The video to be expanded.
+    - **Guide Image**: An optional image to guide the expansion.
+    - **Prompt**: Your text description of the desired expansion.
+    - **Aspect Ratio**: Choose between landscape and portrait.
+    - **Duration**: Choose between 5 and 10 seconds.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Expand Example">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/video-1757976016092.mp4" controls />
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft%20ultra%20(11).mp4" controls />
+    ```text
+    a man standing in the middle of the desert
+    ```
+  </Card>
+</CardGroup>
+
+## Mastering Prompts for VidCraft Ultra
 
 Crafting effective prompts is crucial for achieving the best results with VidCraft Ultra. Here's a comprehensive guide to creating powerful text-to-video prompts:
 
@@ -74,304 +204,46 @@ Crafting effective prompts is crucial for achieving the best results with VidCra
 For optimal results, structure your prompts as follows:
 
 ```
-
 [camera movement]: [establishing scene]. [additional details].
-
 ```
 
 This structure helps VidCraft Ultra understand the key elements of your desired video.
 
 #### Key Elements to Include
 
-1\. **Camera Movement**: Describe how the camera should move (e.g., pan, zoom, tracking shot)
-
-2\. **Scene Description**: Paint a clear picture of the setting and main elements
-
-3\. **Subject Details**: Describe any characters or main objects in the scene
-
-4\. **Action**: Explain what's happening in the video
-
-5\. **Style and Mood**: Convey the overall aesthetic and emotional tone
-
-6\. **Lighting**: Describe the lighting conditions for added atmosphere
-
-#### Example Prompt
-
-```plaintext
-
-Low angle static shot: The camera is angled up at a woman wearing all orange as she stands in a tropical rainforest with colorful flora. The dramatic sky is overcast and gray. The woman slowly raises her arms as if embracing the raindrops that begin to fall. The scene has a mystical, ethereal quality with a soft, diffused light filtering through the canopy.
-
-```
+1.  **Camera Movement**: Describe how the camera should move (e.g., pan, zoom, tracking shot)
+2.  **Scene Description**: Paint a clear picture of the setting and main elements
+3.  **Subject Details**: Describe any characters or main objects in the scene
+4.  **Action**: Explain what's happening in the video
+5.  **Style and Mood**: Convey the overall aesthetic and emotional tone
+6.  **Lighting**: Describe the lighting conditions for added atmosphere
 
 #### Advanced Techniques
 
 <AccordionGroup>
-<Accordion title="Use Cinematic Language" icon="film">
-Incorporate film terminology to achieve specific visual effects. For example: "Use a dolly zoom effect as the character realizes the gravity of their situation."
-</Accordion>
-<Accordion title="Specify Lighting and Atmosphere" icon="sun">
-Detail the lighting conditions and mood. Example: "The scene is bathed in warm, golden hour sunlight, creating long shadows and a nostalgic atmosphere."
-</Accordion>
-<Accordion title="Incorporate Dynamic Elements" icon="wind">
-Describe moving elements in the scene to take advantage of VidCraft Ultra's motion capabilities. Example: "Leaves rustle in a gentle breeze, while clouds slowly drift across the sky."
- </Accordion>
-<Accordion title="Use Style References" icon="palette">
-Reference specific artistic styles or directors to guide the aesthetic. Example: "Create the scene in the style of a Wes Anderson film, with symmetrical composition and pastel colors."
-</Accordion>
-
+  <Accordion title="Use Cinematic Language" icon="film">
+    Incorporate film terminology to achieve specific visual effects. For example: "Use a dolly zoom effect as the character realizes the gravity of their situation."
+  </Accordion>
+  <Accordion title="Specify Lighting and Atmosphere" icon="sun">
+    Detail the lighting conditions and mood. Example: "The scene is bathed in warm, golden hour sunlight, creating long shadows and a nostalgic atmosphere."
+  </Accordion>
+  <Accordion title="Incorporate Dynamic Elements" icon="wind">
+    Describe moving elements in the scene to take advantage of VidCraft Ultra's motion capabilities. Example: "Leaves rustle in a gentle breeze, while clouds slowly drift across the sky."
+  </Accordion>
+  <Accordion title="Use Style References" icon="palette">
+    Reference specific artistic styles or directors to guide the aesthetic. Example: "Create the scene in the style of a Wes Anderson film, with symmetrical composition and pastel colors."
+  </Accordion>
 </AccordionGroup>
 
 #### Prompt Keywords
 
 Experiment with these keywords to achieve specific styles:
 
-- Camera Styles: "low angle", "high angle", "FPV", "tracking shot"
-
-- Lighting Styles: "diffused lighting", "silhouette", "lens flare"
-
-- Movement Speeds: "slow motion", "timelapse", "hyperlapse"
-
-- Movement Types: "grows", "emerges", "transforms", "ripples"
-
-- Style and Aesthetic: "cinematic", "moody", "iridescent", "retro"
-
-## Image-to-Video Generation
-
-VidCraft Ultra's image-to-video feature allows you to animate static images into dynamic video sequences.
-
-### How to Use Image-to-Video
-
-<Steps>
-<Step title="Select Image-to-Video Mode" icon="image">
-Choose the Image-to-Video option from the dropdown menu.
- </Step>
-<Step title="Upload Your Image" icon="upload">
-Select or drag-and-drop your image into the designated area.
-<Callout type="info">
-When uploading an image, allow a few seconds until you see it displayed. This confirms the image has been successfully uploaded.
-</Callout>
-
-</Step>
-
-<Step title="Add a Text Prompt (Optional)" icon="comment">
-Include a brief text description to guide the animation process. VidCraft Ultra uses magic prompting to determine the motion, typically panning or zooming.
-
-</Step>
-
-<Step title="Adjust Settings" icon="sliders">
-Configure additional settings such as motion type and intensity.
-</Step>
-<Step title="Generate Video" icon="play">
-Click the "Generate" button to create your video.
-</Step>
-
-</Steps>
-
-### Best Practices for Image-to-Video
-
-1\. **Use High-Quality Images**: Start with clear, high-resolution images for the best results.
-
-2\. **Focus on Movement**: In your prompt, describe the desired motion rather than the image content.
-
-3\. **Keep It Simple**: Start with simple movements and gradually experiment with more complex animations.
-
-4\. **Consider the Entire Frame**: Think about how all elements in the image could move, not just the main subject.
-
-5\. **Experiment with Different Motions**: Try various movement types like panning, zooming, or more creative transformations.
-
-### Example Prompt
-
-```plaintext
-
-The leaves on the trees sway gently in the breeze, while clouds slowly drift across the sky. A subtle camera pan from left to right reveals more of the landscape.
-
-```
-
-## Text and Image to Video Generation
-
-Combining text prompts with input images gives you more precise control over your generated videos.
-
-### How to Use Text and Image to Video
-
-<Steps>
-<Step title="Select Text and Image to Video Mode" icon="object-group">
-Choose the Text and Image to Video option from the dropdown menu.
-<Frame>
- <img src="https://img.mytsi.org/i/d4QD794.png" alt="Text and Image to Video Interface" />
-</Frame>
-
- </Step>
-
-<Step title="Upload Your Image" icon="upload">
-
-Select or drag-and-drop your image into the designated area.
-
- </Step>
-
- <Step title="Craft Your Prompt" icon="pen-fancy">
-
- Write a detailed text description to guide the video generation process.
-
-</Step>
-<Step title="Adjust Settings" icon="sliders">
-Configure additional settings such as using the image as an end frame or creating a vertical video.
-
- <Frame>
-<img src="https://img.mytsi.org/i/g3L0795.png" alt="Additional Settings" />
-
-</Frame>
-
- </Step>
-
-<Step title="Generate Video" icon="play">
-
-Click the "Generate" button to create your video.
-</Step>
-
-</Steps>
-
-### Mastering Text and Image to Video Prompts
-
-When combining text and images, focus on describing the desired motion and transformation rather than reiterating what's in the image. Here are some tips:
-
-1\. **Describe the Movement**: Explain how elements in the image should animate or transform.
-
-2\. **Add New Elements**: Describe any additional elements that should appear in the video.
-
-3\. **Specify Camera Movement**: Detail how the "camera" should move in relation to the image.
-
-4\. **Enhance the Atmosphere**: Guide the AI on how to develop the mood or lighting of the scene.
-
-5\. **Bridge the Gap**: If using the image as an end frame, describe the journey from the start to the final image.
-
-### Example Prompt
-
-```plaintext
-
-Start with a close-up of the flower in the center. Slowly zoom out to reveal the entire garden, with butterflies gently fluttering between blooms. The lighting transitions from early morning glow to warm afternoon sunlight. End with a wide shot of the garden in full bloom.
-
-```
-
-## Video-to-Video Transformation
-
-VidCraft Ultra's video-to-video feature allows you to remix existing videos into new styles using text prompts.
-
-### How to Use Video-to-Video
-
-<Steps>
-
- <Step title="Select Video-to-Video Mode" icon="film">
-
-Choose the Video-to-Video option from the dropdown menu.
-
- <Frame>
-<img src="https://img.mytsi.org/i/Eyw7796.png" alt="Video-to-Video Interface" />
-
- </Frame>
-
-</Step>
-
-<Step title="Upload Your Video" icon="upload">
-
-Select or drag-and-drop your video (up to 10 seconds) into the designated area.
-
-</Step>
-
-<Step title="Craft Your Prompt" icon="pen-fancy">
-
- Write a text description of the style or transformation you want to apply.
-
-</Step>
-
-<Step title="Adjust Settings" icon="sliders">
-
-Configure the Structure Transformation setting to control how much the original video's structure changes.
-<Frame>
-
- <img src="https://img.mytsi.org/i/yzYs797.png" alt="Structure Transformation Setting" />
-
-</Frame>
-
- </Step>
-<Step title="Generate Video" icon="play">
-
- Click the "Generate" button to create your transformed video.
- </Step>
-
-</Steps>
-
-### Video-to-Video Prompting Guide
-
-When crafting prompts for video-to-video transformation, focus on describing the desired style rather than the content. Here are some tips:
-
-1\. **Specify the Artistic Style**: Describe the visual style you want to apply (e.g., "watercolor painting", "3D animation", "1920s silent film").
-
-2\. **Mention Color Palettes**: Suggest specific color schemes or tones.
-
-3\. **Describe Textures**: Include details about the desired texture (e.g., "grainy", "smooth", "pixelated").
-
-4\. **Reference Visual Effects**: Mention any visual effects you want to add (e.g., "glitch effects", "double exposure", "kaleidoscope").
-
-5\. **Suggest Mood Changes**: Describe how you want the mood or atmosphere of the video to change.
-
-### Example Prompt
-
-```plaintext
-
-Transform the video into a vibrant, hand-drawn animation style reminiscent of Studio Ghibli films. Add flowing, watercolor-like backgrounds with pastel colors. Enhance the movement with slight exaggeration and flowing lines. Incorporate subtle magical elements like sparkling dust or floating leaves.
-
-```
-
-## Extending Videos
-
-VidCraft Ultra allows you to extend your generated videos for longer durations.
-
-### How to Extend Videos
-
-<Steps>
-
-<Step title="Generate Initial Video" icon="play">
-
-Create your initial video using any of the available methods.
-
- </Step>
-
-<Step title="Click 'Extend'" icon="arrow-up-right-from-square">
- Once your video is generated, click the "Extend" button.
-
-<Frame>
-
-<img src="https://img.mytsi.org/i/OnCN798.png" alt="Extend Video Option" />
-
-</Frame>
-
- </Step>
-
- <Step title="Add New Prompt" icon="pen">
-
-Write a new prompt to guide the extension of your video.
-
- </Step>
-
-<Step title="Generate Extension" icon="plus">
-
-Click "Generate" to create the video extension.
-
-</Step>
-
-</Steps>
-
-### Extension Limits
-
-- Text-to-Video: Extend up to 3 times for a total of 18 seconds
-
-- Image and Text to Video: Extend once for a total of 9-10 seconds
-
-<Callout type="info">
-
-When extending videos, focus your prompt on continuing the action or introducing new elements that flow naturally from the original video.
-
-</Callout>
+- **Camera Styles**: "low angle", "high angle", "FPV", "tracking shot"
+- **Lighting Styles**: "diffused lighting", "silhouette", "lens flare"
+- **Movement Speeds**: "slow motion", "timelapse", "hyperlapse"
+- **Movement Types**: "grows", "emerges", "transforms", "ripples"
+- **Style and Aesthetic**: "cinematic", "moody", "iridescent", "retro"
 
 ## Conclusion
 
