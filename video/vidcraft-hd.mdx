@@ -1,70 +1,152 @@
 ---
 title: 'VidCraft HD'
-description: 'Transform text and images into stunning videos with AI-powered VidCraft HD'
+description: 'Transform text and images into stunning videos with AI-powered VidCraft HD, powered by Kling.'
 icon: 'camera-movie'
 ---
+
+<Frame>
+  <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcrafthd%20(2).png" alt="VidCraft HD Screenshot" />
+</Frame>
 
 # VidCraft HD: Advanced AI Video Generation
 
 <Tip>
-  Harness the power of AI to create captivating videos from text prompts and images with unprecedented control and creativity!
+  Harness the power of Kling to create captivating videos from text prompts and images with unprecedented control and creativity!
 </Tip>
 
 ## Overview
 
-VidCraft HD represents a cutting-edge AI-powered video generation tool. This innovative platform allows users to create high-quality video content from both text descriptions and images, opening up new possibilities for content creators, marketers, and storytellers.
+VidCraft HD, powered by the latest Kling models, represents a cutting-edge AI-powered video generation tool. This innovative platform allows users to create high-quality video content from text descriptions, images, and effects, opening up new possibilities for content creators, marketers, and storytellers.
 
 <CardGroup cols={2}>
   <Card title="Text-to-Video" icon="keyboard">
     Generate videos from detailed text prompts, bringing your ideas to life.
   </Card>
-  <Card title="Image-to-Video" icon="image">
-    Transform static images into dynamic video sequences with AI-powered animation.
+  <Card title="Frames-to-Video" icon="image">
+    Create videos by providing the first and last frames.
   </Card>
-  <Card title="High-Quality Output" icon="star">
-    VidCraft HD offers superior resolution and quality for professional-grade results.
+  <Card title="Elements" icon="object-group">
+    Use multiple images to guide the video generation.
   </Card>
-  <Card title="Versatile Applications" icon="layer-group">
-    Suitable for a wide range of uses, from social media content to professional presentations.
+  <Card title="Effects" icon="sparkles">
+    Apply a variety of effects to an image.
   </Card>
 </CardGroup>
 
-## How to Use VidCraft HD
+## Modes of Operation
 
-Follow these steps to create stunning videos with VidCraft HD:
+VidCraft HD offers four primary modes of operation, each designed for a specific video creation workflow.
 
-<Steps>
-  <Step title="Add Text and/or Image" icon="pen-fancy">
-    Enter your text prompt or upload an image (or both) to guide the video generation.
-    
-    <Frame>
-      <img src="https://img.mytsi.org/i/KI5C791.png" alt="VidCraft Input Interface" />
-    </Frame>
-    
-    <Callout type="info">
-      When uploading an image, allow a few seconds until you see it displayed. This confirms the image has been successfully uploaded.
-    </Callout>
-  </Step>
-  
-  <Step title="Generate Video" icon="play">
-    Click the "Generate Video" button to start the AI-powered video creation process.
-    
-    <Frame>
-      <img src="https://img.mytsi.org/i/dpPt792.png" alt="VidCraft Generation Process" />
-    </Frame>
-    
-    <Callout type="warning">
-      VidCraft HD typically takes about 5 minutes to generate a 5-second high-quality video. Be patient during this process.
-    </Callout>
-  </Step>
-  
-  <Step title="Review and Download" icon="eye">
-    Once generation is complete, you can:
-    - Preview your video
-    - Download it for personal use
-    - Share it to the community gallery
-  </Step>
-</Steps>
+### Text to Video
+
+In Text to Video mode, you can create new videos from scratch using text prompts.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between various Kling models, including v1.5, v1.6, and v2.1 Master.
+    - **Mode**: Choose between Standard and Pro.
+    - **Duration**: Choose between 5 and 10 seconds.
+    - **Aspect Ratio**: Choose between 16:9, 9:16, and 1:1.
+    - **CFG Scale**: Dictates how closely the video generation follows your prompt (not available for v2.x models).
+    - **Audio**: Enable to generate audio with your video.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Text to Video Example">
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft-290015020305088.mp4" controls />
+    ```text
+    A small golden-furred puppy in a tattered white shirt, ripped pants, and muddy boots beams innocently while driving a bright red sports car. Wearing black sunglasses, it cruises a charming town street past cobblestone sidewalks, pastel buildings, and curious pedestrians. Sunlight glints on the car; whimsical yet cinematic detail.
+    ```
+  </Card>
+</CardGroup>
+
+### Frames to Video
+
+In Frames to Video mode, you can create a video by providing the first and last frames.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video (optional).
+    - **Start Frame Image**: The first frame of the video.
+    - **End Frame Image**: The last frame of the video (not available for v2.x models).
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Choose between various Kling models.
+    - **Mode**: Choose between Standard and Pro.
+    - **Duration**: Choose between 5 and 10 seconds.
+    - **CFG Scale**: Dictates how closely the video generation follows your prompt (not available for v2.x models).
+    - **Audio**: Enable to generate audio with your video.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Frames to Video Example">
+    <div style={{ display: 'flex', gap: '1rem' }}>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/lipsyncmax2.jpeg" alt="First Frame" />
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/seedcraft4.jpeg" alt="Last Frame" />
+    </div>
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft-290015346503397.mp4" controls />
+    ```text
+    Man puts on sunglasses
+    ```
+  </Card>
+</CardGroup>
+
+### Elements
+
+In Elements mode, you can use up to 4 images to guide the video generation.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Prompt**: Your text description of the desired video.
+    - **Images**: Upload up to 4 images to guide the video generation.
+    - **Negative Prompt**: Specify elements to omit from the video.
+    - **Model**: Currently only supports Kling v1.6.
+    - **Mode**: Choose between Standard and Pro.
+    - **Duration**: Choose between 5 and 10 seconds.
+    - **Aspect Ratio**: Choose between 16:9, 9:16, and 1:1.
+    - **Audio**: Enable to generate audio with your video.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Elements Example">
+    <div style={{ display: 'flex', gap: '1rem' }}>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/lipsyncmax2.jpeg" alt="Element 1" />
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/seedcraft5.jpg" alt="Element 2" />
+    </div>
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft-290015805306960.mp4" controls />
+    ```text
+    The camera is panning towards the man as he puts on a baseball cap
+    ```
+  </Card>
+</CardGroup>
+
+### Effects
+
+In Effects mode, you can apply a variety of effects to an image.
+
+<AccordionGroup>
+  <Accordion title="Parameters" icon="sliders">
+    - **Image**: Upload an image to apply an effect to.
+    - **Effect**: Choose from a variety of effects.
+    - **Prompt**: Your text description of the desired video (for effects that support it).
+    - **Mode**: Choose between Standard and Pro.
+    - **Audio**: Enable to generate audio with your video.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Effects Example">
+    <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/lipsyncmax2.jpeg" alt="Input Image" />
+    <video src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/vidcraft-290020174535099.mp4" controls />
+    ```text
+    Effect: squish
+    ```
+  </Card>
+</CardGroup>
 
 ## Mastering Prompts for VidCraft HD
 
