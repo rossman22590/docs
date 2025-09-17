@@ -302,6 +302,7 @@
             "video/talkcraft",
             "video/talkcraft-pro",
             "video/talkcraft-ultra",
+            "video/talkcraft-max",
             "video/captioncraft",
             "video/video-upscaler",
             "video/interpolate",
@@ -327,6 +328,7 @@
         {
           "group": "Audio",
           "pages": [
+            "audio-gen/tempocraft",
             "audio-gen/songcraft",
             "audio-gen/soundcraft",
             "audio-gen/songcraft-pro",
@@ -351,6 +353,14 @@
           ],
           "icon": "cube",
           "iconType": "solid"
+        },
+        {
+          "group": "Pixio Model Info",
+          "pages": [
+            "faq/video"
+        
+        
+          ]
         }
       ]
     },
@@ -381,14 +391,6 @@
         "machine/security-privacy",
         "machine/faq",
         "machine/machine-errors"
-      ]
-    },
-    {
-      "group": "Pixio Model Info",
-      "pages": [
-        "faq/video"
-    
-        
       ]
     },
     {
