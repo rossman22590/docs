@@ -12,9 +12,9 @@ icon: 'microphone-lines'
 
 ## Overview
 
-VoiceCraft is a versatile AI tool that provides a suite of functionalities for working with voices. It allows you to design entirely new AI voices from a description, clone voices from audio samples, and convert existing speech using a specified voice ID. Whether you're a content creator, developer, or just exploring AI audio, VoiceCraft offers powerful tools for voice manipulation.
+VoiceCraft, powered by Eleven Labs, is a versatile AI tool that provides a suite of functionalities for working with voices. It allows you to design entirely new AI voices from a description, clone voices from audio samples, and convert existing speech using a specified voice ID. Whether you're a content creator, developer, or just exploring AI audio, VoiceCraft offers powerful tools for voice manipulation.
 
-<CardGroup cols={3}>
+<CardGroup cols={2}>
   <Card title="Voice Creator" icon="wand-magic-sparkles">
     Design **custom AI voices** from a text description and sample text.
   </Card>
@@ -23,6 +23,9 @@ VoiceCraft is a versatile AI tool that provides a suite of functionalities for w
   </Card>
   <Card title="Clone Voice" icon="user-plus">
     Create a **clone of a voice** from uploaded audio samples.
+  </Card>
+  <Card title="Text to Dialogue" icon="comments">
+    Create a dialogue between multiple speakers.
   </Card>
 </CardGroup>
 
@@ -144,6 +147,34 @@ This feature allows you to create a new AI voice by cloning it from one or more 
 ### Clone Voice Credits:
 
 Creating a voice clone costs credits based on the total length of the uploaded audio samples. The cost is **1 credit per second** of audio.
+
+## Text to Dialogue: Create a Conversation
+
+This feature allows you to create a dialogue between multiple speakers.
+
+<Steps>
+  <Step title="Select a Voice">
+    Select a voice. It can either be one of the voices from Eleven Labs library or a voice you have created using either Voice Designer of Voice Clone.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraft1.png" alt="Select a Voice" />
+    </Frame>
+  </Step>
+  <Step title="Write Your Dialogue">
+    Start writing your dialogue, a set of lines for each speaker to say and go back and forth.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraft2.png" alt="Write Your Dialogue" />
+    </Frame>
+  </Step>
+  <Step title="Add Speakers">
+    To continue after two blocks of dialogue, click add speaker. Now here you can continue with one of the speakers we are already using or introduce a new speaker. This can safely support up to 8 speakers. Make sure to select the voice. If you are continuing with a speaker you already used, then make sure to select the right voice and have the same name.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/voicecraft3.png" alt="Add Speakers" />
+    </Frame>
+  </Step>
+  <Step title="Generate Dialogue">
+    Once you are done with the plan and the script, Click Generate Dialogue.
+  </Step>
+</Steps>
 
 ## History
 

@@ -1,0 +1,126 @@
+---
+title: 'TempoCraft Pro'
+description: 'Create stunning music with TempoCraft Pro, powered by Eleven Labs Music.'
+icon: 'music-note'
+---
+
+# TempoCraft Pro: AI Music Generation
+
+<Tip>
+  Unleash your creativity with TempoCraft Pro! Generate studio-grade music with natural language prompts in any style, powered by Eleven Labs Music.
+</Tip>
+
+## Overview
+
+TempoCraft Pro, powered by Eleven Labs Music, is a Text to Music model that generates studio-grade music with natural language prompts in any style. It’s designed to understand intent and generate complete, context-aware audio based on your goals. The model understands both natural language and musical terminology, providing you with state-of-the-art features.
+
+## Modes of Operation
+
+TempoCraft Pro offers two modes for generating music: Simple and Master.
+
+### Simple Mode
+
+Simple mode will fill in the gaps, generate lyrics and styles, and then the track all in one go.
+
+<Steps>
+  <Step title="Describe Your Song">
+    Describe the type of song that you'd want. In the prompt, you will describe whether you want an instrumental or a song with lyrics.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro1.png" alt="Describe Your Song" />
+    </Frame>
+  </Step>
+  <Step title="Select Length">
+    Set the length of the song, up to a maximum of 300 seconds.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro2.png" alt="Select Length" />
+    </Frame>
+  </Step>
+  <Step title="Select Audio Format">
+    Select the audio format for your generated song.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro3.png" alt="Select Audio Format" />
+    </Frame>
+  </Step>
+</Steps>
+
+### Master Mode
+
+Master mode allows you to have more control over the track.
+
+<Steps>
+  <Step title="Describe Your Song and Set Length">
+    It starts out the same as simple mode with a prompt and length.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro4.png" alt="Describe Your Song and Set Length" />
+    </Frame>
+  </Step>
+  <Step title="Generate Composition Plan">
+    Click on "Generate Plan" to create a composition plan for your song. This will create different sections of the song.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro5.png" alt="Generate Composition Plan" />
+    </Frame>
+  </Step>
+  <Step title="Edit Composition Plan">
+    Now that you have a composition plan, you can edit it. There are local styles and global styles. Global styles affect the whole song and local styles only a specific section. You can have positive styles - what you want it to sound like - and negative styles - what to avoid.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro6.png" alt="Edit Composition Plan" />
+    </Frame>
+  </Step>
+  <Step title="Adjust Section Lengths">
+    Each section now also has a length. The total length of all sections combined must equal the plan length for the song to sound coherent.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro7.png" alt="Adjust Section Lengths" />
+    </Frame>
+  </Step>
+  <Step title="Add Lyrics">
+    Finally, if you want lyrics, each section has an option to add lyrics.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/tempopro8.png" alt="Add Lyrics" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Mastering Prompts for TempoCraft Pro
+
+<AccordionGroup>
+  <Accordion title="Genre & Creativity">
+    The model demonstrates strong adherence to genre conventions and emotional tone. Both musical descriptors of emotional tone and tone descriptors themselves will work. It responds effectively to both:
+
+    - Abstract mood descriptors (e.g., "eerie," "foreboding")
+    - Detailed musical language (e.g., "dissonant violin screeches over a pulsing sub-bass")
+
+    Prompt length and detail do not always correlate with better quality outputs. For more creative and unexpected results, try using simple, evocative keywords to let the model interpret and compose freely.
+  </Accordion>
+  <Accordion title="Instrument & Vocal Isolation">
+    The v1 model does not generate stems directly from a full track. To create stems with greater control, use targeted prompts and structure:
+
+    - Use the word "solo" before instruments (e.g., "solo electric guitar," "solo piano in C minor").
+    - For vocals, use "a cappella" before the vocal description (e.g., "a cappella female vocals," "a cappella male chorus").
+
+    To improve stem quality and control:
+
+    - Include key, tempo (BPM), and musical tone (e.g., "a cappella vocals in A major, 90 BPM, soulful and raw").
+    - Be as musically descriptive as possible to guide the model's output.
+  </Accordion>
+  <Accordion title="Musical Control">
+    The model accurately follows BPM and often captures the intended musical key. To gain more control over timing and harmony, include tempo cues like "130 BPM" and key signatures like "in A minor" in your prompt.
+
+    To influence vocal delivery and tone, use expressive descriptors such as "raw," "live," "glitching," "breathy," or "aggressive."
+
+    The model can effectively render multiple vocalists, use prompts like "two singers harmonizing in C" to direct vocal arrangement.
+
+    In general, more detailed prompts lead to greater control and expressiveness in the output.
+  </Accordion>
+  <Accordion title="Structural Timing & Lyrics">
+    You can specify the length of the song (e.g., "60 seconds") or use auto mode to let the model determine the duration. If lyrics are not provided, the model will generate structured lyrics that match the chosen or auto-detected length.
+
+    By default, most music prompts will include lyrics. To generate music without vocals, add "instrumental only" to your prompt. You can also write your own lyrics for more creative control. The model uses your lyrics in combination with the prompt length to determine vocal structure and placement.
+
+    To manage when vocals begin or end, include clear timing cues like:
+
+    - "lyrics begin at 15 seconds"
+    - "instrumental only after 1:45"
+
+    The model supports multilingual lyric generation. To change the language of a generated song in our UI, use follow-ups like "make it Japanese" or "translate to Spanish."
+  </Accordion>
+</AccordionGroup>

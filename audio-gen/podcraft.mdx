@@ -1,0 +1,55 @@
+---
+title: 'PodCraft'
+description: 'Create expressive, long-form, multi-speaker conversational audio with PodCraft, powered by Microsofts VibeVoice model.'
+icon: 'podcast'
+---
+
+# PodCraft: AI-Powered Conversational Audio
+
+<Tip>
+  Unleash the power of conversational AI with PodCraft! Generate expressive, long-form, multi-speaker audio, such as podcasts, from text.
+</Tip>
+
+## Overview
+
+PodCraft is a novel framework designed for generating **expressive**, **long-form**, **multi-speaker** conversational audio, such as podcasts, from text. It addresses significant challenges in traditional Text-to-Speech (TTS) systems, particularly in scalability, speaker consistency, and natural turn-taking.
+
+A core innovation of PodCraft is its use of continuous speech tokenizers (Acoustic and Semantic) operating at an ultra-low frame rate of 7.5 Hz. These tokenizers efficiently preserve audio fidelity while significantly boosting computational efficiency for processing long sequences. PodCraft employs a next-token diffusion framework, leveraging a Large Language Model (LLM) to understand textual context and dialogue flow, and a diffusion head to generate high-fidelity acoustic details.
+
+The model can synthesize speech up to **90 minutes** long with up to **4 distinct speakers**, surpassing the typical 1-2 speaker limits of many prior models.
+
+## How to Use PodCraft
+
+<Steps>
+  <Step title="Compose a Script">
+    Compose a script. The specific format for the script should be as follows:
+
+"Speaker 0: Hello there and today we are talking about this awesome new tool in Pixio called PodCraft
+
+Speaker 1: Podcraft lets you generate podcasts with up to 4 speakers
+
+Speaker 0: And it also allows you to upload custom voices.
+
+Speaker 1: Its really fast too!"
+
+    You must start with Speaker 0. You can have up to 4 speakers.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/podcraft1.png" alt="Compose a Script" />
+    </Frame>
+  </Step>
+  <Step title="Add Speakers">
+    In the section below, add speakers from existing voices or select custom and upload an mp3 of a voice to reproduce.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/podcraft2.png" alt="Add Speakers" />
+    </Frame>
+  </Step>
+  <Step title="Finetune Options">
+    Finetune the options for Generation speed and CFG scale. Slower speed produces higher quality results.
+    <Frame>
+      <img src="https://pixiomedia.nyc3.digitaloceanspaces.com/docs/podcraft3.png" alt="Finetune Options" />
+    </Frame>
+  </Step>
+  <Step title="Generate">
+    Click generate. Depending on the length of the script, PodCraft can take up to 5 minutes.
+  </Step>
+</Steps>

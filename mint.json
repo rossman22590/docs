@@ -329,6 +329,7 @@
           "group": "Audio",
           "pages": [
             "audio-gen/tempocraft",
+            "audio-gen/tempocraft-pro",
             "audio-gen/songcraft",
             "audio-gen/soundcraft",
             "audio-gen/songcraft-pro",
@@ -337,8 +338,9 @@
             "audio-gen/rhythmcraft",
             "audio-gen/wavecraft",
             "audio-gen/voicecraft",
-            "audio-gen/voicecraftpro",
-            "audio-gen/speechcraft"
+            "audio-gen/speechcraft",
+            "audio-gen/podcraft",
+            "audio-gen/lyriacraft"
           ],
           "icon": "music",
           "iconType": "solid"
