@@ -71,6 +71,7 @@
         "pages": [
           {
             "group": "Plus",
+            "icon": "image",
             "pages": [
               "aitutor/plus",
               "aitutor/personalities",
@@ -79,54 +80,49 @@
               "aitutor/adding-models",
               "aitutor/custom-prompt-tips",
               "aitutor/importing-exporting-chats"
-            ],
-            "icon": "image",
-            "iconType": "solid"
+            ]
           },
           {
             "group": "Premium",
+            "icon": "hat-wizard",
             "pages": [
               {
                 "group": "Multibot",
+                "icon": "robot",
                 "pages": [
                   "premium/multibot-intro",
                   "premium/adding-a-persona-multibot",
                   "premium/multibot-agent-builder",
                   "premium/image-gen-multibot",
                   "premium/multibot-vendors"
-                ],
-                "icon": "robot",
-                "iconType": "solid"
+                ]
               },
               {
                 "group": "AI Tutor Premium App",
+                "icon": "robot",
                 "pages": [
                   "premium/workspace-instructions",
                   "premium/premium-assistants"
-                ],
-                "icon": "robot",
-                "iconType": "solid"
+                ]
               },
               {
                 "group": "Bookify",
+                "icon": "robot",
                 "pages": [
                   "premium/bookify-basics",
                   "premium/bookify-advanced"
-                ],
-                "icon": "robot",
-                "iconType": "solid"
+                ]
               },
               {
                 "group": "Botcraft Pro",
+                "icon": "bolt",
                 "pages": [
                   "premium/botcraft-pro",
                   "premium/botcraft-pro-settings",
                   "premium/botcraft-bot-setup",
                   "premium/botcraft-add-source",
                   "premium/bocraft-pro-adding-a-rest-api"
-                ],
-                "icon": "bolt",
-                "iconType": "solid"
+                ]
               },
               "premium/prompt-gallery",
               "premium/magic-ai",
@@ -141,37 +137,34 @@
               "premium/app-builder",
               "premium/video-sound-fx",
               "premium/o1-beta"
-            ],
-            "icon": "hat-wizard"
+            ]
           },
           {
             "group": "Ultra",
+            "icon": "rocket",
             "pages": [
               {
                 "group": "Ultra Multibot",
+                "icon": "robot",
                 "pages": [
                   "ultra/multibot-ultra-adding-assistants"
-                ],
-                "icon": "robot",
-                "iconType": "solid"
+                ]
               },
               {
                 "group": "Beam",
+                "icon": "robot",
                 "pages": [
                   "ultra/beam-gemini",
                   "ultra/merging-in-beam",
                   "ultra/beam-2-beta",
                   "ultra/beam-ultra"
-                ],
-                "icon": "robot",
-                "iconType": "solid"
+                ]
               },
               "ultra/browser",
               "ultra/deep-research",
               "ultra/ai-console-ultra",
               "ultra/glyph"
-            ],
-            "icon": "rocket"
+            ]
           }
         ]
       },
@@ -180,9 +173,11 @@
         "pages": [
           {
             "group": "Images",
+            "icon": "image",
             "pages": [
               {
                 "group": "Generate Image",
+                "icon": "camera-polaroid",
                 "pages": [
                   "img-gen/pixcraft",
                   "img-gen/turbocraft",
@@ -199,19 +194,19 @@
                   "img-gen/photoncraft",
                   {
                     "group": "FluxCraft",
+                    "icon": "rocket-launch",
                     "pages": [
                       "img-gen/fluxcraft-overview",
                       "img-gen/fluxcraft-prompt",
                       "img-gen/fluxcraft-custom",
                       "img-gen/fluxcraft-train-lora"
-                    ],
-                    "icon": "rocket-launch"
+                    ]
                   }
-                ],
-                "icon": "camera-polaroid"
+                ]
               },
               {
                 "group": "Edit Image",
+                "icon": "highlighter",
                 "pages": [
                   "img-gen/clothes-swap",
                   "img-gen/clothes-swap-advanced",
@@ -225,37 +220,36 @@
                   "img-gen/remove-object",
                   "img-gen/upscale-image",
                   "img-gen/image-to-vector"
-                ],
-                "icon": "highlighter"
+                ]
               },
               {
                 "group": "Restore",
+                "icon": "star",
                 "pages": [
                   "img-gen/restore-face",
                   "img-gen/colorize",
                   "img-gen/restore-photos"
-                ],
-                "icon": "star"
+                ]
               },
               {
                 "group": "PictoCraft",
+                "icon": "camera-retro",
                 "pages": [
                   "img-gen/pictocraft-full",
                   "img-gen/pictocraft-inpainting",
                   "img-gen/pictocraft-combining"
-                ],
-                "icon": "camera-retro"
+                ]
               },
               {
                 "group": "Creative Upscaler",
+                "icon": "layer-plus",
                 "pages": [
                   "img-gen/upscale-creative",
                   "img-gen/upscale-style",
                   "img-gen/upscale-become",
                   "img-gen/upscale-relight",
                   "img-gen/magnific"
-                ],
-                "icon": "layer-plus"
+                ]
               },
               "img-gen/pixio-creative-01",
               "img-gen/drawcraft",
@@ -278,12 +272,11 @@
               "img-gen/photocraft",
               "img-gen/maxcraft",
               "img-gen/upscalehd"
-            ],
-            "icon": "image",
-            "iconType": "solid"
+            ]
           },
           {
             "group": "Video",
+            "icon": "video",
             "pages": [
               "video/motioncraft",
               "video/motioncraft-pro",
@@ -318,12 +311,11 @@
               "video/pikacraft",
               "video/veocraft",
               "video/removebg"
-            ],
-            "icon": "video",
-            "iconType": "solid"
+            ]
           },
           {
             "group": "Audio",
+            "icon": "music",
             "pages": [
               "audio-gen/tempocraft",
               "audio-gen/tempocraft-pro",
@@ -338,20 +330,17 @@
               "audio-gen/speechcraft",
               "audio-gen/podcraft",
               "audio-gen/lyriacraft"
-            ],
-            "icon": "music",
-            "iconType": "solid"
+            ]
           },
           {
             "group": "3D",
+            "icon": "cube",
             "pages": [
               "3D/objectcraft",
               "3D/polycraft",
               "3D/meshcraft",
               "3D/realitycraft"
-            ],
-            "icon": "cube",
-            "iconType": "solid"
+            ]
           },
           {
             "group": "Pixio Model Info",
@@ -387,7 +376,8 @@
           "machine/pricing-plans",
           "machine/security-privacy",
           "machine/faq",
-          "machine/machine-errors"
+          "machine/machine-errors",
+          "machine/telegram-1"
         ]
       },
       {

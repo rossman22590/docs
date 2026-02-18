@@ -1,0 +1,321 @@
+---
+title: "Telegram Integration"
+description: "Connect your Machine agents to Telegram and chat with them from anywhere"
+icon: "paper-plane"
+---
+
+# Telegram Setup Guide
+
+Connect your Machine agents to Telegram and chat with them from anywhere — in about 5 minutes.
+
+## How It Works
+
+Machine's Telegram Integration lets you connect any of your Machine agents to a Telegram bot. Once connected, anyone who messages your bot on Telegram will receive responses powered by your agent — complete with the model and instructions you've configured.
+
+<Steps>
+  <Step title="User sends message">
+    User sends a message to your Telegram bot
+  </Step>
+  <Step title="Telegram webhooks to Machine">
+    Telegram forwards the message to Machine via webhook
+  </Step>
+  <Step title="Routed to your Agent">
+    Machine routes the message to your selected agent
+  </Step>
+  <Step title="Agent generates response">
+    Your agent processes the message using its configured model and instructions
+  </Step>
+  <Step title="Reply sent on Telegram">
+    The response is sent back to the user on Telegram
+  </Step>
+</Steps>
+
+## Prerequisites
+
+<CardGroup cols={3}>
+  <Card title="Telegram Account" icon="user">
+    A personal Telegram account (free)
+  </Card>
+  <Card title="Machine Account" icon="robot">
+    An active Machine account with at least one agent
+  </Card>
+  <Card title="An Agent" icon="wand-magic-sparkles">
+    At least one agent configured (powers your bot's responses)
+  </Card>
+</CardGroup>
+
+## Part 1 — Create a Bot on Telegram
+
+~2 min
+
+BotFather is Telegram's official tool for creating and managing bots. Open Telegram and search for **@BotFather** (look for the blue verified checkmark ✓).
+
+<Steps>
+  <Step title="Start a chat with BotFather">
+    Tap **Start** or type `/start`. BotFather will reply with a list of available commands.
+  </Step>
+  
+  <Step title="Create a new bot">
+    Send the command `/newbot`.
+  </Step>
+  
+  <Step title="Name your bot">
+    BotFather asks: "How are we going to call it?" — type any display name you like, e.g. **MyAssistantBot**.
+  </Step>
+  
+  <Step title="Choose a username">
+    The username must end in **bot** or **Bot**. If it's taken, BotFather will ask you to try another.
+  </Step>
+  
+  <Step title="Copy your API token">
+    BotFather responds with "Done! Congratulations on your new bot." and provides:
+    - A link to talk to your bot — e.g. `t.me/MyAssistantBot`
+    - An API token — looks like `123456789:ABCdefGHIjklMNO...`
+    
+    <Warning>
+      Keep your token secret! Anyone with this token can control your bot. If it ever gets leaked, revoke it with `/revoke` in BotFather.
+    </Warning>
+  </Step>
+</Steps>
+
+## Part 2 — Connect the Bot in Machine
+
+~1 min
+
+Now bring that bot token into Machine to link it with one of your agents.
+
+<Steps>
+  <Step title="Navigate to the Telegram page">
+    In the Machine dashboard sidebar, click **Telegram** — or go directly to `/telegram`.
+  </Step>
+  
+  <Step title="Click 'Add Bot'">
+    A configuration dialog will open with three fields.
+  </Step>
+  
+  <Step title="Paste your Bot Token">
+    In the Bot Token field, paste the API token from BotFather. Format: `123456789:ABCdefGHIjklMNO...`
+  </Step>
+  
+  <Step title="Select an Agent">
+    Choose which Machine agent should handle incoming messages. This agent's instructions, personality, and tools will power your bot's responses.
+  </Step>
+  
+  <Step title="Select a Model (optional)">
+    Optionally pick a specific AI model. If you leave this blank the bot uses the agent's default model.
+  </Step>
+  
+  <Step title="Click 'Save Configuration'">
+    Machine validates your token, sets up the webhook automatically, and shows a success notification. Your bot appears in the Connected Bots table with a green **Active** badge.
+  </Step>
+</Steps>
+
+## Part 3 — Talk to Your Bot
+
+Your bot is now live! Open Telegram, search for your bot's username (e.g. **@MyAssistantBot**), and tap **Start**.
+
+```
+@MyAssistantBot
+online
+/start
+👋 Hello! I'm your Machine-powered assistant. Here's what I can help with…
+
+Hey, you're my Telegram bot
+That's right! I'm connected to your Machine agent. How can I help you today?
+
+What can you do?
+I can help with a variety of tasks — just ask me anything and I'll use all the tools and knowledge my agent has access to!
+```
+
+The bot maintains conversation context within each chat thread, so you can have natural back-and-forth conversations just like chatting with a person.
+
+## Managing Your Bots
+
+All your connected bots appear on the Telegram dashboard.
+
+<AccordionGroup>
+  <Accordion title="Change Model" icon="sliders">
+    Click the pencil icon next to a bot, pick a new model, and save. The change takes effect immediately for new messages.
+  </Accordion>
+  
+  <Accordion title="Disconnect a Bot" icon="trash">
+    Click the trash icon and confirm. The bot stops responding, but you can reconnect it any time with the same token.
+  </Accordion>
+  
+  <Accordion title="Multiple Bots" icon="layer-group">
+    Machine supports multiple bots per account. Each can have its own agent and model — just click "Add Bot" again.
+  </Accordion>
+</AccordionGroup>
+
+## Tips & Best Practices
+
+### Agent Configuration
+
+<CardGroup cols={2}>
+  <Card title="Customize Instructions" icon="pen">
+    Customize your agent's instructions for Telegram's conversational style. Add instructions like "Keep responses concise and suitable for mobile messaging"
+  </Card>
+  <Card title="Message Length" icon="ruler">
+    Telegram messages tend to be shorter — tune your prompts accordingly
+  </Card>
+</CardGroup>
+
+### Security
+
+<Warning>
+Never share your bot token publicly — treat it like a password. If compromised: @BotFather → `/revoke`. Machine encrypts your bot token at rest.
+</Warning>
+
+### BotFather Commands
+
+<AccordionGroup>
+  <Accordion title="/setname">
+    Change display name
+  </Accordion>
+  <Accordion title="/setdescription">
+    Set bot description
+  </Accordion>
+  <Accordion title="/setuserpic">
+    Upload profile pic
+  </Accordion>
+  <Accordion title="/setcommands">
+    Define slash commands
+  </Accordion>
+  <Accordion title="/setprivacy">
+    Toggle privacy mode
+  </Accordion>
+  <Accordion title="/revoke">
+    Regenerate token
+  </Accordion>
+</AccordionGroup>
+
+## Advanced Branding & Groups
+
+### Branding Your Bot
+
+Use these BotFather commands to give your bot a professional identity:
+
+<CardGroup cols={2}>
+  <Card title="/setuserpic" icon="image">
+    **Profile Picture** - Upload a 512x512 square logo
+  </Card>
+  <Card title="/setdescription" icon="file-lines">
+    **Description** - Shown before users start the bot
+  </Card>
+  <Card title="/setabouttext" icon="info">
+    **About Text** - Shown on the bot's profile page
+  </Card>
+  <Card title="/setcommands" icon="list">
+    **Menu List** - Define your bot's slash command menu
+  </Card>
+</CardGroup>
+
+### Group Chat Intelligence
+
+When you add your bot to a group, Machine provides it with context about who is speaking.
+
+<Info>
+By default, bots only see messages that @mention them. To see all messages, use `/setprivacy` → Disable. Note: Changing privacy requires removing and re-adding the bot to the group.
+</Info>
+
+<Warning>
+Disabling privacy increases credit usage as the bot processes all messages in the group.
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Status shows 'Inactive'">
+    The webhook may not have been set correctly. Try disconnecting and re-adding the bot.
+  </Accordion>
+  
+  <Accordion title="Token is invalid">
+    Make sure you copied the full token from BotFather. It should look like `123456789:ABCdefGHIjklMNO…`
+  </Accordion>
+  
+  <Accordion title="Bot isn't responding">
+    Ensure an agent is selected in the Machine dashboard. If you revoked the token in BotFather, you'll need a new one.
+  </Accordion>
+  
+  <Accordion title="Bot responds slowly">
+    Response time depends on the chosen model and agent complexity. Some models are faster than others.
+  </Accordion>
+  
+  <Accordion title="Bot works in DMs but not in groups">
+    Privacy Mode is on by default — use `/setprivacy` in BotFather to disable it, then remove and re-add the bot to the group.
+  </Accordion>
+  
+  <Accordion title="Webhook Conflicts">
+    If your bot stops responding, another service might have claimed the webhook. Simply click "Save Configuration" again in Machine to re-claim it.
+  </Accordion>
+</AccordionGroup>
+
+## Technical Specifications
+
+### Message Delivery
+
+<CardGroup cols={2}>
+  <Card title="Character Limit" icon="ruler">
+    Strict **4,096 character limit** per message. Machine automatically truncates longer responses.
+  </Card>
+  <Card title="Markdown Stripping" icon="code">
+    Formatting is intentionally simplified to prevent Telegram parse errors. Bold/Italic are converted to plain text.
+  </Card>
+</CardGroup>
+
+### Vision & Media
+
+<AccordionGroup>
+  <Accordion title="Image Processing" icon="image">
+    Supported if using a vision-capable model. Send photos directly or as uncompressed files.
+  </Accordion>
+  <Accordion title="Documents" icon="file">
+    Currently supports image-based documents. Non-image file processing is coming soon.
+  </Accordion>
+</AccordionGroup>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can I connect multiple bots?">
+    Yes! Machine supports multiple bots per account. Each can have its own agent and model.
+  </Accordion>
+  
+  <Accordion title="Can I use the same agent for multiple bots?">
+    Yes, you can use the same agent for multiple Telegram bots.
+  </Accordion>
+  
+  <Accordion title="Does the bot remember previous conversations?">
+    Yes, the bot maintains conversation context within each chat thread.
+  </Accordion>
+  
+  <Accordion title="How do I change which agent my bot uses?">
+    Click the pencil icon next to your bot in the Telegram dashboard, select a different agent, and save.
+  </Accordion>
+  
+  <Accordion title="Is there a cost for each message?">
+    Messages consume credits based on your Machine plan and the model used by your agent.
+  </Accordion>
+  
+  <Accordion title="Can I use the bot in channels?">
+    Currently, bots work best in direct messages and groups. Channel support may vary.
+  </Accordion>
+  
+  <Accordion title="What happens if I delete the bot in BotFather?">
+    If you delete the bot in BotFather, you'll need to create a new bot and reconnect it in Machine.
+  </Accordion>
+</AccordionGroup>
+
+## Ready to Get Started?
+
+Head to the Telegram dashboard to connect your first bot in minutes.
+
+<CardGroup cols={2}>
+  <Card title="Go to Telegram Dashboard" icon="arrow-right" href="/telegram">
+    Connect your first bot in Machine
+  </Card>
+  <Card title="Open BotFather" icon="external-link" href="https://t.me/BotFather">
+    Create your Telegram bot
+  </Card>
+</CardGroup>
+
