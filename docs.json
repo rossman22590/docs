@@ -1,0 +1,429 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "AI Tutor x Pixio Documentation",
+  "theme": "mint",
+  "logo": {
+    "dark": "https://img.mytsi.org/i/lP72916.png",
+    "light": "https://img.mytsi.org/i/lP72916.png"
+  },
+  "favicon": "/logo/icon-144x144.png",
+  "colors": {
+    "primary": "#9b59b6",
+    "light": "#f78fb3",
+    "dark": "#8e44ad"
+  },
+  "topbarLinks": [
+    {
+      "name": "Status",
+      "url": "https://ai-tutor-x-pixio.instatus.com/"
+    },
+    {
+      "name": "Feedback",
+      "url": "https://aitutorxpixio.featurebase.app/"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "API Access",
+    "url": "https://forms.gle/61RXZngEMZYbpfnKA"
+  },
+  "tabs": [
+    {
+      "name": "Pixio",
+      "url": "https://pixio.myapps.ai"
+    },
+    {
+      "name": "AI Tutor",
+      "url": "https://myapps.ai"
+    }
+  ],
+  "primaryTab": {
+    "name": "Home"
+  },
+  "anchors": [
+    {
+      "name": "Youtube",
+      "icon": "pencil",
+      "url": "https://www.youtube.com/@myaitutor"
+    },
+    {
+      "name": "Contact us",
+      "icon": "envelope",
+      "url": "https://calendly.com/techinschools/30min"
+    }
+  ],
+  "topAnchor": {
+    "name": "Home",
+    "icon": "building"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started with AI Tutor",
+        "pages": [
+          "introduction",
+          "quickstart",
+          "development",
+          "faq/support"
+        ]
+      },
+      {
+        "group": "AI Tutor",
+        "pages": [
+          {
+            "group": "Plus",
+            "pages": [
+              "aitutor/plus",
+              "aitutor/personalities",
+              "aitutor/persona-generator",
+              "aitutor/input-output-options",
+              "aitutor/adding-models",
+              "aitutor/custom-prompt-tips",
+              "aitutor/importing-exporting-chats"
+            ],
+            "icon": "image",
+            "iconType": "solid"
+          },
+          {
+            "group": "Premium",
+            "pages": [
+              {
+                "group": "Multibot",
+                "pages": [
+                  "premium/multibot-intro",
+                  "premium/adding-a-persona-multibot",
+                  "premium/multibot-agent-builder",
+                  "premium/image-gen-multibot",
+                  "premium/multibot-vendors"
+                ],
+                "icon": "robot",
+                "iconType": "solid"
+              },
+              {
+                "group": "AI Tutor Premium App",
+                "pages": [
+                  "premium/workspace-instructions",
+                  "premium/premium-assistants"
+                ],
+                "icon": "robot",
+                "iconType": "solid"
+              },
+              {
+                "group": "Bookify",
+                "pages": [
+                  "premium/bookify-basics",
+                  "premium/bookify-advanced"
+                ],
+                "icon": "robot",
+                "iconType": "solid"
+              },
+              {
+                "group": "Botcraft Pro",
+                "pages": [
+                  "premium/botcraft-pro",
+                  "premium/botcraft-pro-settings",
+                  "premium/botcraft-bot-setup",
+                  "premium/botcraft-add-source",
+                  "premium/bocraft-pro-adding-a-rest-api"
+                ],
+                "icon": "bolt",
+                "iconType": "solid"
+              },
+              "premium/prompt-gallery",
+              "premium/magic-ai",
+              "premium/team-ai",
+              "premium/ai-research",
+              "premium/character-ai",
+              "premium/typebot",
+              "premium/ai-console",
+              "premium/datavibes-pro",
+              "premium/agent-builder",
+              "premium/ai-tutor-artifacts",
+              "premium/app-builder",
+              "premium/video-sound-fx",
+              "premium/o1-beta"
+            ],
+            "icon": "hat-wizard"
+          },
+          {
+            "group": "Ultra",
+            "pages": [
+              {
+                "group": "Ultra Multibot",
+                "pages": [
+                  "ultra/multibot-ultra-adding-assistants"
+                ],
+                "icon": "robot",
+                "iconType": "solid"
+              },
+              {
+                "group": "Beam",
+                "pages": [
+                  "ultra/beam-gemini",
+                  "ultra/merging-in-beam",
+                  "ultra/beam-2-beta",
+                  "ultra/beam-ultra"
+                ],
+                "icon": "robot",
+                "iconType": "solid"
+              },
+              "ultra/browser",
+              "ultra/deep-research",
+              "ultra/ai-console-ultra",
+              "ultra/glyph"
+            ],
+            "icon": "rocket"
+          }
+        ]
+      },
+      {
+        "group": "Pixio",
+        "pages": [
+          {
+            "group": "Images",
+            "pages": [
+              {
+                "group": "Generate Image",
+                "pages": [
+                  "img-gen/pixcraft",
+                  "img-gen/turbocraft",
+                  "img-gen/turbocraft-image",
+                  "img-gen/dalle",
+                  "img-gen/customcraft",
+                  "img-gen/imgcraft",
+                  "img-gen/procraft",
+                  "img-gen/stablediffusion3",
+                  "img-gen/recraft",
+                  "img-gen/stablediffusion35",
+                  "img-gen/pictocraft",
+                  "img-gen/sanacraft",
+                  "img-gen/photoncraft",
+                  {
+                    "group": "FluxCraft",
+                    "pages": [
+                      "img-gen/fluxcraft-overview",
+                      "img-gen/fluxcraft-prompt",
+                      "img-gen/fluxcraft-custom",
+                      "img-gen/fluxcraft-train-lora"
+                    ],
+                    "icon": "rocket-launch"
+                  }
+                ],
+                "icon": "camera-polaroid"
+              },
+              {
+                "group": "Edit Image",
+                "pages": [
+                  "img-gen/clothes-swap",
+                  "img-gen/clothes-swap-advanced",
+                  "img-gen/fillcraft",
+                  "img-gen/upscale-tool",
+                  "img-gen/remove-background",
+                  "img-gen/faceswap",
+                  "img-gen/faceswap-advance",
+                  "img-gen/flux-in-context",
+                  "img-gen/edit-image",
+                  "img-gen/remove-object",
+                  "img-gen/upscale-image",
+                  "img-gen/image-to-vector"
+                ],
+                "icon": "highlighter"
+              },
+              {
+                "group": "Restore",
+                "pages": [
+                  "img-gen/restore-face",
+                  "img-gen/colorize",
+                  "img-gen/restore-photos"
+                ],
+                "icon": "star"
+              },
+              {
+                "group": "PictoCraft",
+                "pages": [
+                  "img-gen/pictocraft-full",
+                  "img-gen/pictocraft-inpainting",
+                  "img-gen/pictocraft-combining"
+                ],
+                "icon": "camera-retro"
+              },
+              {
+                "group": "Creative Upscaler",
+                "pages": [
+                  "img-gen/upscale-creative",
+                  "img-gen/upscale-style",
+                  "img-gen/upscale-become",
+                  "img-gen/upscale-relight",
+                  "img-gen/magnific"
+                ],
+                "icon": "layer-plus"
+              },
+              "img-gen/pixio-creative-01",
+              "img-gen/drawcraft",
+              "img-gen/qrcraft",
+              "img-gen/framecraft",
+              "img-gen/fluxcraft-unlimited",
+              "img-gen/fusioncraft",
+              "img-gen/mysticcraft",
+              "img-gen/imagencraft",
+              "img-gen/kontextcraft",
+              "img-gen/qwencraft",
+              "img-gen/kreacraft",
+              "img-gen/gifcraft",
+              "img-gen/bytecraft",
+              "img-gen/pixio-chat",
+              "img-gen/dreamcraft",
+              "img-gen/gpt4o-image",
+              "img-gen/flashcraft",
+              "img-gen/productcraft",
+              "img-gen/photocraft",
+              "img-gen/maxcraft",
+              "img-gen/upscalehd"
+            ],
+            "icon": "image",
+            "iconType": "solid"
+          },
+          {
+            "group": "Video",
+            "pages": [
+              "video/motioncraft",
+              "video/motioncraft-pro",
+              "video/motioncraft-ultra",
+              "video/vidcraft",
+              "video/vidcraft-hd",
+              "video/vidcraft-pro",
+              "video/vidcraft-ultra",
+              "video/vidcraft-remix",
+              "video/mixcraft",
+              "video/morphcraft",
+              "video/faceswapvideo",
+              "video/talkcraft",
+              "video/talkcraft-pro",
+              "video/talkcraft-ultra",
+              "video/talkcraft-max",
+              "video/captioncraft",
+              "video/video-upscaler",
+              "video/interpolate",
+              "video/scenecraft",
+              "video/fxcraft",
+              "video/magicraft",
+              "video/lipsync",
+              "video/lipsync-max",
+              "video/seedcraft",
+              "video/wancraft",
+              "video/viducraft",
+              "video/animatecraft",
+              "video/animate-portrait",
+              "video/filmcraft",
+              "video/flixcraft",
+              "video/pikacraft",
+              "video/veocraft",
+              "video/removebg"
+            ],
+            "icon": "video",
+            "iconType": "solid"
+          },
+          {
+            "group": "Audio",
+            "pages": [
+              "audio-gen/tempocraft",
+              "audio-gen/tempocraft-pro",
+              "audio-gen/songcraft",
+              "audio-gen/soundcraft",
+              "audio-gen/songcraft-pro",
+              "audio-gen/clipcraft",
+              "audio-gen/composecraft",
+              "audio-gen/rhythmcraft",
+              "audio-gen/wavecraft",
+              "audio-gen/voicecraft",
+              "audio-gen/speechcraft",
+              "audio-gen/podcraft",
+              "audio-gen/lyriacraft"
+            ],
+            "icon": "music",
+            "iconType": "solid"
+          },
+          {
+            "group": "3D",
+            "pages": [
+              "3D/objectcraft",
+              "3D/polycraft",
+              "3D/meshcraft",
+              "3D/realitycraft"
+            ],
+            "icon": "cube",
+            "iconType": "solid"
+          },
+          {
+            "group": "Pixio Model Info",
+            "pages": [
+              "faq/video"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Account",
+        "pages": [
+          "billing/account",
+          "video/maker-mode",
+          "billing/billing"
+        ]
+      },
+      {
+        "group": "Machine",
+        "pages": [
+          "machine/the-machine",
+          "machine/getting-started",
+          "machine/using-machine",
+          "machine/features",
+          "machine/browser-automation",
+          "machine/command-line",
+          "machine/file-management",
+          "machine/tools",
+          "machine/api-in-machine",
+          "machine/telegram",
+          "machine/advanced-tutorials",
+          "machine/use-cases",
+          "machine/pricing-plans",
+          "machine/security-privacy",
+          "machine/faq",
+          "machine/machine-errors"
+        ]
+      },
+      {
+        "group": "Pixio API Endpoint",
+        "pages": [
+          "api-reference/endpoint/get",
+          "api-reference/endpoint/auth",
+          "api-reference/endpoint/delete",
+          "api-reference/endpoint/upload"
+        ]
+      },
+      {
+        "group": "AI Tutor RAG API Endpoint",
+        "pages": [
+          "aitutor-api/rag-info",
+          "aitutor-api/rag-api",
+          "aitutor-api/upload-file-rag",
+          "aitutor-api/multi-file-rag",
+          "aitutor-api/list-files-rag"
+        ]
+      },
+      {
+        "group": "AI Tutor API Endpoint",
+        "pages": [
+          "aitutor-api/aitutor-api-info",
+          "aitutor-api/aitutor-api-docs",
+          "aitutor-api/get-token-workflow",
+          "aitutor-api/aitutor-api-chat-stream",
+          "aitutor-api/aitutor-api-chat-history",
+          "aitutor-api/aitutor-api-workflow-stream"
+        ]
+      }
+    ]
+  },
+  "footerSocials": {
+    "x": "https://x.com/tsi_org",
+    "github": "https://github.com/Tech-In-Schools-Initiative"
+  }
+}
