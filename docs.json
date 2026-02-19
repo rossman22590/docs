@@ -384,7 +384,8 @@
           "machine/security-privacy",
           "machine/faq",
           "machine/machine-errors",
-          "machine/open-claw"
+          "machine/open-claw",
+          "machine/telegram"
         ]
       },
       {
