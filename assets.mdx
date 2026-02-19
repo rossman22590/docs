@@ -1,0 +1,44 @@
+---
+title: "Assets"
+description: "Browse generated content and uploads"
+icon: "image"
+---
+
+The **Assets** page is your library of everything you’ve **generated** and everything you’ve **uploaded**. It has two tabs: **Generated** and **Uploads**.
+
+## Access
+
+- **Sidebar**: Click **Assets** (or “My Assets” on the home grid).
+- **URL**: `/home/assets`.
+
+## Tabs
+
+<CardGroup cols={2}>
+  <Card icon="wand-magic-sparkles" title="Generated">
+    All **generated_content** for your account: images, video, audio, 3D. Same data as the “history” on the Generate page, in a dedicated list. Paginated (e.g. 20 per page).
+  </Card>
+  <Card icon="upload" title="Uploads">
+    **User uploads**: files you uploaded (images, etc.) for use in generation or the video editor. Loaded via `getUserUploads` and shown with signed URLs where needed.
+  </Card>
+</CardGroup>
+
+## Generated Tab
+
+- Shows **generated_content** rows: thumbnail/preview, type (image/video/audio/3d), status, creation time.
+- Actions (depending on UI): open in preview, **download**, **publish to gallery**, **delete**.
+- **Delete**: Uses `deleteGeneratedContentAction`; only your (or your account’s) content can be deleted.
+
+## Uploads Tab
+
+- Shows **user uploads** (from the storage/asset system). Used as inputs for models (e.g. ControlNet, image-to-video) or in the video editor.
+- Upload flow elsewhere in the app uses **presigned URLs** and **createUploadRecord** to add new uploads; they then appear here.
+
+## Why Use Assets
+
+- **Reuse**: Find a past generation or upload to use as input for a new generation.
+- **Manage**: Delete old content or bulk-export if the UI supports it.
+- **Publish**: From here or from Generate, publish items to the **public gallery**.
+
+<Info>
+  Assets are scoped to your **account**. With team accounts, members see the same shared assets.
+</Info>

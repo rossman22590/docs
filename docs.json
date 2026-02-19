@@ -347,6 +347,14 @@
             "pages": [
               "faq/video"
             ]
+          },
+          {
+            "group": "Version 2",
+            "pages": [
+              "generate",
+              "assets",
+              "models"
+            ]
           }
         ]
       },

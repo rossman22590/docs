@@ -1,0 +1,80 @@
+---
+title: "Generate"
+description: "Create images, video, audio, and 3D from one workspace"
+icon: "wand-magic-sparkles"
+---
+
+The **Generate** page is your main work**space for creating AI content. You choose a model, set parameters, and run generations. Results appear in your history and are stored as generated content (image, video, audio, or 3D).**
+
+## **Layout**
+
+<CardGroup cols={3}>
+  <Card icon="sliders" title="Left panel">
+    **Model selection and generation form. Pick a provider/model (e.g. Flux, DALL-E 3, SDXL, ControlNet). You can favorite models for quick access.**
+  </Card>
+  <Card icon="image" title="Center / preview">
+    **Preview pane for the current or selected output. View and interact with generated images, video, audio, or 3D.**
+  </Card>
+  <Card icon="list" title="Right column">
+    **History of your generations. Scroll to load more. Click an item to show it in the preview and access download, gallery publish, or delete.**
+  </Card>
+</CardGroup>
+
+## **Model Categories (from the app)**
+
+**The app organizes models by category:**
+
+| **Category**      | **Examples**                                                   |
+| ----------------- | -------------------------------------------------------------- |
+| **Image**         | **Stable Diffusion XL, DALL-E 3, Flux, ControlNet**            |
+| **Video**         | **AnimateDiff, Stable Video Diffusion, Pika Labs, Google Veo** |
+| **Music**         | **SongCraft Pro, RhythmCraft, SoundCraft, TuneCraft**          |
+| **3D**            | **Text to 3D, Image to 3D, 3D Stylization, 3D Animation**      |
+| **Audio & voice** | **PlayHT, ElevenLabs, F5-TTS, Whisper Narration**              |
+
+**Your plan (free, starter, pro, premium, maker) controls which models you can use. Some models are free for certain plans.**
+
+## **Favorites**
+
+- **Favorite models are stored per user. Use the favorite toggle in the left panel to pin models for quick access.**
+- **Favorites are loaded on the Generate page and shown in your model list.**
+
+## **Running a Generation**
+
+<Steps>
+  <Step title="Select a model">
+    **In the left panel, pick a provider and model (e.g. **`fal-ai/flux-1/schnell`**or another ID). The form updates with that model’s inputs.** 
+  </Step>
+  <Step title="Fill the form">
+    **Enter prompt, dimensions, style, or other options. For image-to-image or video, use the upload flow to attach files (presigned upload + upload record).**
+  </Step>
+  <Step title="Generate">
+    **Submit the form. A new generated_content row is created with status **`processing`**. Credits are deducted when the job is billed.**
+  </Step>
+  <Step title="View result">
+    **When status becomes **`succeeded`**, the output appears in the right column and in the preview. You can download, publish to gallery, or delete.**
+  </Step>
+</Steps>
+
+## **Credits**
+
+- **Each generation has a credits cost. If you don’t have enough credits, the app shows an Insufficient credits message and can redirect you to Billing (**`/home/billing`**).**
+- **Credits are tied to your account (personal or team). Free accounts get initial credits on creation.**
+
+## **Uploads & Assets**
+
+- **To use your own images (e.g. for ControlNet or image-to-video), the form uses presigned upload and upload records.**
+- **User assets can be loaded by file type (image, video, etc.) and used as inputs. Signed URLs are used for display and for sending to the AI provider.**
+
+## **Gallery**
+
+- **From the preview or history you can publish a piece of generated content to the public gallery.**
+- **You can unpublish it later. Publication status is stored and shown in the UI.**
+
+## **LoRA in Generate**
+
+- **If you’ve trained LoRAs in Model Training, they can be used in the Generate flow where the model supports custom LoRAs (e.g. Flux). The left panel and form may expose LoRA selection when available.**
+
+<Info>
+  **The default model in the left panel is often **`fal-ai/flux-1/schnell`**. You can change it via URL or by selecting another model.**
+</Info>
