@@ -1,0 +1,173 @@
+---
+title: "OpenClaw Gateway"
+description: "Connect and manage messaging channels with your Machine agents via OpenClaw"
+icon: "plug"
+---
+
+# OpenClaw Gateway
+
+Connect your Machine agents to messaging platforms — Telegram, Discord, WhatsApp — through a single gateway. OpenClaw gives you one place to select an agent, configure channels, and control your gateway.
+
+## Overview
+
+<CardGroup cols={2}>
+  <Card title="Select Agent" icon="robot">
+    Choose which agent to configure for messaging channels. That agent's instructions and model power all connected channels.
+  </Card>
+  <Card title="Messaging Channels" icon="comments">
+    Connect and manage Telegram, Discord, and WhatsApp from one dashboard. Gateway shows **Active** when ready.
+  </Card>
+</CardGroup>
+
+When the gateway is active, use **Open Gateway UI** to manage your OpenClaw instance and see real-time status.
+
+## Machine Backend Configuration
+
+Before connecting channels, configure how OpenClaw talks to Machine.
+
+<AccordionGroup>
+  <Accordion title="Machine CLI" icon="terminal">
+    Set the **default model** used by this gateway. Changing it will restart the gateway so the new model takes effect.
+  </Accordion>
+  <Accordion title="API Key (Optional)" icon="key">
+    Only required for certain models. Enter your key in the format `sk-...`. Need a key? Get one from your provider.
+  </Accordion>
+</AccordionGroup>
+
+Click **Save Machine Config** after updating. The gateway will use these settings for all messaging channels.
+
+## Connecting Messaging Channels
+
+### Telegram
+
+<Steps>
+  <Step title="Open Telegram and search for @BotFather">
+    Create a bot if you don't have one yet.
+  </Step>
+  <Step title="Send the command /newbot">
+    Follow BotFather's instructions to name your bot and choose a username (must end in `bot` or `Bot`).
+  </Step>
+  <Step title="Copy the bot token">
+    BotFather provides a token like `1234567890:ABCdefGHIjklMNOpqrsTUVwxyz`. Copy it fully.
+  </Step>
+  <Step title="Paste in OpenClaw">
+    In the Telegram section, paste the token and click **Connect Telegram Bot**.
+  </Step>
+  <Step title="Approve pairing">
+    Start a chat with your bot in Telegram; you'll receive a **pairing code**. Enter it in "Enter pairing code from Telegram" and click **Approve Pairing**.
+  </Step>
+</Steps>
+
+<Info>
+After starting a chat with your bot, you'll receive a pairing code. Enter it in the gateway UI to approve the connection.
+</Info>
+
+### Discord & WhatsApp
+
+Use the same OpenClaw Gateway UI to add Discord and WhatsApp. Each channel has its own connect flow; follow the on-screen steps for each platform.
+
+## Gateway Control
+
+Manage your OpenClaw instance from the gateway dashboard.
+
+<CardGroup cols={2}>
+  <Card title="Open Gateway UI" icon="window-maximize">
+    Open the full OpenClaw gateway interface in a new tab.
+  </Card>
+  <Card title="Studio Link" icon="link">
+    Quick link to OpenClaw Studio for advanced configuration.
+  </Card>
+  <Card title="Open Console" icon="terminal">
+    Access the gateway console for logs and debugging.
+  </Card>
+  <Card title="Update OpenClaw" icon="arrow-up">
+    Check for and apply OpenClaw updates.
+  </Card>
+</CardGroup>
+
+### Interactive Terminal (Recommended)
+
+<Info>
+**Open Machine Terminal** gives full support — works with `openclaw onboard`, `openclaw config --section channels`, and all interactive commands. No timeout.
+</Info>
+
+Use the terminal for:
+
+- `openclaw onboard` — guided setup
+- `openclaw config --section channels` — channel configuration
+- Any other interactive OpenClaw commands
+
+### Gateway Actions
+
+<AccordionGroup>
+  <Accordion title="Get Fresh URL" icon="rotate">
+    Generate a new gateway URL if the current one has expired or changed.
+  </Accordion>
+  <Accordion title="Fix Gateway Origin" icon="wrench">
+    Resolve origin/CORS issues if the gateway fails to load in the browser.
+  </Accordion>
+  <Accordion title="Restart Gateway" icon="arrows-rotate">
+    Restart the OpenClaw gateway process. Use after config changes or if the gateway is unresponsive.
+  </Accordion>
+  <Accordion title="Refresh Status" icon="arrows-rotate">
+    Update the displayed gateway status (e.g. Running / Stopped).
+  </Accordion>
+  <Accordion title="Auto-Approve Pairing" icon="check">
+    Enable to automatically approve pairing requests for connected channels (e.g. Telegram).
+  </Accordion>
+  <Accordion title="Start Gateway" icon="play">
+    Start the gateway if it is stopped. Required before messaging channels can receive messages.
+  </Accordion>
+</AccordionGroup>
+
+## Gateway URL & Status
+
+After the gateway is running, you'll see:
+
+- **Gateway URL** — A URL like `https://...proxy.daytona.works?token=...`. This is how messaging platforms reach your OpenClaw instance. Keep it private.
+- **Status** — Typically **Running** when the gateway is active.
+
+<Warning>
+Do not share your gateway URL or token publicly. Anyone with the URL could send traffic to your gateway.
+</Warning>
+
+## Timeout & Sandbox
+
+<AccordionGroup>
+  <Accordion title="Auto-stop after inactivity" icon="clock">
+    The gateway auto-stops after a period of inactivity (e.g. **1 hour**) to save resources. The current setting is shown on the dashboard. To change the timeout, you may need to delete and recreate the setup.
+  </Accordion>
+  <Accordion title="Wake Sandbox" icon="bolt">
+    If the gateway has stopped due to inactivity, click **Wake Sandbox** to reactivate it without recreating the setup.
+  </Accordion>
+</AccordionGroup>
+
+## Help & Troubleshooting
+
+Use the **Help & Troubleshooting** section in the OpenClaw Gateway UI for:
+
+- Machine backend configuration issues
+- Channel connection and pairing problems
+- Gateway URL and origin errors
+- OpenClaw CLI and terminal usage
+
+## Removing the Setup
+
+Click **Delete Messaging Setup** to remove the OpenClaw gateway and all channel connections. You can create a new setup later; you'll need to reconnect each channel (Telegram, Discord, WhatsApp) and re-enter tokens or pairing codes as required.
+
+<Info>
+Deleting the setup does not delete your agents — only the gateway and its channel links are removed.
+</Info>
+
+## Summary
+
+| Action | Where |
+|--------|--------|
+| Select agent for messaging | OpenClaw Gateway → **Select Agent** |
+| Configure Machine model/API key | **Machine Backend Configuration** → **Save Machine Config** |
+| Connect Telegram | Paste bot token → **Connect Telegram Bot** → **Approve Pairing** with code from Telegram |
+| Open full gateway UI | **Open Gateway UI** |
+| Use CLI (no timeout) | **Open Machine Terminal** |
+| Reactivate after auto-stop | **Wake Sandbox** |
+| Remove gateway and channels | **Delete Messaging Setup** |
+
