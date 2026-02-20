@@ -350,10 +350,12 @@
           },
           {
             "group": "Version 2",
+            "icon": "camera",
             "pages": [
               "generate",
               "assets",
-              "models"
+              "models",
+              "video-editor"
             ]
           }
         ]
