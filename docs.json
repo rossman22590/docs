@@ -344,6 +344,7 @@
           },
           {
             "group": "Pixio Model Info",
+            "icon": "face-smile",
             "pages": [
               "faq/video"
             ]
