@@ -390,7 +390,8 @@
           "machine/faq",
           "machine/machine-errors",
           "machine/open-claw",
-          "machine/telegram"
+          "machine/telegram",
+          "machine/claw-info"
         ]
       },
       {

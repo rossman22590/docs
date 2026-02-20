@@ -1,0 +1,278 @@
+---
+title: "OpenClaw vs Built-in Telegram"
+description: "How the messaging gateway (OpenClaw) and Machine’s built-in Telegram work under the hood, and when to use each."
+icon: "code-compare"
+---
+
+# Two Ways to Connect Telegram to Machine
+
+**Good news: both paths support Telegram.** You can connect your Machine agents to Telegram either via **Machine’s built-in Telegram** (Telegram-only, full Machine experience) or via the **messaging gateway (OpenClaw)** (Telegram + WhatsApp + Discord from one gateway). They work differently. Many customers find **Machine’s built-in Telegram integration** more powerful for Telegram and group chats — see the checklist below. This page explains how each works and when to use which.
+
+---
+
+## Telegram: Machine built-in vs gateway — at a glance
+
+When you use **Telegram**, you can use **Machine’s built-in Telegram** (full, app-like experience) or the **gateway** (Telegram + WhatsApp + Discord). Built-in is often the better fit for Telegram and group chats.
+
+<CardGroup cols={2}>
+  <Card title="Machine built-in Telegram" icon="paper-plane">
+    **Streaming:** Yes — typing, “Using tool…”, streamed text.  
+    **Group chats:** Full support; @mentions stripped; context per chat.  
+    **Threads:** Same as the app — one thread per Telegram chat, in your projects.  
+    **Files:** Add in Machine; agent has full access.  
+    **Computer:** Yes when needed.  
+    **Manage:** Machine dashboard → Telegram page.  
+    **Channels:** Telegram only.
+  </Card>
+  <Card title="Gateway (OpenClaw) when using Telegram" icon="server">
+    **Streaming:** No — one final message.  
+    **Group chats:** Via gateway; one reply per message.  
+    **Threads:** Different model; not the same as app threads.  
+    **Files:** Manage in **OpenClaw** / gateway UI — agents and files live there.  
+    **Computer:** Different path; no computer for that run.  
+    **Manage:** MachineClaw + Machine “Messaging channels”.  
+    **Channels:** Telegram + WhatsApp + Discord.
+  </Card>
+</CardGroup>
+
+**Summary:** For Telegram and group chats, **Machine’s built-in Telegram is more powerful**: same experience as the app, streaming, proper threads, one place (Machine) to add files. Use the **gateway** when you need **Telegram + WhatsApp + Discord** and are okay with no streaming and managing OpenClaw at MachineClaw.
+
+---
+
+## Production readiness and open source
+
+<CardGroup cols={2}>
+  <Card title="Machine built-in Telegram" icon="check-shield">
+    **Production-grade.** Built-in Telegram is part of Machine and is built for production. It is maintained, monitored, and designed so it will not crash under normal use.
+  </Card>
+  <Card title="Gateway (OpenClaw)" icon="code">
+    **Open source.** OpenClaw is open source. You can self-host it, inspect the code, and modify it to fit your needs.
+  </Card>
+</CardGroup>
+
+---
+
+## How Machine runs an agent (quick context)
+
+In Machine, when you chat in the app or in **Agent Chatrooms**, your message is saved to a **conversation thread**, the agent gets the full setup (including the computer when needed, your files, and limits), and the agent runs with **tools** and **streaming** — you see typing, “Using tool…”, and text as it’s written. **Built-in Telegram is where messages are actually forwarded** (Telegram → Machine via webhook); it uses this same experience. The **gateway** is **isolated** (no forwarding from OpenClaw to Machine; it uses the Machine API key) and uses a different path: one reply at the end, no live streaming.
+
+---
+
+## Built-in Telegram — how it works
+
+Built-in Telegram is **part of Machine**. You set up the bot in the Machine dashboard. Messages are **forwarded** from Telegram to Machine (via Machine’s webhook); Machine runs the **same** agent experience as in-app chat.
+
+<Steps>
+  <Step title="User sends a message in Telegram">
+    The user messages your bot (e.g. in a private chat or group). Telegram sends an update to Machine’s webhook.
+  </Step>
+  <Step title="Machine receives the message">
+    Machine looks up your bot and loads your saved settings (agent, model, etc.).
+  </Step>
+  <Step title="Thread and project">
+    Machine gets or creates a **conversation thread** for this Telegram chat (and a “Chats” project if needed). Your message is saved to that thread — same as when you type in the Machine app.
+  </Step>
+  <Step title="Full agent run">
+    Machine runs the agent with the **full setup**: computer when needed, your files, tools, and limits. The agent has the same **tools**, **computer**, and context as in the Machine app.
+  </Step>
+  <Step title="Streaming back to Telegram">
+    Machine sends updates to Telegram in real time: **typing** indicator, **“🔧 Using tool…”** when a tool runs, and **streamed reply text**. The user sees the same live experience as in the app.
+  </Step>
+</Steps>
+
+So: **one thread per Telegram chat**, **messages saved in that thread**, **full agent run** with **real-time streaming** (typing, tools, text) to Telegram. Built-in Telegram uses the **same** agents you use in Machine chat and in **Agent Chatrooms**.
+
+<CardGroup cols={2}>
+  <Card title="What you get" icon="check">
+    Full agent (tools, computer, files). Same threads and projects as in Machine. Real-time streaming. Conversation history in the same model as the app.
+  </Card>
+  <Card title="Where to set up" icon="settings">
+    Machine dashboard → Telegram page. Add bot, paste token, pick agent (and optional model). Machine sets the webhook and stores the credential.
+  </Card>
+</CardGroup>
+
+<Info>
+**Limitation:** Built-in Telegram is **Telegram only**. There is no built-in WhatsApp or Discord in this path.
+</Info>
+
+---
+
+## Messaging gateway (OpenClaw) — how it works
+
+The **gateway** is **isolated** — a separate, sandboxed environment. OpenClaw runs inside that sandbox and has **its own chat UI**. It can connect **one** agent to **Telegram, WhatsApp, and Discord** at once. When a user sends a message, OpenClaw receives it and uses the **Machine API key** to call Machine (no forwarding from OpenClaw); Machine runs the agent and returns **one** reply. The gateway sends that reply to the user. So the user does **not** get real-time streaming (no typing, no “Using tool…” in the app) — they get the final answer in one go.
+
+<Steps>
+  <Step title="User sends a message (Telegram / WhatsApp / Discord)">
+    The user messages your bot on one of the connected platforms. OpenClaw (inside the gateway sandbox) receives it.
+  </Step>
+  <Step title="Gateway calls Machine (isolated, API key)">
+    The gateway is isolated; it does **not** forward messages. It uses the **Machine API key** to call Machine directly. Machine runs the agent; the gateway does not run your agent itself.
+  </Step>
+  <Step title="Machine: thread and run">
+    Machine finds or creates a **thread** for this user and agent. The conversation model is **minimal** — your message is not stored in the same way as in the app. Machine starts the agent run with the message.
+  </Step>
+  <Step title="Agent run">
+    Machine runs the agent but **without** the full app setup (no computer for this run, no file-upload path from the app). The agent still gets the message and can use tools, but the **experience and thread model** are different from the app and built-in Telegram.
+  </Step>
+  <Step title="One reply back">
+    Machine waits for the agent to finish, then **returns a single reply** to the gateway. The gateway sends that reply to the user on Telegram/WhatsApp/Discord. The user sees **one** message — no live streaming or tool updates in the app.
+  </Step>
+</Steps>
+
+So: **gateway = isolated, sandboxed, own UI, multi-channel**. It uses the **Machine API key** (no forwarding from OpenClaw to Machine). Machine runs the agent and returns **one** reply. No real-time streaming to the channel; different thread and conversation model from the app.
+
+<CardGroup cols={2}>
+  <Card title="What you get" icon="server">
+    One agent on **Telegram + WhatsApp + Discord**. Manage OpenClaw and the gateway’s chat UI at **MachineClaw** ([machineclaw.myapps.ai](https://machineclaw.myapps.ai/)). Enable and link the gateway in Machine’s “Messaging channels” / OpenClaw settings.
+  </Card>
+  <Card title="What’s different from built-in" icon="info">
+    No full app-style run (no computer for this run, no file-upload flow from the app). Machine returns **one reply** to the gateway, so **no streaming** (typing, tool status) to the user. User messages are not stored in the thread the same way as in the app.
+  </Card>
+</CardGroup>
+
+<Warning>
+The gateway is **not** a thin relay. It runs in a **sandbox** and has **its own chat UI**. You manage it at **MachineClaw** and in Machine’s gateway settings. Choose it when you need **multi-channel** and are okay with this different, non-streaming experience.
+</Warning>
+
+---
+
+## Quick comparison
+
+<CardGroup cols={2}>
+  <Card title="Built-in Telegram" icon="paper-plane">
+    **Flow:** Telegram → Machine → thread + message saved → full agent run → **stream** (typing, tools, text) to Telegram.  
+    **Threads:** Same as Machine app (one thread per chat, in your projects).  
+    **Streaming:** Yes — typing, “Using tool…”, streamed reply.  
+    **Channels:** Telegram only.  
+    **Best for:** Telegram-only; want the **full** Machine experience and same agents as chat/chatrooms.
+  </Card>
+  <Card title="Messaging gateway (OpenClaw)" icon="server">
+    **Flow:** User → OpenClaw (isolated sandbox; uses Machine API key) → Machine runs agent → one reply → gateway sends to user. No forwarding from OpenClaw to Machine.  
+    **Threads:** Different model; user message not stored in thread like in the app.  
+    **Streaming:** No — user gets **one** final message.  
+    **Channels:** Telegram, WhatsApp, Discord.  
+    **Best for:** Multi-channel; okay with sandboxed gateway and MachineClaw; no need for live streaming in the app.
+  </Card>
+</CardGroup>
+
+---
+
+## FAQ and common questions
+
+### If I want to add a file to my agent that I built using the gateway method, do I add it in Machine, MachineClaw, or the gateway UI?
+
+**In OpenClaw / gateway UI.** With the gateway, you manage agents and files **inside OpenClaw** — add or edit files, instructions, and knowledge in the gateway UI. You do not manage that agent in the Machine dashboard.
+
+### Does the agent operate differently in Machine than in MachineClaw / the gateway? Do I still need to use the gateway UI?
+
+**Yes, it operates differently depending on where the user is talking to it.**
+
+- **In Machine (app or built-in Telegram):** The agent runs with the **full** pipeline — same threads, projects, tools, computer, streaming. You don’t use the gateway UI to chat; you chat in the Machine app or in Telegram (if you use built-in Telegram).
+- **Via the gateway (Telegram / WhatsApp / Discord through OpenClaw):** The agent still runs in Machine, but the **path** is different: the gateway sends one message and gets one reply back. So the **experience** for the user is different (no streaming in the app, one final message). The **gateway UI** (and MachineClaw) are for **setup and management** — adding tokens, pairing, checking status — not for day-to-day chatting. To **use** the agent, people just open Telegram (or WhatsApp, etc.) and message the bot; they do **not** need to open the gateway UI.
+
+So: **you do not need to use the gateway UI to use the agent.** You use the gateway UI (or MachineClaw) to set up and manage the gateway; end users chat in the messaging app.
+
+### I heard you made changes — what were they?
+
+We **did not change how the product works.** We improved our **documentation** so the two options are clear:
+
+1. **Machine built-in Telegram** — Telegram-only, part of Machine, same pipeline as the app and chatrooms (streaming, threads, files).
+2. **Messaging gateway (OpenClaw)** — Sandboxed, its own UI, Telegram + WhatsApp + Discord; gateway calls Machine and gets one reply per message.
+
+We also clarified: where to manage (**Machine** for Direct/built-in, **OpenClaw** / gateway UI for the gateway), that you don’t need the gateway UI to chat, and that the agent can behave differently when used via the app vs via the gateway. Nothing changed in the actual behavior of the gateway or built-in Telegram.
+
+---
+
+### Where do I add files or knowledge to my agent?
+
+**Machine (Direct / built-in Telegram):** You manage in **Machine** — add or edit files, instructions, and knowledge in the Machine dashboard. **OpenClaw (gateway):** You manage inside **OpenClaw** / the gateway UI; agents and files live there.
+
+### Where do I manage the gateway and OpenClaw?
+
+**MachineClaw** at [https://machineclaw.myapps.ai/](https://machineclaw.myapps.ai/) — for OpenClaw and the gateway’s own chat UI. In **Machine**, use the agent’s “Messaging channels” / OpenClaw settings to enable the gateway and link it to your agent.
+
+### Does built-in Telegram use the same agents as Machine chat and chatrooms?
+
+**Yes.** Built-in Telegram uses the **same** agents and the **same** pipeline as the Machine app and **Agent Chatrooms**. One agent, one place — whether someone chats in the app, in a chatroom, or in Telegram (built-in).
+
+### Why would I use the gateway instead of built-in Telegram?
+
+Use the **gateway** when you need **Telegram + WhatsApp + Discord** from one agent and are okay with: the gateway’s sandboxed environment, its own UI, no real-time streaming to the user (one final reply), and managing OpenClaw at MachineClaw. Use **built-in Telegram** when you only need Telegram and want the full Machine experience (streaming, same threads/agents as the app and chatrooms).
+
+### Do I need to use the gateway UI to chat with my agent?
+
+**No.** End users chat in Telegram (or WhatsApp, etc.). You use the gateway UI and MachineClaw for **setup and management** — tokens, pairing, status — not for day-to-day chatting.
+
+### Can I use both built-in Telegram and the gateway for the same agent?
+
+You can use **built-in Telegram** for one bot (Telegram-only, full experience) and the **gateway** for the same or another agent (multi-channel). They are separate setups. One agent can be connected via the gateway (Telegram + WhatsApp + Discord) and you can also have a different Telegram bot connected via built-in Telegram to the same or another agent.
+
+### Why is Machine’s built-in Telegram described as “more powerful” for Telegram?
+
+For **Telegram specifically**, built-in Telegram gives you: real-time streaming (typing, “Using tool…”, streamed text), the same thread and project model as the app (so conversations are first-class in Machine), full support for group chats and @mentions, and one place (Machine) to add files and manage the bot. The gateway, when used for Telegram, still runs the agent in Machine but returns one reply per message and uses a different thread model; there’s no streaming in the app. So for “Telegram only” use cases, built-in is usually the better fit.
+
+### How do group chats work with built-in Telegram?
+
+Machine’s built-in Telegram supports group chats. You can configure the bot (e.g. in BotFather) so it sees all messages or only when @mentioned. Machine strips @mentions from the text before sending to the agent and can add context (who is speaking, that it’s a group). One thread per group chat; same flow as private chats.
+
+### How do group chats work with the gateway?
+
+The gateway receives messages from Telegram groups. It uses the **Machine API key** to call Machine (no forwarding from OpenClaw to Machine); Machine runs the agent and returns one reply; the gateway sends that reply to the group. There’s no real-time streaming in the group — users see one final message.
+
+### Where is my bot token stored for built-in Telegram?
+
+In **Machine** — in the credential store (e.g. encrypted). Machine sets the Telegram webhook and keeps the token so it can send replies. You never put the token in MachineClaw or the gateway for built-in Telegram.
+
+### Where is my bot token stored when I use the gateway?
+
+For the **gateway**, the token is configured in the gateway (e.g. via Machine’s “Messaging channels” or OpenClaw config in the sandbox). MachineClaw and the gateway UI are where you manage that. The agent itself still lives in Machine; the gateway uses the token to receive and send messages on Telegram (or WhatsApp, Discord).
+
+### I only need Telegram. Which should I use?
+
+Use **Machine’s built-in Telegram**. You get the full Machine experience (streaming, same threads as the app, group chats, one place to add files). No gateway, no MachineClaw needed for that bot.
+
+### I need Telegram and WhatsApp (and maybe Discord). Which should I use?
+
+Use the **messaging gateway (OpenClaw)**. It’s the path that connects one agent to Telegram + WhatsApp + Discord. You’ll set up and manage the gateway at MachineClaw and in Machine’s “Messaging channels” settings.
+
+### Does the agent have access to tools and computer in both paths?
+
+**Built-in Telegram:** Yes — full pipeline, so tools and computer (sandbox) when needed, same as the app.  
+**Gateway:** The agent in Machine can still use tools, but the run doesn’t get the full app setup (e.g. no computer for that run). The reply is sent back as one message; the user doesn’t see “Using tool…” in the messaging app.
+
+### Can I see the conversation history for gateway-connected chats in Machine?
+
+The gateway uses a different thread and conversation model; user messages aren’t stored in the thread the same way. So you won’t see the same per-message history in Machine as for in-app or built-in Telegram chats. The agent still runs and replies, but the conversation model is different.
+
+### What is MachineClaw?
+
+**MachineClaw** ([machineclaw.myapps.ai](https://machineclaw.myapps.ai/)) is the UI for managing **OpenClaw** and the messaging gateway. You use it to configure channels, pairing, and the gateway’s own chat interface. It is separate from the Machine app; Machine is where your agents, chatrooms, and built-in Telegram bots live.
+
+### What are Agent Chatrooms?
+
+**Agent Chatrooms** are a Machine feature: shared spaces where multiple agents (and optionally users) collaborate. They use the same agents and threads as the rest of Machine. Built-in Telegram uses those same agents; the gateway does not use chatrooms — it’s a separate path that calls the agent via the gateway API.
+
+### Summary: where do I do what?
+
+| I want to… | Where |
+| --- | --- |
+| Add a file or knowledge (built-in Telegram) | **Machine** (dashboard, that agent) |
+| Add a file or knowledge (gateway / OpenClaw) | **OpenClaw** / gateway UI (agents and files live in the gateway) |
+| Connect a Telegram-only bot with full experience | **Machine** → Telegram page (built-in) |
+| Connect one agent to Telegram + WhatsApp + Discord | **Machine** “Messaging channels” + **MachineClaw** (gateway) |
+| Manage the gateway / OpenClaw | **MachineClaw** + Machine “Messaging channels” |
+| Chat with my agent as a user | **Machine app**, or **Telegram/WhatsApp** (no gateway UI needed) |
+| Set up or fix the gateway (tokens, pairing) | **MachineClaw** or gateway UI / Machine “Messaging channels” |
+
+
+### Summary: where do I do what?
+
+| I want to…                           | Where                                                  |
+| ------------------------------------ | ------------------------------------------------------ |
+| Add a file or knowledge to my agent  | **Machine** (dashboard, that agent)                    |
+| Connect a Telegram-bot using Machine | **Machine** → Telegram page (built-in)                 |
+| Connect one agent to Telegram        | **Machine** “Messaging channels” + **MachineClaw**     |
+| Manage the gateway / OpenClaw        | **MachineClaw** + Machine “Messaging channels”         |
+| Chat with my agent as a user         | **Machine app**, or **Telegram/WhatsApp** (no gateway) |
+| Set up or fix the gateway            | **MachineClaw** or gateway                             |
+|                                      |                                                        |
