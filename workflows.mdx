@@ -1,0 +1,155 @@
+---
+title: "Workflows"
+description: "Chain AI models into multi-step flows. Build once, run with one click."
+icon: "git-branch"
+---
+
+**Workflows** let you chain **multiple AI models** into a single flow. You build the flow once (add models, connect them, set prompts and options), then **Run** to execute every step in order. Outputs from one step automatically feed into the next. No need to run each model by hand or copy URLs between steps.
+
+<Info>
+  Workflows are **BETA**. The builder and behavior may evolve.
+</Info>
+
+---
+
+## Where to find Workflows
+
+- In the app sidebar, click **Workflows** (BETA).
+- You’ll see a list of your workflows and a **Create workflow** button.
+
+---
+
+## Workflow list
+
+- **Cards** show: name, description, last run time, status (queued / running / succeeded / failed), and a preview of the final output (image, video, or “3D model” placeholder).
+- **Actions** on each card:
+  - **Edit** — Open the workflow in the builder.
+  - **Download** — Download the latest output file (if any).
+  - **Publish** — Share the workflow via a public link (optional cover image).
+  - **Delete** — Delete the workflow and all its runs.
+- **Realtime**: When a run is queued or running, the list updates automatically; the card shows a “running” state and you can open the workflow to watch step-by-step progress.
+
+---
+
+## Creating a workflow
+
+1. Click **Create workflow**.
+2. Enter a **name** and optional **description**, then confirm. You’re taken to the **workflow builder** with an empty canvas.
+3. In the builder:
+   - **Left panel — Models**: Search and browse by provider/company. Use **\+** on a model to add it to the canvas. You can star models as favorites for quick access.
+   - **Right panel — Save & Run**: Set or change name/description, **Save** the workflow, and **Run** it. After a run, status and “Started/Finished” time are shown here; the canvas also updates in real time.
+
+---
+
+## How the builder works
+
+### Adding steps
+
+- **Only “model” nodes** are added from the library. Each node is one AI model (e.g. text-to-image, image-to-video, upscale, TTS).
+- Click **\+** next to a model in the left panel to add it to the canvas. You can add as many nodes as you need.
+- Each model node shows:
+  - **Label** (model name)
+  - **Inputs** — e.g. prompt, image URL, video URL, duration, model-specific options. Inputs can be:
+    - Filled **manually** (type prompt, pick a file from your assets, set sliders/selects).
+    - **Connected** from another node’s output (drag from the **result** handle of one node to a **file** handle on another).
+
+### Connecting nodes
+
+- **Valid connection**: From a node’s **output (result)** handle → to another node’s **input (file)** handle.
+- **Type compatibility** is enforced:
+  - **Image** output can only connect to **image** inputs.
+  - **Video** → **video**, **audio** → **audio**.
+  - If you try to connect incompatible types (e.g. image to video), you’ll see an error and the connection is rejected.
+- **Multi-input**: Some models accept multiple files (e.g. several images). You can connect multiple nodes to the same input up to that input’s maximum.
+- **Execution order** is determined automatically from the graph: nodes with no incoming connections run first; then nodes that depend on their outputs, and so on. Cycles are not allowed and will cause an error when you run.
+
+### What gets saved
+
+- **Saved with the workflow**: Node positions, which model each node uses, **prompt** and **negative prompt**, **params** (sliders, selects, etc.), **file URLs** you picked or that came from previous runs, and **connections** (edges). So when you run again, the same inputs and options are used unless you change them.
+- **Not persisted as “workflow definition”**: Transient run state (e.g. “running”) is cleared after a run; the builder may auto-save after a run to store the latest output URLs on nodes for preview.
+
+### Locked nodes
+
+- You can **lock** a model node when it already has an output you’re happy with. When the workflow runs, **locked** nodes are **skipped** (no new API call); their existing output is reused for any downstream node connected to them. Use this to avoid re-running expensive steps while you iterate on later steps.
+
+---
+
+## Running a workflow
+
+1. **Save** first (especially if you just created the workflow or changed name/description). **Run** will auto-save the current definition if needed, then start a new run.
+2. Click **Run**. A new **workflow run** is created (status: queued → running).
+3. **Execution**:
+   - Steps run in **topological order** (no step runs until the steps that feed it have finished).
+   - Each step uses: the model’s params, prompt/negative prompt from the node, and any **file/image/video/audio URLs** from connected nodes (or from the node’s own selected assets).
+   - **Credits** are consumed per step according to each model’s pricing; duration-based models (e.g. video, audio) get **duration** inferred from upstream outputs when possible.
+4. **Realtime updates**: The builder subscribes to the current workflow’s runs. As each step completes, the corresponding node updates (e.g. “Generation completed”, output thumbnail/URL). The **Save & Run** panel shows overall status and “Started” / “Finished” time.
+5. When the run **succeeds** or **fails**, the workflow is marked complete. If it succeeds, the last step’s output (or the rightmost node with output, depending on layout) is what you see as the “final” result in the list and in the builder. You can **download** that output from the list or from the node in the builder.
+
+---
+
+## After a run
+
+- **List**: The workflow card shows the latest run status and a preview of the final output (image/video/3D). You can **Download** to get the file.
+- **Builder**: Each model node that ran shows its output (image/video/audio, etc.). You can lock nodes, change prompts/params, add or remove nodes, and **Run** again.
+- **Publish**: From the list or the builder, you can **Publish** the workflow to get a shareable link. Others can view (and optionally duplicate) the workflow; they don’t edit your copy unless they duplicate it to their account.
+
+---
+
+## Tips and constraints
+
+- **Start simple**: One text-to-image model, then add an upscale or image-to-video model and connect the first node’s output to the second. Run to see the full chain.
+- **Prompt and files**: The “first” step(s) in the graph usually need prompt or file inputs set manually (or from your assets). Downstream steps can rely entirely on connected outputs.
+- **Duration**: For video/audio/lipsync models, the runner tries to pass **duration** from upstream outputs so credit calculation and APIs that need length work correctly.
+- **Errors**: If a step fails, the run stops and is marked failed; you’ll see which node failed and the error. Fix inputs or model choice and run again.
+- **No cycles**: The graph must be acyclic. If you create a cycle by mistake, running will fail with a “Cycle detected” error.
+- **Models available**: Almost all app models appear in the workflow model library (by provider/company), except a few (e.g. some LoRA/training, certain extend-only or internal models). Search by name, type, or company to find what you need.
+
+---
+
+## Summary
+
+| What          | How                                                                                              |
+| ------------- | ------------------------------------------------------------------------------------------------ |
+| **Open**      | Sidebar → Workflows                                                                              |
+| **Create**    | Create workflow → name/description → builder                                                     |
+| **Add steps** | Models panel → + on a model → node on canvas                                                     |
+| **Connect**   | Drag from a node’s **result** handle to another’s **file** handle (same type: image/video/audio) |
+| **Configure** | Set prompt, params, and/or file inputs on each node; lock nodes to reuse existing output         |
+| **Save**      | Save & Run panel → Save (or auto-save after run)                                                 |
+| **Run**       | Save & Run panel → Run → watch status and node updates in real time                              |
+| **Result**    | Final output on last/downstream node; download from list or use in next run                      |
+| **Share**     | Publish → get link; others can view or duplicate                                                 |
+
+---
+
+## How it works (deep dive)
+
+This section maps the product behavior to how the system actually runs workflows. Useful if you’re debugging or integrating.
+
+### Data model
+
+- **Workflow**: Stored in `workflows` with `id`, `name`, `description`, `definition` (JSON). `definition` has `version: 1`, `nodes[]`, `edges[]`.
+- **Node**: `id`, `type` (`input` | `file` | `model` | `output`), `position`, `data` (prompt, fileUrl, providerId, modelId, params, outputUrl, locked, etc.). In the builder you only add **model** nodes; input/file/output types exist for the runner and for read-only views.
+- **Edge**: `source`, `target`, optional `sourceHandle` (e.g. `result`, `result-0`), `targetHandle` (e.g. `file-0`). Connections are from **result** → **file-N** (N = input index on the target model).
+
+### Execution
+
+1. **Start run**: User clicks Run → `startWorkflowRunAction` creates a row in `workflow_runs` (status `queued`) with a **snapshot** of the current `definition`, then invokes the **workflow orchestrator** (e.g. Edge Function or internal API) with the run ID.
+2. **Orchestrator** calls `runWorkflow(runId)`: loads the run and its `definition_snapshot`, computes **execution order** via a topological sort of nodes by edges (cycles throw).
+3. **Per node** (in order):
+   - **input** node: contributes `prompt` / `negativePrompt` to params of nodes connected to it.
+   - **file** node: contributes `fileUrl` (and optional `durationSeconds`) to connected nodes.
+   - **model** node: If **locked** and has `outputUrl`, skip call and push existing output into the run’s `outputs` map. Otherwise **prepare** params with `buildParamsFromGraph` (merge node’s `params` + prompt/negative + all inbound edge sources: input prompt, file URLs, or upstream model `outputUrl`/duration), validate with the model’s schema, resolve credits, then **dispatch** generation (same providers as the main app: fal, useapi, meshy, etc.). On success, store `outputUrl` (and optional `outputs`/duration) in the run’s `outputs` and in the step record.
+   - **output** node: no execution; just marks where the “final” output comes from (the connected source).
+4. **Progress**: After each step, the run’s `steps` array and `updated_at` are written to the DB. The app subscribes to **realtime** (`workflow_runs` filtered by `workflow_id`) so the UI updates as steps complete.
+5. **End**: Run status set to `succeeded` or `failed`; optional `error_message`. On success, the workflow’s `definition` can be updated so the last node’s `outputUrl` is persisted for preview in the list.
+
+### Connection rules (runner)
+
+- **buildParamsFromGraph** resolves inbound edges by `targetHandle` (e.g. `file-0` → first file input). Source kinds: `input` (prompt/negativePrompt), `file` (fileUrl + duration if media), `model` (outputUrl + duration if audio/video). Params are merged; multi-file inputs get arrays when the model supports it.
+- **Type compatibility** in the builder: output type (image/video/audio) is inferred from `modelType` (e.g. “text-to-video” → video); input type from the model’s input definition. Connection allowed only when types match.
+
+### Credits and duration
+
+- Each model step is validated and **credits** are computed from the model’s pricing (and plan). Duration-based pricing uses **duration** from: upstream node’s `outputs`/params, or probing the media URL when the step is file/audio/video.
+- Total cost of a run is the sum of each executed (non-locked) step’s credits.

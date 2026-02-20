@@ -355,7 +355,8 @@
               "generate",
               "assets",
               "models",
-              "video-editor"
+              "video-editor",
+              "workflows"
             ]
           }
         ]
